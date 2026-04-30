@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "MCP-BOM: A Reproducible Attack-Surface Benchmark for Model Context Protocol Servers"
+message: "If you use this benchmark, please cite the paper."
+type: software
+authors:
+  - family-names: Sanna
+    given-names: Arun Chowdary
+    email: arun.sanna@ieee.org
+    orcid: ""
+repository-code: "https://github.com/arunsanna/mcp-bom"
+license: Apache-2.0
+date-released: "2026-05-06"
+keywords:
+  - model-context-protocol
+  - mcp
+  - ai-security
+  - attack-surface
+  - benchmark
+  - bill-of-materials
+  - agentic-ai
+  - owasp
+preferred-citation:
+  type: conference-paper
+  title: "MCP-BOM: A Reproducible Attack-Surface Benchmark for Model Context Protocol Servers"
+  authors:
+    - family-names: Sanna
+      given-names: Arun Chowdary
+      email: arun.sanna@ieee.org
+  year: 2026
+  conference:
+    name: "NeurIPS 2026 Evaluations & Datasets Track"
