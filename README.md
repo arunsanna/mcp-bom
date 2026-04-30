@@ -5,6 +5,7 @@
 Author: Arun Chowdary Sanna
 Status: in development — targeting NeurIPS 2026 Evaluations & Datasets Track
 Hard freeze: May 6, 2026 AoE
+Work board: live tasks tracked in [GitHub Issues](https://github.com/arunsanna/mcp-bom/issues) and mirrored in AI Memory under project `mcp-bom`. Each issue is labeled by priority (`priority-critical/high/medium/low`) and phase (`phase-build`, `phase-submission`, `phase-post-submission`, `phase-camera-ready`).
 
 ---
 
