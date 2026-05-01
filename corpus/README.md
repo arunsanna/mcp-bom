@@ -7,7 +7,9 @@ Build target: Day 1 (May 1, 2026). 500 public MCP servers stratified by install 
 - **npm**: `@modelcontextprotocol` org packages plus keyword search for `mcp-server`.
 - **PyPI**: keyword search for `mcp` and `model-context-protocol`.
 - **GitHub**: topic `mcp-server`, plus repos referenced in npm/PyPI metadata.
-- **mcp.run**: catalogue scrape.
+- **mcp.run**: checked on the snapshot date; the domain redirected to Turbo MCP, so no unauthenticated catalogue API was available.
+- **Official MCP Registry**: `registry.modelcontextprotocol.io/v0/servers`.
+- **Smithery**: `api.smithery.ai/servers`.
 
 ## Sampling
 
@@ -60,4 +62,10 @@ The scrape script records the timestamp of each registry query and the exact met
 
 ## Status
 
-Empty pending Day 1 scrape.
+`manifest.json` is generated with:
+
+```bash
+python3 corpus/build_manifest.py --snapshot-date 2026-05-01 --target-count 500
+```
+
+By default the builder writes metadata snapshots under `corpus/raw/` and reuses any already-downloaded source archives. Pass `--download-archives` to fetch downloadable npm/PyPI/GitHub archives; this is intentionally explicit because a full archive pull can be large.
