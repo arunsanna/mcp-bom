@@ -78,7 +78,7 @@ Full reference saved to wiki: `wiki://inbox/2026-05-01T210202Z__empirical-resear
 | Hypotheses                | done (14)                                     | `docs/extended-hypotheses.md`                                                      |
 | Spike                     | 3 rounds done (n=23→27, 245 scraped)          | `spike/run_spike.py`, `run_spike_v2.py`, `run_spike_v3.py`, `spike/results/*.json` |
 | Observation               | partial — v2 written, **v3 markdown missing** | `spike/results/hypothesis_validation_v2.md`                                        |
-| Pre-registration          | **NOT DONE**                                  | needs `docs/preregistration.md`                                                    |
+| Pre-registration          | **v1 locked** (2026-05-01)                    | `docs/preregistration.md` — 6 confirmatory + 8 exploratory; α=0.00833              |
 | Confirmatory experiment   | not started                                   | needs production extractor + 500-server corpus                                     |
 | Instrument validation     | not started                                   | needs `validation/` work (precision/recall + Cohen's κ)                            |
 | Eval observations         | informal only                                 | needs proper stats                                                                 |
