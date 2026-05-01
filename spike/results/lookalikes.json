@@ -1,0 +1,1604 @@
+[
+  {
+    "suspect": "@modelcontextprotocol/server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.8,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@szjc/szjc-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@apify/actors-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@ui5/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mapbox/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@hubspot/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@sap-ux/fiori-mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.759,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@sap-ux/fiori-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@browserstack/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@superblocksteam/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@theia/ai-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@theia/ai-mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@theia/ai-mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.769,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@theia/ai-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.9,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@sigmacomputing/slack-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@roychri/mcp-server-asana",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.759,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@roychri/mcp-server-asana",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@z_ai/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@coinbase/cds-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@coinbase/cds-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@alchemy/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@esaio/esa-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@esaio/esa-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@upstash/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@cap-js/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "slite-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "codex-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@phantom/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@gleanwork/mcp-server-utils",
+    "resembles": "mcp-server-git",
+    "similarity": 0.769,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@gleanwork/mcp-server-utils",
+    "resembles": "mcp-server-time",
+    "similarity": 0.815,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@gleanwork/mcp-server-utils",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@benborla29/mcp-server-mysql",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.828,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@benborla29/mcp-server-mysql",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.786,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@benborla29/mcp-server-mysql",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@paperclipai/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@vantasdk/vanta-mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.759,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@vantasdk/vanta-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@forestadmin/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@rollbar/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@mseep/linear-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@penclipai/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@contentful/mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "linear-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "git-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "npm"
+  },
+  {
+    "suspect": "git-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-postgres",
+    "resembles": "mcp-server-postgres",
+    "similarity": 0.786,
+    "registry": "npm"
+  },
+  {
+    "suspect": "@f4ww4z/mcp-mysql-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "npm"
+  },
+  {
+    "suspect": "mcp-server-jira",
+    "resembles": "mcp-server-git",
+    "similarity": 0.8,
+    "registry": "pypi"
+  },
+  {
+    "suspect": "mcp-server-jira",
+    "resembles": "mcp-server-time",
+    "similarity": 0.769,
+    "registry": "pypi"
+  },
+  {
+    "suspect": "mcp-server-jira",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.818,
+    "registry": "pypi"
+  },
+  {
+    "suspect": "github-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "pal-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "pal-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "notion-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-chart",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.786,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-chart",
+    "resembles": "mcp-server-git",
+    "similarity": 0.769,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-chart",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.759,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-chart",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "excel-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "exa-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "exa-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "Gmail-MCP-Server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "slack-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "arxiv-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-qdrant",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mysql_mcp_server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-mysql",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.828,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-mysql",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.786,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-mysql",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "cocos-mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.759,
+    "registry": "github"
+  },
+  {
+    "suspect": "cocos-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "douyin-mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.8,
+    "registry": "github"
+  },
+  {
+    "suspect": "douyin-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "ros-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "ros-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "alpaca-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "n8n-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "n8n-mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.815,
+    "registry": "github"
+  },
+  {
+    "suspect": "n8n-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "servers",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "drawio-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.8,
+    "registry": "github"
+  },
+  {
+    "suspect": "ida-mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "ida-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-milvus",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "MCP-Server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-fetch",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-git",
+    "similarity": 0.857,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-time",
+    "similarity": 0.818,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-sentry",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-github",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-gdrive",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "mcp-server-docker",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server",
+    "resembles": "@notionhq/notion-mcp-server",
+    "similarity": 0.75,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-mongo-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-starrocks",
+    "resembles": "mcp-server-slack",
+    "similarity": 0.812,
+    "registry": "github"
+  },
+  {
+    "suspect": "excel-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "plane-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "ms-365-mcp-server",
+    "resembles": "@railway/mcp-server",
+    "similarity": 0.783,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-weaviate",
+    "resembles": "mcp-server-git",
+    "similarity": 0.759,
+    "registry": "github"
+  },
+  {
+    "suspect": "mcp-server-weaviate",
+    "resembles": "mcp-server-sqlite",
+    "similarity": 0.75,
+    "registry": "github"
+  }
+]

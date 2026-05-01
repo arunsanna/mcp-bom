@@ -1,0 +1,1901 @@
+{
+  "base_results": [
+    {
+      "server_id": "mcp-filesystem",
+      "lang": "typescript",
+      "tier": "official-high",
+      "desc": "Filesystem read/write/search",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": true,
+        "ingress": false,
+        "secrets": false,
+        "delegation": true,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 44.4,
+        "depth": 25.6,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 25.6,
+        "detected_categories": [
+          "filesystem",
+          "delegation",
+          "data_sensitivity",
+          "egress"
+        ],
+        "num_detected": 4
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 1,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-memory",
+      "lang": "typescript",
+      "tier": "official-high",
+      "desc": "Knowledge graph memory",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": false,
+        "ingress": false,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 22.2,
+        "depth": 8.9,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 13.7,
+        "detected_categories": [
+          "filesystem",
+          "secrets"
+        ],
+        "num_detected": 2
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 1,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-sequential-thinking",
+      "lang": "typescript",
+      "tier": "official-high",
+      "desc": "Sequential thinking",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": false,
+        "ingress": true,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 22.2,
+        "depth": 4.4,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 19.7,
+        "detected_categories": [
+          "ingress",
+          "secrets"
+        ],
+        "num_detected": 2
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 1,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-everything",
+      "lang": "typescript",
+      "tier": "official-high",
+      "desc": "Test server all features",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 66.7,
+        "depth": 28.9,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 39.6,
+        "detected_categories": [
+          "filesystem",
+          "egress",
+          "secrets",
+          "database",
+          "data_sensitivity",
+          "ingress"
+        ],
+        "num_detected": 6
+      },
+      "extended": {
+        "has_approval_gate": true,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 18,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": true,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-fetch",
+      "lang": "python",
+      "tier": "official-high",
+      "desc": "HTTP fetch",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": true,
+        "ingress": false,
+        "secrets": false,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 11.1,
+        "depth": 8.9,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 11.5,
+        "detected_categories": [
+          "egress"
+        ],
+        "num_detected": 1
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 3,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-git",
+      "lang": "python",
+      "tier": "official-high",
+      "desc": "Git operations",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": false,
+        "ingress": false,
+        "secrets": false,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 0.0,
+        "depth": 0.0,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 5.2,
+        "detected_categories": [],
+        "num_detected": 0
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 0,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-time",
+      "lang": "python",
+      "tier": "official-low",
+      "desc": "Time queries",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": false,
+        "ingress": false,
+        "secrets": false,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 0.0,
+        "depth": 0.0,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 5.2,
+        "detected_categories": [],
+        "num_detected": 0
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 0,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-shell-server",
+      "lang": "python",
+      "tier": "community-low",
+      "desc": "Shell execution",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": false,
+        "ingress": false,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 33.3,
+        "depth": 10.0,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 16.4,
+        "detected_categories": [
+          "secrets",
+          "filesystem",
+          "shell"
+        ],
+        "num_detected": 3
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 1,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-02",
+        "days_since_update": 29
+      }
+    },
+    {
+      "server_id": "mcp-server-docker",
+      "lang": "python",
+      "tier": "community-medium",
+      "desc": "Docker management",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": true,
+        "ingress": false,
+        "secrets": false,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 11.1,
+        "depth": 8.9,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 11.5,
+        "detected_categories": [
+          "egress"
+        ],
+        "num_detected": 1
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 22,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2025-06-04",
+        "days_since_update": 331
+      }
+    },
+    {
+      "server_id": "mcp-server-mysql",
+      "lang": "python",
+      "tier": "community-medium",
+      "desc": "MySQL database",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": false,
+        "ingress": true,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": true
+      },
+      "score": {
+        "breadth": 44.4,
+        "depth": 15.6,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 29.1,
+        "detected_categories": [
+          "filesystem",
+          "ingress",
+          "secrets",
+          "database"
+        ],
+        "num_detected": 4
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 6,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-03-10",
+        "days_since_update": 52
+      }
+    },
+    {
+      "server_id": "notion-mcp-server",
+      "lang": "typescript",
+      "tier": "enterprise-high",
+      "desc": "Notion API",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 55.6,
+        "depth": 33.3,
+        "exposure": 100,
+        "provenance": 35,
+        "attack_surface_score": 51.4,
+        "detected_categories": [
+          "filesystem",
+          "egress",
+          "ingress",
+          "secrets",
+          "data_sensitivity"
+        ],
+        "num_detected": 5
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 2,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-03-17",
+        "days_since_update": 45
+      }
+    },
+    {
+      "server_id": "sentry-mcp",
+      "lang": "typescript",
+      "tier": "enterprise-high",
+      "desc": "Sentry error tracking",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": true,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 100.0,
+        "depth": 51.1,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 56.2,
+        "detected_categories": [
+          "shell",
+          "egress",
+          "ingress",
+          "data_sensitivity",
+          "database",
+          "impersonation",
+          "secrets",
+          "delegation",
+          "filesystem"
+        ],
+        "num_detected": 9
+      },
+      "extended": {
+        "has_approval_gate": true,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 212,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": true,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-28",
+        "days_since_update": 3
+      }
+    },
+    {
+      "server_id": "mcp-remote",
+      "lang": "typescript",
+      "tier": "popular-high-cve",
+      "desc": "Remote MCP proxy (CVE)",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 77.8,
+        "depth": 42.2,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 47.8,
+        "detected_categories": [
+          "delegation",
+          "shell",
+          "egress",
+          "filesystem",
+          "ingress",
+          "secrets",
+          "data_sensitivity"
+        ],
+        "num_detected": 7
+      },
+      "extended": {
+        "has_approval_gate": true,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 2,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-02-06",
+        "days_since_update": 84
+      }
+    },
+    {
+      "server_id": "mcp-server-kubernetes",
+      "lang": "typescript",
+      "tier": "popular-high",
+      "desc": "Kubernetes management",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": false,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 66.7,
+        "depth": 30.0,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 40.1,
+        "detected_categories": [
+          "secrets",
+          "filesystem",
+          "shell",
+          "ingress",
+          "delegation",
+          "data_sensitivity"
+        ],
+        "num_detected": 6
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 44,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-07",
+        "days_since_update": 24
+      }
+    },
+    {
+      "server_id": "python-sdk",
+      "lang": "python",
+      "tier": "official-high",
+      "desc": "Python SDK examples",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": true,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 100.0,
+        "depth": 41.1,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 51.8,
+        "detected_categories": [
+          "egress",
+          "secrets",
+          "delegation",
+          "filesystem",
+          "shell",
+          "ingress",
+          "impersonation",
+          "database",
+          "data_sensitivity"
+        ],
+        "num_detected": 9
+      },
+      "extended": {
+        "has_approval_gate": true,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 53,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": true,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-14",
+        "days_since_update": 17
+      }
+    },
+    {
+      "server_id": "supabase-mcp",
+      "lang": "typescript",
+      "tier": "enterprise-high",
+      "desc": "Supabase DB/auth",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": true,
+        "ingress": false,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 55.6,
+        "depth": 31.1,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 30.4,
+        "detected_categories": [
+          "egress",
+          "filesystem",
+          "data_sensitivity",
+          "secrets",
+          "database"
+        ],
+        "num_detected": 5
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 30,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-30",
+        "days_since_update": 1
+      }
+    },
+    {
+      "server_id": "slack-mcp-clone",
+      "lang": "typescript",
+      "tier": "official-high",
+      "desc": "Slack messaging",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 88.9,
+        "depth": 47.8,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 52.5,
+        "detected_categories": [
+          "filesystem",
+          "shell",
+          "egress",
+          "secrets",
+          "database",
+          "data_sensitivity",
+          "ingress",
+          "delegation"
+        ],
+        "num_detected": 8
+      },
+      "extended": {
+        "has_approval_gate": true,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 25,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": true,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-17",
+        "days_since_update": 14
+      }
+    },
+    {
+      "server_id": "mcp-playwright",
+      "lang": "typescript",
+      "tier": "popular-high",
+      "desc": "Playwright browser",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 66.7,
+        "depth": 35.6,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 42.6,
+        "detected_categories": [
+          "egress",
+          "ingress",
+          "secrets",
+          "data_sensitivity",
+          "shell",
+          "filesystem"
+        ],
+        "num_detected": 6
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 44,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2025-12-13",
+        "days_since_update": 139
+      }
+    },
+    {
+      "server_id": "mongo-mcp",
+      "lang": "typescript",
+      "tier": "community-medium",
+      "desc": "MongoDB server",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": true,
+        "ingress": false,
+        "secrets": false,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 33.3,
+        "depth": 14.4,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 18.4,
+        "detected_categories": [
+          "data_sensitivity",
+          "egress",
+          "database"
+        ],
+        "num_detected": 3
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 14,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2025-03-16",
+        "days_since_update": 411
+      }
+    },
+    {
+      "server_id": "mcp-inspector",
+      "lang": "typescript",
+      "tier": "official-high",
+      "desc": "MCP Inspector (CVE)",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": true,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 88.9,
+        "depth": 42.2,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 50.0,
+        "detected_categories": [
+          "filesystem",
+          "egress",
+          "secrets",
+          "delegation",
+          "shell",
+          "impersonation",
+          "data_sensitivity",
+          "ingress"
+        ],
+        "num_detected": 8
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 11,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": true,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-14",
+        "days_since_update": 17
+      }
+    },
+    {
+      "server_id": "mcp-browserbase",
+      "lang": "typescript",
+      "tier": "popular-high",
+      "desc": "Browserbase automation",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": true,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 77.8,
+        "depth": 43.3,
+        "exposure": 100,
+        "provenance": 35,
+        "attack_surface_score": 60.3,
+        "detected_categories": [
+          "ingress",
+          "filesystem",
+          "secrets",
+          "data_sensitivity",
+          "egress",
+          "delegation",
+          "impersonation"
+        ],
+        "num_detected": 7
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 7,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-03-30",
+        "days_since_update": 32
+      }
+    },
+    {
+      "server_id": "exa-mcp",
+      "lang": "typescript",
+      "tier": "popular-medium",
+      "desc": "Exa search API",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 33.3,
+        "depth": 13.3,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 25.9,
+        "detected_categories": [
+          "secrets",
+          "ingress",
+          "egress"
+        ],
+        "num_detected": 3
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 12,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": true,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-04-30",
+        "days_since_update": 1
+      }
+    },
+    {
+      "server_id": "anthropic-quickstarts",
+      "lang": "python",
+      "tier": "official-high",
+      "desc": "Anthropic examples",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": false,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 88.9,
+        "depth": 47.8,
+        "exposure": 100,
+        "provenance": 35,
+        "attack_surface_score": 64.5,
+        "detected_categories": [
+          "secrets",
+          "filesystem",
+          "shell",
+          "egress",
+          "delegation",
+          "ingress",
+          "data_sensitivity",
+          "database"
+        ],
+        "num_detected": 8
+      },
+      "extended": {
+        "has_approval_gate": false,
+        "has_admin_db_connection": false,
+        "schema_declared_tools": 7,
+        "impl_detected_capabilities": 0,
+        "has_interactive_prompt": false,
+        "connection_string_patterns": []
+      },
+      "staleness": {
+        "last_commit": "2026-02-05",
+        "days_since_update": 85
+      }
+    }
+  ],
+  "new_results": [
+    {
+      "server_id": "resend-mcp",
+      "lang": "typescript",
+      "tier": "enterprise-high",
+      "desc": "Resend email sending",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": true,
+        "ingress": true,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": true,
+        "data_sensitivity": true,
+        "database": false
+      },
+      "score": {
+        "breadth": 66.7,
+        "depth": 30.0,
+        "exposure": 40,
+        "provenance": 35,
+        "attack_surface_score": 40.1,
+        "detected_categories": [
+          "filesystem",
+          "secrets",
+          "egress",
+          "impersonation",
+          "data_sensitivity",
+          "ingress"
+        ],
+        "num_detected": 6
+      },
+      "schema_drift": {
+        "schema_declared": [
+          "egress",
+          "filesystem",
+          "impersonation",
+          "shell"
+        ],
+        "impl_detected": [
+          "egress",
+          "filesystem",
+          "secrets"
+        ],
+        "hidden_capabilities": [
+          "secrets"
+        ],
+        "declared_but_not_impl": [
+          "impersonation",
+          "shell"
+        ],
+        "has_drift": true,
+        "drift_count": 1
+      },
+      "approval_gates": {
+        "has_user_confirmation": false,
+        "has_dry_run": false,
+        "has_approval_workflow": false,
+        "confirmation_patterns": [],
+        "has_any_gate": false
+      }
+    },
+    {
+      "server_id": "neon-mcp",
+      "lang": "typescript",
+      "tier": "enterprise-high",
+      "desc": "Neon Postgres",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": false,
+        "egress": true,
+        "ingress": false,
+        "secrets": true,
+        "delegation": true,
+        "impersonation": true,
+        "data_sensitivity": true,
+        "database": true
+      },
+      "score": {
+        "breadth": 77.8,
+        "depth": 27.8,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 33.3,
+        "detected_categories": [
+          "filesystem",
+          "secrets",
+          "delegation",
+          "impersonation",
+          "egress",
+          "data_sensitivity",
+          "database"
+        ],
+        "num_detected": 7
+      },
+      "schema_drift": {
+        "schema_declared": [
+          "database",
+          "egress",
+          "filesystem",
+          "impersonation",
+          "shell"
+        ],
+        "impl_detected": [
+          "database",
+          "egress",
+          "filesystem",
+          "secrets",
+          "shell"
+        ],
+        "hidden_capabilities": [
+          "secrets"
+        ],
+        "declared_but_not_impl": [
+          "impersonation"
+        ],
+        "has_drift": true,
+        "drift_count": 1
+      },
+      "approval_gates": {
+        "has_user_confirmation": false,
+        "has_dry_run": false,
+        "has_approval_workflow": true,
+        "confirmation_patterns": [
+          "approval_workflow",
+          "approval_workflow"
+        ],
+        "has_any_gate": true
+      }
+    },
+    {
+      "server_id": "go-mcp-filesystem",
+      "lang": "go",
+      "tier": "community-medium",
+      "desc": "Go filesystem server",
+      "capability_vector": {
+        "filesystem": false,
+        "shell": false,
+        "egress": false,
+        "ingress": false,
+        "secrets": false,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": false
+      },
+      "score": {
+        "breadth": 0.0,
+        "depth": 0.0,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 5.2,
+        "detected_categories": [],
+        "num_detected": 0
+      },
+      "schema_drift": {
+        "schema_declared": [],
+        "impl_detected": [],
+        "hidden_capabilities": [],
+        "declared_but_not_impl": [],
+        "has_drift": false,
+        "drift_count": 0
+      },
+      "approval_gates": {
+        "has_user_confirmation": false,
+        "has_dry_run": false,
+        "has_approval_workflow": false,
+        "confirmation_patterns": [],
+        "has_any_gate": false
+      }
+    },
+    {
+      "server_id": "mcp-nixos",
+      "lang": "python",
+      "tier": "community-medium",
+      "desc": "NixOS system management",
+      "capability_vector": {
+        "filesystem": true,
+        "shell": true,
+        "egress": true,
+        "ingress": false,
+        "secrets": true,
+        "delegation": false,
+        "impersonation": false,
+        "data_sensitivity": false,
+        "database": true
+      },
+      "score": {
+        "breadth": 55.6,
+        "depth": 28.9,
+        "exposure": 0,
+        "provenance": 35,
+        "attack_surface_score": 29.4,
+        "detected_categories": [
+          "filesystem",
+          "secrets",
+          "egress",
+          "database",
+          "shell"
+        ],
+        "num_detected": 5
+      },
+      "schema_drift": {
+        "schema_declared": [
+          "database",
+          "filesystem"
+        ],
+        "impl_detected": [
+          "egress",
+          "filesystem",
+          "secrets",
+          "shell"
+        ],
+        "hidden_capabilities": [
+          "egress",
+          "secrets",
+          "shell"
+        ],
+        "declared_but_not_impl": [
+          "database"
+        ],
+        "has_drift": true,
+        "drift_count": 3
+      },
+      "approval_gates": {
+        "has_user_confirmation": false,
+        "has_dry_run": false,
+        "has_approval_workflow": false,
+        "confirmation_patterns": [],
+        "has_any_gate": false
+      }
+    }
+  ],
+  "drift_results": {
+    "mcp-filesystem": {
+      "schema_declared": [
+        "filesystem"
+      ],
+      "impl_detected": [
+        "filesystem"
+      ],
+      "hidden_capabilities": [],
+      "declared_but_not_impl": [],
+      "has_drift": false,
+      "drift_count": 0
+    },
+    "mcp-fetch": {
+      "schema_declared": [
+        "egress",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress"
+      ],
+      "hidden_capabilities": [],
+      "declared_but_not_impl": [
+        "shell"
+      ],
+      "has_drift": false,
+      "drift_count": 0
+    },
+    "mcp-git": {
+      "schema_declared": [
+        "filesystem"
+      ],
+      "impl_detected": [
+        "filesystem"
+      ],
+      "hidden_capabilities": [],
+      "declared_but_not_impl": [],
+      "has_drift": false,
+      "drift_count": 0
+    },
+    "mcp-everything": {
+      "schema_declared": [
+        "egress",
+        "filesystem",
+        "impersonation",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "impersonation",
+        "shell"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "mcp-time": {
+      "schema_declared": [],
+      "impl_detected": [],
+      "hidden_capabilities": [],
+      "declared_but_not_impl": [],
+      "has_drift": false,
+      "drift_count": 0
+    },
+    "mcp-memory": {
+      "schema_declared": [
+        "database",
+        "filesystem"
+      ],
+      "impl_detected": [
+        "filesystem",
+        "secrets"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "database"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "mcp-shell-server": {
+      "schema_declared": [
+        "shell"
+      ],
+      "impl_detected": [
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "filesystem",
+        "secrets"
+      ],
+      "declared_but_not_impl": [],
+      "has_drift": true,
+      "drift_count": 2
+    },
+    "notion-mcp-server": {
+      "schema_declared": [],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets"
+      ],
+      "hidden_capabilities": [
+        "egress",
+        "filesystem",
+        "secrets"
+      ],
+      "declared_but_not_impl": [],
+      "has_drift": true,
+      "drift_count": 3
+    },
+    "sentry-mcp": {
+      "schema_declared": [
+        "database",
+        "egress",
+        "filesystem",
+        "impersonation"
+      ],
+      "impl_detected": [
+        "database",
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "secrets",
+        "shell"
+      ],
+      "declared_but_not_impl": [
+        "impersonation"
+      ],
+      "has_drift": true,
+      "drift_count": 2
+    },
+    "mcp-remote": {
+      "schema_declared": [],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "declared_but_not_impl": [],
+      "has_drift": true,
+      "drift_count": 4
+    },
+    "mcp-server-kubernetes": {
+      "schema_declared": [
+        "database",
+        "egress",
+        "filesystem",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "database"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "supabase-mcp": {
+      "schema_declared": [
+        "database",
+        "egress",
+        "filesystem",
+        "impersonation",
+        "shell"
+      ],
+      "impl_detected": [
+        "database",
+        "egress",
+        "filesystem",
+        "secrets"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "impersonation",
+        "shell"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "slack-mcp-clone": {
+      "schema_declared": [
+        "database",
+        "egress",
+        "filesystem",
+        "impersonation",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "database",
+        "impersonation"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "mcp-inspector": {
+      "schema_declared": [
+        "egress",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "filesystem",
+        "secrets"
+      ],
+      "declared_but_not_impl": [],
+      "has_drift": true,
+      "drift_count": 2
+    },
+    "mcp-browserbase": {
+      "schema_declared": [
+        "egress",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets"
+      ],
+      "hidden_capabilities": [
+        "filesystem",
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "shell"
+      ],
+      "has_drift": true,
+      "drift_count": 2
+    },
+    "mcp-playwright": {
+      "schema_declared": [
+        "egress",
+        "filesystem",
+        "impersonation",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "impersonation"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "mongo-mcp": {
+      "schema_declared": [
+        "database"
+      ],
+      "impl_detected": [],
+      "hidden_capabilities": [],
+      "declared_but_not_impl": [
+        "database"
+      ],
+      "has_drift": false,
+      "drift_count": 0
+    },
+    "exa-mcp": {
+      "schema_declared": [
+        "database",
+        "egress",
+        "filesystem"
+      ],
+      "impl_detected": [
+        "egress",
+        "secrets"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "database",
+        "filesystem"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "resend-mcp": {
+      "schema_declared": [
+        "egress",
+        "filesystem",
+        "impersonation",
+        "shell"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "impersonation",
+        "shell"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "neon-mcp": {
+      "schema_declared": [
+        "database",
+        "egress",
+        "filesystem",
+        "impersonation",
+        "shell"
+      ],
+      "impl_detected": [
+        "database",
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "secrets"
+      ],
+      "declared_but_not_impl": [
+        "impersonation"
+      ],
+      "has_drift": true,
+      "drift_count": 1
+    },
+    "go-mcp-filesystem": {
+      "schema_declared": [],
+      "impl_detected": [],
+      "hidden_capabilities": [],
+      "declared_but_not_impl": [],
+      "has_drift": false,
+      "drift_count": 0
+    },
+    "mcp-nixos": {
+      "schema_declared": [
+        "database",
+        "filesystem"
+      ],
+      "impl_detected": [
+        "egress",
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "hidden_capabilities": [
+        "egress",
+        "secrets",
+        "shell"
+      ],
+      "declared_but_not_impl": [
+        "database"
+      ],
+      "has_drift": true,
+      "drift_count": 3
+    }
+  },
+  "approval_results": {
+    "mcp-filesystem": {
+      "has_user_confirmation": false,
+      "has_dry_run": true,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [
+        "dry_run",
+        "dry_run"
+      ],
+      "has_any_gate": true
+    },
+    "mcp-fetch": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-git": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-everything": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-time": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-memory": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-shell-server": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "notion-mcp-server": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "sentry-mcp": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": true,
+      "confirmation_patterns": [
+        "approval_workflow",
+        "approval_workflow",
+        "approval_workflow",
+        "approval_workflow"
+      ],
+      "has_any_gate": true
+    },
+    "mcp-remote": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": true,
+      "confirmation_patterns": [
+        "approval_workflow"
+      ],
+      "has_any_gate": true
+    },
+    "mcp-server-kubernetes": {
+      "has_user_confirmation": false,
+      "has_dry_run": true,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [
+        "dry_run",
+        "dry_run",
+        "dry_run",
+        "dry_run",
+        "dry_run"
+      ],
+      "has_any_gate": true
+    },
+    "supabase-mcp": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "slack-mcp-clone": {
+      "has_user_confirmation": false,
+      "has_dry_run": true,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [
+        "dry_run",
+        "dry_run"
+      ],
+      "has_any_gate": true
+    },
+    "mcp-inspector": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-browserbase": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-playwright": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mongo-mcp": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "exa-mcp": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "resend-mcp": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "neon-mcp": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": true,
+      "confirmation_patterns": [
+        "approval_workflow",
+        "approval_workflow"
+      ],
+      "has_any_gate": true
+    },
+    "go-mcp-filesystem": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    },
+    "mcp-nixos": {
+      "has_user_confirmation": false,
+      "has_dry_run": false,
+      "has_approval_workflow": false,
+      "confirmation_patterns": [],
+      "has_any_gate": false
+    }
+  },
+  "semgrep_results": {
+    "mcp-filesystem": {
+      "total_findings": 23,
+      "by_severity": {
+        "ERROR": 1,
+        "WARNING": 22
+      },
+      "cwe_ids": []
+    },
+    "mcp-fetch": {
+      "total_findings": 1,
+      "by_severity": {
+        "ERROR": 1
+      },
+      "cwe_ids": []
+    },
+    "mcp-git": {
+      "total_findings": 1,
+      "by_severity": {
+        "ERROR": 1
+      },
+      "cwe_ids": []
+    },
+    "mcp-everything": {
+      "total_findings": 4,
+      "by_severity": {
+        "ERROR": 1,
+        "INFO": 3
+      },
+      "cwe_ids": []
+    },
+    "mcp-time": {
+      "total_findings": 1,
+      "by_severity": {
+        "ERROR": 1
+      },
+      "cwe_ids": []
+    },
+    "mcp-memory": {
+      "total_findings": 1,
+      "by_severity": {
+        "ERROR": 1
+      },
+      "cwe_ids": []
+    },
+    "mcp-shell-server": {
+      "total_findings": 1,
+      "by_severity": {
+        "ERROR": 1
+      },
+      "cwe_ids": []
+    },
+    "notion-mcp-server": {
+      "total_findings": 4,
+      "by_severity": {
+        "ERROR": 1,
+        "WARNING": 3
+      },
+      "cwe_ids": []
+    },
+    "sentry-mcp": {
+      "total_findings": 14,
+      "by_severity": {
+        "INFO": 10,
+        "WARNING": 3,
+        "ERROR": 1
+      },
+      "cwe_ids": []
+    },
+    "mcp-remote": {
+      "total_findings": 4,
+      "by_severity": {
+        "WARNING": 2,
+        "INFO": 2
+      },
+      "cwe_ids": []
+    }
+  },
+  "lookalikes_count": 267,
+  "corpus_size": 245
+}

@@ -1,0 +1,2389 @@
+[
+  {
+    "name": "figma-mcp",
+    "registry": "npm",
+    "version": "0.1.4",
+    "description": "ModelContextProtocol server for Figma",
+    "repo_url": "",
+    "maintainer": "mjd",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/sdk",
+    "registry": "npm",
+    "version": "1.29.0",
+    "description": "Model Context Protocol implementation for TypeScript",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "pcarleton",
+    "lang": "typescript"
+  },
+  {
+    "name": "ref-tools-mcp",
+    "registry": "npm",
+    "version": "3.0.3",
+    "description": "ModelContextProtocol server for Ref",
+    "repo_url": "",
+    "maintainer": "mjd",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/ext-apps",
+    "registry": "npm",
+    "version": "1.7.1",
+    "description": "MCP Apps SDK \u2014 Enable MCP servers to display interactive user interfaces in conversational clients.",
+    "repo_url": "git+https://github.com/modelcontextprotocol/ext-apps.git",
+    "maintainer": "ochafik",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/inspector",
+    "registry": "npm",
+    "version": "0.21.2",
+    "description": "Model Context Protocol inspector",
+    "repo_url": "git+https://github.com/modelcontextprotocol/inspector.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "puppeteer-mcp-server",
+    "registry": "npm",
+    "version": "0.7.2",
+    "description": "Experimental MCP server for browser automation using Puppeteer (inspired by @modelcontextprotocol/server-puppeteer)",
+    "repo_url": "git+https://github.com/merajmehrabi/puppeteer-mcp-server.git",
+    "maintainer": "merajmehrabi",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server",
+    "registry": "npm",
+    "version": "2.0.0-alpha.2",
+    "description": "Model Context Protocol implementation for TypeScript - Server package",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@hisma/server-puppeteer",
+    "registry": "npm",
+    "version": "0.6.5",
+    "description": "Fork and update (v0.6.5) of the original @modelcontextprotocol/server-puppeteer MCP server for browser automation using Puppeteer.",
+    "repo_url": "git+https://github.com/Hisma/servers-archived.git",
+    "maintainer": "hisma",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server-everything",
+    "registry": "npm",
+    "version": "2026.1.26",
+    "description": "MCP server that exercises all the features of the MCP protocol",
+    "repo_url": "git+https://github.com/modelcontextprotocol/servers.git",
+    "maintainer": "pcarleton",
+    "lang": "typescript"
+  },
+  {
+    "name": "@maz-ui/mcp",
+    "registry": "npm",
+    "version": "4.9.3",
+    "description": "Maz-UI ModelContextProtocol Client",
+    "repo_url": "git+https://github.com/LouisMazel/maz-ui.git",
+    "maintainer": "louismazel",
+    "lang": "typescript"
+  },
+  {
+    "name": "@solvapay/mcp",
+    "registry": "npm",
+    "version": "0.2.3",
+    "description": "Official @modelcontextprotocol/sdk + @modelcontextprotocol/ext-apps adapter for the SolvaPay MCP toolbox (createSolvaPayMcpServer, registerPayableTool) with ./fetch + ./express subpath exports for run",
+    "repo_url": "git+https://github.com/solvapay/solvapay-sdk.git",
+    "maintainer": "tommy-solvapay",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server-pdf",
+    "registry": "npm",
+    "version": "1.7.1",
+    "description": "MCP server for loading and extracting text from PDF files with chunked pagination and interactive viewer",
+    "repo_url": "git+https://github.com/modelcontextprotocol/ext-apps.git",
+    "maintainer": "ochafik",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-starter",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "ModelContextProtocol starter server",
+    "repo_url": "",
+    "maintainer": "mjd",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/conformance",
+    "registry": "npm",
+    "version": "0.1.16",
+    "description": "A framework for testing MCP (Model Context Protocol) client and server implementations against the specification.",
+    "repo_url": "git+https://github.com/modelcontextprotocol/conformance.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "hyper-mcp-shell",
+    "registry": "npm",
+    "version": "1.1.2",
+    "description": "A shell for the ModelContextProtocol",
+    "repo_url": "",
+    "maintainer": "dadigua",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/node",
+    "registry": "npm",
+    "version": "2.0.0-alpha.2",
+    "description": "Model Context Protocol implementation for TypeScript - Node.js middleware",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-use",
+    "registry": "npm",
+    "version": "1.26.0",
+    "description": "Opinionated MCP Framework for TypeScript (@modelcontextprotocol/sdk compatible) - Build MCP Agents, Clients and Servers with support for ChatGPT Apps, Code Mode, OAuth, Notifications, Sampling, Observ",
+    "repo_url": "git+https://github.com/mcp-use/mcp-use.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@jsonresume/mcp",
+    "registry": "npm",
+    "version": "3.0.3",
+    "description": "ModelContextProtocol server for enhancing JSON Resumes",
+    "repo_url": "",
+    "maintainer": "thomasdavis",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/client",
+    "registry": "npm",
+    "version": "2.0.0-alpha.2",
+    "description": "Model Context Protocol implementation for TypeScript - Client package",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@mcp-use/modelcontextprotocol-sdk",
+    "registry": "npm",
+    "version": "1.24.3-mcp-use.4",
+    "description": "Model Context Protocol implementation for TypeScript",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "tonxxd",
+    "lang": "typescript"
+  },
+  {
+    "name": "@syntrologie/adapt-mcp",
+    "registry": "npm",
+    "version": "2.8.0-canary.127",
+    "description": "Adaptive MCP \u2014 dynamically loads @modelcontextprotocol/ext-apps so interactive MCP app cards can bridge back to the host.",
+    "repo_url": "git+https://github.com/SyntropyForge/amazing-demos.git",
+    "maintainer": "syntrologie-eng",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server-sequential-thinking",
+    "registry": "npm",
+    "version": "2025.12.18",
+    "description": "MCP server for sequential thinking and problem solving",
+    "repo_url": "git+https://github.com/modelcontextprotocol/servers.git",
+    "maintainer": "pcarleton",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/express",
+    "registry": "npm",
+    "version": "2.0.0-alpha.2",
+    "description": "Express adapters for the Model Context Protocol TypeScript server SDK - Express middleware",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "user-postgresql-mcp",
+    "registry": "npm",
+    "version": "0.1.7",
+    "description": "A PostgreSQL MCP server built with @modelcontextprotocol/sdk.",
+    "repo_url": "",
+    "maintainer": "wenxue1",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/hono",
+    "registry": "npm",
+    "version": "2.0.0-alpha.2",
+    "description": "Hono adapters for the Model Context Protocol TypeScript server SDK - Hono middleware",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server-filesystem",
+    "registry": "npm",
+    "version": "2026.1.14",
+    "description": "MCP server for filesystem access",
+    "repo_url": "git+https://github.com/modelcontextprotocol/servers.git",
+    "maintainer": "pcarleton",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/inspector-client",
+    "registry": "npm",
+    "version": "0.21.2",
+    "description": "Client-side application for the Model Context Protocol inspector",
+    "repo_url": "git+https://github.com/modelcontextprotocol/inspector.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server-memory",
+    "registry": "npm",
+    "version": "2026.1.26",
+    "description": "MCP server for enabling memory for Claude through a knowledge graph",
+    "repo_url": "git+https://github.com/modelcontextprotocol/servers.git",
+    "maintainer": "pcarleton",
+    "lang": "typescript"
+  },
+  {
+    "name": "@laskarks/mcp-rag-node",
+    "registry": "npm",
+    "version": "1.1.1",
+    "description": "Simple MCP RAG server using @modelcontextprotocol/sdk",
+    "repo_url": "git+https://github.com/laskar-ksatria/rag-mcp-nodejs.git",
+    "maintainer": "laskarks",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/inspector-server",
+    "registry": "npm",
+    "version": "0.21.2",
+    "description": "Server-side application for the Model Context Protocol inspector",
+    "repo_url": "git+https://github.com/modelcontextprotocol/inspector.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/inspector-cli",
+    "registry": "npm",
+    "version": "0.21.2",
+    "description": "CLI for the Model Context Protocol inspector",
+    "repo_url": "git+https://github.com/modelcontextprotocol/inspector.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "jsonresume-mcp",
+    "registry": "npm",
+    "version": "0.4.0",
+    "description": "ModelContextProtocol starter server",
+    "repo_url": "",
+    "maintainer": "thomasdavis",
+    "lang": "typescript"
+  },
+  {
+    "name": "@sit-onyx/modelcontextprotocol",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "MCP (Model Context Protocol) Server that provide onyx specific tools and resources.",
+    "repo_url": "git+https://github.com/SchwarzIT/onyx.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-smart-crawler",
+    "registry": "npm",
+    "version": "1.0.10",
+    "description": "A command-line tool acting as an MCP (ModelContextProtocol) server, using Playwright to crawl web content for AI models.",
+    "repo_url": "https://github.com/loo-y/mcp-smart-crawler",
+    "maintainer": "erikloo",
+    "lang": "typescript"
+  },
+  {
+    "name": "@jsonresume/jsonresume-mcp",
+    "registry": "npm",
+    "version": "0.2.0",
+    "description": "ModelContextProtocol starter server",
+    "repo_url": "",
+    "maintainer": "thomasdavis",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-sdk-client-ssejs",
+    "registry": "npm",
+    "version": "1.0.4",
+    "description": "Client transport alternative of @modelcontextprotocol/sdk/client base on sse.js. The main purpose is make it working on React Native with llama.rn.",
+    "repo_url": "git+https://github.com/mybigday/mcp-sdk-client-ssejs.git",
+    "maintainer": "jhen0409",
+    "lang": "typescript"
+  },
+  {
+    "name": "zero-mcp",
+    "registry": "npm",
+    "version": "0.2.2",
+    "description": "Zero-boilerplate, lightweight and fast MCP server toolkit. Skip the weight of `@modelcontextprotocol/sdk` and start shipping MCP servers in minutes with minimal code.",
+    "repo_url": "git+https://github.com/SNIKO/zero-mcp.git",
+    "maintainer": "nikosv",
+    "lang": "typescript"
+  },
+  {
+    "name": "enhanced-postgres-mcp-server",
+    "registry": "npm",
+    "version": "1.0.1",
+    "description": "Enhanced PostgreSQL MCP server with read and write capabilities. Based on @modelcontextprotocol/server-postgres by Anthropic.",
+    "repo_url": "https://github.com/garethcottrell/enhanced-postgres-mcp-server",
+    "maintainer": "jlzan1314",
+    "lang": "typescript"
+  },
+  {
+    "name": "@iflow-mcp/figma-mcp",
+    "registry": "npm",
+    "version": "0.1.4",
+    "description": "ModelContextProtocol server for Figma",
+    "repo_url": "",
+    "maintainer": "chatflowdev",
+    "lang": "typescript"
+  },
+  {
+    "name": "@iflow-mcp/ref-tools-mcp",
+    "registry": "npm",
+    "version": "3.0.0",
+    "description": "ModelContextProtocol server for Ref",
+    "repo_url": "",
+    "maintainer": "chatflowdev",
+    "lang": "typescript"
+  },
+  {
+    "name": "@mseep/mcp-typescript-server-starter",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "ModelContextProtocol typescript server starter",
+    "repo_url": "",
+    "maintainer": "skydeckai",
+    "lang": "typescript"
+  },
+  {
+    "name": "onestep-puppeteer-mcp-server",
+    "registry": "npm",
+    "version": "0.5.5",
+    "description": "Experimental MCP server for browser automation using Puppeteer (inspired by @modelcontextprotocol/server-puppeteer)",
+    "repo_url": "git+https://github.com/merajmehrabi/puppeteer-mcp-server.git",
+    "maintainer": "fzhao123",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-grpc-transport",
+    "registry": "npm",
+    "version": "0.1.2",
+    "description": "Pluggable gRPC transport for Model Context Protocol (MCP) servers using @modelcontextprotocol/sdk. Protobuf surface aligned with the community mcp-python-sdk-grpc-poc reference.",
+    "repo_url": "git+https://github.com/danielsmithdevelopment/ClawQL.git",
+    "maintainer": "danielsmithdev",
+    "lang": "typescript"
+  },
+  {
+    "name": "composiohq-modelcontextprotocol-typescript-sdk",
+    "registry": "npm",
+    "version": "1.12.2",
+    "description": "Model Context Protocol implementation for TypeScript",
+    "repo_url": "git+https://github.com/modelcontextprotocol/typescript-sdk.git",
+    "maintainer": "sampark_inc",
+    "lang": "typescript"
+  },
+  {
+    "name": "@szjc/szjc-mcp-server",
+    "registry": "npm",
+    "version": "1.0.24",
+    "description": "MCP Server for the Szjc API using @modelcontextprotocol/sdk",
+    "repo_url": "git+https://github.com/szjc/szjc-mcp-server.git",
+    "maintainer": "bimsop",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server-map",
+    "registry": "npm",
+    "version": "1.7.1",
+    "description": "MCP App Server example with CesiumJS 3D globe and geocoding",
+    "repo_url": "git+https://github.com/modelcontextprotocol/ext-apps.git",
+    "maintainer": "ochafik",
+    "lang": "typescript"
+  },
+  {
+    "name": "terry-mcp",
+    "registry": "npm",
+    "version": "0.3.0",
+    "description": "ModelContextProtocol server for Terry CLI integration",
+    "repo_url": "",
+    "maintainer": "mjd",
+    "lang": "typescript"
+  },
+  {
+    "name": "@iflow-mcp/matthewdailey-mcp-starter",
+    "registry": "npm",
+    "version": "0.2.1",
+    "description": "ModelContextProtocol starter server",
+    "repo_url": "",
+    "maintainer": "chatflowdev",
+    "lang": "typescript"
+  },
+  {
+    "name": "@modelcontextprotocol/server-threejs",
+    "registry": "npm",
+    "version": "1.7.1",
+    "description": "Three.js 3D visualization MCP App Server",
+    "repo_url": "git+https://github.com/modelcontextprotocol/ext-apps.git",
+    "maintainer": "ochafik",
+    "lang": "typescript"
+  },
+  {
+    "name": "@szc-ft/mcp-szcd-component-helper",
+    "registry": "npm",
+    "version": "0.8.3",
+    "description": "MCP server for szcd component library - built with @modelcontextprotocol/sdk, supports stdio/SSE/dual modes",
+    "repo_url": "git+https://github.com/szc-ft/szcd.git",
+    "maintainer": "zzj-new",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-server",
+    "registry": "npm",
+    "version": "0.0.9",
+    "description": "mcp server",
+    "repo_url": "git+https://github.com/sandy-mount/mcp-server.git",
+    "maintainer": "melvincarvalho",
+    "lang": "typescript"
+  },
+  {
+    "name": "@upstash/context7-mcp",
+    "registry": "npm",
+    "version": "2.2.3",
+    "description": "MCP server for Context7",
+    "repo_url": "git+https://github.com/upstash/context7.git",
+    "maintainer": "fahreddin.ozcan",
+    "lang": "typescript"
+  },
+  {
+    "name": "@notionhq/notion-mcp-server",
+    "registry": "npm",
+    "version": "2.2.1",
+    "description": "Official MCP server for Notion API",
+    "repo_url": "git+ssh://git@github.com/makenotion/notion-mcp-server.git",
+    "maintainer": "quan-notion",
+    "lang": "typescript"
+  },
+  {
+    "name": "chrome-devtools-mcp",
+    "registry": "npm",
+    "version": "0.23.0",
+    "description": "MCP server for Chrome DevTools",
+    "repo_url": "git+https://github.com/ChromeDevTools/chrome-devtools-mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@apify/actors-mcp-server",
+    "registry": "npm",
+    "version": "0.9.20",
+    "description": "Apify MCP Server",
+    "repo_url": "git+https://github.com/apify/apify-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@sentry/mcp-server",
+    "registry": "npm",
+    "version": "0.33.0",
+    "description": "Sentry MCP Server",
+    "repo_url": "git+ssh://git@github.com/getsentry/sentry-mcp.git",
+    "maintainer": "sentry-bot",
+    "lang": "typescript"
+  },
+  {
+    "name": "@ui5/mcp-server",
+    "registry": "npm",
+    "version": "0.2.11",
+    "description": "MCP server for SAPUI5/OpenUI5 development",
+    "repo_url": "git+https://github.com/UI5/mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@railway/mcp-server",
+    "registry": "npm",
+    "version": "0.1.8",
+    "description": "Official Railway MCP server",
+    "repo_url": "git+https://github.com/railwayapp/railway-mcp-server.git",
+    "maintainer": "thisismahmoud",
+    "lang": "typescript"
+  },
+  {
+    "name": "@mapbox/mcp-server",
+    "registry": "npm",
+    "version": "0.11.0",
+    "description": "Mapbox MCP server.",
+    "repo_url": "git+https://github.com/mapbox/mcp-server.git",
+    "maintainer": "mbx-npm-02-production",
+    "lang": "typescript"
+  },
+  {
+    "name": "@hubspot/mcp-server",
+    "registry": "npm",
+    "version": "0.4.0",
+    "description": "MCP Server for developers building HubSpot Apps",
+    "repo_url": "",
+    "maintainer": "jedeen-hs",
+    "lang": "typescript"
+  },
+  {
+    "name": "@winor30/mcp-server-datadog",
+    "registry": "npm",
+    "version": "1.7.0",
+    "description": "MCP server for interacting with Datadog API",
+    "repo_url": "git+https://github.com/winor30/mcp-server-datadog.git",
+    "maintainer": "winor30",
+    "lang": "typescript"
+  },
+  {
+    "name": "@sap-ux/fiori-mcp-server",
+    "registry": "npm",
+    "version": "0.6.52",
+    "description": "SAP Fiori - Model Context Protocol (MCP) server",
+    "repo_url": "git+https://github.com/SAP/open-ux-tools.git",
+    "maintainer": "devinea",
+    "lang": "typescript"
+  },
+  {
+    "name": "@heroku/mcp-server",
+    "registry": "npm",
+    "version": "1.2.2",
+    "description": "Heroku Platform MCP Server",
+    "repo_url": "git+https://github.com/heroku/heroku-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@browserstack/mcp-server",
+    "registry": "npm",
+    "version": "1.2.16",
+    "description": "BrowserStack's Official MCP Server",
+    "repo_url": "git+https://github.com/browserstack/mcp-server.git",
+    "maintainer": "browserstack-admin",
+    "lang": "typescript"
+  },
+  {
+    "name": "@dynatrace-oss/dynatrace-mcp-server",
+    "registry": "npm",
+    "version": "1.8.4",
+    "description": "Model Context Protocol (MCP) server for Dynatrace",
+    "repo_url": "git+https://github.com/dynatrace-oss/dynatrace-mcp.git",
+    "maintainer": "christian-kreuzberger-dtx",
+    "lang": "typescript"
+  },
+  {
+    "name": "@superblocksteam/mcp-server",
+    "registry": "npm",
+    "version": "2.0.101-next.1",
+    "description": "Superblocks MCP server",
+    "repo_url": "",
+    "maintainer": "superblocksteam-admin",
+    "lang": "typescript"
+  },
+  {
+    "name": "@theia/ai-mcp-server",
+    "registry": "npm",
+    "version": "1.71.0",
+    "description": "Theia - MCP Server",
+    "repo_url": "git+https://github.com/eclipse-theia/theia.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-server-kubernetes",
+    "registry": "npm",
+    "version": "3.5.0",
+    "description": "MCP server for interacting with Kubernetes clusters via kubectl",
+    "repo_url": "git+https://github.com/Flux159/mcp-server-kubernetes.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@sigmacomputing/slack-mcp-server",
+    "registry": "npm",
+    "version": "0.1.1",
+    "description": "MCP server for interacting with Slack",
+    "repo_url": "git+https://github.com/sigmacomputing/slack-mcp-server.git",
+    "maintainer": "svc-prod-winfra-npm",
+    "lang": "typescript"
+  },
+  {
+    "name": "@azure-devops/mcp",
+    "registry": "npm",
+    "version": "2.7.0",
+    "description": "MCP server for interacting with Azure DevOps",
+    "repo_url": "git+https://github.com/microsoft/azure-devops-mcp.git",
+    "maintainer": "novaes",
+    "lang": "typescript"
+  },
+  {
+    "name": "@ivotoby/openapi-mcp-server",
+    "registry": "npm",
+    "version": "1.14.0",
+    "description": "An MCP server that exposes OpenAPI endpoints as resources",
+    "repo_url": "git+https://github.com/ivo-toby/mcp-openapi-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@roychri/mcp-server-asana",
+    "registry": "npm",
+    "version": "1.8.0",
+    "description": "MCP Server for Asana",
+    "repo_url": "git+https://github.com/roychri/mcp-server-asana.git",
+    "maintainer": "roychri",
+    "lang": "typescript"
+  },
+  {
+    "name": "@gongrzhe/server-gmail-autoauth-mcp",
+    "registry": "npm",
+    "version": "1.1.11",
+    "description": "Gmail MCP server with auto authentication support",
+    "repo_url": "git+https://github.com/gongrzhe/server-gmail-autoauth-mcp.git",
+    "maintainer": "gongrzhe",
+    "lang": "typescript"
+  },
+  {
+    "name": "@eslint/mcp",
+    "registry": "npm",
+    "version": "0.3.4",
+    "description": "MCP server for ESLint",
+    "repo_url": "git+https://github.com/eslint/rewrite.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@z_ai/mcp-server",
+    "registry": "npm",
+    "version": "0.1.4",
+    "description": "MCP Server for Z.AI - A Model Context Protocol server that provides AI capabilities",
+    "repo_url": "https://docs.z.ai/",
+    "maintainer": "tomsun28",
+    "lang": "typescript"
+  },
+  {
+    "name": "@supabase/mcp-server-supabase",
+    "registry": "npm",
+    "version": "0.8.0",
+    "description": "MCP server for interacting with Supabase",
+    "repo_url": "git+https://github.com/supabase-community/supabase-mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "kubernetes-mcp-server",
+    "registry": "npm",
+    "version": "0.0.61",
+    "description": "Model Context Protocol (MCP) server for Kubernetes and OpenShift",
+    "repo_url": "git+https://github.com/containers/kubernetes-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@coinbase/cds-mcp-server",
+    "registry": "npm",
+    "version": "8.66.2",
+    "description": "Coinbase Design System - MCP Server",
+    "repo_url": "git+ssh://git@github.com/coinbase/cds.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-server-code-runner",
+    "registry": "npm",
+    "version": "0.1.8",
+    "description": "Code Runner MCP Server",
+    "repo_url": "git+https://github.com/formulahendry/mcp-server-code-runner.git",
+    "maintainer": "formulahendry",
+    "lang": "typescript"
+  },
+  {
+    "name": "@currents/mcp",
+    "registry": "npm",
+    "version": "2.2.17",
+    "description": "Currents MCP server",
+    "repo_url": "git+https://github.com/currents-dev/currents-mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@shortcut/mcp",
+    "registry": "npm",
+    "version": "0.24.0",
+    "description": "Shortcut MCP Server",
+    "repo_url": "git+https://github.com/useshortcut/mcp-server-shortcut.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "tavily-mcp",
+    "registry": "npm",
+    "version": "0.2.19",
+    "description": "MCP server for advanced web search using Tavily",
+    "repo_url": "git+https://github.com/tavily-ai/tavily-mcp.git",
+    "maintainer": "dustinpulver",
+    "lang": "typescript"
+  },
+  {
+    "name": "@cloudflare/mcp-server-cloudflare",
+    "registry": "npm",
+    "version": "0.2.0",
+    "description": "MCP server for interacting with Cloudflare API",
+    "repo_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "maintainer": "geelen",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-hello-world",
+    "registry": "npm",
+    "version": "1.1.2",
+    "description": "A simple Hello World MCP server",
+    "repo_url": "git+https://github.com/lobehub/mcp-hello-world.git",
+    "maintainer": "arvinxx",
+    "lang": "typescript"
+  },
+  {
+    "name": "@azure/mcp",
+    "registry": "npm",
+    "version": "3.0.0-beta.6",
+    "description": "Azure MCP Server - Model Context Protocol implementation for Azure",
+    "repo_url": "git+https://github.com/microsoft/mcp.git",
+    "maintainer": "microsoft1es",
+    "lang": "typescript"
+  },
+  {
+    "name": "@alchemy/mcp-server",
+    "registry": "npm",
+    "version": "0.3.0",
+    "description": "MCP server for using Alchemy APIs",
+    "repo_url": "git+https://github.com/alchemyplatform/alchemy-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@esaio/esa-mcp-server",
+    "registry": "npm",
+    "version": "0.7.1",
+    "description": "Official MCP server for esa.io - STDIO transport version",
+    "repo_url": "git+https://github.com/esaio/esa-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@upstash/mcp-server",
+    "registry": "npm",
+    "version": "0.2.3",
+    "description": "MCP server for Upstash",
+    "repo_url": "git+https://github.com/upstash/mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@github/computer-use-mcp",
+    "registry": "npm",
+    "version": "0.1.23",
+    "description": "Computer Use MCP Server",
+    "repo_url": "git+https://github.com/github/computer-use-mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@taazkareem/clickup-mcp-server",
+    "registry": "npm",
+    "version": "0.14.3",
+    "description": "ClickUp MCP Server - Powering AI Agents with full ClickUp task, document, and chat management capabilities.",
+    "repo_url": "git+https://github.com/taazkareem/clickup-mcp-server.git",
+    "maintainer": "taazkareem",
+    "lang": "typescript"
+  },
+  {
+    "name": "@cap-js/mcp-server",
+    "registry": "npm",
+    "version": "0.0.5",
+    "description": "Model Context Protocol (MCP) server for AI-assisted development of CAP applications.",
+    "repo_url": "git+https://github.com/cap-js/mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@aikidosec/mcp",
+    "registry": "npm",
+    "version": "1.0.5",
+    "description": "Aikido MCP server",
+    "repo_url": "",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "polaris-mcp-server",
+    "registry": "npm",
+    "version": "1.0.0",
+    "description": "Shopify Polaris UI Components MCP Server for AI assistants",
+    "repo_url": "git+https://github.com/shramiknakarmi/polaris-mcp-server.git",
+    "maintainer": "shramiknakarmi",
+    "lang": "typescript"
+  },
+  {
+    "name": "@amap/amap-maps-mcp-server",
+    "registry": "npm",
+    "version": "0.0.8",
+    "description": "MCP server for using the AMap Maps API",
+    "repo_url": "",
+    "maintainer": "duxiaohui",
+    "lang": "typescript"
+  },
+  {
+    "name": "slite-mcp-server",
+    "registry": "npm",
+    "version": "1.3.0",
+    "description": "'Slite MCP server'",
+    "repo_url": "",
+    "maintainer": "prenaudin",
+    "lang": "typescript"
+  },
+  {
+    "name": "codex-mcp-server",
+    "registry": "npm",
+    "version": "1.4.10",
+    "description": "MCP server wrapper for OpenAI Codex CLI",
+    "repo_url": "git+https://github.com/tuannvm/codex-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@salesforce/mcp",
+    "registry": "npm",
+    "version": "0.30.8",
+    "description": "MCP Server for interacting with Salesforce instances",
+    "repo_url": "git+https://github.com/salesforcecli/mcp.git",
+    "maintainer": "salesforce-releases",
+    "lang": "typescript"
+  },
+  {
+    "name": "@phantom/mcp-server",
+    "registry": "npm",
+    "version": "1.2.7",
+    "description": "MCP Server for Phantom Wallet",
+    "repo_url": "git+https://github.com/phantom/phantom-connect-sdk.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "argocd-mcp",
+    "registry": "npm",
+    "version": "0.5.0",
+    "description": "Argo CD MCP Server",
+    "repo_url": "git+https://github.com/argoproj-labs/mcp-for-argocd.git",
+    "maintainer": "akuitybot",
+    "lang": "typescript"
+  },
+  {
+    "name": "serper-search-scrape-mcp-server",
+    "registry": "npm",
+    "version": "0.1.2",
+    "description": "Serper MCP Server supporting search and webpage scraping",
+    "repo_url": "git+https://github.com/marcopesani/mcp-server-serper.git",
+    "maintainer": "marcopesani",
+    "lang": "typescript"
+  },
+  {
+    "name": "@gleanwork/mcp-server-utils",
+    "registry": "npm",
+    "version": "0.10.1",
+    "description": "Shared utilities for MCP server packages",
+    "repo_url": "git+ssh://git@github.com/gleanwork/mcp-server.git",
+    "maintainer": "rwjblue-glean",
+    "lang": "typescript"
+  },
+  {
+    "name": "@benborla29/mcp-server-mysql",
+    "registry": "npm",
+    "version": "2.0.8",
+    "description": "MCP server for interacting with MySQL databases with write operations support",
+    "repo_url": "",
+    "maintainer": "benborla29",
+    "lang": "typescript"
+  },
+  {
+    "name": "nx-mcp",
+    "registry": "npm",
+    "version": "0.25.0",
+    "description": "A Model Context Protocol server implementation for Nx",
+    "repo_url": "git+https://github.com/nrwl/nx-console.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "mongodb-mcp-server",
+    "registry": "npm",
+    "version": "1.10.0",
+    "description": "MongoDB Model Context Protocol Server",
+    "repo_url": "git+https://github.com/mongodb-js/mongodb-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-obsidian",
+    "registry": "npm",
+    "version": "1.0.0",
+    "description": "Model Context Protocol server for Obsidian Vaults",
+    "repo_url": "",
+    "maintainer": "calclavia",
+    "lang": "typescript"
+  },
+  {
+    "name": "middy-mcp",
+    "registry": "npm",
+    "version": "0.1.6",
+    "description": "Middy middleware for Model Context Protocol server",
+    "repo_url": "git+https://github.com/fredericbarthelet/middy-mcp.git",
+    "maintainer": "bartheletf",
+    "lang": "typescript"
+  },
+  {
+    "name": "@paperclipai/mcp-server",
+    "registry": "npm",
+    "version": "2026.428.0",
+    "description": "Model Context Protocol server for Paperclip.",
+    "repo_url": "git+https://github.com/paperclipai/paperclip.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@geobio/google-workspace-server",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "A Model Context Protocol server",
+    "repo_url": "",
+    "maintainer": "geobio",
+    "lang": "typescript"
+  },
+  {
+    "name": "@felores/airtable-mcp-server",
+    "registry": "npm",
+    "version": "0.3.0",
+    "description": "An Airtable Model Context Protocol Server",
+    "repo_url": "git+https://github.com/felores/airtable-mcp.git",
+    "maintainer": "felores",
+    "lang": "typescript"
+  },
+  {
+    "name": "@vantasdk/vanta-mcp-server",
+    "registry": "npm",
+    "version": "1.2.0",
+    "description": "Model Context Protocol server for Vanta's security compliance platform",
+    "repo_url": "git+https://github.com/VantaInc/vanta-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@forestadmin/mcp-server",
+    "registry": "npm",
+    "version": "1.11.7",
+    "description": "Model Context Protocol server for Forest Admin with OAuth authentication",
+    "repo_url": "git+https://github.com/ForestAdmin/agent-nodejs.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@rollbar/mcp-server",
+    "registry": "npm",
+    "version": "0.5.0",
+    "description": "Model Context Protocol server for Rollbar",
+    "repo_url": "git+https://github.com/rollbar/rollbar-mcp-server.git",
+    "maintainer": "brianr",
+    "lang": "typescript"
+  },
+  {
+    "name": "@agentdeskai/browser-tools-mcp",
+    "registry": "npm",
+    "version": "1.2.1",
+    "description": "MCP (Model Context Protocol) server for browser tools integration",
+    "repo_url": "",
+    "maintainer": "tedjames24",
+    "lang": "typescript"
+  },
+  {
+    "name": "@mseep/linear-mcp-server",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "A Model Context Protocol server for the Linear API.",
+    "repo_url": "git+https://github.com/modelcontextprotocol/linear-server.git",
+    "maintainer": "skydeckai",
+    "lang": "typescript"
+  },
+  {
+    "name": "european-parliament-mcp-server",
+    "registry": "npm",
+    "version": "1.2.18",
+    "description": "Model Context Protocol server for European Parliament open data",
+    "repo_url": "git+https://github.com/Hack23/European-Parliament-MCP-Server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@penclipai/mcp-server",
+    "registry": "npm",
+    "version": "2026.426.0",
+    "description": "Model Context Protocol server for Paperclip.",
+    "repo_url": "git+https://github.com/paperclipai/paperclip.git",
+    "maintainer": "penclipai",
+    "lang": "typescript"
+  },
+  {
+    "name": "@claude-flow/mcp",
+    "registry": "npm",
+    "version": "3.0.0-alpha.8",
+    "description": "Standalone MCP (Model Context Protocol) server - stdio/http/websocket transports, connection pooling, tool registry",
+    "repo_url": "",
+    "maintainer": "ruvnet",
+    "lang": "typescript"
+  },
+  {
+    "name": "@microsoft/devbox-mcp",
+    "registry": "npm",
+    "version": "0.0.3-alpha.4",
+    "description": "Model Context Protocol server for Microsoft Dev Box",
+    "repo_url": "",
+    "maintainer": "microsoft1es",
+    "lang": "typescript"
+  },
+  {
+    "name": "@vuetify/mcp",
+    "registry": "npm",
+    "version": "0.7.0",
+    "description": "Model Context Protocol server for Vuetify assistance",
+    "repo_url": "git+https://github.com/vuetifyjs/mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@contentful/mcp-server",
+    "registry": "npm",
+    "version": "1.7.15",
+    "description": "Contentful MCP Server - Model Context Protocol server for Contentful",
+    "repo_url": "git+https://github.com/contentful/contentful-mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@razorpay/blade-mcp",
+    "registry": "npm",
+    "version": "1.26.0",
+    "description": "Model Context Protocol server for Blade",
+    "repo_url": "git+ssh://git@github.com/razorpay/blade.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@cognitionai/metabase-mcp-server",
+    "registry": "npm",
+    "version": "1.0.14",
+    "description": "A Model Context Protocol server for Metabase integration",
+    "repo_url": "git+https://github.com/CognitionAI/metabase-mcp-server.git",
+    "maintainer": "marcosfede",
+    "lang": "typescript"
+  },
+  {
+    "name": "@iterable/mcp",
+    "registry": "npm",
+    "version": "1.7.2",
+    "description": "Model Context Protocol server for Iterable API",
+    "repo_url": "git+https://github.com/Iterable/mcp-server.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@zeddotdev/postgres-context-server",
+    "registry": "npm",
+    "version": "0.1.7",
+    "description": "a model context protocol server for postgres",
+    "repo_url": "git+https://github.com/zed-industries/postgres-context-server.git",
+    "maintainer": "conradirwin",
+    "lang": "typescript"
+  },
+  {
+    "name": "hyperbrowser-mcp",
+    "registry": "npm",
+    "version": "1.0.25",
+    "description": "Hyperbrowser Model Context Protocol Server",
+    "repo_url": "git+https://github.com/hyperbrowserai/mcp.git",
+    "maintainer": "a_harmless_pyro",
+    "lang": "typescript"
+  },
+  {
+    "name": "open-meteo-mcp-server",
+    "registry": "npm",
+    "version": "1.6.1",
+    "description": "Model Context Protocol server for Open-Meteo weather APIs",
+    "repo_url": "git+https://github.com/cmer81/open-meteo-mcp.git",
+    "maintainer": "cm3r",
+    "lang": "typescript"
+  },
+  {
+    "name": "xcodebuildmcp",
+    "registry": "npm",
+    "version": "2.3.2",
+    "description": "XcodeBuildMCP is a Model Context Protocol server that provides tools for Xcode project management, simulator management, and app utilities.",
+    "repo_url": "git+https://github.com/getsentry/XcodeBuildMCP.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "flightradar-mcp-server",
+    "registry": "npm",
+    "version": "0.1.2",
+    "description": "A Model Context Protocol server for flight tracking and status information",
+    "repo_url": "",
+    "maintainer": "skanda-yutori",
+    "lang": "typescript"
+  },
+  {
+    "name": "@easecloudio/mcp-metabase-server",
+    "registry": "npm",
+    "version": "1.0.5",
+    "description": "A Model Context Protocol server for Metabase integration",
+    "repo_url": "git+https://github.com/easecloudio/mcp-metabase-server.git",
+    "maintainer": "safoor.safdar",
+    "lang": "typescript"
+  },
+  {
+    "name": "awesome-copilot-mcp",
+    "registry": "npm",
+    "version": "0.7.9",
+    "description": "Model Context Protocol server for awesome-copilot agents and collections",
+    "repo_url": "git+https://github.com/RbBtSn0w/awesome-copilot-mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "bc-telemetry-buddy-mcp",
+    "registry": "npm",
+    "version": "3.3.12",
+    "description": "Model Context Protocol server for Business Central telemetry",
+    "repo_url": "",
+    "maintainer": "waldobc",
+    "lang": "typescript"
+  },
+  {
+    "name": "@burtthecoder/mcp-shodan",
+    "registry": "npm",
+    "version": "1.0.22",
+    "description": "A Model Context Protocol server for Shodan API queries.",
+    "repo_url": "git+https://github.com/BurtTheCoder/mcp-shodan.git",
+    "maintainer": "burtmacklin",
+    "lang": "typescript"
+  },
+  {
+    "name": "@okx_ai/okx-trade-mcp",
+    "registry": "npm",
+    "version": "1.3.2",
+    "description": "OKX MCP Server - Model Context Protocol server for OKX exchange",
+    "repo_url": "",
+    "maintainer": "oker_steve",
+    "lang": "typescript"
+  },
+  {
+    "name": "feishu-mcp",
+    "registry": "npm",
+    "version": "0.3.2",
+    "description": "Model Context Protocol server for Feishu integration",
+    "repo_url": "git+https://github.com/cso1z/Feishu-MCP.git",
+    "maintainer": "yonghuishen",
+    "lang": "typescript"
+  },
+  {
+    "name": "@gongrzhe/server-calendar-autoauth-mcp",
+    "registry": "npm",
+    "version": "1.0.2",
+    "description": "A Model Context Protocol server for Google Calendar integration with auto authentication",
+    "repo_url": "git+https://github.com/gongrzhe/server-calendar-autoauth-mcp.git",
+    "maintainer": "gongrzhe",
+    "lang": "typescript"
+  },
+  {
+    "name": "@insforge/mcp",
+    "registry": "npm",
+    "version": "1.2.10",
+    "description": "MCP (Model Context Protocol) server for Insforge backend-as-a-service",
+    "repo_url": "git+https://github.com/InsForge/insforge-mcp.git",
+    "maintainer": "fermioniclyu",
+    "lang": "typescript"
+  },
+  {
+    "name": "linear-mcp-server",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "A Model Context Protocol server for the Linear API.",
+    "repo_url": "git+https://github.com/modelcontextprotocol/linear-server.git",
+    "maintainer": "jerhadf",
+    "lang": "typescript"
+  },
+  {
+    "name": "@k8ika0s/mcp-tmux",
+    "registry": "npm",
+    "version": "0.1.10",
+    "description": "Model Context Protocol server that lets LLMs collaboratively drive tmux",
+    "repo_url": "git+https://github.com/k8ika0s/mcp-tmux.git",
+    "maintainer": "k8ika0s",
+    "lang": "typescript"
+  },
+  {
+    "name": "git-mcp-server",
+    "registry": "npm",
+    "version": "1.0.0",
+    "description": "A Model Context Protocol server",
+    "repo_url": "",
+    "maintainer": "tusharsoni",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp-postgres",
+    "registry": "npm",
+    "version": "1.2.1",
+    "description": "Model Context Protocol server for PostgreSQL database operations",
+    "repo_url": "git+https://github.com/kristofer84/mcp-postgres.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "meta-ads-mcp",
+    "registry": "npm",
+    "version": "1.1.0",
+    "description": "Model Context Protocol server for Meta Marketing API integration",
+    "repo_url": "",
+    "maintainer": "brijr",
+    "lang": "typescript"
+  },
+  {
+    "name": "neurodivergent-memory",
+    "registry": "npm",
+    "version": "0.3.9",
+    "description": "A Model Context Protocol server for knowledge graphs designed around neurodivergent thinking patterns",
+    "repo_url": "git+https://github.com/jmeyer1980/neurodivergent-memory.git",
+    "maintainer": "bellok",
+    "lang": "typescript"
+  },
+  {
+    "name": "@channel.io/tolgee-mcp",
+    "registry": "npm",
+    "version": "1.0.1",
+    "description": "Model Context Protocol server for Tolgee integration",
+    "repo_url": "git+https://github.com/channel-io/ch-mcp-tools.git",
+    "maintainer": "zoyi",
+    "lang": "typescript"
+  },
+  {
+    "name": "@grackle-ai/mcp",
+    "registry": "npm",
+    "version": "0.108.1",
+    "description": "MCP (Model Context Protocol) server for Grackle \u2014 translates MCP tool calls to ConnectRPC",
+    "repo_url": "git+https://github.com/nick-pape/grackle.git",
+    "maintainer": "nickpape",
+    "lang": "typescript"
+  },
+  {
+    "name": "powerplatform-mcp",
+    "registry": "npm",
+    "version": "2.3.0",
+    "description": "PowerPlatform Model Context Protocol server",
+    "repo_url": "git+https://github.com/michsob/powerplatform-mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@taiga-ui/mcp",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "Model Context Protocol server providing Taiga UI documentation search and scaffolding tools.",
+    "repo_url": "git+https://github.com/taiga-family/taiga-ui-mcp.git",
+    "maintainer": "nsbarsukov",
+    "lang": "typescript"
+  },
+  {
+    "name": "@testomatio/mcp",
+    "registry": "npm",
+    "version": "2.0.1",
+    "description": "Model Context Protocol server for Testomatio API",
+    "repo_url": "git+https://github.com/testomatio/mcp.git",
+    "maintainer": "GitHub Actions",
+    "lang": "typescript"
+  },
+  {
+    "name": "@adenot/mcp-google-search",
+    "registry": "npm",
+    "version": "0.3.1",
+    "description": "A Model Context Protocol server for Google Search",
+    "repo_url": "",
+    "maintainer": "adenot",
+    "lang": "typescript"
+  },
+  {
+    "name": "newrelic-mcp",
+    "registry": "npm",
+    "version": "2.0.0",
+    "description": "Model Context Protocol server for New Relic observability platform integration",
+    "repo_url": "git+https://github.com/cloudbring/newrelic-mcp.git",
+    "maintainer": "cloudbring",
+    "lang": "typescript"
+  },
+  {
+    "name": "@f4ww4z/mcp-mysql-server",
+    "registry": "npm",
+    "version": "0.1.0",
+    "description": "A Model Context Protocol server for MySQL database operations",
+    "repo_url": "git+https://github.com/f4ww4z/mcp-mysql-server.git",
+    "maintainer": "f4ww4z",
+    "lang": "typescript"
+  },
+  {
+    "name": "jason-mcp-nextjs",
+    "registry": "npm",
+    "version": "0.1.22",
+    "description": "Model Context Protocol server for Next.js projects",
+    "repo_url": "",
+    "maintainer": "jasonbcn0919",
+    "lang": "typescript"
+  },
+  {
+    "name": "mcp",
+    "registry": "pypi",
+    "version": "1.27.0",
+    "description": "Model Context Protocol SDK",
+    "repo_url": "https://github.com/modelcontextprotocol/python-sdk",
+    "maintainer": "Anthropic, PBC.",
+    "lang": "python"
+  },
+  {
+    "name": "mcp-server-docker",
+    "registry": "pypi",
+    "version": "0.2.1",
+    "description": "A Docker MCP Server",
+    "repo_url": "https://github.com/ckreiling/mcp-server-docker",
+    "maintainer": null,
+    "lang": "python"
+  },
+  {
+    "name": "mcp-server-jira",
+    "registry": "pypi",
+    "version": "0.1.1",
+    "description": "A Model Context Protocol server providing Jira integration tools for LLMs",
+    "repo_url": "https://github.com/your-username/mcp-jira-v3",
+    "maintainer": null,
+    "lang": "python"
+  },
+  {
+    "name": "awesome-mcp-servers",
+    "registry": "github",
+    "version": "",
+    "description": "A collection of MCP servers.",
+    "repo_url": "https://github.com/punkpeye/awesome-mcp-servers",
+    "maintainer": "punkpeye",
+    "lang": "unknown",
+    "stars": 86062,
+    "updated_at": "2026-05-01T13:09:37Z"
+  },
+  {
+    "name": "playwright-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "Playwright MCP server",
+    "repo_url": "https://github.com/microsoft/playwright-mcp",
+    "maintainer": "microsoft",
+    "lang": "typescript",
+    "stars": 31873,
+    "updated_at": "2026-05-01T12:55:24Z"
+  },
+  {
+    "name": "github-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "GitHub's official MCP Server",
+    "repo_url": "https://github.com/github/github-mcp-server",
+    "maintainer": "github",
+    "lang": "go",
+    "stars": 29418,
+    "updated_at": "2026-05-01T12:56:07Z"
+  },
+  {
+    "name": "whatsapp-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "WhatsApp MCP server",
+    "repo_url": "https://github.com/lharries/whatsapp-mcp",
+    "maintainer": "lharries",
+    "lang": "go",
+    "stars": 5565,
+    "updated_at": "2026-04-30T16:37:33Z"
+  },
+  {
+    "name": "awesome-mcp-servers",
+    "registry": "github",
+    "version": "",
+    "description": "Awesome MCP Servers - A curated list of Model Context Protocol servers",
+    "repo_url": "https://github.com/appcypher/awesome-mcp-servers",
+    "maintainer": "appcypher",
+    "lang": "unknown",
+    "stars": 5505,
+    "updated_at": "2026-04-30T17:28:34Z"
+  },
+  {
+    "name": "pal-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter / Azure / Grok / Ollama / Custom Model / All Of The Above] working as one.",
+    "repo_url": "https://github.com/BeehiveInnovations/pal-mcp-server",
+    "maintainer": "BeehiveInnovations",
+    "lang": "python",
+    "stars": 11493,
+    "updated_at": "2026-05-01T13:13:53Z"
+  },
+  {
+    "name": "awesome-mcp-servers",
+    "registry": "github",
+    "version": "",
+    "description": "A curated list of Model Context Protocol (MCP) servers",
+    "repo_url": "https://github.com/wong2/awesome-mcp-servers",
+    "maintainer": "wong2",
+    "lang": "unknown",
+    "stars": 4028,
+    "updated_at": "2026-05-01T06:06:42Z"
+  },
+  {
+    "name": "mcp",
+    "registry": "github",
+    "version": "",
+    "description": "Official MCP Servers for AWS",
+    "repo_url": "https://github.com/awslabs/mcp",
+    "maintainer": "awslabs",
+    "lang": "python",
+    "stars": 8923,
+    "updated_at": "2026-05-01T11:08:06Z"
+  },
+  {
+    "name": "GhidraMCP",
+    "registry": "github",
+    "version": "",
+    "description": "MCP Server for Ghidra",
+    "repo_url": "https://github.com/LaurieWired/GhidraMCP",
+    "maintainer": "LaurieWired",
+    "lang": "java",
+    "stars": 8717,
+    "updated_at": "2026-05-01T12:19:42Z"
+  },
+  {
+    "name": "Awesome-MCP-ZH",
+    "registry": "github",
+    "version": "",
+    "description": "MCP \u8d44\u6e90\u7cbe\u9009\uff0c MCP\u6307\u5357\uff0cClaude MCP\uff0cMCP Servers, MCP Clients",
+    "repo_url": "https://github.com/yzfly/Awesome-MCP-ZH",
+    "maintainer": "yzfly",
+    "lang": "unknown",
+    "stars": 6971,
+    "updated_at": "2026-05-01T11:31:43Z"
+  },
+  {
+    "name": "firecrawl-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "\ud83d\udd25 Official Firecrawl MCP Server - Adds powerful web scraping and search to Cursor, Claude and any other LLM clients.",
+    "repo_url": "https://github.com/firecrawl/firecrawl-mcp-server",
+    "maintainer": "firecrawl",
+    "lang": "typescript",
+    "stars": 6190,
+    "updated_at": "2026-05-01T13:27:38Z"
+  },
+  {
+    "name": "inspector",
+    "registry": "github",
+    "version": "",
+    "description": "Visual testing tool for MCP servers",
+    "repo_url": "https://github.com/modelcontextprotocol/inspector",
+    "maintainer": "modelcontextprotocol",
+    "lang": "typescript",
+    "stars": 9624,
+    "updated_at": "2026-05-01T07:38:31Z"
+  },
+  {
+    "name": "mcp-toolbox",
+    "registry": "github",
+    "version": "",
+    "description": "MCP Toolbox for Databases is an open source MCP server for databases.",
+    "repo_url": "https://github.com/googleapis/mcp-toolbox",
+    "maintainer": "googleapis",
+    "lang": "go",
+    "stars": 14891,
+    "updated_at": "2026-05-01T12:09:06Z"
+  },
+  {
+    "name": "notion-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Official Notion MCP Server",
+    "repo_url": "https://github.com/makenotion/notion-mcp-server",
+    "maintainer": "makenotion",
+    "lang": "typescript",
+    "stars": 4283,
+    "updated_at": "2026-04-30T22:09:39Z"
+  },
+  {
+    "name": "activepieces",
+    "registry": "github",
+    "version": "",
+    "description": "AI Agents & MCPs & AI Workflow Automation \u2022 (~400 MCP servers for AI agents) \u2022 AI Automation / AI Agent with MCPs \u2022 AI Workflows & AI Agents \u2022 MCPs for AI Agents",
+    "repo_url": "https://github.com/activepieces/activepieces",
+    "maintainer": "activepieces",
+    "lang": "typescript",
+    "stars": 22004,
+    "updated_at": "2026-05-01T12:46:28Z"
+  },
+  {
+    "name": "mcp-use",
+    "registry": "github",
+    "version": "",
+    "description": "The fullstack MCP framework to develop MCP Apps for ChatGPT / Claude & MCP Servers for AI Agents.",
+    "repo_url": "https://github.com/mcp-use/mcp-use",
+    "maintainer": "mcp-use",
+    "lang": "typescript",
+    "stars": 9861,
+    "updated_at": "2026-05-01T07:53:31Z"
+  },
+  {
+    "name": "mcp-server-chart",
+    "registry": "github",
+    "version": "",
+    "description": "\ud83e\udd16 A visualization mcp & skills contains 25+ visual charts using @antvis. Using for chart generation and data analysis.",
+    "repo_url": "https://github.com/antvis/mcp-server-chart",
+    "maintainer": "antvis",
+    "lang": "typescript",
+    "stars": 4026,
+    "updated_at": "2026-05-01T03:38:24Z"
+  },
+  {
+    "name": "excel-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol server for Excel file manipulation",
+    "repo_url": "https://github.com/haris-musa/excel-mcp-server",
+    "maintainer": "haris-musa",
+    "lang": "python",
+    "stars": 3777,
+    "updated_at": "2026-05-01T05:39:17Z"
+  },
+  {
+    "name": "directories",
+    "registry": "github",
+    "version": "",
+    "description": "Find rules and MCP servers",
+    "repo_url": "https://github.com/leerob/directories",
+    "maintainer": "leerob",
+    "lang": "typescript",
+    "stars": 3926,
+    "updated_at": "2026-04-30T14:22:06Z"
+  },
+  {
+    "name": "mcp-server-cloudflare",
+    "registry": "github",
+    "version": "",
+    "description": "",
+    "repo_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "maintainer": "cloudflare",
+    "lang": "typescript",
+    "stars": 3679,
+    "updated_at": "2026-05-01T11:29:06Z"
+  },
+  {
+    "name": "mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "An MCP server for interacting with the Financial Datasets stock market API.",
+    "repo_url": "https://github.com/financial-datasets/mcp-server",
+    "maintainer": "financial-datasets",
+    "lang": "python",
+    "stars": 2057,
+    "updated_at": "2026-05-01T07:30:48Z"
+  },
+  {
+    "name": "exa-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Exa MCP for web search and web crawling!",
+    "repo_url": "https://github.com/exa-labs/exa-mcp-server",
+    "maintainer": "exa-labs",
+    "lang": "typescript",
+    "stars": 4365,
+    "updated_at": "2026-05-01T10:41:49Z"
+  },
+  {
+    "name": "mcp-server-browserbase",
+    "registry": "github",
+    "version": "",
+    "description": "Allow LLMs to control a browser with Browserbase and Stagehand",
+    "repo_url": "https://github.com/browserbase/mcp-server-browserbase",
+    "maintainer": "browserbase",
+    "lang": "typescript",
+    "stars": 3301,
+    "updated_at": "2026-04-30T21:16:07Z"
+  },
+  {
+    "name": "mcp-grafana",
+    "registry": "github",
+    "version": "",
+    "description": "MCP server for Grafana",
+    "repo_url": "https://github.com/grafana/mcp-grafana",
+    "maintainer": "grafana",
+    "lang": "go",
+    "stars": 2944,
+    "updated_at": "2026-05-01T11:10:07Z"
+  },
+  {
+    "name": "awesome-remote-mcp-servers",
+    "registry": "github",
+    "version": "",
+    "description": "Remote MCP Servers",
+    "repo_url": "https://github.com/jaw9c/awesome-remote-mcp-servers",
+    "maintainer": "jaw9c",
+    "lang": "unknown",
+    "stars": 1052,
+    "updated_at": "2026-05-01T03:36:17Z"
+  },
+  {
+    "name": "mcp-atlassian",
+    "registry": "github",
+    "version": "",
+    "description": "MCP server for Atlassian tools (Confluence, Jira)",
+    "repo_url": "https://github.com/sooperset/mcp-atlassian",
+    "maintainer": "sooperset",
+    "lang": "python",
+    "stars": 5084,
+    "updated_at": "2026-05-01T11:02:54Z"
+  },
+  {
+    "name": "linkedin-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Open-source MCP server for LinkedIn. Give Claude and any MCP-compatible AI assistant access to profiles, companies, jobs, and messages.",
+    "repo_url": "https://github.com/stickerdaniel/linkedin-mcp-server",
+    "maintainer": "stickerdaniel",
+    "lang": "python",
+    "stars": 1721,
+    "updated_at": "2026-05-01T12:31:15Z"
+  },
+  {
+    "name": "kubernetes-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol (MCP) server for Kubernetes and OpenShift",
+    "repo_url": "https://github.com/containers/kubernetes-mcp-server",
+    "maintainer": "containers",
+    "lang": "go",
+    "stars": 1515,
+    "updated_at": "2026-04-30T22:38:55Z"
+  },
+  {
+    "name": "Gmail-MCP-Server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol (MCP) server for Gmail integration in Claude Desktop with auto authentication support. This server enables AI assistants to manage Gmail through natural language interactions.",
+    "repo_url": "https://github.com/GongRzhe/Gmail-MCP-Server",
+    "maintainer": "GongRzhe",
+    "lang": "typescript",
+    "stars": 1102,
+    "updated_at": "2026-05-01T13:11:34Z"
+  },
+  {
+    "name": "mcp-installer",
+    "registry": "github",
+    "version": "",
+    "description": "An MCP server that installs other MCP servers for you",
+    "repo_url": "https://github.com/anaisbetts/mcp-installer",
+    "maintainer": "anaisbetts",
+    "lang": "typescript",
+    "stars": 1520,
+    "updated_at": "2026-05-01T10:17:00Z"
+  },
+  {
+    "name": "slack-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "The most powerful MCP Slack Server with no permission requirements, Apps support, GovSlack, DMs, Group DMs and smart history fetch logic.",
+    "repo_url": "https://github.com/korotovsky/slack-mcp-server",
+    "maintainer": "korotovsky",
+    "lang": "go",
+    "stars": 1572,
+    "updated_at": "2026-05-01T06:02:16Z"
+  },
+  {
+    "name": "Windows-MCP",
+    "registry": "github",
+    "version": "",
+    "description": "MCP Server for Computer Use in Windows",
+    "repo_url": "https://github.com/CursorTouch/Windows-MCP",
+    "maintainer": "CursorTouch",
+    "lang": "python",
+    "stars": 5431,
+    "updated_at": "2026-05-01T13:18:10Z"
+  },
+  {
+    "name": "arxiv-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol server for searching and analyzing arXiv papers",
+    "repo_url": "https://github.com/blazickjp/arxiv-mcp-server",
+    "maintainer": "blazickjp",
+    "lang": "python",
+    "stars": 2634,
+    "updated_at": "2026-05-01T12:30:41Z"
+  },
+  {
+    "name": "shadcn-ui-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A mcp server to allow LLMS gain context about shadcn ui component structure,usage and installation,compaitable with react,svelte 5,vue & React Native",
+    "repo_url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+    "maintainer": "Jpisnice",
+    "lang": "typescript",
+    "stars": 2757,
+    "updated_at": "2026-05-01T03:54:55Z"
+  },
+  {
+    "name": "fastmcp",
+    "registry": "github",
+    "version": "",
+    "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients.",
+    "repo_url": "https://github.com/PrefectHQ/fastmcp",
+    "maintainer": "PrefectHQ",
+    "lang": "python",
+    "stars": 24936,
+    "updated_at": "2026-05-01T12:54:48Z"
+  },
+  {
+    "name": "mcp-server-qdrant",
+    "registry": "github",
+    "version": "",
+    "description": "An official Qdrant Model Context Protocol (MCP) server implementation",
+    "repo_url": "https://github.com/qdrant/mcp-server-qdrant",
+    "maintainer": "qdrant",
+    "lang": "python",
+    "stars": 1377,
+    "updated_at": "2026-04-30T11:12:00Z"
+  },
+  {
+    "name": "mcp-server-kubernetes",
+    "registry": "github",
+    "version": "",
+    "description": "MCP Server for kubernetes management commands",
+    "repo_url": "https://github.com/Flux159/mcp-server-kubernetes",
+    "maintainer": "Flux159",
+    "lang": "typescript",
+    "stars": 1383,
+    "updated_at": "2026-04-29T15:26:13Z"
+  },
+  {
+    "name": "awesome-mcp-servers",
+    "registry": "github",
+    "version": "",
+    "description": "A comprehensive collection of Model Context Protocol (MCP) servers",
+    "repo_url": "https://github.com/TensorBlock/awesome-mcp-servers",
+    "maintainer": "TensorBlock",
+    "lang": "unknown",
+    "stars": 653,
+    "updated_at": "2026-04-30T19:46:02Z"
+  },
+  {
+    "name": "mysql_mcp_server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol (MCP) server that enables secure interaction with MySQL databases",
+    "repo_url": "https://github.com/designcomputer/mysql_mcp_server",
+    "maintainer": "designcomputer",
+    "lang": "python",
+    "stars": 1241,
+    "updated_at": "2026-04-30T14:15:54Z"
+  },
+  {
+    "name": "mcp-server-mysql",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol server that provides read-only access to MySQL databases. This server enables LLMs to inspect database schemas and execute read-only queries.",
+    "repo_url": "https://github.com/benborla/mcp-server-mysql",
+    "maintainer": "benborla",
+    "lang": "typescript",
+    "stars": 1603,
+    "updated_at": "2026-04-30T10:00:58Z"
+  },
+  {
+    "name": "Office-Word-MCP-Server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, ",
+    "repo_url": "https://github.com/GongRzhe/Office-Word-MCP-Server",
+    "maintainer": "GongRzhe",
+    "lang": "python",
+    "stars": 1907,
+    "updated_at": "2026-05-01T10:20:15Z"
+  },
+  {
+    "name": "mongodb-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol server to connect to MongoDB databases and MongoDB Atlas Clusters.",
+    "repo_url": "https://github.com/mongodb-js/mongodb-mcp-server",
+    "maintainer": "mongodb-js",
+    "lang": "typescript",
+    "stars": 1012,
+    "updated_at": "2026-04-30T02:50:55Z"
+  },
+  {
+    "name": "cocos-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "\u4e00\u6b3e\u5168\u9762\u7684\u3001\u4fbf\u6377\u7684cocos creator AI MCP\u670d\u52a1\u63d2\u4ef6\uff0c\u9002\u7528\u4e8e3.8.0\u4ee5\u4e0acocos\u7248\u672c\uff0c\u4e00\u952e\u5b89\u88c5\uff0c\u4e00\u952e\u542f\u52a8\u3002A comprehensive and convenient cocos creator AI MCP service plug-in, suitable for cocos versions above 3.8.0, one-click installation and o",
+    "repo_url": "https://github.com/DaxianLee/cocos-mcp-server",
+    "maintainer": "DaxianLee",
+    "lang": "typescript",
+    "stars": 855,
+    "updated_at": "2026-05-01T05:53:19Z"
+  },
+  {
+    "name": "mcp-router",
+    "registry": "github",
+    "version": "",
+    "description": "A Unified MCP Server Management App (MCP Manager).",
+    "repo_url": "https://github.com/mcp-router/mcp-router",
+    "maintainer": "mcp-router",
+    "lang": "typescript",
+    "stars": 1988,
+    "updated_at": "2026-05-01T04:59:58Z"
+  },
+  {
+    "name": "douyin-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "\u63d0\u53d6\u6296\u97f3\u65e0\u6c34\u5370\u89c6\u9891\u94fe\u63a5\uff0c\u89c6\u9891\u6587\u6848\uff0cdouyin-mcp-server\uff0cmcp\uff0cclaude skill\uff0c\u652f\u6301\u9f99\u867e",
+    "repo_url": "https://github.com/yzfly/douyin-mcp-server",
+    "maintainer": "yzfly",
+    "lang": "html",
+    "stars": 962,
+    "updated_at": "2026-05-01T01:05:07Z"
+  },
+  {
+    "name": "ros-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Connect AI models like Claude & GPT with robots using MCP and ROS.",
+    "repo_url": "https://github.com/robotmcp/ros-mcp-server",
+    "maintainer": "robotmcp",
+    "lang": "python",
+    "stars": 1196,
+    "updated_at": "2026-05-01T05:07:38Z"
+  },
+  {
+    "name": "alpaca-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Alpaca\u2019s official MCP Server lets you trade stocks, ETFs, crypto, and options, run data analysis, and build strategies in plain English directly from your favorite LLM tools and IDEs",
+    "repo_url": "https://github.com/alpacahq/alpaca-mcp-server",
+    "maintainer": "alpacahq",
+    "lang": "python",
+    "stars": 690,
+    "updated_at": "2026-05-01T03:35:35Z"
+  },
+  {
+    "name": "terraform-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "The Terraform MCP Server provides seamless integration with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development.",
+    "repo_url": "https://github.com/hashicorp/terraform-mcp-server",
+    "maintainer": "hashicorp",
+    "lang": "go",
+    "stars": 1350,
+    "updated_at": "2026-05-01T11:07:50Z"
+  },
+  {
+    "name": "n8n-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "MCP server that provides tools and resources for interacting with n8n API",
+    "repo_url": "https://github.com/leonardsellem/n8n-mcp-server",
+    "maintainer": "leonardsellem",
+    "lang": "typescript",
+    "stars": 1608,
+    "updated_at": "2026-04-30T18:06:33Z"
+  },
+  {
+    "name": "awesome-devops-mcp-servers",
+    "registry": "github",
+    "version": "",
+    "description": "A curated list of awesome MCP servers focused on DevOps tools and capabilities.",
+    "repo_url": "https://github.com/rohitg00/awesome-devops-mcp-servers",
+    "maintainer": "rohitg00",
+    "lang": "unknown",
+    "stars": 979,
+    "updated_at": "2026-04-28T01:28:31Z"
+  },
+  {
+    "name": "servers",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol Servers",
+    "repo_url": "https://github.com/modelcontextprotocol/servers",
+    "maintainer": "modelcontextprotocol",
+    "lang": "typescript",
+    "stars": 84868,
+    "updated_at": "2026-05-01T13:29:12Z"
+  },
+  {
+    "name": "python-sdk",
+    "registry": "github",
+    "version": "",
+    "description": "The official Python SDK for Model Context Protocol servers and clients",
+    "repo_url": "https://github.com/modelcontextprotocol/python-sdk",
+    "maintainer": "modelcontextprotocol",
+    "lang": "python",
+    "stars": 22840,
+    "updated_at": "2026-05-01T11:41:25Z"
+  },
+  {
+    "name": "typescript-sdk",
+    "registry": "github",
+    "version": "",
+    "description": "The official TypeScript SDK for Model Context Protocol servers and clients",
+    "repo_url": "https://github.com/modelcontextprotocol/typescript-sdk",
+    "maintainer": "modelcontextprotocol",
+    "lang": "typescript",
+    "stars": 12319,
+    "updated_at": "2026-05-01T12:26:02Z"
+  },
+  {
+    "name": "mcp-neo4j",
+    "registry": "github",
+    "version": "",
+    "description": "Neo4j Labs Model Context Protocol servers",
+    "repo_url": "https://github.com/neo4j-contrib/mcp-neo4j",
+    "maintainer": "neo4j-contrib",
+    "lang": "python",
+    "stars": 941,
+    "updated_at": "2026-04-29T16:48:34Z"
+  },
+  {
+    "name": "registry",
+    "registry": "github",
+    "version": "",
+    "description": "A community driven registry service for Model Context Protocol (MCP) servers.",
+    "repo_url": "https://github.com/modelcontextprotocol/registry",
+    "maintainer": "modelcontextprotocol",
+    "lang": "go",
+    "stars": 6756,
+    "updated_at": "2026-05-01T09:18:58Z"
+  },
+  {
+    "name": "freecad-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "FreeCAD MCP(Model Context Protocol) server",
+    "repo_url": "https://github.com/neka-nat/freecad-mcp",
+    "maintainer": "neka-nat",
+    "lang": "python",
+    "stars": 873,
+    "updated_at": "2026-05-01T12:23:05Z"
+  },
+  {
+    "name": "drawio-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Draw.io Model Context Protocol (MCP) Server",
+    "repo_url": "https://github.com/lgazo/drawio-mcp-server",
+    "maintainer": "lgazo",
+    "lang": "typescript",
+    "stars": 1187,
+    "updated_at": "2026-05-01T11:20:14Z"
+  },
+  {
+    "name": "server",
+    "registry": "github",
+    "version": "",
+    "description": "Core PHP implementation for the Model Context Protocol (MCP) server",
+    "repo_url": "https://github.com/php-mcp/server",
+    "maintainer": "php-mcp",
+    "lang": "php",
+    "stars": 835,
+    "updated_at": "2026-04-26T16:07:02Z"
+  },
+  {
+    "name": "jupyter-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "\ud83e\ude90 \ud83d\udd27 Model Context Protocol (MCP) Server for Jupyter.",
+    "repo_url": "https://github.com/datalayer/jupyter-mcp-server",
+    "maintainer": "datalayer",
+    "lang": "python",
+    "stars": 1049,
+    "updated_at": "2026-05-01T13:00:11Z"
+  },
+  {
+    "name": "Awesome-MCP-Servers",
+    "registry": "github",
+    "version": "",
+    "description": "A curated list of Model Context Protocol (MCP) servers ",
+    "repo_url": "https://github.com/YuzeHao2023/Awesome-MCP-Servers",
+    "maintainer": "YuzeHao2023",
+    "lang": "unknown",
+    "stars": 1041,
+    "updated_at": "2026-04-15T16:08:14Z"
+  },
+  {
+    "name": "quickstart-resources",
+    "registry": "github",
+    "version": "",
+    "description": "A repository of servers and clients from the Model Context Protocol tutorials",
+    "repo_url": "https://github.com/modelcontextprotocol/quickstart-resources",
+    "maintainer": "modelcontextprotocol",
+    "lang": "go",
+    "stars": 1077,
+    "updated_at": "2026-04-30T18:56:06Z"
+  },
+  {
+    "name": "markdownify-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol server for converting almost anything to Markdown",
+    "repo_url": "https://github.com/zcaceres/markdownify-mcp",
+    "maintainer": "zcaceres",
+    "lang": "typescript",
+    "stars": 2621,
+    "updated_at": "2026-05-01T00:12:46Z"
+  },
+  {
+    "name": "fetch-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "A flexible HTTP fetching Model Context Protocol server.",
+    "repo_url": "https://github.com/zcaceres/fetch-mcp",
+    "maintainer": "zcaceres",
+    "lang": "typescript",
+    "stars": 744,
+    "updated_at": "2026-05-01T10:56:31Z"
+  },
+  {
+    "name": "run-model-context-protocol-servers-with-aws-lambda",
+    "registry": "github",
+    "version": "",
+    "description": "Run existing Model Context Protocol (MCP) stdio-based servers in AWS Lambda functions",
+    "repo_url": "https://github.com/awslabs/run-model-context-protocol-servers-with-aws-lambda",
+    "maintainer": "awslabs",
+    "lang": "python",
+    "stars": 362,
+    "updated_at": "2026-04-29T20:39:07Z"
+  },
+  {
+    "name": "ida-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol server for IDA",
+    "repo_url": "https://github.com/MxIris-Reverse-Engineering/ida-mcp-server",
+    "maintainer": "MxIris-Reverse-Engineering",
+    "lang": "python",
+    "stars": 543,
+    "updated_at": "2026-04-30T14:54:56Z"
+  },
+  {
+    "name": "mcp-server-milvus",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol Servers for Milvus",
+    "repo_url": "https://github.com/zilliztech/mcp-server-milvus",
+    "maintainer": "zilliztech",
+    "lang": "python",
+    "stars": 230,
+    "updated_at": "2026-04-29T03:05:32Z"
+  },
+  {
+    "name": "csharp-sdk",
+    "registry": "github",
+    "version": "",
+    "description": "The official C# SDK for Model Context Protocol servers and clients. Maintained in collaboration with Microsoft.",
+    "repo_url": "https://github.com/modelcontextprotocol/csharp-sdk",
+    "maintainer": "modelcontextprotocol",
+    "lang": "c#",
+    "stars": 4230,
+    "updated_at": "2026-05-01T10:56:10Z"
+  },
+  {
+    "name": "mcp-filesystem-server",
+    "registry": "github",
+    "version": "",
+    "description": "Go server implementing Model Context Protocol (MCP) for filesystem operations.",
+    "repo_url": "https://github.com/mark3labs/mcp-filesystem-server",
+    "maintainer": "mark3labs",
+    "lang": "go",
+    "stars": 639,
+    "updated_at": "2026-04-30T21:19:51Z"
+  },
+  {
+    "name": "swift-sdk",
+    "registry": "github",
+    "version": "",
+    "description": "The official Swift SDK for Model Context Protocol servers and clients.",
+    "repo_url": "https://github.com/modelcontextprotocol/swift-sdk",
+    "maintainer": "modelcontextprotocol",
+    "lang": "swift",
+    "stars": 1368,
+    "updated_at": "2026-05-01T10:55:04Z"
+  },
+  {
+    "name": "mcp-graphql",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol server for GraphQL",
+    "repo_url": "https://github.com/blurrah/mcp-graphql",
+    "maintainer": "blurrah",
+    "lang": "typescript",
+    "stars": 383,
+    "updated_at": "2026-04-30T03:05:31Z"
+  },
+  {
+    "name": "model-context-protocol-resources",
+    "registry": "github",
+    "version": "",
+    "description": "Exploring the Model Context Protocol (MCP) through practical guides, clients, and servers I've built while learning about this new protocol.",
+    "repo_url": "https://github.com/cyanheads/model-context-protocol-resources",
+    "maintainer": "cyanheads",
+    "lang": "unknown",
+    "stars": 278,
+    "updated_at": "2026-04-23T08:44:02Z"
+  },
+  {
+    "name": "MCP-Server",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol",
+    "repo_url": "https://github.com/BilgisayarKavramlari/MCP-Server",
+    "maintainer": "BilgisayarKavramlari",
+    "lang": "python",
+    "stars": 18,
+    "updated_at": "2026-04-29T10:54:12Z"
+  },
+  {
+    "name": "java-sdk",
+    "registry": "github",
+    "version": "",
+    "description": "The official Java SDK for Model Context Protocol servers and clients. Maintained in collaboration with Spring AI",
+    "repo_url": "https://github.com/modelcontextprotocol/java-sdk",
+    "maintainer": "modelcontextprotocol",
+    "lang": "java",
+    "stars": 3390,
+    "updated_at": "2026-05-01T10:55:47Z"
+  },
+  {
+    "name": "mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Mapbox Model Context Protocol (MCP) server",
+    "repo_url": "https://github.com/mapbox/mcp-server",
+    "maintainer": "mapbox",
+    "lang": "typescript",
+    "stars": 335,
+    "updated_at": "2026-04-25T21:05:56Z"
+  },
+  {
+    "name": "quarkus-mcp-servers",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol Servers in Quarkus",
+    "repo_url": "https://github.com/quarkiverse/quarkus-mcp-servers",
+    "maintainer": "quarkiverse",
+    "lang": "java",
+    "stars": 188,
+    "updated_at": "2026-04-17T07:08:35Z"
+  },
+  {
+    "name": "mcp-mongo-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol Server for MongoDB",
+    "repo_url": "https://github.com/kiliczsh/mcp-mongo-server",
+    "maintainer": "kiliczsh",
+    "lang": "typescript",
+    "stars": 278,
+    "updated_at": "2026-04-27T18:35:31Z"
+  },
+  {
+    "name": "mcp-youtube",
+    "registry": "github",
+    "version": "",
+    "description": "A Model-Context Protocol Server for YouTube",
+    "repo_url": "https://github.com/anaisbetts/mcp-youtube",
+    "maintainer": "anaisbetts",
+    "lang": "typescript",
+    "stars": 515,
+    "updated_at": "2026-04-21T10:23:07Z"
+  },
+  {
+    "name": "mcp-server-starrocks",
+    "registry": "github",
+    "version": "",
+    "description": "StarRocks MCP (Model Context Protocol) Server",
+    "repo_url": "https://github.com/StarRocks/mcp-server-starrocks",
+    "maintainer": "StarRocks",
+    "lang": "python",
+    "stars": 169,
+    "updated_at": "2026-04-27T09:25:10Z"
+  },
+  {
+    "name": "mobile-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol Server for Mobile Automation and Scraping (iOS, Android, Emulators, Simulators and Real Devices)",
+    "repo_url": "https://github.com/mobile-next/mobile-mcp",
+    "maintainer": "mobile-next",
+    "lang": "typescript",
+    "stars": 4765,
+    "updated_at": "2026-05-01T13:26:44Z"
+  },
+  {
+    "name": "go-sdk",
+    "registry": "github",
+    "version": "",
+    "description": "The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.",
+    "repo_url": "https://github.com/modelcontextprotocol/go-sdk",
+    "maintainer": "modelcontextprotocol",
+    "lang": "go",
+    "stars": 4458,
+    "updated_at": "2026-05-01T10:56:00Z"
+  },
+  {
+    "name": "excel-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol (MCP) server that reads and writes MS Excel data",
+    "repo_url": "https://github.com/negokaz/excel-mcp-server",
+    "maintainer": "negokaz",
+    "lang": "go",
+    "stars": 939,
+    "updated_at": "2026-04-30T11:04:33Z"
+  },
+  {
+    "name": "obsidian-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "Obsidian MCP (Model Context Protocol) Server",
+    "repo_url": "https://github.com/newtype-01/obsidian-mcp",
+    "maintainer": "newtype-01",
+    "lang": "typescript",
+    "stars": 301,
+    "updated_at": "2026-05-01T02:19:10Z"
+  },
+  {
+    "name": "graphlit-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Model Context Protocol (MCP) Server for Graphlit Platform",
+    "repo_url": "https://github.com/graphlit/graphlit-mcp-server",
+    "maintainer": "graphlit",
+    "lang": "typescript",
+    "stars": 374,
+    "updated_at": "2026-04-13T21:35:09Z"
+  },
+  {
+    "name": "dbt-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "A MCP (Model Context Protocol) server for interacting with dbt.",
+    "repo_url": "https://github.com/dbt-labs/dbt-mcp",
+    "maintainer": "dbt-labs",
+    "lang": "python",
+    "stars": 549,
+    "updated_at": "2026-05-01T01:24:27Z"
+  },
+  {
+    "name": "zendesk-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol server for Zendesk",
+    "repo_url": "https://github.com/reminia/zendesk-mcp-server",
+    "maintainer": "reminia",
+    "lang": "python",
+    "stars": 86,
+    "updated_at": "2026-04-29T19:50:04Z"
+  },
+  {
+    "name": "plane-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "Plane's Official Model Context Protocol Server \ud83d\udd0c \u2328\ufe0f \ud83d\udd25",
+    "repo_url": "https://github.com/makeplane/plane-mcp-server",
+    "maintainer": "makeplane",
+    "lang": "python",
+    "stars": 210,
+    "updated_at": "2026-04-30T11:53:15Z"
+  },
+  {
+    "name": "sec-edgar-mcp",
+    "registry": "github",
+    "version": "",
+    "description": "A SEC EDGAR MCP (Model Context Protocol) Server",
+    "repo_url": "https://github.com/stefanoamorelli/sec-edgar-mcp",
+    "maintainer": "stefanoamorelli",
+    "lang": "python",
+    "stars": 257,
+    "updated_at": "2026-04-30T20:02:33Z"
+  },
+  {
+    "name": "mcp",
+    "registry": "github",
+    "version": "",
+    "description": "MariaDB MCP (Model Context Protocol) server implementation",
+    "repo_url": "https://github.com/MariaDB/mcp",
+    "maintainer": "MariaDB",
+    "lang": "python",
+    "stars": 166,
+    "updated_at": "2026-04-23T07:51:45Z"
+  },
+  {
+    "name": "ms-365-mcp-server",
+    "registry": "github",
+    "version": "",
+    "description": "A Model Context Protocol (MCP) server for interacting with Microsoft 365 and Office services through the Graph API",
+    "repo_url": "https://github.com/Softeria/ms-365-mcp-server",
+    "maintainer": "Softeria",
+    "lang": "typescript",
+    "stars": 668,
+    "updated_at": "2026-05-01T04:41:58Z"
+  },
+  {
+    "name": "mcp-server-weaviate",
+    "registry": "github",
+    "version": "",
+    "description": "MCP (Model Context Protocol) server for Weaviate",
+    "repo_url": "https://github.com/weaviate/mcp-server-weaviate",
+    "maintainer": "weaviate",
+    "lang": "go",
+    "stars": 161,
+    "updated_at": "2026-04-13T09:04:20Z"
+  },
+  {
+    "name": "mcp",
+    "registry": "github",
+    "version": "",
+    "description": "Catalog of official Microsoft MCP (Model Context Protocol) server implementations for AI-powered data access and tool integration",
+    "repo_url": "https://github.com/microsoft/mcp",
+    "maintainer": "microsoft",
+    "lang": "c#",
+    "stars": 3085,
+    "updated_at": "2026-05-01T12:45:12Z"
+  }
+]
