@@ -36,6 +36,24 @@
 - Why it matters: closest academic analog. Establishes corpus approach but stops at aggregate health metrics.
 - Source: https://arxiv.org/abs/2506.13538
 
+### MCP-in-SoS — arXiv:2603.10194 (March 2026)
+
+- Authors: Pratyay Kumar, Miguel Antonio Guirao Aguilera, Srikathyayani Srikanteswara, Satyajayant Misra, Abu Saleh Md Tayeen
+- What it does: Risk-assessment framework for open-source MCP servers. Uses static code analysis (CodeQL, Joern, Cisco Scanner) to identify CWEs and maps them to CAPEC attack patterns.
+- Scoring: Computes a "Risk Index" per weakness and a repository-level risk score.
+- Permission taxonomy: NO. It uses generic software weaknesses (CWEs) rather than an MCP-specific capability/permission taxonomy.
+- Corpus: 222 Python-only servers from GitHub.
+- Why it matters: The most direct competitor. It performs per-server scoring. However, its scoring relies on MITRE metadata that the authors admit is heavily missing (76% of CWE exploit likelihood data is missing), and it measures coding flaws rather than intended capability attack surfaces.
+- Source: https://arxiv.org/abs/2603.10194
+
+### MCP-SEC — IEEE S&P 2026 (arXiv:2509.06572 v4, April 2026)
+
+- Authors: Zhao et al. (NSSL-SJTU)
+- What it does: Large-scale analysis of "Parasitic Toolchain Attacks" on the MCP ecosystem. Analyzed 12,230 tools across 1,360 servers.
+- Scoring: NO per-server numeric attack-surface score. Focuses on attack taxonomy and finding exploitable gadgets.
+- Permission taxonomy: NO.
+- Source: https://arxiv.org/abs/2509.06572
+
 ### MCPLIB — arXiv:2508.12538 (2025)
 
 - What it does: catalogs 31 MCP attack types in four categories. Simulation framework.
@@ -57,6 +75,8 @@
 | Cisco MCP Scanner                  | No                   | Enterprise-only, methodology private | No                | No            |
 | Proximity                          | Categorical flags    | No                                   | No                | No            |
 | Hasan et al. (arXiv:2506.13538 v5) | No                   | No (aggregate stats only)            | 1,899 servers     | arXiv only    |
+| MCP-in-SoS (arXiv:2603.10194)      | No (uses generic CWE)| Yes (but theoretical/imputed data)   | 222 Python-only   | arXiv only    |
+| MCP-SEC (arXiv:2509.06572)         | No                   | No                                   | 1,360 servers     | IEEE S&P 2026 |
 | MCPLIB (arXiv:2508.12538)          | No                   | No                                   | Simulation only   | arXiv only    |
 | OWASP AIBOM Generator              | No                   | Completeness only                    | HF models only    | No            |
 
@@ -95,7 +115,7 @@ Three capabilities have not been combined anywhere:
 
 1. **Structured permission inventory.** No existing scanner maps MCP tool capabilities to a taxonomy of capability scopes — filesystem read/write, shell execution, network egress/ingress, secret access, inter-server delegation, human impersonation, data sensitivity. Snyk Agent Scan detects malicious patterns; it does not enumerate what a benign-but-overprivileged server can actually do. The distinction matters: a tool with zero detectable poisoning can still expose arbitrary shell execution to any caller.
 
-2. **Numeric attack-surface score per server.** Hasan et al. (arXiv:2506.13538) is the closest: 1,899 servers, static analysis, aggregate statistics. There is no per-server score and no reproducible scoring function another researcher can apply to a new server. Industry tools (Cisco's "dynamic risk scoring") are proprietary and not reproducible. OWASP AIBOM scores completeness, not risk.
+2. **Numeric attack-surface score per server based on capabilities.** While `MCP-in-SoS` (arXiv:2603.10194) recently introduced a risk score, it measures generic coding flaws (CWEs) and relies on sparse MITRE metadata. An MCP server can be perfectly coded (zero CWEs) but still expose highly dangerous capabilities (e.g., arbitrary shell execution) to an LLM. MCP-BOM scores the *intended attack surface* using OWASP Agentic Top 10 weights, not just accidental coding vulnerabilities.
 
 3. **Reproducible benchmark corpus with ground truth.** No paper has assembled a labeled corpus of MCP servers with known vulnerability classes, permission scope measurements, and comparable risk scores. NeurIPS ED requires exactly this: a dataset + methodology that others can run, reproduce, and extend.
 
@@ -104,4 +124,5 @@ The OWASP MCP Top 10 and OWASP Agentic Top 10 (2026) provide qualitative risk ca
 ## Section 4 — Verification (April 30, 2026)
 
 - arXiv:2506.13538 v5 (April 13, 2026) live-fetched. Abstract confirmed to retain aggregate-only reporting. No per-server scoring. No permission taxonomy. The April revision did not close the gap.
+- arXiv:2603.10194 (March 2026) discovered and analyzed. Confirmed it uses generic CWEs, not an MCP-specific capability taxonomy, and its dataset is restricted to 222 Python servers. The novelty gap for a capability-based, multi-language benchmark of 500 servers remains open.
 - Risk monitor: Cisco could publish their proprietary methodology before May 6. Less likely (enterprise vendors rarely publish scoring methods), but to be re-checked the day before submission.

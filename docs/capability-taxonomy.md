@@ -2,7 +2,7 @@
 
 > Eight-category permission scope taxonomy for the MCP-BOM static extractor. Each category is detected via API/source patterns plus declared schema parsing of `tools/list` entries.
 
-## The Eight Categories
+## The Nine Categories
 
 ### 1. Filesystem
 
@@ -171,10 +171,23 @@ Each detected category carries a confidence:
 
 Confidence affects score weighting in the score function.
 
-## Open Questions for Day 1
+### 9. Database / Persistence
 
-- Should unsafe deserialization functions (Python's binary serialization loaders, YAML unsafe-load, etc.) be flagged separately under filesystem or shell? (Argues for: arbitrary code execution risk.)
-- Inter-server delegation — does an HTTP call to a generic URL count if the path is `/sse` or `/mcp`?
-- Database access (SQLAlchemy, psycopg) — currently unclassified. Add a ninth category or fold into network egress?
+What it covers: direct connection to SQL/NoSQL databases, ORM usage, key-value stores. This is distinct from generic network egress because it specifically indicates the server can exfiltrate, modify, or drop structured data stores.
 
-These are decided May 1 morning, then frozen for the corpus run.
+Detection patterns:
+
+- Python: `sqlite3`, `psycopg2`, `SQLAlchemy`, `pymongo`, `redis`, `motor`.
+- Node/TS: `pg`, `mysql2`, `mongoose`, `prisma`, `typeorm`.
+- Go: `database/sql`, `gorm`.
+
+Sub-fields:
+
+- read / write / delete
+- type: relational / nosql / key-value
+
+## Open Questions Resolved (May 1)
+
+- **Unsafe Deserialization:** Classified under **Shell / Process Execution**. Functions like `yaml.unsafe_load` or `pickle.load` in Python inherently carry arbitrary code execution risk, which aligns with the threat model of shell execution rather than mere filesystem access.
+- **Inter-server delegation:** An HTTP call to a generic URL counts as **Inter-Server Delegation** ONLY if the path explicitly targets known MCP transport URIs (e.g., `/sse`, `/mcp`). Generic HTTP calls fall under **Network Egress**.
+- **Database access:** Added as the 9th category (Database / Persistence) above. Folding it into network egress dilutes the specific risk of data exfiltration or SQL injection inherent to database connections.
