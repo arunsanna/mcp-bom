@@ -1,0 +1,1109 @@
+[
+  {
+    "server_id": "mcp-filesystem",
+    "path": "/home/ubuntu/mcp-servers-official/src/filesystem",
+    "capability_vector": {
+      "filesystem": true,
+      "delegation": true,
+      "data_sensitivity": true,
+      "egress": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs"
+      ],
+      "shell": [],
+      "egress": [
+        "\"url\""
+      ],
+      "ingress": [],
+      "secrets": [],
+      "delegation": [
+        "Client does not support MCP",
+        "client either does not support MCP roots protocol or provide",
+        "client to provide roots via MCP"
+      ],
+      "impersonation": [],
+      "data_sensitivity": [
+        "crypto"
+      ],
+      "database": []
+    },
+    "score": {
+      "breadth": 44.4,
+      "depth": 25.6,
+      "exposure": 0,
+      "provenance": 35,
+      "attack_surface_score": 25.6,
+      "detected_categories": [
+        "filesystem",
+        "delegation",
+        "data_sensitivity",
+        "egress"
+      ],
+      "num_detected": 4
+    },
+    "tier": "official-high",
+    "lang": "typescript",
+    "description": "Filesystem read/write/search"
+  },
+  {
+    "server_id": "mcp-memory",
+    "path": "/home/ubuntu/mcp-servers-official/src/memory",
+    "capability_vector": {
+      "filesystem": true,
+      "secrets": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs.read",
+        "fs.write",
+        "readFile"
+      ],
+      "shell": [],
+      "egress": [],
+      "ingress": [],
+      "secrets": [
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": []
+    },
+    "score": {
+      "breadth": 22.2,
+      "depth": 8.9,
+      "exposure": 0,
+      "provenance": 35,
+      "attack_surface_score": 13.7,
+      "detected_categories": [
+        "filesystem",
+        "secrets"
+      ],
+      "num_detected": 2
+    },
+    "tier": "official-high",
+    "lang": "typescript",
+    "description": "Knowledge graph memory"
+  },
+  {
+    "server_id": "mcp-sequential-thinking",
+    "path": "/home/ubuntu/mcp-servers-official/src/sequentialthinking",
+    "capability_vector": {
+      "ingress": true,
+      "secrets": true
+    },
+    "pattern_details": {
+      "filesystem": [],
+      "shell": [],
+      "egress": [],
+      "ingress": [
+        "express",
+        "Express"
+      ],
+      "secrets": [
+        "process.env"
+      ],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": []
+    },
+    "score": {
+      "breadth": 22.2,
+      "depth": 4.4,
+      "exposure": 40,
+      "provenance": 35,
+      "attack_surface_score": 19.7,
+      "detected_categories": [
+        "ingress",
+        "secrets"
+      ],
+      "num_detected": 2
+    },
+    "tier": "official-high",
+    "lang": "typescript",
+    "description": "Sequential thinking/reasoning"
+  },
+  {
+    "server_id": "mcp-everything",
+    "path": "/home/ubuntu/mcp-servers-official/src/everything",
+    "capability_vector": {
+      "filesystem": true,
+      "egress": true,
+      "secrets": true,
+      "database": true,
+      "data_sensitivity": true,
+      "ingress": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "\"path\"",
+        "fs",
+        "\"path\""
+      ],
+      "shell": [],
+      "egress": [
+        "\"url\"",
+        "\"url\"",
+        "got",
+        "fetch("
+      ],
+      "ingress": [
+        "express",
+        "express",
+        "Express",
+        "express",
+        "express",
+        ".listen(",
+        "express",
+        "express",
+        "Express",
+        "express"
+      ],
+      "secrets": [
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [
+        "\"email\"",
+        "crypto"
+      ],
+      "database": [
+        "drizzle"
+      ]
+    },
+    "score": {
+      "breadth": 66.7,
+      "depth": 28.9,
+      "exposure": 40,
+      "provenance": 35,
+      "attack_surface_score": 39.6,
+      "detected_categories": [
+        "filesystem",
+        "egress",
+        "secrets",
+        "database",
+        "data_sensitivity",
+        "ingress"
+      ],
+      "num_detected": 6
+    },
+    "tier": "official-high",
+    "lang": "typescript",
+    "description": "Test server exercising all MCP features"
+  },
+  {
+    "server_id": "mcp-fetch",
+    "path": "/home/ubuntu/mcp-servers-official/src/fetch",
+    "capability_vector": {
+      "egress": true
+    },
+    "pattern_details": {
+      "filesystem": [],
+      "shell": [],
+      "egress": [
+        "requests",
+        "requests",
+        "requests",
+        "requests",
+        "httpx",
+        "httpx",
+        "urllib",
+        "\"url\"",
+        "\"url\"",
+        "\"url\""
+      ],
+      "ingress": [],
+      "secrets": [],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": []
+    },
+    "score": {
+      "breadth": 11.1,
+      "depth": 8.9,
+      "exposure": 0,
+      "provenance": 35,
+      "attack_surface_score": 11.5,
+      "detected_categories": [
+        "egress"
+      ],
+      "num_detected": 1
+    },
+    "tier": "official-high",
+    "lang": "python",
+    "description": "HTTP fetch/web scraping"
+  },
+  {
+    "server_id": "mcp-git",
+    "path": "/home/ubuntu/mcp-servers-official/src/git",
+    "capability_vector": {},
+    "pattern_details": {
+      "filesystem": [],
+      "shell": [],
+      "egress": [],
+      "ingress": [],
+      "secrets": [],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": []
+    },
+    "score": {
+      "breadth": 0.0,
+      "depth": 0.0,
+      "exposure": 0,
+      "provenance": 35,
+      "attack_surface_score": 5.2,
+      "detected_categories": [],
+      "num_detected": 0
+    },
+    "tier": "official-high",
+    "lang": "python",
+    "description": "Git repository operations"
+  },
+  {
+    "server_id": "mcp-time",
+    "path": "/home/ubuntu/mcp-servers-official/src/time",
+    "capability_vector": {},
+    "pattern_details": {
+      "filesystem": [],
+      "shell": [],
+      "egress": [],
+      "ingress": [],
+      "secrets": [],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": []
+    },
+    "score": {
+      "breadth": 0.0,
+      "depth": 0.0,
+      "exposure": 0,
+      "provenance": 35,
+      "attack_surface_score": 5.2,
+      "detected_categories": [],
+      "num_detected": 0
+    },
+    "tier": "official-low",
+    "lang": "python",
+    "description": "Time/timezone queries"
+  },
+  {
+    "server_id": "mcp-shell-server",
+    "path": "/home/ubuntu/mcp-spike-repos/mcp-shell-server",
+    "capability_vector": {
+      "secrets": true,
+      "filesystem": true,
+      "shell": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "os.path",
+        "os.path",
+        "os.path",
+        "os.path",
+        "os.path",
+        "os.path",
+        "open(",
+        "open(",
+        "os.path",
+        "os.path"
+      ],
+      "shell": [
+        "\"command\"",
+        "\"command\"",
+        "\"command\"",
+        "\"SHELL\""
+      ],
+      "egress": [],
+      "ingress": [],
+      "secrets": [
+        "os.environ",
+        "os.environ",
+        "os.environ",
+        "os.environ",
+        "os.environ"
+      ],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": []
+    },
+    "score": {
+      "breadth": 33.3,
+      "depth": 10.0,
+      "exposure": 0,
+      "provenance": 35,
+      "attack_surface_score": 16.4,
+      "detected_categories": [
+        "secrets",
+        "filesystem",
+        "shell"
+      ],
+      "num_detected": 3
+    },
+    "tier": "community-low",
+    "lang": "python",
+    "description": "Shell command execution"
+  },
+  {
+    "server_id": "mcp-server-docker",
+    "path": "/home/ubuntu/mcp-spike-repos/mcp-server-docker",
+    "capability_vector": {
+      "egress": true
+    },
+    "pattern_details": {
+      "filesystem": [],
+      "shell": [],
+      "egress": [
+        "requests"
+      ],
+      "ingress": [],
+      "secrets": [],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": []
+    },
+    "score": {
+      "breadth": 11.1,
+      "depth": 8.9,
+      "exposure": 0,
+      "provenance": 35,
+      "attack_surface_score": 11.5,
+      "detected_categories": [
+        "egress"
+      ],
+      "num_detected": 1
+    },
+    "tier": "community-medium",
+    "lang": "python",
+    "description": "Docker container management"
+  },
+  {
+    "server_id": "mcp-server-mysql",
+    "path": "/home/ubuntu/mcp-spike-repos/mcp-server-mysql",
+    "capability_vector": {
+      "filesystem": true,
+      "ingress": true,
+      "secrets": true,
+      "database": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs.read"
+      ],
+      "shell": [],
+      "egress": [],
+      "ingress": [
+        "express",
+        "express",
+        "express",
+        "express",
+        ".listen("
+      ],
+      "secrets": [
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": [
+        "\"sql\"",
+        "\"sql\"",
+        "mysql2",
+        "mysql2",
+        "mysql2",
+        "mysql2",
+        "mysql2",
+        "mysql2",
+        "mysql2",
+        "mysql2"
+      ]
+    },
+    "score": {
+      "breadth": 44.4,
+      "depth": 15.6,
+      "exposure": 40,
+      "provenance": 35,
+      "attack_surface_score": 29.1,
+      "detected_categories": [
+        "filesystem",
+        "ingress",
+        "secrets",
+        "database"
+      ],
+      "num_detected": 4
+    },
+    "tier": "community-medium",
+    "lang": "python",
+    "description": "MySQL database access"
+  },
+  {
+    "server_id": "notion-mcp-server",
+    "path": "/home/ubuntu/mcp-spike-repos/notion-mcp-server",
+    "capability_vector": {
+      "filesystem": true,
+      "egress": true,
+      "ingress": true,
+      "secrets": true,
+      "data_sensitivity": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "fs",
+        "fs",
+        "fs.write",
+        "node:fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs.read",
+        "node:fs"
+      ],
+      "shell": [],
+      "egress": [
+        "fetch(",
+        "axios",
+        "axios",
+        "axios",
+        "got"
+      ],
+      "ingress": [
+        "express",
+        "express",
+        "express",
+        "express",
+        "express",
+        "express",
+        "express",
+        ".listen(",
+        "0.0.0.0",
+        "0.0.0.0"
+      ],
+      "secrets": [
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [
+        "crypto"
+      ],
+      "database": []
+    },
+    "score": {
+      "breadth": 55.6,
+      "depth": 33.3,
+      "exposure": 100,
+      "provenance": 35,
+      "attack_surface_score": 51.4,
+      "detected_categories": [
+        "filesystem",
+        "egress",
+        "ingress",
+        "secrets",
+        "data_sensitivity"
+      ],
+      "num_detected": 5
+    },
+    "tier": "enterprise-high",
+    "lang": "typescript",
+    "description": "Notion API integration"
+  },
+  {
+    "server_id": "sentry-mcp",
+    "path": "/home/ubuntu/mcp-spike-repos/sentry-mcp",
+    "capability_vector": {
+      "shell": true,
+      "egress": true,
+      "ingress": true,
+      "data_sensitivity": true,
+      "database": true,
+      "impersonation": true,
+      "secrets": true,
+      "delegation": true,
+      "filesystem": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "node:fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs"
+      ],
+      "shell": [
+        "exec(",
+        "exec(",
+        "exec(",
+        "\"exec\"",
+        "child_process",
+        "exec(",
+        "exec(",
+        "exec(",
+        "exec("
+      ],
+      "egress": [
+        "fetch(",
+        "fetch(",
+        "fetch(",
+        "fetch(",
+        "fetch(",
+        "\"url\"",
+        "fetch(",
+        "http.request",
+        "node-fetch",
+        "fetch("
+      ],
+      "ingress": [
+        "EXPRESS",
+        "Hono",
+        "hono",
+        "hono",
+        "hono",
+        "Hono",
+        "hono",
+        "hono",
+        "hono",
+        "Hono"
+      ],
+      "secrets": [
+        "process.env",
+        "\"token\"",
+        "\"token\"",
+        "process.env",
+        "process.env",
+        "process.env",
+        "\"token\"",
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [
+        "client with the MCP",
+        "client with our MCP",
+        "client with MCP",
+        "@modelcontextprotocol/sdk/client",
+        "@modelcontextprotocol/sdk/client",
+        "client will throw ApiClientError/ApiServerError which the MC",
+        "client = await experimental_createMCP"
+      ],
+      "impersonation": [
+        "\"POST\"",
+        "\"post\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\""
+      ],
+      "data_sensitivity": [
+        "crypto",
+        "Crypto",
+        "Crypto",
+        "Crypto",
+        "Crypto",
+        "crypto",
+        "crypto",
+        "crypto",
+        "Crypto",
+        "Crypto"
+      ],
+      "database": [
+        "PG",
+        "\"table\"",
+        "\"query\"",
+        "\"database\"",
+        "\"query\"",
+        "\"query\"",
+        "\"query\"",
+        "\"query\"",
+        "\"query\"",
+        "\"query\""
+      ]
+    },
+    "score": {
+      "breadth": 100.0,
+      "depth": 51.1,
+      "exposure": 40,
+      "provenance": 35,
+      "attack_surface_score": 56.2,
+      "detected_categories": [
+        "shell",
+        "egress",
+        "ingress",
+        "data_sensitivity",
+        "database",
+        "impersonation",
+        "secrets",
+        "delegation",
+        "filesystem"
+      ],
+      "num_detected": 9
+    },
+    "tier": "enterprise-high",
+    "lang": "typescript",
+    "description": "Sentry error tracking"
+  },
+  {
+    "server_id": "mcp-remote",
+    "path": "/home/ubuntu/mcp-spike-repos/mcp-remote",
+    "capability_vector": {
+      "delegation": true,
+      "shell": true,
+      "egress": true,
+      "filesystem": true,
+      "ingress": true,
+      "secrets": true,
+      "data_sensitivity": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs/promises"
+      ],
+      "shell": [
+        "\"command\"",
+        "exec("
+      ],
+      "egress": [
+        "fetch(",
+        "fetch(",
+        "fetch(",
+        "fetch(",
+        "fetch(",
+        "fetch("
+      ],
+      "ingress": [
+        "express",
+        "express",
+        "express",
+        ".listen(",
+        "express",
+        "express",
+        "Express",
+        "express",
+        "Express",
+        ".listen("
+      ],
+      "secrets": [
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [
+        "@modelcontextprotocol/sdk/client",
+        "client that connects to an MCP",
+        "@modelcontextprotocol/sdk/client",
+        "@modelcontextprotocol/sdk/client",
+        "@modelcontextprotocol/sdk/client",
+        "@modelcontextprotocol/sdk/client",
+        "@modelcontextprotocol/sdk/client",
+        "Client({ name: 'mcp",
+        "SSEClientTransport",
+        "SSEClientTransport"
+      ],
+      "impersonation": [],
+      "data_sensitivity": [
+        "crypto",
+        "crypto",
+        "crypto",
+        "crypto"
+      ],
+      "database": []
+    },
+    "score": {
+      "breadth": 77.8,
+      "depth": 42.2,
+      "exposure": 40,
+      "provenance": 35,
+      "attack_surface_score": 47.8,
+      "detected_categories": [
+        "delegation",
+        "shell",
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets",
+        "data_sensitivity"
+      ],
+      "num_detected": 7
+    },
+    "tier": "popular-high-cve",
+    "lang": "typescript",
+    "description": "Remote MCP proxy (CVE-2025-6514)"
+  },
+  {
+    "server_id": "firecrawl-mcp",
+    "path": "/home/ubuntu/mcp-spike-repos/firecrawl-mcp",
+    "capability_vector": {
+      "filesystem": true,
+      "egress": true,
+      "ingress": true,
+      "secrets": true,
+      "database": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "fs/promises",
+        "readFile",
+        "readFile",
+        "node:fs",
+        "\"filePath\"",
+        "\"filePath\""
+      ],
+      "shell": [],
+      "egress": [
+        "fetch(",
+        "\"url\"",
+        "\"url\"",
+        "\"url\"",
+        "\"url\"",
+        "\"url\"",
+        "\"url\"",
+        "\"url\"",
+        "\"webhook\""
+      ],
+      "ingress": [
+        "0.0.0.0"
+      ],
+      "secrets": [
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [],
+      "impersonation": [],
+      "data_sensitivity": [],
+      "database": [
+        "\"query\"",
+        "\"query\""
+      ]
+    },
+    "score": {
+      "breadth": 55.6,
+      "depth": 31.1,
+      "exposure": 100,
+      "provenance": 35,
+      "attack_surface_score": 50.4,
+      "detected_categories": [
+        "filesystem",
+        "egress",
+        "ingress",
+        "secrets",
+        "database"
+      ],
+      "num_detected": 5
+    },
+    "tier": "popular-high",
+    "lang": "typescript",
+    "description": "Web crawling/scraping"
+  },
+  {
+    "server_id": "mcp-server-kubernetes",
+    "path": "/home/ubuntu/mcp-spike-repos/mcp-server-kubernetes",
+    "capability_vector": {
+      "secrets": true,
+      "filesystem": true,
+      "shell": true,
+      "ingress": true,
+      "delegation": true,
+      "data_sensitivity": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs",
+        "fs.write",
+        "\"path\"",
+        "fs"
+      ],
+      "shell": [
+        "child_process",
+        "\"command\"",
+        "\"exec\"",
+        "child_process",
+        "child_process",
+        "child_process",
+        "child_process",
+        "child_process",
+        "child_process",
+        "child_process"
+      ],
+      "egress": [],
+      "ingress": [
+        "express",
+        "express",
+        "express",
+        "express",
+        "express",
+        "express",
+        "express",
+        "express",
+        ".listen(",
+        "express"
+      ],
+      "secrets": [
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env",
+        "process.env"
+      ],
+      "delegation": [
+        "Client: X-MCP"
+      ],
+      "impersonation": [],
+      "data_sensitivity": [
+        "crypto"
+      ],
+      "database": []
+    },
+    "score": {
+      "breadth": 66.7,
+      "depth": 30.0,
+      "exposure": 40,
+      "provenance": 35,
+      "attack_surface_score": 40.1,
+      "detected_categories": [
+        "secrets",
+        "filesystem",
+        "shell",
+        "ingress",
+        "delegation",
+        "data_sensitivity"
+      ],
+      "num_detected": 6
+    },
+    "tier": "popular-high",
+    "lang": "typescript",
+    "description": "Kubernetes cluster management"
+  },
+  {
+    "server_id": "mcp-server-sqlite-py",
+    "path": "/home/ubuntu/mcp-spike-repos/mcp-server-sqlite-py",
+    "capability_vector": {
+      "egress": true,
+      "secrets": true,
+      "delegation": true,
+      "filesystem": true,
+      "shell": true,
+      "ingress": true,
+      "impersonation": true,
+      "database": true,
+      "data_sensitivity": true
+    },
+    "pattern_details": {
+      "filesystem": [
+        "open(",
+        "open(",
+        "open(",
+        "open(",
+        "shutil",
+        "shutil",
+        "\"filename\"",
+        "\"filename\"",
+        "\"filename\"",
+        "open("
+      ],
+      "shell": [
+        "\"command\"",
+        "\"command\"",
+        "\"execute\"",
+        "\"command\"",
+        "subprocess.run",
+        "subprocess.run",
+        "\"SHELL\"",
+        "subprocess.Popen",
+        "subprocess.Popen",
+        "subprocess.Popen"
+      ],
+      "egress": [
+        "httpx",
+        "httpx",
+        "httpx",
+        "urllib",
+        "httpx",
+        "httpx",
+        "urllib",
+        "httpx",
+        "httpx",
+        "httpx"
+      ],
+      "ingress": [
+        "uvicorn",
+        "uvicorn",
+        "uvicorn",
+        "uvicorn",
+        "uvicorn",
+        "uvicorn",
+        "uvicorn",
+        "uvicorn",
+        "uvicorn",
+        "uvicorn"
+      ],
+      "secrets": [
+        "os.environ",
+        "os.environ",
+        "os.environ",
+        "os.getenv",
+        "os.getenv",
+        "os.getenv",
+        "os.environ",
+        "os.getenv",
+        "dotenv",
+        "os.environ"
+      ],
+      "delegation": [
+        "ClientSession",
+        "ClientSession",
+        "ClientSession",
+        "ClientSession",
+        "ClientSession",
+        "ClientSession",
+        "ClientSession",
+        "ClientSession",
+        "ClientSession",
+        "ClientSession"
+      ],
+      "impersonation": [
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"post\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\"",
+        "\"POST\""
+      ],
+      "data_sensitivity": [
+        "hashlib",
+        "hashlib",
+        "hashlib",
+        "hashlib"
+      ],
+      "database": [
+        "\"Database\"",
+        "\"query\"",
+        "\"query\"",
+        "\"query\"",
+        "\"query\"",
+        "\"Database\"",
+        "Redis",
+        "Redis",
+        "Redis",
+        "Redis"
+      ]
+    },
+    "score": {
+      "breadth": 100.0,
+      "depth": 41.1,
+      "exposure": 40,
+      "provenance": 35,
+      "attack_surface_score": 51.8,
+      "detected_categories": [
+        "egress",
+        "secrets",
+        "delegation",
+        "filesystem",
+        "shell",
+        "ingress",
+        "impersonation",
+        "database",
+        "data_sensitivity"
+      ],
+      "num_detected": 9
+    },
+    "tier": "official-high",
+    "lang": "python",
+    "description": "Python SDK examples"
+  }
+]

@@ -1,0 +1,17 @@
+server_id,tier,lang,description,attack_surface_score,breadth,depth,exposure,num_categories,detected_categories,filesystem,shell,egress,ingress,secrets,delegation,impersonation,data_sensitivity,database
+mcp-filesystem,official-high,typescript,Filesystem read/write/search,25.6,44.4,25.6,0,4,filesystem|delegation|data_sensitivity|egress,True,False,True,False,False,True,False,True,False
+mcp-memory,official-high,typescript,Knowledge graph memory,13.7,22.2,8.9,0,2,filesystem|secrets,True,False,False,False,True,False,False,False,False
+mcp-sequential-thinking,official-high,typescript,Sequential thinking/reasoning,19.7,22.2,4.4,40,2,ingress|secrets,False,False,False,True,True,False,False,False,False
+mcp-everything,official-high,typescript,Test server exercising all MCP features,39.6,66.7,28.9,40,6,filesystem|egress|secrets|database|data_sensitivity|ingress,True,False,True,True,True,False,False,True,True
+mcp-fetch,official-high,python,HTTP fetch/web scraping,11.5,11.1,8.9,0,1,egress,False,False,True,False,False,False,False,False,False
+mcp-git,official-high,python,Git repository operations,5.2,0.0,0.0,0,0,,False,False,False,False,False,False,False,False,False
+mcp-time,official-low,python,Time/timezone queries,5.2,0.0,0.0,0,0,,False,False,False,False,False,False,False,False,False
+mcp-shell-server,community-low,python,Shell command execution,16.4,33.3,10.0,0,3,secrets|filesystem|shell,True,True,False,False,True,False,False,False,False
+mcp-server-docker,community-medium,python,Docker container management,11.5,11.1,8.9,0,1,egress,False,False,True,False,False,False,False,False,False
+mcp-server-mysql,community-medium,python,MySQL database access,29.1,44.4,15.6,40,4,filesystem|ingress|secrets|database,True,False,False,True,True,False,False,False,True
+notion-mcp-server,enterprise-high,typescript,Notion API integration,51.4,55.6,33.3,100,5,filesystem|egress|ingress|secrets|data_sensitivity,True,False,True,True,True,False,False,True,False
+sentry-mcp,enterprise-high,typescript,Sentry error tracking,56.2,100.0,51.1,40,9,shell|egress|ingress|data_sensitivity|database|impersonation|secrets|delegation|filesystem,True,True,True,True,True,True,True,True,True
+mcp-remote,popular-high-cve,typescript,Remote MCP proxy (CVE-2025-6514),47.8,77.8,42.2,40,7,delegation|shell|egress|filesystem|ingress|secrets|data_sensitivity,True,True,True,True,True,True,False,True,False
+firecrawl-mcp,popular-high,typescript,Web crawling/scraping,50.4,55.6,31.1,100,5,filesystem|egress|ingress|secrets|database,True,False,True,True,True,False,False,False,True
+mcp-server-kubernetes,popular-high,typescript,Kubernetes cluster management,40.1,66.7,30.0,40,6,secrets|filesystem|shell|ingress|delegation|data_sensitivity,True,True,False,True,True,True,False,True,False
+mcp-server-sqlite-py,official-high,python,Python SDK examples,51.8,100.0,41.1,40,9,egress|secrets|delegation|filesystem|shell|ingress|impersonation|database|data_sensitivity,True,True,True,True,True,True,True,True,True
