@@ -4,50 +4,57 @@
 
 To elevate `MCP-BOM` from a simple tool release to a scientific contribution suitable for the NeurIPS Evaluations & Datasets Track, we must ask fundamental questions about the nature of the MCP ecosystem's attack surface.
 
-*   **RQ1 (The Capability Paradox):** Do MCP servers systematically violate the principle of least privilege by exposing high-severity capabilities (e.g., arbitrary shell execution) more frequently than low-severity capabilities (e.g., restricted filesystem reads)?
-*   **RQ2 (The Proxy Blindspot):** To what extent do existing vulnerability scanners (like CWE-based static analyzers) fail to capture the true attack surface of MCP servers compared to a capability-based taxonomy?
-*   **RQ3 (Ecosystem Maturity):** Is there a measurable correlation between the provenance of an MCP server (e.g., install count, maintainer reputation) and its quantitative attack-surface score?
+*   **RQ1 (The Capability Sprawl):** Do MCP servers inherently violate the principle of least privilege by bundling multiple orthogonal capabilities (e.g., filesystem + network + secrets) rather than adhering to single-responsibility design?
+*   **RQ2 (The Secrets Gateway):** Does the presence of secrets-management capabilities (e.g., environment variable access) act as a reliable predictor for a dramatically expanded attack surface across other categories?
+*   **RQ3 (The Language Divide):** Is there a structural difference in attack-surface risk between the TypeScript/Node.js ecosystem (npm) and the Python ecosystem (PyPI) for MCP servers?
+*   **RQ4 (The CWE Blindspot):** To what extent do traditional vulnerability scanners (which measure coding flaws) fail to capture the intended capability risk of MCP servers compared to a taxonomy-based attack-surface score?
 
 ## 2. Testable Hypotheses
 
-Based on the RQs, we formulate the following hypotheses to test against our 500-server corpus.
+Based on the RQs and initial spike data, we formulate the following hypotheses to test against our 500-server corpus.
 
-### Hypothesis 1: The "Execution-First" Asymmetry
-**H1:** *In the MCP ecosystem, the prevalence of "Shell / Process Execution" capabilities will significantly exceed the prevalence of "Filesystem" capabilities.*
+### Hypothesis 1: The "Multi-Capability Default" (Sprawl)
+**H1:** *The average MCP server exposes capabilities across 3 or more distinct categories, rather than adhering to a single-responsibility design.*
 
-*   **Rationale:** Traditional software typically requires broad filesystem access but rarely exposes arbitrary shell execution. We hypothesize the inverse is true for MCP servers, as they are explicitly designed to grant LLMs "agency" (the ability to act), leading developers to over-provision execution rights while neglecting granular filesystem controls.
-*   **Expected Observation:** The static extractor will find a higher percentage of servers with the `shell` capability than the `filesystem` capability.
+*   **Rationale:** Unlike traditional microservices that restrict scope, MCP servers are designed to give LLMs broad agency. Developers tend to build "kitchen sink" servers (e.g., a single server that reads files, makes network requests, and executes shell commands) to maximize the utility of the LLM connection, fundamentally violating least privilege.
+*   **Expected Observation:** The mean number of detected capability categories per server will be ≥ 3.0.
 
-### Hypothesis 2: The CWE Measurement Gap
-**H2:** *Servers scoring low on traditional CWE-based risk assessments (e.g., those with zero detected coding flaws) can still score in the top quartile (≥ 75) of the MCP-BOM attack-surface metric.*
+### Hypothesis 2: The Secrets-Gateway Effect
+**H2:** *Servers that require access to secrets (e.g., API keys, environment variables) will exhibit an attack-surface score at least 2x higher than servers without secrets access.*
 
-*   **Rationale:** Competitors like `MCP-in-SoS` measure accidental coding flaws (CWEs). However, a perfectly written Python script that intentionally exposes `subprocess.run(shell=True)` to an LLM is highly dangerous but contains no "bug." We hypothesize that measuring intended capabilities captures a critical risk dimension that CWEs miss.
-*   **Expected Observation:** A subset of servers in our corpus will have high MCP-BOM scores but would theoretically pass standard SAST tools without critical alerts.
+*   **Rationale:** Secrets are rarely used in isolation. A server that reads an API key almost certainly uses it to make network requests (egress), and likely saves data to the filesystem or a database. Secrets act as a "gateway" capability that necessitates other high-risk capabilities.
+*   **Expected Observation:** The average Attack-Surface Score (ASS) of servers with the `secrets` capability will be significantly higher (≥ 2x) than those without.
 
-### Hypothesis 3: The Popularity Penalty
-**H3:** *The top 10% most downloaded MCP servers will exhibit a higher average attack-surface score than the long-tail (bottom 50%) servers.*
+### Hypothesis 3: The TypeScript/Python Divide
+**H3:** *TypeScript MCP servers (primarily from npm) will exhibit a broader capability spread and higher average attack-surface score than Python servers (primarily from PyPI).*
 
-*   **Rationale:** Highly downloaded servers (often provided by major platforms or designed as "universal" tools) tend to be "kitchen sink" implementations that bundle numerous capabilities to maximize utility, inherently violating least privilege. Long-tail servers are often built for narrow, specific tasks.
-*   **Expected Observation:** A positive correlation between `install_count` and the final `ASS` (Attack-Surface Score).
+*   **Rationale:** The Node.js/npm ecosystem has historically favored highly composable, broad-access patterns compared to Python's ecosystem. Additionally, enterprise platforms (which require complex integrations) often default to TypeScript for their official MCP SDKs.
+*   **Expected Observation:** A statistically significant difference in mean ASS between the two languages.
+
+### Hypothesis 4: The Ingress Risk Multiplier
+**H4:** *The presence of network ingress (listening on a port) acts as a primary driver for top-quartile attack-surface scores, strongly co-occurring with filesystem and secrets access.*
+
+*   **Rationale:** An MCP server that listens for inbound connections (e.g., via SSE or custom HTTP endpoints) fundamentally shifts the threat model from local-only execution to remote exploitability.
+*   **Expected Observation:** Servers with the `ingress` capability will dominate the top 10% of the highest-scoring servers in the corpus.
 
 ## 3. Experimental Methodology
 
 To test these hypotheses, we will execute the following experimental pipeline during our 6-day sprint:
 
-### Experiment 1: Capability Distribution Analysis (Tests H1)
+### Experiment 1: Capability Sprawl Analysis (Tests H1 & H4)
 1.  Run the `mcp_bom` static extractor across the 500-server corpus.
-2.  Calculate the frequency distribution of the 9 capability categories.
-3.  **Analysis:** Compare the raw count and percentage of servers exposing Category 2 (Shell) vs. Category 1 (Filesystem). 
+2.  Calculate the mean and median number of detected categories per server.
+3.  Generate a conditional co-occurrence matrix (Heatmap) to identify which capabilities (like `ingress` and `filesystem`) frequently bundle together.
 
-### Experiment 2: The "Intended vs. Accidental" Comparison (Tests H2)
-1.  Identify the top 20 highest-scoring servers according to the MCP-BOM score function.
-2.  Manually review the source code of these 20 servers to determine if the high score is driven by *intended design* (e.g., a "terminal" tool) or *accidental flaws* (e.g., command injection via poor string formatting).
-3.  **Analysis:** Quantify the percentage of high-risk capabilities that are explicitly declared in the `tools/list` schema versus those hidden in the implementation.
+### Experiment 2: The Gateway Analysis (Tests H2)
+1.  Partition the scored corpus into two sets: `secrets_detected == True` and `secrets_detected == False`.
+2.  Perform a Welch's t-test to compare the mean Attack-Surface Scores of both groups.
+3.  Analyze the average number of distinct capabilities in the `secrets` group versus the non-secrets group.
 
-### Experiment 3: Provenance Correlation (Tests H3)
-1.  Using the `corpus/scored_500.json` output, plot the Attack-Surface Score (y-axis) against the log of the install count (x-axis).
-2.  Calculate the Pearson correlation coefficient between the two variables.
-3.  **Analysis:** Determine if popularity drives over-provisioning.
+### Experiment 3: Ecosystem Comparison (Tests H3)
+1.  Partition the corpus by primary language (`python` vs `typescript`).
+2.  Compare the mean ASS, depth scores, and breadth scores between the two ecosystems.
+3.  Identify if certain capabilities (e.g., `shell` or `impersonation`) are disproportionately favored by one language.
 
 ## 4. Expected Impact for NeurIPS
 
