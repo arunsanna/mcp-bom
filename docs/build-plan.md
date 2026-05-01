@@ -9,15 +9,15 @@
 - [ ] Scrape 500 MCP servers from npm `@modelcontextprotocol`, npm keyword `mcp-server`, PyPI matching keywords, GitHub topic `mcp-server`, mcp.run catalogue. Stratify by install count.
 - [ ] Output `corpus/manifest.json` with package name, version, downloads, repo URL, source archive path.
 - [ ] Create anonymous Hugging Face account and GitHub repository for double-blind submission.
-- [ ] Resolve open questions in `docs/capability-taxonomy.md` (unsafe deserialization classification, generic HTTP, DB access).
-- [ ] Lock `docs/score-function.md` weights and depth tables; check in `score_function.toml`.
+- [x] Resolve open questions in `docs/capability-taxonomy.md` (unsafe deserialization classification, generic HTTP, DB access).
+- [x] Lock `docs/score-function.md` weights and depth tables; check in `score_function.toml`.
 - [ ] Repo is now ready for extractor build.
 
 ## Day 2 — Saturday May 2
 
 **Goal**: working extractor on first 100 servers.
 
-- [ ] Implement `extractor/mcp_bom/extractor.py` — capability scope detection across the nine categories (focus on **Python ONLY** for v1 to ensure completion).
+- [ ] Implement `extractor/mcp_bom/extractor.py` — capability scope detection across the eight categories (focus on **Python ONLY** for v1 to ensure completion).
 - [ ] Implement `extractor/mcp_bom/scorer.py` — score function from spec.
 - [ ] Run on first 100 Python servers from corpus. Inspect outputs by hand.
 - [ ] Iterate on detection rules where false positives or false negatives appear.

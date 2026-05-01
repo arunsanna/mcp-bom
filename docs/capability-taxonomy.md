@@ -1,8 +1,16 @@
 # MCP Capability / Permission Taxonomy
 
-> Eight-category permission scope taxonomy for the MCP-BOM static extractor. Each category is detected via API/source patterns plus declared schema parsing of `tools/list` entries.
+> Locked v1 eight-category permission scope taxonomy for the MCP-BOM static extractor. Each category is detected via API/source patterns plus declared schema parsing of `tools/list` entries.
 
-## The Nine Categories
+## v1 Scope Decisions
+
+MCP-BOM keeps exactly eight top-level categories for v1. Edge cases are folded into the closest capability category so the extractor output stays stable across the corpus run.
+
+- Unsafe deserialization is classified under **Shell / Process Execution** when it can lead to code execution from untrusted input. It is a code-execution vector even when no shell binary is invoked.
+- Generic outbound HTTP is **Network Egress** only. It becomes **Inter-Server Delegation** only when the code uses an MCP client, JSON-RPC MCP methods, a known MCP transport path such as `/sse` or `/mcp`, or explicit tool-calling semantics.
+- Database access does not create a ninth category. Remote database clients are **Network Egress** with datastore protocol metadata; local database files are **Filesystem**; sensitive records surfaced through tools are captured by **Data Egress Sensitivity**.
+
+## The Eight Categories
 
 ### 1. Filesystem
 
@@ -29,6 +37,7 @@ Detection patterns:
 - Python: `subprocess.run`, `subprocess.Popen`, `os.system`, `os.exec*`, `pty.spawn`, `eval`, `exec`.
 - Node/TS: `child_process.exec`, `child_process.spawn`, `execSync`, `shelljs`.
 - Go: `os/exec.Command`, `syscall.Exec`.
+- Unsafe deserialization/code-evaluation: Python `pickle.load(s)`, `dill.load(s)`, `marshal.load(s)`, `yaml.load` without `SafeLoader`; Node `vm.runIn*`, dynamic `Function`, unsafe template/eval loaders.
 - Tool description heuristics: words like "run", "execute", "shell", "command", "script".
 
 Sub-fields:
@@ -36,6 +45,7 @@ Sub-fields:
 - direct / sandboxed
 - shell-interpreted (true/false)
 - arbitrary args (true/false)
+- code-evaluation vector: eval / unsafe deserialization / dynamic module load
 
 ### 3. Network Egress
 
@@ -46,11 +56,12 @@ Detection patterns:
 - Python: `requests`, `httpx`, `urllib`, `aiohttp`, `socket.connect`.
 - Node/TS: `fetch`, `axios`, `node-fetch`, `http.request`, `https.request`.
 - Go: `net/http`, `net.Dial`.
+- Remote datastores: PostgreSQL/MySQL/Redis/MongoDB/Elasticsearch clients when the connection target is remote.
 
 Sub-fields:
 
 - arbitrary host / allowlisted host
-- protocol set (HTTP/S, raw TCP, UDP)
+- protocol set (HTTP/S, raw TCP, UDP, datastore)
 
 ### 4. Network Ingress
 
@@ -92,12 +103,13 @@ Detection patterns:
 
 - MCP client SDK imports: `@modelcontextprotocol/sdk` client classes, `mcp.ClientSession` (Python).
 - A2A SDK imports.
-- HTTP calls to known MCP transport URIs in code.
+- HTTP calls to known MCP transport URIs in code: `/sse`, `/mcp`, JSON-RPC `tools/list`, `tools/call`, `resources/list`, or explicit MCP session initialization.
 
 Sub-fields:
 
 - static (declared at startup) / dynamic (resolved at runtime)
 - count: number of other MCP servers reachable
+- evidence: MCP SDK / transport path / JSON-RPC MCP method / declared remote server
 
 ### 7. Human Impersonation
 
@@ -120,6 +132,7 @@ What it covers: PII handling, log content sensitivity, attachment upload.
 Detection patterns:
 
 - Imports: `cryptography.fernet`, `hashlib` (hashing PII), libraries that handle PHI/PII.
+- Database access surfaces: SQL query builders/ORMs and database clients when tool outputs expose user, customer, patient, financial, location, message, or credential records.
 - Tool descriptions mentioning user data fields.
 - Output schema fields for messages, emails, addresses.
 
@@ -171,23 +184,8 @@ Each detected category carries a confidence:
 
 Confidence affects score weighting in the score function.
 
-### 9. Database / Persistence
+## Frozen Day 1 Decisions
 
-What it covers: direct connection to SQL/NoSQL databases, ORM usage, key-value stores. This is distinct from generic network egress because it specifically indicates the server can exfiltrate, modify, or drop structured data stores.
-
-Detection patterns:
-
-- Python: `sqlite3`, `psycopg2`, `SQLAlchemy`, `pymongo`, `redis`, `motor`.
-- Node/TS: `pg`, `mysql2`, `mongoose`, `prisma`, `typeorm`.
-- Go: `database/sql`, `gorm`.
-
-Sub-fields:
-
-- read / write / delete
-- type: relational / nosql / key-value
-
-## Open Questions Resolved (May 1)
-
-- **Unsafe Deserialization:** Classified under **Shell / Process Execution**. Functions like `yaml.unsafe_load` or `pickle.load` in Python inherently carry arbitrary code execution risk, which aligns with the threat model of shell execution rather than mere filesystem access.
-- **Inter-server delegation:** An HTTP call to a generic URL counts as **Inter-Server Delegation** ONLY if the path explicitly targets known MCP transport URIs (e.g., `/sse`, `/mcp`). Generic HTTP calls fall under **Network Egress**.
-- **Database access:** Added as the 9th category (Database / Persistence) above. Folding it into network egress dilutes the specific risk of data exfiltration or SQL injection inherent to database connections.
+- Unsafe deserialization: **Shell / Process Execution**, flagged as `code_evaluation_vector="unsafe_deserialization"` when reachable from untrusted input.
+- Generic HTTP: **Network Egress** unless MCP-specific client/transport/method evidence is present; `/sse` or `/mcp` paths count as delegation only when paired with client-side MCP semantics.
+- Database access: no ninth category. Remote DB connectivity contributes to **Network Egress**; local DB files contribute to **Filesystem**; sensitive result exposure contributes to **Data Egress Sensitivity**.

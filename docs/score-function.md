@@ -1,6 +1,6 @@
 # MCP-BOM Attack-Surface Score Function
 
-> 0–100 numeric attack-surface score per MCP server. Weights derived from OWASP Agentic Top 10 (2026) severity. v0 specification.
+> 0–100 numeric attack-surface score per MCP server. Weights derived from OWASP Agentic Top 10 (2026) severity. Locked v1 specification for the initial corpus run.
 
 ## Inputs
 
@@ -22,15 +22,15 @@ B = (count_detected_categories / 8) * 100
 
 ### Component 2 — Privilege Depth (D)
 
-For each detected category, how deep the privilege goes (read-only vs write vs execute). Per-category depth on a 0–10 scale, summed and normalised.
+For each detected category, how deep the privilege goes (read-only vs write vs execute). Per-category depth is capped at 10, summed across the eight categories, and normalised.
 
 Depth scoring per category:
 
 - Filesystem: read=2, write=5, delete=8, system-wide-scope=+2
-- Shell: sandboxed=4, direct=8, shell-interpreted=+1, arbitrary-args=+1
-- Egress: allowlisted=2, arbitrary-host=8
+- Shell: sandboxed=4, direct=8, unsafe-deserialization/code-evaluation=8, shell-interpreted=+1, arbitrary-args=+1
+- Egress: allowlisted=2, fixed remote datastore=3, arbitrary-host=8
 - Ingress: localhost=1, 0.0.0.0+auth=4, 0.0.0.0+no-auth=10
-- Secrets: process-env-read=3, keychain-read=6, cloud-KMS-read=8, write=+2
+- Secrets: config-specific env read=2, arbitrary/exposed env read=6, keychain-read=6, cloud-KMS-read=8, write=+2
 - Delegation: static=3, dynamic=7
 - Impersonation: per-channel +3, no-approval-gate=+3
 - Data-sensitivity: none=0, financial/location=4, PII=7, PHI=9
@@ -67,7 +67,7 @@ Inverse trust signal — lower trust raises the score.
 ASS = w_b * B + w_d * D + w_e * E + w_p * P
 ```
 
-Default weights (sum to 1.0):
+Locked v1 weights (sum to 1.0):
 
 - w_b = 0.20 (breadth)
 - w_d = 0.45 (depth)
@@ -78,7 +78,9 @@ Rationale: depth dominates because a single high-privilege capability is more da
 
 ## Confidence Adjustment
 
-Detected categories with `low` confidence contribute 50% of their depth value. Categories with `medium` confidence contribute 75%.
+Detected categories with `low` confidence contribute 50% of their depth value. Categories with `medium` confidence contribute 75%. `high` confidence contributes 100%.
+
+Confidence adjustment applies to privilege depth only. Breadth still counts a category as detected when confidence is `low`, `medium`, or `high`; validation reports precision/recall separately so low-confidence detections can be audited.
 
 ## OWASP Agentic Top 10 Mapping
 

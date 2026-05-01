@@ -1,0 +1,101 @@
+version = "1.0"
+status = "locked-v1"
+category_count = 8
+depth_denominator = 80
+score_min = 0
+score_max = 100
+
+[weights]
+breadth = 0.20
+depth = 0.45
+exposure = 0.20
+provenance = 0.15
+
+[confidence_multipliers]
+high = 1.00
+medium = 0.75
+low = 0.50
+
+[depth_caps]
+filesystem = 10
+shell = 10
+egress = 10
+ingress = 10
+secrets = 10
+delegation = 10
+impersonation = 10
+data_sensitivity = 10
+
+[depth.filesystem]
+read = 2
+write = 5
+delete = 8
+system_wide_scope_bonus = 2
+arbitrary_scope_bonus = 2
+
+[depth.shell]
+sandboxed = 4
+direct = 8
+code_evaluation = 8
+unsafe_deserialization = 8
+shell_interpreted_bonus = 1
+arbitrary_args_bonus = 1
+
+[depth.egress]
+allowlisted = 2
+fixed_remote_datastore = 3
+arbitrary_host = 8
+
+[depth.ingress]
+localhost = 1
+public_bind_with_auth = 4
+public_bind_no_auth = 10
+
+[depth.secrets]
+config_specific_env_read = 2
+arbitrary_or_exposed_env_read = 6
+keychain_read = 6
+cloud_kms_read = 8
+write_bonus = 2
+
+[depth.delegation]
+static = 3
+dynamic = 7
+
+[depth.impersonation]
+per_channel = 3
+no_approval_gate_bonus = 3
+
+[depth.data_sensitivity]
+none = 0
+financial = 4
+location = 4
+pii = 7
+phi = 9
+
+[exposure_surface]
+localhost_auth_tls = 0
+localhost_no_auth = 20
+public_auth_tls = 40
+public_auth_no_tls = 60
+public_no_auth_tls = 80
+public_no_auth_no_tls = 100
+
+[provenance]
+signed_active_maintained_1k_plus_installs = 0
+signed_stale = 25
+unsigned_active = 35
+unsigned_stale = 60
+single_author_low_install_stale = 80
+typosquat_or_new_account = 100
+
+[calibration_targets]
+mcp_remote_rce_min = 80
+mcp_inspector_csrf_rce_min = 80
+localhost_filesystem_readonly_active_max = 30
+public_no_auth_shell_min = 90
+
+[taxonomy_decisions]
+unsafe_deserialization = "shell_process_execution"
+generic_http = "network_egress_unless_mcp_client_or_transport_evidence"
+database_access = "network_egress_for_remote_filesystem_for_local_data_sensitivity_for_exposed_records"
