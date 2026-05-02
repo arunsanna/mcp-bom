@@ -1,0 +1,726 @@
+[
+  {
+    "id": "official-ai-smithery-brave",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-linkupplatform-linkup-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-adamamer20-paper-search-mcp-openai",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-pinkpixel-dev-web-scout-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-zwldarren-akshare-one-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-nekzus-npm-sentinel-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-klavis-strata",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-kwp-lab-rss-reader-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-kkjdaniel-bgg-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-ramadasmr-networkcalc-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-com-figma-mcp-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-ref-tools-ref-tools-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-com-atlassian-atlassian-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-chir24-unreal-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-smithery-hustcc-mcp-mermaid",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ac-inference-sh-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ac-tandem-docs-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-agency-lona-trading",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-aarna-atars-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-abmeter-abmeter",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-adadvisor-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-adramp-google-ads",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-adweave-meta-ads-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-agentdm-agentdm",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-agentic-news-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-agentrapay-agentra",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-alpic-mcp-alpic-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-alpic-test-test-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-anzenna-anzenna",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-appdeploy-deploy-app",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-artidrop-artidrop",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-auteng-docs",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-auteng-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-bankee-inferventis-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-baselight-baselight",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-bezal-local-commerce",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-bluenexus-universal-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-bringyour-bringyour",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-byteray-byteray-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-childadhd-library",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-childanxiety-library",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-childpsychiatry-library",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-chinamarketing-intelligence",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-cirra-salesforce-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-clarid-compliance",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-com-mcp-contabo",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-com-mcp-hapi-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-com-mcp-skills-search",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-complyhat-compliance",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-cookiy-cookiy",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-datamerge-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-deepledger-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-djwizard-tvwizard",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-donethat-donethat",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-example4-xmp4",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-explorium-mcp-explorium",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-fathom-api-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-fiber-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-filegraph-document-processing",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-filtrix-mcp-filtrix-ai",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-gavelin-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-geodesiclabs-governance-platform",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-getperspective-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-gomarble-mcp-api",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-gossiper-shopify-admin-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-helixar-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-inflowpay-app-inflow",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-jeda-jeda-ai",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-kubit-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-lattiq-x402-trading-signals",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-limitguard-api-trust-intelligence",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-llmse-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-lucasandersen-mlp-tax",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-ludo-game-assets",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-mailjunky-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-marketcore-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-mcpanalytics-analytics",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-meacheal-mrc-data",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-meetsquad-squad",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-memestack-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "official-ai-meminal-meminal",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-ethanhenrickson-math-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-exa",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-gantta-gantta-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-googlesheets",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-gmail",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-reddit",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-martin111ma-za5d-swiss-truth-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-aniruddha-adhikary-gahmen-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-aryankeluskar-polymarket-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-hamid-vakilzadeh-mcpsemanticscholar",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-deniselewis200081-rail",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-gvzq-flight-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-rashforddamion-rivalsearch",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-blockscout-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-heather-macavelia-ai-agent-index",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-agentmail",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-fabsforward2-zhoi-sbb-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-standardaccounting-public-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-oevortex-ddg-search",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-titansneaker-paper-search-mcp-openai-v2",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-re-rank-uiux-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-bh-rat-context-awesome",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-settlegrid-settlegrid-discovery",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-ayni-protocol-ayni",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-clay-inc-clay-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-vdineshk-ai-compliance-monitor",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-sincetomorrow-cultural-intelligence",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-icons8community-icons8mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-enji-ai-marketing-agent",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-papersearch-papersearcher",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-quantoracle-quantoracle",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-cloud101-kr-cloud101kr",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-strale-io-strale",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-hjsh200219-fortuneteller",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-bitpoort-on-chain-data",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-do-droid-seoul-essentials",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-info-g03l-catalunya-2022",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-isdaniel-mcp-weather-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-linxule-mcp-music-studio",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-senzing-entity-resolution",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-garasegae-aiskillstore",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-hola-ps65-siil-ostomy-store",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-aguskenari86-8bo7-cryptoiz-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-rfi-irfos-ternlang",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-microsoft-learn-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-sigai-cancersupport",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-etweisberg-mlb-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-ciprianpater-srv-d7aoqmh5pdvs7391dcqg",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-antvis-mcp-server-chart",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-slack",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-octomil-octomil",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-minitim222-harvard-mit-course-recommendation",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-theconstructionstandard-the-construction-standard",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-tbakerx-instant-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-ucpchecker-ucp-checker",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-hellokitty-v-smithery-mcp-servers",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-arjunkmrm-grep",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-imviky-zzzr-tickerr-live-status",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-seahbk1006-seahboonkeong-chat-opendosm",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-linxule-lotus-wisdom-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-davidcho-ca-building-code-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-alexandria-shai-eden-caselaw",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-agonzalez-prueba-mcp-seeker",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-chuhuoyuan-cloudflare",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-integsec-turbopentest",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-apogeoapi-apogeoapi-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-code-rabi-littlesis-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-modellix-modellix-docs",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-artvepa80-hefestoai",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-labsofuniverse-legacy-mcp-analyzer",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-jon-ag46-troystack",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-faresyoussef94-aws-knowledge-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-bartek-ywte-gaproll",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-spyfree-mingli-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-googledrive",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-waldzellai-clear-thought",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-arizeai-docs",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-maximumsats-maximumsats",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-parallel-search",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-jarvis-stark1985-superhero-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-glassnode-glassnode-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-janmacher02-xl8y-czech-vat-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-strale-agent-tools",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-nexgendata-apify-github-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-supabase",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-exaltedtrou6-b24-mcp-dev",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-agentidx-agentcrawl",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-agentidx-zarq-risk",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-namewhisper-ens-tools",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-ai-research-airesearchass",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-jina",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-nexgendata-apify-developer-tools-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-rubenayla-partle",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-rabqatab-lexlink-ko-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-shawnnygoh-arxiv-scout",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-jacksmith3888-wuwa-mcp-server",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-icons8community-icons8mpc",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-bopmarket-marketplace",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-sfiorini-youtube-mcp",
+    "reason": "inherently_remote_no_source"
+  },
+  {
+    "id": "smithery-linell-grimoire-mcp",
+    "reason": "inherently_remote_no_source"
+  }
+]
