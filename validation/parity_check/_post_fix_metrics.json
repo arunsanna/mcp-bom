@@ -1,0 +1,88 @@
+{
+  "anchor_parity": [
+    {
+      "id": "mcp-filesystem",
+      "scope_code_in_port": [
+        "data_sensitivity",
+        "delegation",
+        "egress",
+        "filesystem"
+      ],
+      "scope_tool_expected_subset": true,
+      "extra_in_port": [],
+      "missing_in_port": []
+    },
+    {
+      "id": "mcp-fetch",
+      "scope_code_in_port": [
+        "egress"
+      ],
+      "scope_tool_expected_subset": true,
+      "extra_in_port": [],
+      "missing_in_port": []
+    },
+    {
+      "id": "mcp-everything",
+      "scope_code_in_port": [
+        "data_sensitivity",
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets"
+      ],
+      "scope_tool_expected_subset": true,
+      "extra_in_port": [],
+      "missing_in_port": []
+    },
+    {
+      "id": "mcp-shell-server",
+      "scope_code_in_port": [
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "scope_tool_expected_subset": true,
+      "extra_in_port": [],
+      "missing_in_port": []
+    },
+    {
+      "id": "notion-mcp-server",
+      "scope_code_in_port": [
+        "data_sensitivity",
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets"
+      ],
+      "scope_tool_expected_subset": true,
+      "extra_in_port": [],
+      "missing_in_port": []
+    }
+  ],
+  "schema_patterns_restored": {
+    "filesystem": 6,
+    "shell": 6,
+    "egress": 4,
+    "ingress": 0,
+    "secrets": 5,
+    "delegation": 2,
+    "impersonation": 7,
+    "data_sensitivity": 6
+  },
+  "schema_patterns_total": 36,
+  "skip_dirs_removed": [
+    "dist",
+    "build"
+  ],
+  "tests_added": [
+    "tests/test_extractor_parity.py::test_anchor_parity_code_scope (x5)",
+    "tests/test_extractor_parity.py::test_tool_scope_is_subset_of_code_scope (x5)",
+    "tests/test_extractor_parity.py::test_tool_scope_fewer_than_code (x1)"
+  ],
+  "tests_passed": 45,
+  "tests_failed": 0,
+  "score_function_md_updated": true,
+  "taxonomy_md_updated": false,
+  "git_commits": [],
+  "residual_anchor_divergence": []
+}
