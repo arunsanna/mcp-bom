@@ -1,0 +1,134 @@
+{
+  "server_id": "dangerous_server",
+  "source_path": "/Users/jarvis_arunlab/code/mcp-bom/extractor/tests/fixtures/dangerous_server",
+  "capability_vector": {
+    "server_id": "dangerous_server",
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "evidence": [
+        "open(",
+        "os.remove"
+      ],
+      "depth_raw": 15.0,
+      "depth_adjusted": 15.0,
+      "sub_fields": {},
+      "read": true,
+      "write": true,
+      "delete": true,
+      "scope": "cwd-only"
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "evidence": [
+        "pickle.load",
+        "subprocess.run",
+        "unsafe_deserialization"
+      ],
+      "depth_raw": 9.0,
+      "depth_adjusted": 9.0,
+      "sub_fields": {},
+      "direct": true,
+      "sandboxed": false,
+      "shell_interpreted": true,
+      "arbitrary_args": false,
+      "code_evaluation_vector": "unsafe_deserialization"
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "evidence": [
+        "requests."
+      ],
+      "depth_raw": 2.0,
+      "depth_adjusted": 2.0,
+      "sub_fields": {},
+      "arbitrary_host": false,
+      "allowlisted_host": true,
+      "fixed_remote_datastore": false,
+      "protocols": [
+        "http"
+      ]
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "evidence": [],
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0,
+      "sub_fields": {},
+      "bind": "none",
+      "auth": "none",
+      "tls_enabled": false
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "evidence": [
+        "arbitrary_env:\\bos\\.environ\\.get\\b",
+        "config_env:\\bos\\.environ\\b"
+      ],
+      "depth_raw": 6.0,
+      "depth_adjusted": 6.0,
+      "sub_fields": {},
+      "read": true,
+      "write": false,
+      "scope": "arbitrary-env"
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "evidence": [],
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0,
+      "sub_fields": {},
+      "static": false,
+      "dynamic": false,
+      "count": 0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "evidence": [],
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0,
+      "sub_fields": {},
+      "channels": [],
+      "approval_gate": true
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "evidence": [],
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0,
+      "sub_fields": {},
+      "categories": [],
+      "redaction_declared": false
+    }
+  },
+  "provenance": {
+    "signed": false,
+    "active_maintenance": true,
+    "install_count": 0,
+    "last_update_days": 0,
+    "author_count": 1,
+    "typosquat_suspicion": false
+  },
+  "exposure": {
+    "bind_address": "localhost",
+    "auth": "none",
+    "tls_enabled": false
+  },
+  "score": {
+    "breadth": 50.0,
+    "depth": 40.0,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 37.25
+  },
+  "languages_detected": [
+    "python"
+  ]
+}
