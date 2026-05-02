@@ -1,0 +1,164 @@
+{
+  "seed": "0x4d4250",
+  "stratification": "source",
+  "stratum_counts": {
+    "github": 5,
+    "npm": 5,
+    "official": 5,
+    "pypi": 5,
+    "smithery": 5
+  },
+  "total": 25,
+  "servers": [
+    {
+      "server_id": "github-activepieces",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-activepieces.zip"
+    },
+    {
+      "server_id": "github-enscan-go",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-enscan-go.zip"
+    },
+    {
+      "server_id": "github-kubefwd",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-kubefwd.zip"
+    },
+    {
+      "server_id": "github-ms-365-mcp-server",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-ms-365-mcp-server.zip"
+    },
+    {
+      "server_id": "github-py-xiaozhi",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-py-xiaozhi.zip"
+    },
+    {
+      "server_id": "npm-breadstone-archipel-platform-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-breadstone-archipel-platform-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-directus-content-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-directus-content-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-functional-models-orm-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-functional-models-orm-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-grackle-ai-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-grackle-ai-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-modelcontextprotocol-conformance",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-modelcontextprotocol-conformance.metadata.json"
+    },
+    {
+      "server_id": "official-ai-artidrop-artidrop",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-artidrop-artidrop.metadata.json"
+    },
+    {
+      "server_id": "official-ai-cookiy-cookiy",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-cookiy-cookiy.metadata.json"
+    },
+    {
+      "server_id": "official-ai-fiber-mcp",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-fiber-mcp.metadata.json"
+    },
+    {
+      "server_id": "official-ai-gomarble-mcp-api",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-gomarble-mcp-api.metadata.json"
+    },
+    {
+      "server_id": "official-ai-smithery-adamamer20-paper-search-mcp-openai",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-smithery-adamamer20-paper-search-mcp-openai.metadata.json"
+    },
+    {
+      "server_id": "pypi-agentictrade-mcp",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-agentictrade-mcp.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-aws-kb-retrieval",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-aws-kb-retrieval.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-notion",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-notion.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-qdrant",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-qdrant.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-sentry",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-sentry.metadata.json"
+    },
+    {
+      "server_id": "smithery-agentidx-agentcrawl",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-agentidx-agentcrawl.metadata.json"
+    },
+    {
+      "server_id": "smithery-ai-research-airesearchass",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-ai-research-airesearchass.metadata.json"
+    },
+    {
+      "server_id": "smithery-antvis-mcp-server-chart",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-antvis-mcp-server-chart.metadata.json"
+    },
+    {
+      "server_id": "smithery-bartek-ywte-gaproll",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-bartek-ywte-gaproll.metadata.json"
+    },
+    {
+      "server_id": "smithery-linxule-mcp-music-studio",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-linxule-mcp-music-studio.metadata.json"
+    }
+  ]
+}
