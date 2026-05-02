@@ -1,0 +1,70 @@
+{
+  "id": "github-unla",
+  "registry": "github",
+  "language": "typescript",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 2327026,
+  "duration_s": 5.49,
+  "download_seconds": 0.33,
+  "scan_seconds": 4.37,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 15.0,
+      "depth_adjusted": 15.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 6,
+      "depth_adjusted": 6.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    }
+  },
+  "score": {
+    "breadth": 75.0,
+    "depth": 48.12,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 45.91
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

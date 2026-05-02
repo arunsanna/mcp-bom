@@ -1,0 +1,70 @@
+{
+  "id": "npm-negokaz-excel-mcp-server",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 40325416,
+  "duration_s": 16.59,
+  "download_seconds": 9.95,
+  "scan_seconds": 0.06,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "egress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 25.0,
+    "depth": 10.0,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 18.75
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

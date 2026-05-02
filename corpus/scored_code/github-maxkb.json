@@ -1,0 +1,70 @@
+{
+  "id": "github-maxkb",
+  "registry": "github",
+  "language": "python",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 38836425,
+  "duration_s": 10.49,
+  "download_seconds": 2.18,
+  "scan_seconds": 4.2,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 17.0,
+      "depth_adjusted": 17.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 10,
+      "depth_adjusted": 10.0
+    },
+    "delegation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    }
+  },
+  "score": {
+    "breadth": 87.5,
+    "depth": 64.38,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 55.72
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

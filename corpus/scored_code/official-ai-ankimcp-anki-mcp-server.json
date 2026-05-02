@@ -1,0 +1,70 @@
+{
+  "id": "official-ai-ankimcp-anki-mcp-server",
+  "registry": "official",
+  "language": "typescript",
+  "source_tier": "official",
+  "scope": "code",
+  "archive_size_bytes": 1951359,
+  "duration_s": 1.17,
+  "download_seconds": 0.89,
+  "scan_seconds": 0.22,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9.0,
+      "depth_adjusted": 9.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "egress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 6,
+      "depth_adjusted": 6.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 50.0,
+    "depth": 30.63,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 33.03
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

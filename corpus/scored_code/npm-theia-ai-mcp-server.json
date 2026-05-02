@@ -1,0 +1,70 @@
+{
+  "id": "npm-theia-ai-mcp-server",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 14011697,
+  "duration_s": 17.93,
+  "download_seconds": 1.53,
+  "scan_seconds": 12.77,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 17.0,
+      "depth_adjusted": 17.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "delegation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 7,
+      "depth_adjusted": 7.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    }
+  },
+  "score": {
+    "breadth": 87.5,
+    "depth": 77.5,
+    "exposure": 40.0,
+    "provenance": 35.0,
+    "attack_surface_score": 65.62
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "npm-geobio-google-workspace-server",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 6580,
+  "duration_s": 1.1,
+  "download_seconds": 1.08,
+  "scan_seconds": 0.02,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 7,
+      "depth_adjusted": 7.0
+    }
+  },
+  "score": {
+    "breadth": 37.5,
+    "depth": 13.12,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 22.66
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

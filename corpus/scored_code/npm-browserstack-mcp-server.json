@@ -1,0 +1,70 @@
+{
+  "id": "npm-browserstack-mcp-server",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 1993147,
+  "duration_s": 1.3,
+  "download_seconds": 0.38,
+  "scan_seconds": 0.55,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9.0,
+      "depth_adjusted": 9.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 6,
+      "depth_adjusted": 6.0
+    },
+    "delegation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 100.0,
+    "depth": 50.62,
+    "exposure": 60.0,
+    "provenance": 35.0,
+    "attack_surface_score": 60.03
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

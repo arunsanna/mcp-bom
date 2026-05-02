@@ -1,0 +1,70 @@
+{
+  "id": "npm-berthojoris-mcp-mysql-server",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 148768,
+  "duration_s": 0.62,
+  "download_seconds": 0.15,
+  "scan_seconds": 0.45,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 7.0,
+      "depth_adjusted": 7.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "delegation": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 3,
+      "depth_adjusted": 2.25
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    }
+  },
+  "score": {
+    "breadth": 75.0,
+    "depth": 39.06,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 41.83
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "npm-azure-devops-mcp",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "enterprise",
+  "scope": "code",
+  "archive_size_bytes": 38819860,
+  "duration_s": 3.51,
+  "download_seconds": 1.95,
+  "scan_seconds": 0.48,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 7.0,
+      "depth_adjusted": 7.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 7,
+      "depth_adjusted": 7.0
+    }
+  },
+  "score": {
+    "breadth": 62.5,
+    "depth": 24.38,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 32.72
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

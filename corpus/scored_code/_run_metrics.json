@@ -1,0 +1,109 @@
+{
+  "started_utc": "2026-05-02T20:06:39.906027+00:00",
+  "ended_utc": "2026-05-02T20:17:52.592938+00:00",
+  "total_duration_s": 672.7,
+  "manifest_total": 500,
+  "pre_filtered_remote": 181,
+  "pre_filtered_no_source": 3,
+  "scannable_total": 316,
+  "scanned_succeeded": 298,
+  "scanned_errored": 18,
+  "scanned_skipped": 0,
+  "download_seconds_p50": 0.42,
+  "download_seconds_p95": 8.27,
+  "download_seconds_max": 52.9,
+  "scan_seconds_p50": 0.29,
+  "scan_seconds_p95": 11.83,
+  "scan_seconds_max": 176.11,
+  "archive_size_bytes_p50": 344705,
+  "archive_size_bytes_p95": 48226297,
+  "archive_size_bytes_max": 385070605,
+  "total_on_disk_bytes": 3180297035,
+  "errors_by_stage": {
+    "scan": 36
+  },
+  "errors_by_exception_type": {
+    "HTTPError": 18
+  },
+  "score_distribution": {
+    "min": 9.2,
+    "p25": 19.8,
+    "median": 31.6,
+    "p75": 43.1,
+    "max": 74.9,
+    "mean": 32.6
+  },
+  "capability_prevalence": {
+    "filesystem": 66.4,
+    "shell": 51.3,
+    "egress": 78.2,
+    "ingress": 29.5,
+    "secrets": 78.5,
+    "delegation": 20.1,
+    "impersonation": 42.3,
+    "data_sensitivity": 62.8
+  },
+  "cached_subset_counts": {
+    "labeled": 29,
+    "hold_buffer": 0
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0",
+  "git_hash": "e8f938a6f0af6c7eef8b04fa11b5bd9b5234dd1e",
+  "peak_temp_dir_bytes": 3005656447,
+  "prevalence_comparison": {
+    "filesystem": {
+      "tool_scope_v1": 4.7,
+      "code_scope_v2": 66.4,
+      "delta_pp": 61.7,
+      "n_servers": 298
+    },
+    "shell": {
+      "tool_scope_v1": 47.0,
+      "code_scope_v2": 51.3,
+      "delta_pp": 4.3,
+      "n_servers": 298
+    },
+    "egress": {
+      "tool_scope_v1": 62.8,
+      "code_scope_v2": 78.2,
+      "delta_pp": 15.4,
+      "n_servers": 298
+    },
+    "ingress": {
+      "tool_scope_v1": 27.9,
+      "code_scope_v2": 29.5,
+      "delta_pp": 1.6,
+      "n_servers": 298
+    },
+    "secrets": {
+      "tool_scope_v1": 6.0,
+      "code_scope_v2": 78.5,
+      "delta_pp": 72.5,
+      "n_servers": 298
+    },
+    "delegation": {
+      "tool_scope_v1": 18.5,
+      "code_scope_v2": 20.1,
+      "delta_pp": 1.6,
+      "n_servers": 298
+    },
+    "impersonation": {
+      "tool_scope_v1": 36.9,
+      "code_scope_v2": 42.3,
+      "delta_pp": 5.4,
+      "n_servers": 298
+    },
+    "data_sensitivity": {
+      "tool_scope_v1": 51.3,
+      "code_scope_v2": 62.8,
+      "delta_pp": 11.5,
+      "n_servers": 298
+    }
+  },
+  "mean_breadth_tool_scope": 2.55,
+  "mean_breadth_code_scope": 4.29,
+  "h1_threshold_cleared": true,
+  "intersection_n": 298,
+  "peak_a1_disk_gb": 144.0
+}

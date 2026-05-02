@@ -1,0 +1,70 @@
+{
+  "id": "pypi-mcp-server-git",
+  "registry": "pypi",
+  "language": "python",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 30892,
+  "duration_s": 0.05,
+  "download_seconds": 0.03,
+  "scan_seconds": 0.02,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 2.0,
+      "depth_adjusted": 1.5
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 12.5,
+    "depth": 1.88,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 12.59
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

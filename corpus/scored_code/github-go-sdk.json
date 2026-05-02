@@ -1,0 +1,70 @@
+{
+  "id": "github-go-sdk",
+  "registry": "github",
+  "language": "go",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 509802,
+  "duration_s": 23.32,
+  "download_seconds": 2.63,
+  "scan_seconds": 2.99,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 6,
+      "depth_adjusted": 6.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 7,
+      "depth_adjusted": 7.0
+    }
+  },
+  "score": {
+    "breadth": 50.0,
+    "depth": 28.12,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 31.91
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

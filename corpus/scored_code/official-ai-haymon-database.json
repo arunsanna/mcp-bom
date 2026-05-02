@@ -1,0 +1,70 @@
+{
+  "id": "official-ai-haymon-database",
+  "registry": "official",
+  "language": "unknown",
+  "source_tier": "official",
+  "scope": "code",
+  "archive_size_bytes": 715020,
+  "duration_s": 0.75,
+  "download_seconds": 0.67,
+  "scan_seconds": 0.0,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 0.0,
+    "depth": 0.0,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 9.25
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

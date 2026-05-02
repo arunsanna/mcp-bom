@@ -1,0 +1,70 @@
+{
+  "id": "github-mcp-toolbox",
+  "registry": "github",
+  "language": "go",
+  "source_tier": "community",
+  "scope": "code",
+  "archive_size_bytes": 20809030,
+  "duration_s": 23.77,
+  "download_seconds": 12.34,
+  "scan_seconds": 1.79,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 15.0,
+      "depth_adjusted": 15.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    }
+  },
+  "score": {
+    "breadth": 75.0,
+    "depth": 46.88,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 45.34
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

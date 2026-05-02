@@ -1,0 +1,70 @@
+{
+  "id": "npm-azure-mcp",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "enterprise",
+  "scope": "code",
+  "archive_size_bytes": 39370388,
+  "duration_s": 7.45,
+  "download_seconds": 3.88,
+  "scan_seconds": 0.14,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 2.0,
+      "depth_adjusted": 1.5
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "egress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 37.5,
+    "depth": 14.37,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 23.22
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}
