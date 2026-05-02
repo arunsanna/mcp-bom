@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 
+from mcp_bom._strip import language_for_path, strip_comments_and_strings
 from mcp_bom.models import Confidence, IngressResult
 
 _PYTHON_SERVER_PATTERNS = [
@@ -55,7 +56,10 @@ def detect(source_files: dict[str, str]) -> IngressResult:
     evidence: list[str] = []
     has_server = False
 
-    all_content = "\n".join(source_files.values())
+    masked_parts: list[str] = []
+    for path, content in source_files.items():
+        masked_parts.append(strip_comments_and_strings(content, language_for_path(path)))
+    all_content = "\n".join(masked_parts)
 
     all_server_patterns = _PYTHON_SERVER_PATTERNS + _TS_SERVER_PATTERNS
     for pat, _lang in all_server_patterns:
@@ -63,11 +67,13 @@ def detect(source_files: dict[str, str]) -> IngressResult:
             has_server = True
             evidence.append(pat)
 
-    if not has_server:
+    # `.listen(` alone is too weak to be ingress evidence on its own — many
+    # libraries expose `.listen(...)` for non-network event handlers. Only
+    # count it if a known server framework was also imported.
+    if has_server:
         listen_matches = re.findall(r"\.listen\s*\(", all_content)
         if listen_matches:
-            has_server = True
-            evidence.extend([".listen()"])
+            evidence.append(".listen()")
 
     if not has_server:
         return result

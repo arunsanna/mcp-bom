@@ -1,95 +1,217 @@
+"""Secrets capability detector with Tier 1 (config) vs Tier 2 (exposed) split.
+
+Per issue #17:
+  - Tier 1 (config): server reads a *named* env var for its OWN configuration
+                     (e.g., os.environ.get("NOTION_API_KEY"), process.env.FOO).
+                     This is benign and routine.
+  - Tier 2 (exposed): server reads the env *generically* (full dict, dynamic key,
+                      subscript with non-literal). This is "secrets gateway"-shaped
+                      and is what the score function should weight heavily.
+
+The classification matters because nearly every server has Tier 1, but only a
+small fraction expose Tier 2. Conflating them inflates H14 (drift rate).
+"""
 from __future__ import annotations
 
+import ast
 import re
 
+from mcp_bom._strip import language_for_path, strip_comments_and_strings
 from mcp_bom.models import Confidence, SecretsResult
 
-_PYTHON_PATTERNS = {
-    "config_env": [
-        r"\bos\.environ\b",
-        r"\bos\.getenv\b",
-        r"\bdotenv\b",
-        r"\bload_dotenv\b",
-    ],
-    "arbitrary_env": [
-        r"\bos\.environ\.get\b",
-        r"\bos\.environ\[",
-    ],
-    "keychain": [
-        r"\bkeyring\b",
-    ],
-    "cloud_kms": [
-        r"\bboto3\b.*secret",
-        r"\bazure.*keyvault\b",
-        r"\bgoogle.*secret.manager\b",
-        r"\bSecretsManager\b",
-    ],
-}
 
-_TS_PATTERNS = {
-    "config_env": [
-        r"\bprocess\.env\b",
-        r"\bdotenv\b",
-    ],
-    "arbitrary_env": [
-        r"\bprocess\.env\[",
-    ],
-    "cloud_kms": [
-        r"\bAWS\.SecretsManager\b",
-        r"\bSecretsManager\b",
-    ],
-}
+def _ast_python(source: str) -> tuple[bool, bool, bool, list[str]]:
+    """Return (tier1_seen, tier2_seen, write_seen, evidence)."""
+    tier1 = False
+    tier2 = False
+    write_seen = False
+    evidence: list[str] = []
 
-_GO_PATTERNS = {
-    "config_env": [
-        r"\bos\.Getenv\b",
-    ],
-}
+    try:
+        tree = ast.parse(source)
+    except SyntaxError:
+        return tier1, tier2, write_seen, evidence
+
+    for node in ast.walk(tree):
+        # os.environ.get(X)  /  os.getenv(X)
+        if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):
+            mod = node.func.value.id if isinstance(node.func.value, ast.Name) else None
+            attr = node.func.attr
+            if (mod == "os" and attr == "getenv") or (
+                isinstance(node.func.value, ast.Attribute)
+                and node.func.value.attr == "environ"
+                and attr == "get"
+            ):
+                arg0 = node.args[0] if node.args else None
+                if isinstance(arg0, ast.Constant) and isinstance(arg0.value, str):
+                    tier1 = True
+                    evidence.append(f"tier1:{mod or 'os'}.{attr}({arg0.value!r})")
+                else:
+                    tier2 = True
+                    evidence.append(f"tier2:{mod or 'os'}.{attr}(non-literal)")
+
+        # os.environ[X]  /  os.environ[X] = Y
+        if isinstance(node, ast.Subscript):
+            val = node.value
+            if (
+                isinstance(val, ast.Attribute)
+                and val.attr == "environ"
+                and isinstance(val.value, ast.Name)
+                and val.value.id == "os"
+            ):
+                key = node.slice
+                if isinstance(key, ast.Constant) and isinstance(key.value, str):
+                    tier1 = True
+                    evidence.append(f"tier1:os.environ[{key.value!r}]")
+                else:
+                    tier2 = True
+                    evidence.append("tier2:os.environ[non-literal]")
+
+        # bare `os.environ` reference outside subscript/attribute access ->
+        # likely full-dict view (.keys(), iter, copy, **os.environ, etc.)
+        if isinstance(node, ast.Attribute) and node.attr == "environ":
+            if isinstance(node.value, ast.Name) and node.value.id == "os":
+                # only flag if NOT part of os.environ.<something> or os.environ[...]
+                pass  # handled by parent walks above; keep as no-op
+
+        # assignment to os.environ[X] or os.environ.update(...)
+        if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):
+            if (
+                node.func.attr in ("update", "setdefault", "pop")
+                and isinstance(node.func.value, ast.Attribute)
+                and node.func.value.attr == "environ"
+            ):
+                write_seen = True
+                evidence.append(f"write:os.environ.{node.func.attr}")
+
+        if isinstance(node, ast.Assign):
+            for tgt in node.targets:
+                if (
+                    isinstance(tgt, ast.Subscript)
+                    and isinstance(tgt.value, ast.Attribute)
+                    and tgt.value.attr == "environ"
+                ):
+                    write_seen = True
+                    evidence.append("write:os.environ[]=")
+
+    # Detect bare `os.environ` (no subscript, no .get) — Tier 2 exposure.
+    if re.search(r"\bos\.environ\b(?!\s*\.\s*(get|setdefault|pop|update)\b|\s*\[)", source):
+        tier2 = True
+        evidence.append("tier2:os.environ-bare")
+
+    return tier1, tier2, write_seen, evidence
+
+
+def _ts_js(masked: str) -> tuple[bool, bool, bool, list[str]]:
+    tier1 = False
+    tier2 = False
+    write_seen = False
+    evidence: list[str] = []
+
+    if re.search(r"\bprocess\.env\.[A-Z_][A-Z0-9_]*\b", masked):
+        tier1 = True
+        evidence.append("tier1:process.env.LITERAL")
+    if re.search(r"\bprocess\.env\[", masked):
+        tier2 = True
+        evidence.append("tier2:process.env[]")
+    if re.search(r"\bprocess\.env\b(?!\s*\.\s*[A-Za-z_]|\s*\[)", masked):
+        tier2 = True
+        evidence.append("tier2:process.env-bare")
+
+    if re.search(r"\bprocess\.env\[[^\]]+\]\s*=", masked):
+        write_seen = True
+        evidence.append("write:process.env[]=")
+
+    return tier1, tier2, write_seen, evidence
+
+
+def _go(masked: str) -> tuple[bool, bool, bool, list[str]]:
+    tier1 = False
+    tier2 = False
+    write_seen = False
+    evidence: list[str] = []
+
+    if re.search(r'\bos\.Getenv\s*\(\s*"[A-Za-z_][A-Za-z0-9_]*"\s*\)', masked):
+        tier1 = True
+        evidence.append("tier1:os.Getenv(literal)")
+    if re.search(r"\bos\.Getenv\s*\(\s*[A-Za-z_]", masked):
+        tier2 = True
+        evidence.append("tier2:os.Getenv(var)")
+    if re.search(r"\bos\.Environ\s*\(\s*\)", masked):
+        tier2 = True
+        evidence.append("tier2:os.Environ()")
+    if re.search(r"\bos\.Setenv\b", masked):
+        write_seen = True
+        evidence.append("write:os.Setenv")
+
+    return tier1, tier2, write_seen, evidence
+
+
+def _kms_or_keychain(masked: str, language: str) -> str | None:
+    if re.search(r"\bkeyring\b", masked):
+        return "system-keychain"
+    kms_pats = [
+        r"\bSecretsManager\b",
+        r"\bsecretsmanager\b",
+        r"\bsecret_manager\b",
+        r"\bkeyvault\b",
+        r"\bget_secret_value\b",
+    ]
+    for pat in kms_pats:
+        if re.search(pat, masked):
+            return "cloud-kms"
+    return None
 
 
 def detect(source_files: dict[str, str]) -> SecretsResult:
     result = SecretsResult(detected=False)
     evidence: list[str] = []
-    detected_scopes: set[str] = set()
-    has_read = False
-    has_write = False
+    tier1_seen = False
+    tier2_seen = False
+    write_seen = False
+    kms_or_keychain_scope: str | None = None
 
     for path, content in source_files.items():
-        pattern_set: dict[str, list[str]] = {}
-        if path.endswith(".py"):
-            pattern_set = _PYTHON_PATTERNS
-        elif path.endswith((".ts", ".js", ".tsx", ".jsx")):
-            pattern_set = _TS_PATTERNS
-        elif path.endswith(".go"):
-            pattern_set = _GO_PATTERNS
+        lang = language_for_path(path)
+        masked = strip_comments_and_strings(content, lang)
 
-        for scope_key, pats in pattern_set.items():
-            for pat in pats:
-                if re.search(pat, content, re.IGNORECASE):
-                    has_read = True
-                    detected_scopes.add(scope_key)
-                    evidence.append(f"{scope_key}:{pat}")
-
-        if re.search(r"\bos\.environ\[.*\]\s*=", content) or re.search(r"\bprocess\.env\[.*\]\s*=", content):
-            has_write = True
-            evidence.append("env_write")
-
-    if has_read or has_write:
-        result.detected = True
-        result.confidence = Confidence.HIGH
-        result.read = has_read
-        result.write = has_write
-
-        if "cloud_kms" in detected_scopes:
-            result.scope = "cloud-kms"
-        elif "keychain" in detected_scopes:
-            result.scope = "system-keychain"
-        elif "arbitrary_env" in detected_scopes:
-            result.scope = "arbitrary-env"
-        elif "config_env" in detected_scopes:
-            result.scope = "process-env"
+        if lang == "python":
+            t1, t2, w, ev = _ast_python(content)
+        elif lang == "typescript":
+            t1, t2, w, ev = _ts_js(masked)
+        elif lang == "go":
+            t1, t2, w, ev = _go(masked)
         else:
-            result.scope = "unknown"
+            continue
+
+        tier1_seen = tier1_seen or t1
+        tier2_seen = tier2_seen or t2
+        write_seen = write_seen or w
+        evidence.extend(ev)
+
+        scope = _kms_or_keychain(masked, lang)
+        if scope and not kms_or_keychain_scope:
+            kms_or_keychain_scope = scope
+            evidence.append(f"scope:{scope}")
+
+    if not (tier1_seen or tier2_seen or write_seen or kms_or_keychain_scope):
+        return result
+
+    result.detected = True
+    result.confidence = Confidence.HIGH
+    result.read = tier1_seen or tier2_seen or kms_or_keychain_scope is not None
+    result.write = write_seen
+
+    if kms_or_keychain_scope == "cloud-kms":
+        result.scope = "cloud-kms"
+    elif kms_or_keychain_scope == "system-keychain":
+        result.scope = "system-keychain"
+    elif tier2_seen:
+        result.scope = "arbitrary-env"  # Tier 2 — exposed
+    elif tier1_seen:
+        result.scope = "process-env"  # Tier 1 — config-only
+    else:
+        result.scope = "unknown"
 
     result.evidence = sorted(set(evidence))[:20]
     return result

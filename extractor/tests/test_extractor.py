@@ -67,6 +67,25 @@ class TestSecretsDetector:
         assert se.detected is True
         assert se.read is True
 
+    def test_tier1_literal_env_classified_as_process_env(self):
+        report = extract(FIXTURES / "tier1_secrets_server")
+        se = report.capability_vector.secrets
+        assert se.detected is True
+        assert se.scope == "process-env"  # Tier 1 — config-only
+
+    def test_tier2_dynamic_env_classified_as_arbitrary(self):
+        report = extract(FIXTURES / "tier2_secrets_server")
+        se = report.capability_vector.secrets
+        assert se.detected is True
+        assert se.scope == "arbitrary-env"  # Tier 2 — exposed
+
+
+class TestFalsePositiveReductions:
+    def test_client_in_comments_does_not_trigger_delegation(self):
+        report = extract(FIXTURES / "comment_only_delegation")
+        de = report.capability_vector.delegation
+        assert de.detected is False, f"FP: {de.evidence}"
+
 
 class TestScorer:
     def test_score_is_deterministic(self):

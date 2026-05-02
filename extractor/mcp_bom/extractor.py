@@ -42,7 +42,27 @@ _SKIP_DIRS = {
     ".mypy_cache",
     ".ruff_cache",
     ".pytest_cache",
+    "tests",
+    "test",
+    "__tests__",
+    "spec",
+    "specs",
+    "examples",
+    "example",
+    "docs",
+    "doc",
+    "vendor",
+    "third_party",
 }
+
+
+def _looks_like_test_file(name: str) -> bool:
+    n = name.lower()
+    if n.startswith("test_") or n.endswith("_test.go") or n.endswith("_test.py"):
+        return True
+    if ".test." in n or ".spec." in n:
+        return True
+    return False
 
 
 def _read_source_files(source_path: Path) -> tuple[dict[str, str], set[Language]]:
@@ -63,16 +83,19 @@ def _read_source_files(source_path: Path) -> tuple[dict[str, str], set[Language]
     for fpath in sorted(source_path.rglob("*")):
         if not fpath.is_file():
             continue
-        if any(part in _SKIP_DIRS for part in fpath.parts):
+        try:
+            rel_parts = fpath.relative_to(source_path).parts
+        except ValueError:
+            continue
+        if any(part in _SKIP_DIRS for part in rel_parts):
             continue
         ext = fpath.suffix
         lang = _EXT_LANG.get(ext)
         if lang and lang != Language.UNKNOWN:
-            if "test" in fpath.name.lower() and fpath.stat().st_size < 200:
+            if _looks_like_test_file(fpath.name):
                 continue
             try:
-                rel = str(fpath.relative_to(source_path))
-                source_files[rel] = fpath.read_text(errors="ignore")
+                source_files["/".join(rel_parts)] = fpath.read_text(errors="ignore")
                 languages.add(lang)
             except Exception:
                 pass

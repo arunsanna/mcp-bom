@@ -1,0 +1,559 @@
+{
+  "n": 27,
+  "seed": 1729,
+  "manifest_snapshot": "2026-05-01",
+  "servers": [
+    {
+      "description": "Find rules and MCP servers",
+      "homepage_url": "https://github.com/leerob/directories",
+      "id": "github-directories",
+      "install_count": 3926,
+      "language": "typescript",
+      "last_update": "2026-04-30T14:22:06Z",
+      "license": "",
+      "maintainer": "leerob",
+      "name": "directories",
+      "package_url": "https://github.com/leerob/directories",
+      "registry": "github",
+      "repo_url": "https://github.com/leerob/directories",
+      "signed": false,
+      "source_archive_path": "raw/github-directories.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "An autonomous agent that conducts deep research on any data using any LLM providers",
+      "homepage_url": "https://github.com/assafelovic/gpt-researcher",
+      "id": "github-gpt-researcher",
+      "install_count": 26815,
+      "language": "python",
+      "last_update": "2026-05-01T17:17:44Z",
+      "license": "",
+      "maintainer": "assafelovic",
+      "name": "gpt-researcher",
+      "package_url": "https://github.com/assafelovic/gpt-researcher",
+      "registry": "github",
+      "repo_url": "https://github.com/assafelovic/gpt-researcher",
+      "signed": false,
+      "source_archive_path": "raw/github-gpt-researcher.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Official Notion MCP Server",
+      "homepage_url": "https://github.com/makenotion/notion-mcp-server",
+      "id": "github-notion-mcp-server",
+      "install_count": 4284,
+      "language": "typescript",
+      "last_update": "2026-05-01T14:13:24Z",
+      "license": "",
+      "maintainer": "makenotion",
+      "name": "notion-mcp-server",
+      "package_url": "https://github.com/makenotion/notion-mcp-server",
+      "registry": "github",
+      "repo_url": "https://github.com/makenotion/notion-mcp-server",
+      "signed": false,
+      "source_archive_path": "raw/github-notion-mcp-server.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "The power of Claude Code / GeminiCLI / CodexCLI + [Gemini / OpenAI / OpenRouter / Azure / Grok / Ollama / Custom Model / All Of The Above] working as one.",
+      "homepage_url": "https://github.com/BeehiveInnovations/pal-mcp-server",
+      "id": "github-pal-mcp-server",
+      "install_count": 11493,
+      "language": "python",
+      "last_update": "2026-05-01T17:01:47Z",
+      "license": "",
+      "maintainer": "BeehiveInnovations",
+      "name": "pal-mcp-server",
+      "package_url": "https://github.com/BeehiveInnovations/pal-mcp-server",
+      "registry": "github",
+      "repo_url": "https://github.com/BeehiveInnovations/pal-mcp-server",
+      "signed": false,
+      "source_archive_path": "raw/github-pal-mcp-server.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "\ud83c\udf0a The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, distributed swarm intelligence, RAG integration, and native Claude Code / Codex Integration",
+      "homepage_url": "https://github.com/ruvnet/ruflo",
+      "id": "github-ruflo",
+      "install_count": 34874,
+      "language": "typescript",
+      "last_update": "2026-05-01T19:31:19Z",
+      "license": "",
+      "maintainer": "ruvnet",
+      "name": "ruflo",
+      "package_url": "https://github.com/ruvnet/ruflo",
+      "registry": "github",
+      "repo_url": "https://github.com/ruvnet/ruflo",
+      "signed": false,
+      "source_archive_path": "raw/github-ruflo.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Code, Build and Evaluate agents - excellent Model and Skills/MCP/ACP Support",
+      "homepage_url": "https://github.com/evalstate/fast-agent",
+      "id": "github-fast-agent",
+      "install_count": 3760,
+      "language": "python",
+      "last_update": "2026-05-01T13:27:04Z",
+      "license": "",
+      "maintainer": "evalstate",
+      "name": "fast-agent",
+      "package_url": "https://github.com/evalstate/fast-agent",
+      "registry": "github",
+      "repo_url": "https://github.com/evalstate/fast-agent",
+      "signed": false,
+      "source_archive_path": "raw/github-fast-agent.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Own your AI. The native macOS harness for AI agents -- any model, persistent memory, autonomous execution, cryptographic identity. Built in Swift. Fully offline. Open source.",
+      "homepage_url": "https://github.com/osaurus-ai/osaurus",
+      "id": "github-osaurus",
+      "install_count": 5175,
+      "language": "c",
+      "last_update": "2026-05-01T17:02:29Z",
+      "license": "",
+      "maintainer": "osaurus-ai",
+      "name": "osaurus",
+      "package_url": "https://github.com/osaurus-ai/osaurus",
+      "registry": "github",
+      "repo_url": "https://github.com/osaurus-ai/osaurus",
+      "signed": false,
+      "source_archive_path": "raw/github-osaurus.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "A simple, secure MCP-to-OpenAPI proxy server",
+      "homepage_url": "https://github.com/open-webui/mcpo",
+      "id": "github-mcpo",
+      "install_count": 4170,
+      "language": "python",
+      "last_update": "2026-05-01T12:15:58Z",
+      "license": "",
+      "maintainer": "open-webui",
+      "name": "mcpo",
+      "package_url": "https://github.com/open-webui/mcpo",
+      "registry": "github",
+      "repo_url": "https://github.com/open-webui/mcpo",
+      "signed": false,
+      "source_archive_path": "raw/github-mcpo.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Trigger.dev \u2013 build and deploy fully\u2011managed AI agents and workflows",
+      "homepage_url": "https://github.com/triggerdotdev/trigger.dev",
+      "id": "github-trigger-dev",
+      "install_count": 14751,
+      "language": "typescript",
+      "last_update": "2026-05-01T19:26:37Z",
+      "license": "",
+      "maintainer": "triggerdotdev",
+      "name": "trigger.dev",
+      "package_url": "https://github.com/triggerdotdev/trigger.dev",
+      "registry": "github",
+      "repo_url": "https://github.com/triggerdotdev/trigger.dev",
+      "signed": false,
+      "source_archive_path": "raw/github-trigger-dev.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "\u2b50AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.\ud83c\udfaf \u544a\u522b\u4fe1\u606f\u8fc7\u8f7d\uff0c\u4f60\u7684 AI \u8206\u60c5\u76d1\u63a7\u52a9\u624b\u4e0e\u70ed\u70b9\u7b5b\u9009\u5de5\u5177\uff01\u805a\u5408\u591a\u5e73\u53f0\u70ed\u70b9 +  RSS \u8ba2\u9605\uff0c\u652f\u6301\u5173\u952e\u8bcd\u7cbe\u51c6\u7b5b\u9009\u3002AI \u667a\u80fd\u7b5b\u9009\u65b0\u95fb + AI \u7ffb\u8bd1 +  AI \u5206\u6790\u7b80\u62a5\u76f4\u63a8\u624b\u673a\uff0c\u4e5f\u652f\u6301\u63a5\u5165 MCP \u67b6\u6784\uff0c\u8d4b\u80fd AI \u81ea\u7136\u8bed\u8a00\u5bf9\u8bdd\u5206\u6790\u3001\u60c5\u611f\u6d1e\u5bdf\u4e0e\u8d8b\u52bf\u9884\u6d4b\u7b49\u3002\u652f\u6301 Docker \uff0c\u6570\u636e\u672c\u5730/\u4e91\u7aef\u81ea\u6301\u3002\u96c6\u6210\u5fae\u4fe1/\u98de\u4e66/\u9489\u9489/Telegram/\u90ae\u4ef6/ntfy/bark/slack \u7b49\u6e20\u9053\u667a\u80fd\u63a8\u9001\u3002",
+      "homepage_url": "https://github.com/sansan0/TrendRadar",
+      "id": "github-trendradar",
+      "install_count": 55979,
+      "language": "python",
+      "last_update": "2026-05-01T18:33:28Z",
+      "license": "",
+      "maintainer": "sansan0",
+      "name": "TrendRadar",
+      "package_url": "https://github.com/sansan0/TrendRadar",
+      "registry": "github",
+      "repo_url": "https://github.com/sansan0/TrendRadar",
+      "signed": false,
+      "source_archive_path": "raw/github-trendradar.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "A MCP for Claude Desktop / Claude Code / Windsurf / Cursor to build n8n workflows for you ",
+      "homepage_url": "https://github.com/czlonkowski/n8n-mcp",
+      "id": "github-n8n-mcp",
+      "install_count": 18957,
+      "language": "typescript",
+      "last_update": "2026-05-01T19:32:12Z",
+      "license": "",
+      "maintainer": "czlonkowski",
+      "name": "n8n-mcp",
+      "package_url": "https://github.com/czlonkowski/n8n-mcp",
+      "registry": "github",
+      "repo_url": "https://github.com/czlonkowski/n8n-mcp",
+      "signed": false,
+      "source_archive_path": "raw/github-n8n-mcp.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
+      "homepage_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+      "id": "github-skill-seekers",
+      "install_count": 13227,
+      "language": "python",
+      "last_update": "2026-05-01T18:28:24Z",
+      "license": "",
+      "maintainer": "yusufkaraaslan",
+      "name": "Skill_Seekers",
+      "package_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+      "registry": "github",
+      "repo_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+      "signed": false,
+      "source_archive_path": "raw/github-skill-seekers.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "\ud83d\ude80 The fast, Pythonic way to build MCP servers and clients.",
+      "homepage_url": "https://github.com/PrefectHQ/fastmcp",
+      "id": "github-fastmcp",
+      "install_count": 24942,
+      "language": "python",
+      "last_update": "2026-05-01T18:27:01Z",
+      "license": "",
+      "maintainer": "PrefectHQ",
+      "name": "fastmcp",
+      "package_url": "https://pypi.org/project/fastmcp/",
+      "registry": "github",
+      "repo_url": "https://github.com/PrefectHQ/fastmcp",
+      "signed": false,
+      "source_archive_path": "raw/github-fastmcp.zip",
+      "sources": [
+        "github",
+        "pypi",
+        "spike"
+      ],
+      "version": "3.2.4"
+    },
+    {
+      "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
+      "homepage_url": "https://github.com/mrexodia/ida-pro-mcp",
+      "id": "github-ida-pro-mcp",
+      "install_count": 8124,
+      "language": "python",
+      "last_update": "2026-05-01T19:08:27Z",
+      "license": "",
+      "maintainer": "mrexodia",
+      "name": "ida-pro-mcp",
+      "package_url": "https://github.com/mrexodia/ida-pro-mcp",
+      "registry": "github",
+      "repo_url": "https://github.com/mrexodia/ida-pro-mcp",
+      "signed": false,
+      "source_archive_path": "raw/github-ida-pro-mcp.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Official MCP Servers for AWS",
+      "homepage_url": "https://github.com/awslabs/mcp",
+      "id": "github-mcp",
+      "install_count": 8925,
+      "language": "python",
+      "last_update": "2026-05-01T16:30:05Z",
+      "license": "",
+      "maintainer": "awslabs",
+      "name": "mcp",
+      "package_url": "https://github.com/awslabs/mcp",
+      "registry": "github",
+      "repo_url": "https://github.com/awslabs/mcp",
+      "signed": false,
+      "source_archive_path": "raw/github-mcp.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "A Model Context Protocol server for Excel file manipulation",
+      "homepage_url": "https://github.com/haris-musa/excel-mcp-server",
+      "id": "github-excel-mcp-server",
+      "install_count": 3779,
+      "language": "python",
+      "last_update": "2026-05-01T18:23:51Z",
+      "license": "",
+      "maintainer": "haris-musa",
+      "name": "excel-mcp-server",
+      "package_url": "https://github.com/haris-musa/excel-mcp-server",
+      "registry": "github",
+      "repo_url": "https://github.com/haris-musa/excel-mcp-server",
+      "signed": false,
+      "source_archive_path": "raw/github-excel-mcp-server.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "A mcp server to allow LLMS gain context about shadcn ui component structure,usage and installation,compaitable with react,svelte 5,vue & React Native",
+      "homepage_url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+      "id": "github-shadcn-ui-mcp-server",
+      "install_count": 2757,
+      "language": "typescript",
+      "last_update": "2026-05-01T15:27:17Z",
+      "license": "",
+      "maintainer": "Jpisnice",
+      "name": "shadcn-ui-mcp-server",
+      "package_url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+      "registry": "github",
+      "repo_url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+      "signed": false,
+      "source_archive_path": "raw/github-shadcn-ui-mcp-server.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
+      "homepage_url": "https://github.com/bytedance/UI-TARS-desktop",
+      "id": "github-ui-tars-desktop",
+      "install_count": 29579,
+      "language": "typescript",
+      "last_update": "2026-05-01T19:14:58Z",
+      "license": "",
+      "maintainer": "bytedance",
+      "name": "UI-TARS-desktop",
+      "package_url": "https://github.com/bytedance/UI-TARS-desktop",
+      "registry": "github",
+      "repo_url": "https://github.com/bytedance/UI-TARS-desktop",
+      "signed": false,
+      "source_archive_path": "raw/github-ui-tars-desktop.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "homepage_url": "https://github.com/n8n-io/n8n",
+      "id": "github-n8n",
+      "install_count": 186388,
+      "language": "typescript",
+      "last_update": "2026-05-01T19:29:53Z",
+      "license": "",
+      "maintainer": "n8n-io",
+      "name": "n8n",
+      "package_url": "https://github.com/n8n-io/n8n",
+      "registry": "github",
+      "repo_url": "https://github.com/n8n-io/n8n",
+      "signed": false,
+      "source_archive_path": "raw/github-n8n.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth!",
+      "homepage_url": "https://github.com/tadata-org/fastapi_mcp",
+      "id": "github-fastapi-mcp",
+      "install_count": 11836,
+      "language": "python",
+      "last_update": "2026-05-01T15:27:16Z",
+      "license": "",
+      "maintainer": "tadata-org",
+      "name": "fastapi_mcp",
+      "package_url": "https://github.com/tadata-org/fastapi_mcp",
+      "registry": "github",
+      "repo_url": "https://github.com/tadata-org/fastapi_mcp",
+      "signed": false,
+      "source_archive_path": "raw/github-fastapi-mcp.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Laravel-focused MCP server for augmenting your AI powered local development experience.",
+      "homepage_url": "https://github.com/laravel/boost",
+      "id": "github-boost",
+      "install_count": 3442,
+      "language": "php",
+      "last_update": "2026-04-30T13:10:36Z",
+      "license": "",
+      "maintainer": "laravel",
+      "name": "boost",
+      "package_url": "https://github.com/laravel/boost",
+      "registry": "github",
+      "repo_url": "https://github.com/laravel/boost",
+      "signed": false,
+      "source_archive_path": "raw/github-boost.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "WhatsApp MCP server",
+      "homepage_url": "https://github.com/lharries/whatsapp-mcp",
+      "id": "github-whatsapp-mcp",
+      "install_count": 5565,
+      "language": "go",
+      "last_update": "2026-04-30T16:37:33Z",
+      "license": "",
+      "maintainer": "lharries",
+      "name": "whatsapp-mcp",
+      "package_url": "https://github.com/lharries/whatsapp-mcp",
+      "registry": "github",
+      "repo_url": "https://github.com/lharries/whatsapp-mcp",
+      "signed": false,
+      "source_archive_path": "raw/github-whatsapp-mcp.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "MCP Server for Computer Use in Windows",
+      "homepage_url": "https://github.com/CursorTouch/Windows-MCP",
+      "id": "github-windows-mcp",
+      "install_count": 5434,
+      "language": "python",
+      "last_update": "2026-05-01T14:42:13Z",
+      "license": "",
+      "maintainer": "CursorTouch",
+      "name": "Windows-MCP",
+      "package_url": "https://github.com/CursorTouch/Windows-MCP",
+      "registry": "github",
+      "repo_url": "https://github.com/CursorTouch/Windows-MCP",
+      "signed": false,
+      "source_archive_path": "raw/github-windows-mcp.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Yet another WebUI for Nginx",
+      "homepage_url": "https://github.com/0xJacky/nginx-ui",
+      "id": "github-nginx-ui",
+      "install_count": 11103,
+      "language": "go",
+      "last_update": "2026-05-01T17:48:21Z",
+      "license": "",
+      "maintainer": "0xJacky",
+      "name": "nginx-ui",
+      "package_url": "https://github.com/0xJacky/nginx-ui",
+      "registry": "github",
+      "repo_url": "https://github.com/0xJacky/nginx-ui",
+      "signed": false,
+      "source_archive_path": "raw/github-nginx-ui.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Playwright MCP server",
+      "homepage_url": "https://github.com/microsoft/playwright-mcp",
+      "id": "github-playwright-mcp",
+      "install_count": 31885,
+      "language": "typescript",
+      "last_update": "2026-05-01T19:09:46Z",
+      "license": "",
+      "maintainer": "microsoft",
+      "name": "playwright-mcp",
+      "package_url": "https://github.com/microsoft/playwright-mcp",
+      "registry": "github",
+      "repo_url": "https://github.com/microsoft/playwright-mcp",
+      "signed": false,
+      "source_archive_path": "raw/github-playwright-mcp.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    },
+    {
+      "description": "Monitor browser logs directly from Cursor and other MCP compatible IDEs.",
+      "homepage_url": "https://github.com/AgentDeskAI/browser-tools-mcp",
+      "id": "github-browser-tools-mcp",
+      "install_count": 7209,
+      "language": "typescript",
+      "last_update": "2026-04-30T11:57:07Z",
+      "license": "",
+      "maintainer": "AgentDeskAI",
+      "name": "browser-tools-mcp",
+      "package_url": "https://github.com/AgentDeskAI/browser-tools-mcp",
+      "registry": "github",
+      "repo_url": "https://github.com/AgentDeskAI/browser-tools-mcp",
+      "signed": false,
+      "source_archive_path": "raw/github-browser-tools-mcp.zip",
+      "sources": [
+        "github"
+      ],
+      "version": ""
+    },
+    {
+      "description": "GitHub's official MCP Server",
+      "homepage_url": "https://github.com/github/github-mcp-server",
+      "id": "github-github-mcp-server",
+      "install_count": 29424,
+      "language": "go",
+      "last_update": "2026-05-01T19:29:41Z",
+      "license": "",
+      "maintainer": "github",
+      "name": "github-mcp-server",
+      "package_url": "https://github.com/github/github-mcp-server",
+      "registry": "github",
+      "repo_url": "https://github.com/github/github-mcp-server",
+      "signed": false,
+      "source_archive_path": "raw/github-github-mcp-server.zip",
+      "sources": [
+        "github",
+        "spike"
+      ],
+      "version": ""
+    }
+  ]
+}

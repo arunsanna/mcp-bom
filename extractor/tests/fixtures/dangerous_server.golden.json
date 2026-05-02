@@ -66,15 +66,15 @@
       "detected": true,
       "confidence": "high",
       "evidence": [
-        "arbitrary_env:\\bos\\.environ\\.get\\b",
-        "config_env:\\bos\\.environ\\b"
+        "tier1:os.get('API_KEY')",
+        "tier1:os.get('DATABASE_URL')"
       ],
-      "depth_raw": 6.0,
-      "depth_adjusted": 6.0,
+      "depth_raw": 2.0,
+      "depth_adjusted": 2.0,
       "sub_fields": {},
       "read": true,
       "write": false,
-      "scope": "arbitrary-env"
+      "scope": "process-env"
     },
     "delegation": {
       "detected": false,
@@ -123,10 +123,10 @@
   },
   "score": {
     "breadth": 50.0,
-    "depth": 40.0,
+    "depth": 35.0,
     "exposure": 20.0,
     "provenance": 35.0,
-    "attack_surface_score": 37.25
+    "attack_surface_score": 35.0
   },
   "languages_detected": [
     "python"

@@ -78,3 +78,7 @@ spike/__pycache__/
 # Extractor venv
 extractor/.venv/
 extractor/.pytest_cache/
+
+# Per-PI labeling work (commit explicitly when ready for paper)
+validation/precision_recall/labels.json
+validation/precision_recall/metrics.md

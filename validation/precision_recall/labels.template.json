@@ -1,0 +1,407 @@
+[
+  {
+    "server_id": "github-directories",
+    "repo_url": "https://github.com/leerob/directories",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-gpt-researcher",
+    "repo_url": "https://github.com/assafelovic/gpt-researcher",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-notion-mcp-server",
+    "repo_url": "https://github.com/makenotion/notion-mcp-server",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-pal-mcp-server",
+    "repo_url": "https://github.com/BeehiveInnovations/pal-mcp-server",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-ruflo",
+    "repo_url": "https://github.com/ruvnet/ruflo",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-fast-agent",
+    "repo_url": "https://github.com/evalstate/fast-agent",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-osaurus",
+    "repo_url": "https://github.com/osaurus-ai/osaurus",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-mcpo",
+    "repo_url": "https://github.com/open-webui/mcpo",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-trigger-dev",
+    "repo_url": "https://github.com/triggerdotdev/trigger.dev",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-trendradar",
+    "repo_url": "https://github.com/sansan0/TrendRadar",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-n8n-mcp",
+    "repo_url": "https://github.com/czlonkowski/n8n-mcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-skill-seekers",
+    "repo_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-fastmcp",
+    "repo_url": "https://github.com/PrefectHQ/fastmcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-ida-pro-mcp",
+    "repo_url": "https://github.com/mrexodia/ida-pro-mcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-mcp",
+    "repo_url": "https://github.com/awslabs/mcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-excel-mcp-server",
+    "repo_url": "https://github.com/haris-musa/excel-mcp-server",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-shadcn-ui-mcp-server",
+    "repo_url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-ui-tars-desktop",
+    "repo_url": "https://github.com/bytedance/UI-TARS-desktop",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-n8n",
+    "repo_url": "https://github.com/n8n-io/n8n",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-fastapi-mcp",
+    "repo_url": "https://github.com/tadata-org/fastapi_mcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-boost",
+    "repo_url": "https://github.com/laravel/boost",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-whatsapp-mcp",
+    "repo_url": "https://github.com/lharries/whatsapp-mcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-windows-mcp",
+    "repo_url": "https://github.com/CursorTouch/Windows-MCP",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-nginx-ui",
+    "repo_url": "https://github.com/0xJacky/nginx-ui",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-playwright-mcp",
+    "repo_url": "https://github.com/microsoft/playwright-mcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-browser-tools-mcp",
+    "repo_url": "https://github.com/AgentDeskAI/browser-tools-mcp",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  },
+  {
+    "server_id": "github-github-mcp-server",
+    "repo_url": "https://github.com/github/github-mcp-server",
+    "labels": {
+      "filesystem": null,
+      "shell": null,
+      "egress": null,
+      "ingress": null,
+      "secrets": null,
+      "delegation": null,
+      "impersonation": null,
+      "data_sensitivity": null
+    },
+    "notes": ""
+  }
+]

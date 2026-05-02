@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 
+from mcp_bom._strip import language_for_path, strip_comments_and_strings
 from mcp_bom.models import Confidence, DelegationResult
 
 _PYTHON_PATTERNS = [
@@ -49,29 +50,33 @@ def detect(source_files: dict[str, str]) -> DelegationResult:
     has_dynamic = False
     delegate_count = 0
 
-    all_content = "\n".join(source_files.values())
+    masked_parts: list[str] = []
 
     for path, content in source_files.items():
+        masked = strip_comments_and_strings(content, language_for_path(path))
+        masked_parts.append(masked)
         patterns = _PYTHON_PATTERNS if path.endswith(".py") else _TS_PATTERNS if path.endswith((".ts", ".js")) else []
 
         for pat in patterns:
-            if re.search(pat, content, re.IGNORECASE):
+            if re.search(pat, masked, re.IGNORECASE):
                 has_delegation = True
                 has_static = True
                 evidence.append(f"sdk:{pat}")
                 delegate_count += 1
 
         for pat in _MCP_TRANSPORT_PATHS:
-            matches = re.findall(pat, content)
+            matches = re.findall(pat, masked)
             if matches:
                 has_delegation = True
                 evidence.append(f"transport:{pat}")
                 delegate_count += len(matches)
 
         for pat in _MCP_METHODS:
-            if re.search(pat, content):
+            if re.search(pat, masked):
                 has_delegation = True
                 evidence.append(f"method:{pat}")
+
+    all_content = "\n".join(masked_parts)
 
     if has_delegation:
         for pat in _DYNAMIC_INDICATORS:
