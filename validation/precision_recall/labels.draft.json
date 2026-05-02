@@ -1,0 +1,704 @@
+[
+  {
+    "server_id": "github-directories",
+    "repo_url": "https://github.com/leerob/directories",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": false,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-gpt-researcher",
+    "repo_url": "https://github.com/assafelovic/gpt-researcher",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-notion-mcp-server",
+    "repo_url": "https://github.com/makenotion/notion-mcp-server",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['location', 'notion'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-pal-mcp-server",
+    "repo_url": "https://github.com/BeehiveInnovations/pal-mcp-server",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-ruflo",
+    "repo_url": "https://github.com/ruvnet/ruflo",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": false,
+      "secrets": false,
+      "delegation": true,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "imports MCP ClientSession (calls other MCP servers)",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-fast-agent",
+    "repo_url": "https://github.com/evalstate/fast-agent",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-osaurus",
+    "repo_url": "https://github.com/osaurus-ai/osaurus",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": false,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-mcpo",
+    "repo_url": "https://github.com/open-webui/mcpo",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": true,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "imports MCP ClientSession (calls other MCP servers)",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-trigger-dev",
+    "repo_url": "https://github.com/triggerdotdev/trigger.dev",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-trendradar",
+    "repo_url": "https://github.com/sansan0/TrendRadar",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": true,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "tool decorator references path/file/dir",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "write-shaped tool (['github']) acts on user's behalf",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-n8n-mcp",
+    "repo_url": "https://github.com/czlonkowski/n8n-mcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": true,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "imports MCP ClientSession (calls other MCP servers)",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['email', 'phi', 'slack'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-skill-seekers",
+    "repo_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": false,
+      "shell": false,
+      "egress": false,
+      "ingress": false,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "no path/file tool argument detected",
+      "shell": "no command/exec tool argument detected",
+      "egress": "no fetch/api tool argument and no URL fetcher",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['notion', 'slack'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-fastmcp",
+    "repo_url": "https://github.com/PrefectHQ/fastmcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": true,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "imports MCP ClientSession (calls other MCP servers)",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-ida-pro-mcp",
+    "repo_url": "https://github.com/mrexodia/ida-pro-mcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "tool decorator references path/file/dir",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['location'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-mcp",
+    "repo_url": "https://github.com/awslabs/mcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": true,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": true,
+      "impersonation": true,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "tool decorator references path/file/dir",
+      "shell": "tool decorator references command/exec AND source uses subprocess",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "imports MCP ClientSession (calls other MCP servers)",
+      "impersonation": "write-shaped tool (['github']) acts on user's behalf",
+      "data_sensitivity": "server domain handles sensitive data (['location', 'phi'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-excel-mcp-server",
+    "repo_url": "https://github.com/haris-musa/excel-mcp-server",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": false,
+      "shell": false,
+      "egress": false,
+      "ingress": false,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "no path/file tool argument detected",
+      "shell": "no command/exec tool argument detected",
+      "egress": "no fetch/api tool argument and no URL fetcher",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-shadcn-ui-mcp-server",
+    "repo_url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['calendar', 'phi'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-ui-tars-desktop",
+    "repo_url": "https://github.com/bytedance/UI-TARS-desktop",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": false,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-n8n",
+    "repo_url": "https://github.com/n8n-io/n8n",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": false,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "no path/file tool argument detected",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-fastapi-mcp",
+    "repo_url": "https://github.com/tadata-org/fastapi_mcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": false,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "no path/file tool argument detected",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['slack'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-boost",
+    "repo_url": "https://github.com/laravel/boost",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": false,
+      "shell": false,
+      "egress": false,
+      "ingress": false,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "no path/file tool argument detected",
+      "shell": "no command/exec tool argument detected",
+      "egress": "no fetch/api tool argument and no URL fetcher",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-whatsapp-mcp",
+    "repo_url": "https://github.com/lharries/whatsapp-mcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": false,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": true,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "tool decorator references path/file/dir",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "no public HTTP server detected (likely stdio)",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "write-shaped tool (['github']) acts on user's behalf",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-windows-mcp",
+    "repo_url": "https://github.com/CursorTouch/Windows-MCP",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-nginx-ui",
+    "repo_url": "https://github.com/0xJacky/nginx-ui",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['location'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-playwright-mcp",
+    "repo_url": "https://github.com/microsoft/playwright-mcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": false,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "no fetch/api tool argument and no URL fetcher",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['location'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-browser-tools-mcp",
+    "repo_url": "https://github.com/AgentDeskAI/browser-tools-mcp",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": true,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": false,
+      "impersonation": false,
+      "data_sensitivity": false
+    },
+    "rationale": {
+      "filesystem": "writes or deletes files in source (likely exposed)",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "binds 0.0.0.0 with an HTTP framework",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "no MCP client import",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "domain doesn't appear to handle PII/PHI/financial/location"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  },
+  {
+    "server_id": "github-github-mcp-server",
+    "repo_url": "https://github.com/github/github-mcp-server",
+    "source": "ai-draft",
+    "labels": {
+      "filesystem": false,
+      "shell": false,
+      "egress": true,
+      "ingress": true,
+      "secrets": false,
+      "delegation": true,
+      "impersonation": false,
+      "data_sensitivity": true
+    },
+    "rationale": {
+      "filesystem": "no path/file tool argument detected",
+      "shell": "no command/exec tool argument detected",
+      "egress": "tool surface fetches URLs or queries APIs",
+      "ingress": "HTTP framework imported and README mentions listen/port",
+      "secrets": "no env/secret tool argument; only Tier 1 config in source",
+      "delegation": "imports MCP ClientSession (calls other MCP servers)",
+      "impersonation": "no write-shaped tool against an external account system",
+      "data_sensitivity": "server domain handles sensitive data (['location'])"
+    },
+    "notes": "AI-drafted; human PI must review before computing real metrics"
+  }
+]

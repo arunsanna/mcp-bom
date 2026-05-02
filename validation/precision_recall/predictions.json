@@ -4,87 +4,87 @@
     "language": "typescript",
     "repo_url": "https://github.com/leerob/directories",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": true,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 42.92
+    "score": 30.61
   },
   {
     "server_id": "github-gpt-researcher",
     "language": "python",
     "repo_url": "https://github.com/assafelovic/gpt-researcher",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 66.25
+    "score": 48.31
   },
   {
     "server_id": "github-notion-mcp-server",
     "language": "typescript",
     "repo_url": "https://github.com/makenotion/notion-mcp-server",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": false,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": false,
       "data_sensitivity": true
     },
-    "score": 28.5
+    "score": 18.44
   },
   {
     "server_id": "github-pal-mcp-server",
     "language": "python",
     "repo_url": "https://github.com/BeehiveInnovations/pal-mcp-server",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": false,
       "data_sensitivity": true
     },
-    "score": 50.44
+    "score": 31.38
   },
   {
     "server_id": "github-ruflo",
     "language": "typescript",
     "repo_url": "https://github.com/ruvnet/ruflo",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": true,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 69.53
+    "score": 50.47
   },
   {
     "server_id": "github-fast-agent",
     "language": "python",
     "repo_url": "https://github.com/evalstate/fast-agent",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
@@ -93,110 +93,110 @@
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 58.72
+    "score": 45.53
   },
   {
     "server_id": "github-osaurus",
     "language": "c",
     "repo_url": "https://github.com/osaurus-ai/osaurus",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": false,
       "egress": true,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": false
     },
-    "score": 26.28
+    "score": 16.22
   },
   {
     "server_id": "github-mcpo",
     "language": "python",
     "repo_url": "https://github.com/open-webui/mcpo",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": true,
       "impersonation": false,
       "data_sensitivity": true
     },
-    "score": 32.31
+    "score": 21.12
   },
   {
     "server_id": "github-trigger-dev",
     "language": "typescript",
     "repo_url": "https://github.com/triggerdotdev/trigger.dev",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 66.19
+    "score": 47.12
   },
   {
     "server_id": "github-trendradar",
     "language": "python",
     "repo_url": "https://github.com/sansan0/TrendRadar",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 47.88
+    "score": 31.06
   },
   {
     "server_id": "github-n8n-mcp",
     "language": "typescript",
     "repo_url": "https://github.com/czlonkowski/n8n-mcp",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": true,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 56.47
+    "score": 38.53
   },
   {
     "server_id": "github-skill-seekers",
     "language": "python",
     "repo_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 50.31
+    "score": 31.25
   },
   {
     "server_id": "github-fastmcp",
     "language": "python",
     "repo_url": "https://github.com/PrefectHQ/fastmcp",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
@@ -205,7 +205,7 @@
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 57.03
+    "score": 43.84
   },
   {
     "server_id": "github-ida-pro-mcp",
@@ -216,12 +216,12 @@
       "shell": true,
       "egress": true,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 47.03
+    "score": 33.28
   },
   {
     "server_id": "github-mcp",
@@ -237,39 +237,39 @@
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 60.97
+    "score": 59.84
   },
   {
     "server_id": "github-excel-mcp-server",
     "language": "python",
     "repo_url": "https://github.com/haris-musa/excel-mcp-server",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": false,
       "egress": false,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": false,
       "data_sensitivity": false
     },
-    "score": 23.81
+    "score": 9.25
   },
   {
     "server_id": "github-shadcn-ui-mcp-server",
     "language": "typescript",
     "repo_url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": false,
       "data_sensitivity": false
     },
-    "score": 42.69
+    "score": 32.62
   },
   {
     "server_id": "github-ui-tars-desktop",
@@ -285,14 +285,14 @@
       "impersonation": false,
       "data_sensitivity": true
     },
-    "score": 62.88
+    "score": 60.62
   },
   {
     "server_id": "github-n8n",
     "language": "typescript",
     "repo_url": "https://github.com/n8n-io/n8n",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
@@ -301,14 +301,14 @@
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 74.88
+    "score": 61.69
   },
   {
     "server_id": "github-fastapi-mcp",
     "language": "python",
     "repo_url": "https://github.com/tadata-org/fastapi_mcp",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": false,
       "egress": true,
       "ingress": true,
@@ -317,7 +317,7 @@
       "impersonation": true,
       "data_sensitivity": false
     },
-    "score": 26.0
+    "score": 19.28
   },
   {
     "server_id": "github-boost",
@@ -349,7 +349,7 @@
       "impersonation": false,
       "data_sensitivity": true
     },
-    "score": 37.25
+    "score": 28.81
   },
   {
     "server_id": "github-windows-mcp",
@@ -360,75 +360,75 @@
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": false,
       "data_sensitivity": false
     },
-    "score": 41.94
+    "score": 27.06
   },
   {
     "server_id": "github-nginx-ui",
     "language": "go",
     "repo_url": "https://github.com/0xJacky/nginx-ui",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": false,
       "egress": true,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 40.59
+    "score": 22.66
   },
   {
     "server_id": "github-playwright-mcp",
     "language": "typescript",
     "repo_url": "https://github.com/microsoft/playwright-mcp",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": false,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": false,
       "data_sensitivity": false
     },
-    "score": 26.31
+    "score": 16.25
   },
   {
     "server_id": "github-browser-tools-mcp",
     "language": "typescript",
     "repo_url": "https://github.com/AgentDeskAI/browser-tools-mcp",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": true,
       "egress": true,
       "ingress": true,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": false
     },
-    "score": 39.72
+    "score": 26.28
   },
   {
     "server_id": "github-github-mcp-server",
     "language": "go",
     "repo_url": "https://github.com/github/github-mcp-server",
     "predictions": {
-      "filesystem": true,
+      "filesystem": false,
       "shell": false,
       "egress": true,
       "ingress": false,
-      "secrets": true,
+      "secrets": false,
       "delegation": false,
       "impersonation": true,
       "data_sensitivity": true
     },
-    "score": 37.22
+    "score": 26.03
   }
 ]

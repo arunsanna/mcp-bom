@@ -99,11 +99,21 @@ def main() -> int:
 
     n_labeled = len(labels_rows) - len(unlabeled_servers)
 
+    try:
+        preds_rel = args.predictions.relative_to(REPO_ROOT)
+    except ValueError:
+        preds_rel = str(args.predictions)
+
+    try:
+        labels_rel = args.labels.relative_to(REPO_ROOT)
+    except ValueError:
+        labels_rel = str(args.labels)
+
     lines = [
         "# Extractor precision/recall on ground-truth sample",
         "",
-        f"- Predictions file: `{args.predictions.relative_to(REPO_ROOT)}`",
-        f"- Labels file: `{args.labels.relative_to(REPO_ROOT)}`",
+        f"- Predictions file: `{preds_rel}`",
+        f"- Labels file: `{labels_rel}`",
         f"- Servers in labels file: {len(labels_rows)}",
         f"- Servers fully labeled: {n_labeled}",
         f"- Servers with at least one null label: {len(unlabeled_servers)}",
