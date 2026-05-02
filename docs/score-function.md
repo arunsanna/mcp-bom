@@ -8,6 +8,27 @@
 - Provenance metadata: install count, last-update date, signed package (true/false), maintainer reputation.
 - Exposure surface: ingress bind, auth, TLS.
 
+## Construct
+
+ASS measures **code-level attack surface** — the set of capabilities reachable
+from any code path in the server's source code, regardless of whether the
+capability is exposed via a registered MCP tool. This matches OWASP ASI05
+(Unexpected Code Exec) and the Manadhare-surface formalism: an attacker
+compromising the server (e.g., via prompt injection) can route through a tool
+to any capability the source code touches.
+
+The extractor's secondary `--scope tool` mode produces the "declared subset"
+— capabilities reachable from inside MCP tool-handler functions only. The
+difference between the two modes per server is the operational definition of
+H14's schema-vs-implementation drift metric:
+
+```
+drift_categories(server) = code_scope_categories(server) - tool_scope_categories(server)
+```
+
+See **Capability Scope Vector** below for how the scope mode affects each
+category's detection.
+
 ## Components
 
 The final score is a weighted sum of four components, each normalised to 0–100, then combined with weights `w_b`, `w_d`, `w_e`, `w_p`.
@@ -75,6 +96,15 @@ Locked v1 weights (sum to 1.0):
 - w_p = 0.15 (provenance)
 
 Rationale: depth dominates because a single high-privilege capability is more dangerous than many low-privilege ones. Provenance is weighted lowest because it is recoverable (a stale repo can become active) while depth is intrinsic.
+
+## Capability Scope Vector
+
+Each of the eight categories is detected via two independent layers:
+
+1. **Source-code patterns** — regex and AST analysis of `.py`, `.ts`, `.js`, `.go` files. Scope-gated: `--scope code` scans all source; `--scope tool` restricts to MCP tool-handler context.
+2. **Schema property patterns** — JSON schema property names (e.g. `"path"`, `"command"`, `"url"`, `"api_key"`) that indicate a tool parameter referencing a capability. This layer runs regardless of `--scope`.
+
+Schema-only detections produce `confidence: low` and are tracked separately in the drift metric.
 
 ## Confidence Adjustment
 
