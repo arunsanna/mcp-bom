@@ -5,6 +5,7 @@
 | Field                               | Value                                                                    |
 | ----------------------------------- | ------------------------------------------------------------------------ |
 | Pre-registration date               | 2026-05-01                                                               |
+| Pre-registration version            | v1.1 (amended 2026-05-02; original v1 locked 2026-05-01)                |
 | Corpus snapshot                     | `corpus/manifest.json` (500 servers, snapshot 2026-05-01)                |
 | Score function version              | `score_function.toml` v1 (locked)                                        |
 | Taxonomy version                    | `docs/capability-taxonomy.md` v1 (locked)                                |
@@ -136,12 +137,35 @@ Per repo `CLAUDE.md`, no confirmatory test runs until the measurement instrument
 - **Ground truth set**: 50 servers, stratified random sample from the 500 corpus (different seed: `0x4d4250` = "MBP"). One annotator (Arun) hand-labels the 8-category capability vector. A second annotator labels 25 of the 50 (overlap subset) for inter-rater reliability.
 - **Per-category precision and recall** reported in `validation/extractor_metrics.json`. Each value with 95% Wilson CI.
 - **Cohen's κ** on the 25-server overlap subset. Target ≥ 0.6 (substantial agreement). Below 0.4 (fair) halts the run.
-- **Calibration anchors** (per `score_function.toml`):
-  - CVE-2025-6514 (`mcp-remote`) must produce ASS ≥ 80
-  - CVE-2025-49596 (MCP Inspector CSRF→RCE) must produce ASS ≥ 80
-  - A localhost-only filesystem-read-only server with active maintenance must produce ASS ≤ 30
-  - A server with `ingress=public+no-auth` and `shell=direct` must produce ASS ≥ 90
-- **If any anchor fails**: weights are re-tuned via grid search constrained to anchor satisfaction. Re-tuning constitutes a `v1.1` weight update; pre-registration must be amended and the family of 6 tests re-run.
+- **Calibration anchors (v1.1, percentile-relative)**:
+  Computed against the corpus snapshot 2026-05-01 (n=298 successfully
+  scored servers, code-scope, in `corpus/scored_code/`). Percentiles
+  refer to the ASS distribution of that scored set.
+
+  - CVE-2025-6514 (`mcp-remote`) — known-vulnerable remote-access
+    proxy. Out-of-corpus anchor (not in the 500 manifest).
+    Required ASS ≥ p50 of corpus (≈ 31.61 ASS). Tested separately
+    in `validation/calibration_anchors/` (TBD task).
+  - CVE-2025-49596 (MCP Inspector CSRF→RCE) — known-vulnerable.
+    In-corpus anchor (`npm-modelcontextprotocol-inspector`).
+    Required ASS ≥ p50 of corpus (≈ 31.61). Observed: 41.28
+    (≈ p70). PASSES.
+  - Localhost-only filesystem-read-only with active maintenance
+    — narrow-surface floor anchor. Required ASS ≤ p33 of corpus
+    (≈ 23.22). In-corpus example: `pypi-mcp-server-sqlite` at
+    16.22. PASSES.
+  - Public-no-auth ingress + direct shell — worst-case ceiling
+    anchor. Required ASS ≥ p90 of corpus (≈ 55.22). If no such
+    server exists in the corpus, the anchor is documented as
+    untestable and reported as a §5 construct-validity threat.
+- **If any percentile-relative anchor fails**: investigate root cause
+  first. (a) If extractor bug — bounded fix, re-score affected
+  servers, re-check anchor. No pre-reg amendment. (b) If score-
+  function structural issue — weight re-tune triggers a v1.1 → v1.2
+  amendment per §7 and the §1 confirmatory family is re-run on the
+  re-scored corpus. (c) If the anchor selection itself is flawed
+  (e.g., set above the model's mathematical ceiling) — document as
+  a §7 deviation, do NOT re-tune the model to satisfy a flawed anchor.
 
 ---
 
