@@ -20,29 +20,38 @@ from mcp_bom._strip import language_for_path, strip_comments_and_strings
 from mcp_bom._tool_scope import GO_TOOL_REG_PATS, TS_TOOL_REG_PATS, near_tool_reg, python_tool_source
 from mcp_bom.models import Confidence, SecretsResult
 
+SCHEMA_PATTERNS = [
+    r'"api_key"',
+    r'"token"',
+    r'"secret"',
+    r'"password"',
+    r'"credential"',
+]
 
-def _ast_python(source: str) -> tuple[bool, bool, bool, list[str]]:
-    """Return (tier1_seen, tier2_seen, write_seen, evidence).
 
-    Only flags env access that occurs inside a function decorated with an MCP
-    tool decorator (@mcp.tool, @server.tool, @app.tool, @tool).  Module-level
-    config reads are intentionally excluded — they are not exposed capabilities.
-    """
+def _ast_python(source: str, scope: str = "code") -> tuple[bool, bool, bool, list[str]]:
     tier1 = False
     tier2 = False
     write_seen = False
     evidence: list[str] = []
 
     tree, ranges, tool_text = python_tool_source(source)
-    if tree is None or not ranges:
+    if tree is None:
         return tier1, tier2, write_seen, evidence
 
-    def in_tool(lineno: int) -> bool:
+    if scope == "tool" and not ranges:
+        return tier1, tier2, write_seen, evidence
+
+    scan_text = tool_text if scope == "tool" else source
+
+    def _in_scope(lineno: int) -> bool:
+        if scope == "code":
+            return True
         return any(s <= lineno <= e for s, e in ranges)
 
     for node in ast.walk(tree):
         lineno = getattr(node, "lineno", None)
-        if lineno is None or not in_tool(lineno):
+        if lineno is None or not _in_scope(lineno):
             continue
 
         # os.environ.get(X)  /  os.getenv(X)
@@ -101,7 +110,7 @@ def _ast_python(source: str) -> tuple[bool, bool, bool, list[str]]:
 
     # Bare os.environ (dict view, **os.environ, etc.) — only inside tool functions.
     if re.search(
-        r"\bos\.environ\b(?!\s*\.\s*(get|setdefault|pop|update)\b|\s*\[)", tool_text
+        r"\bos\.environ\b(?!\s*\.\s*(get|setdefault|pop|update)\b|\s*\[)", scan_text
     ):
         tier2 = True
         evidence.append("tier2:os.environ-bare")
@@ -110,7 +119,7 @@ def _ast_python(source: str) -> tuple[bool, bool, bool, list[str]]:
 
 
 
-def _ts_js(masked: str) -> tuple[bool, bool, bool, list[str]]:
+def _ts_js(masked: str, scope: str = "code") -> tuple[bool, bool, bool, list[str]]:
     tier1 = False
     tier2 = False
     write_seen = False
@@ -118,7 +127,7 @@ def _ts_js(masked: str) -> tuple[bool, bool, bool, list[str]]:
 
     lines = masked.splitlines()
     for i, line in enumerate(lines):
-        if not near_tool_reg(lines, i, TS_TOOL_REG_PATS):
+        if scope == "tool" and not near_tool_reg(lines, i, TS_TOOL_REG_PATS):
             continue
         if re.search(r"\bprocess\.env\.[A-Z_][A-Z0-9_]*\b", line):
             tier1 = True
@@ -136,7 +145,7 @@ def _ts_js(masked: str) -> tuple[bool, bool, bool, list[str]]:
     return tier1, tier2, write_seen, evidence
 
 
-def _go(masked: str) -> tuple[bool, bool, bool, list[str]]:
+def _go(masked: str, scope: str = "code") -> tuple[bool, bool, bool, list[str]]:
     tier1 = False
     tier2 = False
     write_seen = False
@@ -144,7 +153,7 @@ def _go(masked: str) -> tuple[bool, bool, bool, list[str]]:
 
     lines = masked.splitlines()
     for i, line in enumerate(lines):
-        if not near_tool_reg(lines, i, GO_TOOL_REG_PATS):
+        if scope == "tool" and not near_tool_reg(lines, i, GO_TOOL_REG_PATS):
             continue
         if re.search(r'\bos\.Getenv\s*\(\s*"[A-Za-z_][A-Za-z0-9_]*"\s*\)', line):
             tier1 = True
@@ -178,24 +187,30 @@ def _kms_or_keychain(masked: str, language: str) -> str | None:
     return None
 
 
-def detect(source_files: dict[str, str]) -> SecretsResult:
+def detect(source_files: dict[str, str], scope: str = "code") -> SecretsResult:
     result = SecretsResult(detected=False)
     evidence: list[str] = []
     tier1_seen = False
     tier2_seen = False
     write_seen = False
     kms_or_keychain_scope: str | None = None
+    schema_hits = False
 
     for path, content in source_files.items():
         lang = language_for_path(path)
         masked = strip_comments_and_strings(content, lang)
 
+        for pat in SCHEMA_PATTERNS:
+            if re.search(pat, masked, re.IGNORECASE):
+                schema_hits = True
+                evidence.append(f"schema:{pat}")
+
         if lang == "python":
-            t1, t2, w, ev = _ast_python(content)
+            t1, t2, w, ev = _ast_python(content, scope=scope)
         elif lang == "typescript":
-            t1, t2, w, ev = _ts_js(masked)
+            t1, t2, w, ev = _ts_js(masked, scope=scope)
         elif lang == "go":
-            t1, t2, w, ev = _go(masked)
+            t1, t2, w, ev = _go(masked, scope=scope)
         else:
             continue
 
@@ -204,16 +219,21 @@ def detect(source_files: dict[str, str]) -> SecretsResult:
         write_seen = write_seen or w
         evidence.extend(ev)
 
-        scope = _kms_or_keychain(masked, lang)
-        if scope and not kms_or_keychain_scope:
-            kms_or_keychain_scope = scope
-            evidence.append(f"scope:{scope}")
+        kms_scope = _kms_or_keychain(masked, lang)
+        if kms_scope and not kms_or_keychain_scope:
+            kms_or_keychain_scope = kms_scope
+            evidence.append(f"scope:{kms_scope}")
 
-    if not (tier1_seen or tier2_seen or write_seen or kms_or_keychain_scope):
+    if not (tier1_seen or tier2_seen or write_seen or kms_or_keychain_scope or schema_hits):
         return result
 
     result.detected = True
-    result.confidence = Confidence.HIGH
+
+    if tier1_seen or tier2_seen or write_seen or kms_or_keychain_scope:
+        result.confidence = Confidence.HIGH
+    elif schema_hits:
+        result.confidence = Confidence.LOW
+
     result.read = tier1_seen or tier2_seen or kms_or_keychain_scope is not None
     result.write = write_seen
 
@@ -222,9 +242,11 @@ def detect(source_files: dict[str, str]) -> SecretsResult:
     elif kms_or_keychain_scope == "system-keychain":
         result.scope = "system-keychain"
     elif tier2_seen:
-        result.scope = "arbitrary-env"  # Tier 2 — exposed
+        result.scope = "arbitrary-env"
     elif tier1_seen:
-        result.scope = "process-env"  # Tier 1 — config-only
+        result.scope = "process-env"
+    elif schema_hits:
+        result.scope = "schema-only"
     else:
         result.scope = "unknown"
 

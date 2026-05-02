@@ -7,6 +7,15 @@ from pathlib import Path
 from mcp_bom._tool_scope import GO_TOOL_REG_PATS, TS_TOOL_REG_PATS, near_tool_reg, python_tool_source
 from mcp_bom.models import Confidence, FilesystemResult
 
+SCHEMA_PATTERNS = [
+    r'"path"',
+    r'"filename"',
+    r'"directory"',
+    r'"file_url"',
+    r'"file_path"',
+    r'"filepath"',
+]
+
 _PYTHON_PATTERNS = {
     "read": [
         r"\bopen\s*\(",
@@ -70,15 +79,6 @@ _GO_PATTERNS = {
     ],
 }
 
-_SCHEMA_HEURISTICS = [
-    r'"path"',
-    r'"filename"',
-    r'"directory"',
-    r'"file_url"',
-    r'"file_path"',
-    r'"filepath"',
-]
-
 _SCOPE_PATTERNS = {
     "system-wide": [r"\b/usr\b", r"\b/etc\b", r"\bC:\\", r"\b/var\b", r"\bos\.path\.expanduser\b"],
     "user-home": [r"\b~/", r"\bHome\b", r"\bexpanduser\b"],
@@ -98,9 +98,9 @@ def _scan_text(content: str, patterns: dict[str, list[str]]) -> tuple[dict[str, 
     return hits, all_matches
 
 
-def _scan_schema(content: str) -> list[str]:
+def _regex_scan(content: str, patterns: list[str]) -> list[str]:
     matches = []
-    for pat in _SCHEMA_HEURISTICS:
+    for pat in patterns:
         found = re.findall(pat, content, re.IGNORECASE)
         matches.extend(found)
     return matches
@@ -114,18 +114,53 @@ def _detect_scope(content: str) -> str:
     return "cwd-only"
 
 
-def _ast_python_filesystem(source: str) -> tuple[dict[str, list[str]], str]:
-    """Return (hits, tool_text).
+def _ast_python_code_scope(source: str) -> dict[str, list[str]]:
+    hits: dict[str, list[str]] = {"read": [], "write": [], "delete": []}
+    try:
+        tree = ast.parse(source)
+    except SyntaxError:
+        return hits
 
-    hits      — filesystem call sites found inside tool-decorated functions only.
-    tool_text — concatenated source of all tool function bodies (for subsequent
-                regex scan); empty string when no tool-decorated functions exist.
+    read_calls = {"open"}
+    write_calls = {"makedirs", "rename"}
+    delete_calls = {"remove", "unlink"}
 
-    Import-level signals (e.g. `import shutil`) are intentionally excluded — they
-    are module-level and cannot appear inside a tool-decorated function body.
-    """
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Call):
+            func_name = ""
+            if isinstance(node.func, ast.Name):
+                func_name = node.func.id
+            elif isinstance(node.func, ast.Attribute):
+                func_name = node.func.attr
+            if func_name in read_calls:
+                hits["read"].append(func_name)
+            if func_name in write_calls:
+                hits["write"].append(func_name)
+            if func_name in delete_calls:
+                hits["delete"].append(func_name)
+
+        if isinstance(node, ast.Import):
+            for alias in node.names:
+                if alias.name in ("pathlib", "aiofiles", "glob", "shutil"):
+                    hits["read"].append(alias.name)
+                if alias.name == "shutil":
+                    hits["write"].append("shutil")
+
+        if isinstance(node, ast.ImportFrom):
+            if node.module and "pathlib" in node.module:
+                hits["read"].append("pathlib")
+            if node.module and "aiofiles" in node.module:
+                hits["read"].append("aiofiles")
+
+    return hits
+
+
+def _ast_python_filesystem(source: str, scope: str = "tool") -> tuple[dict[str, list[str]], str]:
+    if scope == "code":
+        hits = _ast_python_code_scope(source)
+        return hits, source
+
     empty: dict[str, list[str]] = {"read": [], "write": [], "delete": []}
-
     tree, ranges, tool_text = python_tool_source(source)
     if tree is None or not ranges:
         return empty, ""
@@ -161,46 +196,53 @@ def _ast_python_filesystem(source: str) -> tuple[dict[str, list[str]], str]:
 
 def detect(
     source_files: dict[str, str],
+    scope: str = "code",
 ) -> FilesystemResult:
     result = FilesystemResult(detected=False)
     evidence: list[str] = []
     ast_hits: dict[str, list[str]] = {"read": [], "write": [], "delete": []}
+    schema_evidence: list[str] = []
 
     for path, content in source_files.items():
+        schema_matches = _regex_scan(content, SCHEMA_PATTERNS)
+        schema_evidence.extend(schema_matches)
+
         if path.endswith(".py"):
-            ast_h, tool_text = _ast_python_filesystem(content)
+            ast_h, scan_text = _ast_python_filesystem(content, scope=scope)
             for k, v in ast_h.items():
                 ast_hits[k].extend(v)
-            if tool_text:
-                regex_h, regex_m = _scan_text(tool_text, _PYTHON_PATTERNS)
+            if scan_text:
+                regex_h, regex_m = _scan_text(scan_text, _PYTHON_PATTERNS)
                 for k, v in regex_h.items():
                     ast_hits.setdefault(k, []).extend(v)
                 evidence.extend(regex_m)
-                schema_matches = _scan_schema(tool_text)
-                evidence.extend(schema_matches)
         elif path.endswith((".ts", ".js", ".tsx", ".jsx")):
-            ts_lines = content.splitlines()
-            tool_lines = [
-                line for i, line in enumerate(ts_lines)
-                if near_tool_reg(ts_lines, i, TS_TOOL_REG_PATS)
-            ]
-            if tool_lines:
-                tool_text = "\n".join(tool_lines)
-                regex_h, regex_m = _scan_text(tool_text, _TS_PATTERNS)
+            if scope == "tool":
+                ts_lines = content.splitlines()
+                tool_lines = [
+                    line for i, line in enumerate(ts_lines)
+                    if near_tool_reg(ts_lines, i, TS_TOOL_REG_PATS)
+                ]
+                scan_text = "\n".join(tool_lines) if tool_lines else ""
+            else:
+                scan_text = content
+            if scan_text:
+                regex_h, regex_m = _scan_text(scan_text, _TS_PATTERNS)
                 for k, v in regex_h.items():
                     ast_hits.setdefault(k, []).extend(v)
                 evidence.extend(regex_m)
-                schema_matches = _scan_schema(tool_text)
-                evidence.extend(schema_matches)
         elif path.endswith(".go"):
-            go_lines = content.splitlines()
-            tool_lines = [
-                line for i, line in enumerate(go_lines)
-                if near_tool_reg(go_lines, i, GO_TOOL_REG_PATS)
-            ]
-            if tool_lines:
-                tool_text = "\n".join(tool_lines)
-                regex_h, regex_m = _scan_text(tool_text, _GO_PATTERNS)
+            if scope == "tool":
+                go_lines = content.splitlines()
+                tool_lines = [
+                    line for i, line in enumerate(go_lines)
+                    if near_tool_reg(go_lines, i, GO_TOOL_REG_PATS)
+                ]
+                scan_text = "\n".join(tool_lines) if tool_lines else ""
+            else:
+                scan_text = content
+            if scan_text:
+                regex_h, regex_m = _scan_text(scan_text, _GO_PATTERNS)
                 for k, v in regex_h.items():
                     ast_hits.setdefault(k, []).extend(v)
                 evidence.extend(regex_m)
@@ -215,9 +257,10 @@ def detect(
         result.write = has_write
         result.delete = has_delete
         result.confidence = Confidence.HIGH if (has_read and has_write) else Confidence.MEDIUM
-    elif evidence:
+    elif evidence or schema_evidence:
         result.detected = True
-        result.confidence = Confidence.LOW
+        result.confidence = Confidence.LOW if schema_evidence and not evidence else Confidence.MEDIUM
+        evidence.extend(schema_evidence)
 
     if result.detected:
         all_content = "\n".join(source_files.values())

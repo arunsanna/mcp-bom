@@ -21,6 +21,8 @@ from mcp_bom.patterns import (
 )
 from mcp_bom.scorer import score_vector
 
+_SCOPE_SENTINEL = object()
+
 _EXT_LANG = {
     ".py": Language.PYTHON,
     ".ts": Language.TYPESCRIPT,
@@ -36,8 +38,6 @@ _SKIP_DIRS = {
     ".git",
     ".venv",
     "venv",
-    "dist",
-    "build",
     ".tox",
     ".mypy_cache",
     ".ruff_cache",
@@ -106,25 +106,29 @@ def _read_source_files(source_path: Path) -> tuple[dict[str, str], set[Language]
 def extract(
     source_path: str | Path,
     server_id: str = "",
+    scope: str = "code",
 ) -> ServerReport:
     source_path = Path(source_path).resolve()
 
     if not source_path.exists():
         raise FileNotFoundError(f"Source path not found: {source_path}")
 
+    if scope not in ("code", "tool"):
+        raise ValueError(f"Invalid scope: {scope!r}. Must be 'code' or 'tool'.")
+
     source_files, languages = _read_source_files(source_path)
 
     if not server_id:
         server_id = source_path.name
 
-    fs_result = filesystem.detect(source_files)
-    sh_result = shell.detect(source_files)
-    eg_result = egress.detect(source_files)
-    ig_result = ingress.detect(source_files)
-    se_result = secrets.detect(source_files)
-    de_result = delegation.detect(source_files)
-    im_result = impersonation.detect(source_files)
-    ds_result = data_sensitivity.detect(source_files)
+    fs_result = filesystem.detect(source_files, scope=scope)
+    sh_result = shell.detect(source_files, scope=scope)
+    eg_result = egress.detect(source_files, scope=scope)
+    ig_result = ingress.detect(source_files, scope=scope)
+    se_result = secrets.detect(source_files, scope=scope)
+    de_result = delegation.detect(source_files, scope=scope)
+    im_result = impersonation.detect(source_files, scope=scope)
+    ds_result = data_sensitivity.detect(source_files, scope=scope)
 
     vector = CapabilityVector(
         server_id=server_id,
@@ -150,6 +154,7 @@ def extract(
     return ServerReport(
         server_id=server_id,
         source_path=str(source_path),
+        scope=scope,
         capability_vector=vector,
         provenance=provenance,
         exposure=exposure,

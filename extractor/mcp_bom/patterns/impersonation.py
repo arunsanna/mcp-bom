@@ -18,7 +18,7 @@ _TS_CHANNEL_PATTERNS = {
     "calendar": [r"\bgoogleapis\b.*calendar"],
 }
 
-_SCHEMA_WORDS = [
+SCHEMA_WORDS = [
     r'"send_email"',
     r'"send_message"',
     r'"post"',
@@ -27,6 +27,8 @@ _SCHEMA_WORDS = [
     r'"send_slack"',
     r'"send"',
 ]
+
+SCHEMA_PATTERNS = SCHEMA_WORDS
 
 _NO_APPROVAL_INDICATORS = [
     r"\bauto[_-]?send\b",
@@ -37,7 +39,7 @@ _NO_APPROVAL_INDICATORS = [
 ]
 
 
-def detect(source_files: dict[str, str]) -> ImpersonationResult:
+def detect(source_files: dict[str, str], scope: str = "code") -> ImpersonationResult:
     result = ImpersonationResult(detected=False)
     evidence: list[str] = []
     channels: set[str] = set()
@@ -58,7 +60,7 @@ def detect(source_files: dict[str, str]) -> ImpersonationResult:
                     channels.add(channel)
                     evidence.append(f"{channel}:{pat}")
 
-        for pat in _SCHEMA_WORDS:
+        for pat in SCHEMA_WORDS:
             found = re.findall(pat, content, re.IGNORECASE)
             if found:
                 evidence.extend(found)

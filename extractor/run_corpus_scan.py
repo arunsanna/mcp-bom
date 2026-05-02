@@ -343,6 +343,7 @@ def scan_single_server(
     labeled_ids: set[str],
     hold_dir: Path,
     sf_version: str,
+    scope: str = "code",
 ) -> dict:
     sid = server["id"]
     scored_path = output_dir / f"{sid}.json"
@@ -394,7 +395,7 @@ def scan_single_server(
         source_root = _find_source_root(server_dir)
 
         t_scan = time.monotonic()
-        report = extract(str(source_root), server_id=sid)
+        report = extract(str(source_root), server_id=sid, scope=scope)
         scan_s = time.monotonic() - t_scan
 
         result = {
@@ -402,6 +403,7 @@ def scan_single_server(
             "registry": server.get("registry", ""),
             "language": server.get("language", ""),
             "source_tier": _source_tier(server),
+            "scope": scope,
             "archive_size_bytes": archive_size,
             "duration_s": round(time.monotonic() - t0, 2),
             "download_seconds": round(download_s, 2),
@@ -612,6 +614,8 @@ def main() -> None:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--ids", default=None)
+    parser.add_argument("--scope", choices=["code", "tool"], default="code",
+                        help="Extractor scope: 'code' (all source, default) or 'tool' (tool-handler only)")
     args = parser.parse_args()
 
     manifest_path = Path(args.manifest)
@@ -666,7 +670,8 @@ def main() -> None:
     completed = 0
     total = len(scannable)
 
-    print(f"Scanning {total} servers with {args.workers} workers...")
+    extract_scope = args.scope
+    print(f"Scanning {total} servers with {args.workers} workers (scope={extract_scope})...")
     print()
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -681,6 +686,7 @@ def main() -> None:
                 labeled_ids,
                 hold_dir,
                 sf_version,
+                extract_scope,
             ): server
             for server in scannable
         }

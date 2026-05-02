@@ -4,6 +4,13 @@ import re
 
 from mcp_bom.models import Confidence, EgressResult
 
+SCHEMA_PATTERNS = [
+    r'"url"',
+    r'"endpoint"',
+    r'"api_url"',
+    r'"webhook"',
+]
+
 _PYTHON_PATTERNS = [
     r"\brequests\.",
     r"\bhttpx\.",
@@ -63,12 +70,18 @@ _FIXED_DATASTORE_INDICATORS = [
 ]
 
 
-def detect(source_files: dict[str, str]) -> EgressResult:
+def detect(source_files: dict[str, str], scope: str = "code") -> EgressResult:
     result = EgressResult(detected=False)
     evidence: list[str] = []
     has_egress = False
+    schema_hits = False
 
     all_content = "\n".join(source_files.values())
+
+    for pat in SCHEMA_PATTERNS:
+        if re.search(pat, all_content, re.IGNORECASE):
+            schema_hits = True
+            evidence.append(f"schema:{pat}")
 
     for path, content in source_files.items():
         patterns = []
@@ -85,11 +98,11 @@ def detect(source_files: dict[str, str]) -> EgressResult:
                 has_egress = True
                 evidence.extend(found)
 
-    if not has_egress:
+    if not has_egress and not schema_hits:
         return result
 
     result.detected = True
-    result.confidence = Confidence.HIGH
+    result.confidence = Confidence.HIGH if has_egress else Confidence.LOW
 
     is_arbitrary = False
     for pat in _ARBITRARY_HOST_INDICATORS:

@@ -4,6 +4,15 @@ import re
 
 from mcp_bom.models import Confidence, DataSensitivityResult
 
+SCHEMA_PATTERNS = [
+    r'"email"',
+    r'"phone"',
+    r'"address"',
+    r'"ssn"',
+    r'"credit_card"',
+    r'"patient"',
+]
+
 _SENSITIVITY_PATTERNS = {
     "pii": [
         r"\bemail\b.*\baddress\b",
@@ -55,14 +64,20 @@ _REDACTION_INDICATORS = [
 ]
 
 
-def detect(source_files: dict[str, str]) -> DataSensitivityResult:
+def detect(source_files: dict[str, str], scope: str = "code") -> DataSensitivityResult:
     result = DataSensitivityResult(detected=False)
     evidence: list[str] = []
     detected_categories: set[str] = set()
     has_crypto = False
     has_redaction = False
+    schema_hits = False
 
     all_content = "\n".join(source_files.values())
+
+    for pat in SCHEMA_PATTERNS:
+        if re.search(pat, all_content, re.IGNORECASE):
+            schema_hits = True
+            evidence.append(f"schema:{pat}")
 
     for path, content in source_files.items():
         for category, pats in _SENSITIVITY_PATTERNS.items():
@@ -91,6 +106,10 @@ def detect(source_files: dict[str, str]) -> DataSensitivityResult:
         result.confidence = Confidence.MEDIUM
         result.categories = []
         result.redaction_declared = has_redaction
+    elif schema_hits:
+        result.detected = True
+        result.confidence = Confidence.LOW
+        result.categories = []
 
     result.evidence = sorted(set(evidence))[:20]
     return result

@@ -5,6 +5,11 @@ import re
 from mcp_bom._strip import language_for_path, strip_comments_and_strings
 from mcp_bom.models import Confidence, DelegationResult
 
+SCHEMA_PATTERNS = [
+    r'"mcp_server"',
+    r'"server_url"',
+]
+
 _PYTHON_PATTERNS = [
     r"\bmcp\.ClientSession\b",
     r"\bClientSession\b.*mcp",
@@ -42,19 +47,26 @@ _DYNAMIC_INDICATORS = [
 ]
 
 
-def detect(source_files: dict[str, str]) -> DelegationResult:
+def detect(source_files: dict[str, str], scope: str = "code") -> DelegationResult:
     result = DelegationResult(detected=False)
     evidence: list[str] = []
     has_delegation = False
     has_static = False
     has_dynamic = False
     delegate_count = 0
+    schema_hits = False
 
     masked_parts: list[str] = []
 
     for path, content in source_files.items():
         masked = strip_comments_and_strings(content, language_for_path(path))
         masked_parts.append(masked)
+
+        for pat in SCHEMA_PATTERNS:
+            if re.search(pat, masked, re.IGNORECASE):
+                schema_hits = True
+                evidence.append(f"schema:{pat}")
+
         patterns = _PYTHON_PATTERNS if path.endswith(".py") else _TS_PATTERNS if path.endswith((".ts", ".js")) else []
 
         for pat in patterns:
@@ -89,6 +101,9 @@ def detect(source_files: dict[str, str]) -> DelegationResult:
         result.static = has_static and not has_dynamic
         result.dynamic = has_dynamic
         result.count = delegate_count
+    elif schema_hits:
+        result.detected = True
+        result.confidence = Confidence.LOW
 
     result.evidence = sorted(set(evidence))[:20]
     return result

@@ -142,6 +142,7 @@ class ScoreBreakdown(BaseModel):
 class ServerReport(BaseModel):
     server_id: str
     source_path: str
+    scope: str = "code"
     capability_vector: CapabilityVector
     provenance: ProvenanceData = Field(default_factory=ProvenanceData)
     exposure: ExposureData = Field(default_factory=ExposureData)

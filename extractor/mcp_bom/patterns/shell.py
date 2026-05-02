@@ -48,12 +48,13 @@ _GO_DIRECT = [
     r"\bsyscall\.Exec\b",
 ]
 
-_SCHEMA_WORDS = [
+SCHEMA_PATTERNS = [
     r'"command"',
     r'"shell"',
     r'"script"',
     r'"execute"',
     r'"run_command"',
+    r'"exec"',
 ]
 
 
@@ -109,7 +110,7 @@ def _regex_scan(content: str, patterns: list[str]) -> list[str]:
     return matches
 
 
-def detect(source_files: dict[str, str]) -> ShellResult:
+def detect(source_files: dict[str, str], scope: str = "code") -> ShellResult:
     result = ShellResult(detected=False)
     evidence: list[str] = []
     direct = False
@@ -160,7 +161,7 @@ def detect(source_files: dict[str, str]) -> ShellResult:
                 direct = True
                 evidence.extend(go_dir)
 
-        schema = _regex_scan(content, _SCHEMA_WORDS)
+        schema = _regex_scan(content, SCHEMA_PATTERNS)
         if schema:
             evidence.extend(schema)
 

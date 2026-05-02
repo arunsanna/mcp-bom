@@ -5,6 +5,8 @@ import re
 from mcp_bom._strip import language_for_path, strip_comments_and_strings
 from mcp_bom.models import Confidence, IngressResult
 
+SCHEMA_PATTERNS: list[str] = []
+
 _PYTHON_SERVER_PATTERNS = [
     (r"\bFlask\b", "python"),
     (r"\bFastAPI\b", "python"),
@@ -51,7 +53,7 @@ _TLS_PATTERNS = [
 ]
 
 
-def detect(source_files: dict[str, str]) -> IngressResult:
+def detect(source_files: dict[str, str], scope: str = "code") -> IngressResult:
     result = IngressResult(detected=False)
     evidence: list[str] = []
     has_server = False
