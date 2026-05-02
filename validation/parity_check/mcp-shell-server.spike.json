@@ -1,0 +1,21 @@
+{
+  "server_id": "mcp-shell-server",
+  "capability_vector": {
+    "filesystem": true,
+    "shell": true,
+    "secrets": true
+  },
+  "score": {
+    "breadth": 33.3,
+    "depth": 10.0,
+    "exposure": 0,
+    "provenance": 35,
+    "attack_surface_score": 16.4,
+    "detected_categories": [
+      "filesystem",
+      "shell",
+      "secrets"
+    ],
+    "num_detected": 3
+  }
+}

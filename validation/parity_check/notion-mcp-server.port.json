@@ -1,0 +1,20 @@
+{
+  "server_id": "notion-mcp-server",
+  "capability_vector": {
+    "filesystem": false,
+    "shell": false,
+    "egress": true,
+    "ingress": true,
+    "secrets": false,
+    "delegation": false,
+    "impersonation": false,
+    "data_sensitivity": true
+  },
+  "score": {
+    "breadth": 37.5,
+    "depth": 3.75,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 18.44
+  }
+}

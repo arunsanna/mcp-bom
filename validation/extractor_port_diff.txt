@@ -1,0 +1,191 @@
+EXTRACTOR PORT PARITY ANALYSIS
+===============================
+Date: 2026-05-02
+Comparing: spike/extractor.py (reference) vs extractor/mcp_bom/extractor.py (port)
+Corpus: spike v3 (n=27) vs production scan (n=298)
+
+1. ARCHITECTURAL DIFFERENCES
+----------------------------
+
+1a. Database category dropped
+   - Spike: 9 categories (filesystem, shell, egress, ingress, secrets, delegation, impersonation, data_sensitivity, database)
+   - Port:  8 categories (database removed per taxonomy decision)
+
+1b. Pattern structure
+   - Spike: PATTERNS dict with lang-keyed sub-dicts (python, typescript) + schema patterns per category
+     Spike pattern counts (python/typescript/schema):
+       filesystem:       4/4/2    shell:           4/3/2    egress:      2/2/1
+       ingress:          2/2/0    secrets:         2/2/2    delegation:  2/2/1
+       impersonation:    2/2/2    data_sensitivity:1/1/2    database:    3/3/2
+   - Port:  per-category modules with sub-typed pattern dicts (e.g. read/write/delete for filesystem)
+     Port regex pattern counts:
+       filesystem: 52    shell: 31    egress: 47    ingress: 28
+       secrets: 15       delegation: 21    impersonation: 30    data_sensitivity: 33
+   - Port has ~4x more patterns per category (more granular sub-types)
+
+1c. Schema patterns DROPPED in port
+   - Spike: 7 of 9 categories had "schema" patterns matching JSON schema property names (e.g. "path", "filename", "command")
+   - Port: 0 of 8 categories have schema patterns
+   - Impact: removes a source of false positives but also loses tool-schema-level detection
+
+1d. Comment/string stripping ADDED in port
+   - Port: strip_comments_and_strings() blanks out comments and string literals before regex matching
+   - Spike: no stripping — comments and docstrings can trigger patterns
+   - Impact: reduces false positives from commented-out code and documentation strings
+
+1e. Tool-scope gating ADDED in port
+   - Port: near_tool_reg() and python_tool_source() restrict detection to code within/near MCP tool registrations
+   - Spike: scans all source files with no scope restriction
+   - Impact: most significant architectural change — see Section 2
+
+1f. Tier system ADDED in port
+   - Port: tier1 (import-level) + tier2 (usage-level) with configurable thresholds
+   - Spike: single threshold per category
+
+1g. AST augmentation in port
+   - Port: uses Python ast module for import analysis, class detection
+   - Spike: pure regex
+
+
+2. ANCHOR COMPARISON (5 reference servers)
+------------------------------------------
+
+Server: mcp-everything
+  Spike: filesystem=T, shell=F, egress=T, ingress=T, secrets=T, delegation=F, impersonation=F, data_sensitivity=T, database=T  (6/9)
+  Port:  filesystem=F, shell=F, egress=T, ingress=T, secrets=F, delegation=F, impersonation=F, data_sensitivity=T             (3/8)
+  Divergence: filesystem LOST, secrets LOST, database LOST (expected - category dropped)
+  Score: spike=39.6  port=25.75  (delta=-13.85)
+
+Server: mcp-fetch
+  Spike: egress=T (1/9)
+  Port:  egress=T (1/8)
+  Divergence: NONE (perfect match on overlapping categories)
+  Score: spike=11.5  port=16.25  (delta=+4.75, due to scoring formula differences)
+
+Server: mcp-filesystem
+  Spike: filesystem=T, egress=T, data_sensitivity=T, delegation=T (4/9)
+  Port:  filesystem=F, egress=F, data_sensitivity=T, delegation=T (2/8)
+  Divergence: filesystem LOST, egress LOST
+  Score: spike=25.6  port=15.94  (delta=-9.66)
+
+Server: mcp-shell-server
+  Spike: filesystem=T, shell=T, secrets=T (3/9)
+  Port:  shell=T (1/8)
+  Divergence: filesystem LOST, secrets LOST
+  Score: spike=16.4  port=11.75  (delta=-4.65)
+
+Server: notion-mcp-server
+  Spike: filesystem=T, egress=T, ingress=T, secrets=T, data_sensitivity=T (5/9)
+  Port:  egress=T, ingress=T, data_sensitivity=T (3/8)
+  Divergence: filesystem LOST, secrets LOST
+  Score: spike=51.4  port=18.44  (delta=-33.0)
+
+ANCHOR SUMMARY:
+  Total divergent categories: 9 (filesystem: 4, secrets: 3, egress: 1, database: 1 expected)
+  Perfect matches: 1/5 (mcp-fetch)
+  Systematic under-detection: filesystem (4/4 anchors with spike=true show port=false)
+  Systematic under-detection: secrets (3/3 anchors with spike=true show port=false)
+
+
+3. SPOT-CHECK COMPARISON (4 random corpus servers + manual grep)
+-----------------------------------------------------------------
+
+Server: npm-notionhq-notion-mcp-server
+  Manual grep:  egress=T, ingress=T, secrets=T (3/8)
+  Port output:  data_sensitivity=T, egress=T, ingress=T (3/8)
+  Missing from port: secrets
+  Extra in port:     data_sensitivity
+
+Server: github-trigger-dev
+  Manual grep:  egress=T, filesystem=T, ingress=T, secrets=T, shell=T (5/8)
+  Port output:  data_sensitivity=T, egress=T, impersonation=T, ingress=T, shell=T (5/8)
+  Missing from port: filesystem, secrets
+  Extra in port:     data_sensitivity, impersonation
+
+Server: npm-likec4-mcp
+  Manual grep:  egress=T, filesystem=T, ingress=T, secrets=T, shell=T (5/8)
+  Port output:  data_sensitivity=T, egress=T, ingress=T, secrets=T, shell=T (5/8)
+  Missing from port: filesystem
+  Extra in port:     data_sensitivity
+
+Server: npm-transcend-io-mcp-server-workflows
+  Manual grep:  egress=T, filesystem=T, ingress=T, secrets=T, shell=T (5/8)
+  Port output:  data_sensitivity=T, egress=T, shell=T (3/8)
+  Missing from port: filesystem, ingress, secrets
+  Extra in port:     data_sensitivity
+
+SPOT-CHECK SUMMARY:
+  All 4 servers: filesystem missing from port (grep finds fs operations, port doesn't)
+  3/4 servers: secrets missing from port (grep finds env var access, port doesn't)
+  Port consistently detects data_sensitivity where grep doesn't look (AST-driven category)
+  1/4 servers: ingress false negative (port missed express/listen patterns)
+
+
+4. PREVALENCE COMPARISON
+-------------------------
+
+Category          | Spike (n=27) | Port (n=298) | Delta
+filesystem       | 70.4%        | 4.7%         | -65.7pp
+shell            | 37.0%        | 47.0%        | +10.0pp
+egress           | 70.4%        | 62.8%        | -7.6pp
+ingress          | 55.6%        | 27.9%        | -27.7pp
+secrets          | 74.1%        | 6.0%         | -68.1pp
+delegation       | 37.0%        | 18.5%        | -18.5pp
+impersonation    | 22.2%        | 36.9%        | +14.7pp
+data_sensitivity | 59.3%        | 51.3%        | -8.0pp
+
+Largest shifts: filesystem (-65.7pp), secrets (-68.1pp) — both explained by tool-scope gating
+
+
+5. ROOT CAUSES
+--------------
+
+5a. Tool-scope gating (PRIMARY)
+    Port's near_tool_reg() and python_tool_source() only detect capabilities within/near MCP tool
+    registration functions. Module-level imports, constructor initialization, and helper functions
+    outside the tool boundary are invisible.
+    
+    Affected: filesystem (read/write in setup code), secrets (env vars read at module level)
+
+5b. Schema patterns dropped (SECONDARY)
+    Port dropped all schema patterns. This removes detection of capabilities declared in JSON
+    schema (tool parameter names like "path", "command", "url").
+    
+    Affected: filesystem, shell, egress, secrets, delegation, impersonation, data_sensitivity
+
+5c. Comment stripping (TERTIARY)
+    strip_comments_and_strings() removes some true positives from docstrings that contain
+    capability indicators (e.g., "reads from filesystem" in a docstring).
+    
+    Affected: minor impact across all categories
+
+5d. Sample difference (CONFOUND)
+    Spike n=27 vs port n=298 — different sample sizes explain some prevalence shift,
+    but 65-68pp drops for filesystem/secrets cannot be explained by sample alone.
+
+
+6. VERDICT
+---------
+
+Status: INCONCLUSIVE (with identified root causes)
+
+The port extractor is NOT equivalent to the spike extractor. Systematic under-detection
+in filesystem (-65.7pp) and secrets (-68.1pp) is explained by two architectural changes:
+
+1. Tool-scope gating restricts detection to MCP-tool-registered code only
+2. Schema patterns were dropped entirely
+
+These are design choices, not bugs — the port is intentionally more conservative.
+However, for the purposes of the MCP-BOM benchmark:
+
+- If the benchmark aims to measure DEPLOYED capabilities (what the MCP server CAN do),
+  the tool-scope approach is defensible but needs tool-boundary detection validation.
+  
+- If the benchmark aims to measure CODE-LEVEL risk (what the source code CONTAINS),
+  the spike approach is more appropriate and the port is undercounting.
+
+RECOMMENDATION:
+1. Validate tool-scope boundary detection precision/recall (instrument validation phase)
+2. Consider a "code-level" vs "tool-level" detection mode
+3. Re-add schema patterns as a separate detection layer (not gated by tool scope)
+4. Document the design choice and its impact in the paper's threats-to-validity section

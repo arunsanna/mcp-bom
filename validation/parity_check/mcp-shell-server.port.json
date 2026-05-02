@@ -1,0 +1,20 @@
+{
+  "server_id": "mcp-shell-server",
+  "capability_vector": {
+    "filesystem": false,
+    "shell": true,
+    "egress": false,
+    "ingress": false,
+    "secrets": false,
+    "delegation": false,
+    "impersonation": false,
+    "data_sensitivity": false
+  },
+  "score": {
+    "breadth": 12.5,
+    "depth": 0.0,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 11.75
+  }
+}

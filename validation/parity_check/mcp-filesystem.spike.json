@@ -1,0 +1,23 @@
+{
+  "server_id": "mcp-filesystem",
+  "capability_vector": {
+    "filesystem": true,
+    "egress": true,
+    "data_sensitivity": true,
+    "delegation": true
+  },
+  "score": {
+    "breadth": 44.4,
+    "depth": 25.6,
+    "exposure": 0,
+    "provenance": 35,
+    "attack_surface_score": 25.6,
+    "detected_categories": [
+      "filesystem",
+      "egress",
+      "data_sensitivity",
+      "delegation"
+    ],
+    "num_detected": 4
+  }
+}

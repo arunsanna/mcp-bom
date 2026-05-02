@@ -1,0 +1,27 @@
+{
+  "server_id": "mcp-everything",
+  "capability_vector": {
+    "database": true,
+    "egress": true,
+    "data_sensitivity": true,
+    "secrets": true,
+    "ingress": true,
+    "filesystem": true
+  },
+  "score": {
+    "breadth": 66.7,
+    "depth": 28.9,
+    "exposure": 40,
+    "provenance": 35,
+    "attack_surface_score": 39.6,
+    "detected_categories": [
+      "database",
+      "egress",
+      "data_sensitivity",
+      "secrets",
+      "ingress",
+      "filesystem"
+    ],
+    "num_detected": 6
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "timestamp": "2026-05-02T16:07:54.926687Z",
+  "verdict": "INCONCLUSIVE",
+  "verdict_reason": "Systematic under-detection in filesystem (-65.7pp) and secrets (-68.1pp) due to tool-scope gating and schema pattern removal. Port is intentionally more conservative but not equivalent to spike.",
+  "anchor_comparison": {
+    "mcp-everything": {
+      "spike_detected": [
+        "data_sensitivity",
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets"
+      ],
+      "port_detected": [
+        "data_sensitivity",
+        "egress",
+        "ingress"
+      ],
+      "divergent_categories": [
+        {
+          "category": "filesystem",
+          "spike": true,
+          "port": false
+        },
+        {
+          "category": "secrets",
+          "spike": true,
+          "port": false
+        }
+      ],
+      "spike_score": 39.6,
+      "port_score": 25.75,
+      "score_delta": -13.85
+    },
+    "mcp-fetch": {
+      "spike_detected": [
+        "egress"
+      ],
+      "port_detected": [
+        "egress"
+      ],
+      "divergent_categories": [],
+      "spike_score": 11.5,
+      "port_score": 16.25,
+      "score_delta": 4.75
+    },
+    "mcp-filesystem": {
+      "spike_detected": [
+        "data_sensitivity",
+        "delegation",
+        "egress",
+        "filesystem"
+      ],
+      "port_detected": [
+        "data_sensitivity",
+        "delegation"
+      ],
+      "divergent_categories": [
+        {
+          "category": "filesystem",
+          "spike": true,
+          "port": false
+        },
+        {
+          "category": "egress",
+          "spike": true,
+          "port": false
+        }
+      ],
+      "spike_score": 25.6,
+      "port_score": 15.94,
+      "score_delta": -9.66
+    },
+    "mcp-shell-server": {
+      "spike_detected": [
+        "filesystem",
+        "secrets",
+        "shell"
+      ],
+      "port_detected": [
+        "shell"
+      ],
+      "divergent_categories": [
+        {
+          "category": "filesystem",
+          "spike": true,
+          "port": false
+        },
+        {
+          "category": "secrets",
+          "spike": true,
+          "port": false
+        }
+      ],
+      "spike_score": 16.4,
+      "port_score": 11.75,
+      "score_delta": -4.65
+    },
+    "notion-mcp-server": {
+      "spike_detected": [
+        "data_sensitivity",
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets"
+      ],
+      "port_detected": [
+        "data_sensitivity",
+        "egress",
+        "ingress"
+      ],
+      "divergent_categories": [
+        {
+          "category": "filesystem",
+          "spike": true,
+          "port": false
+        },
+        {
+          "category": "secrets",
+          "spike": true,
+          "port": false
+        }
+      ],
+      "spike_score": 51.4,
+      "port_score": 18.44,
+      "score_delta": -32.96
+    }
+  },
+  "anchor_summary": {
+    "total_anchors": 5,
+    "perfect_matches": 1,
+    "systematic_under_detection": {
+      "filesystem": {
+        "spike_true_port_false": 4,
+        "total_with_spike_true": 4
+      },
+      "secrets": {
+        "spike_true_port_false": 3,
+        "total_with_spike_true": 3
+      }
+    }
+  },
+  "spot_check_comparison": {
+    "npm-notionhq-notion-mcp-server": {
+      "manual_grep": [
+        "egress",
+        "ingress",
+        "secrets"
+      ],
+      "port_detected": [
+        "data_sensitivity",
+        "egress",
+        "ingress"
+      ],
+      "missing_from_port": [
+        "secrets"
+      ],
+      "extra_in_port": [
+        "data_sensitivity"
+      ]
+    },
+    "github-trigger-dev": {
+      "manual_grep": [
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets",
+        "shell"
+      ],
+      "port_detected": [
+        "data_sensitivity",
+        "egress",
+        "impersonation",
+        "ingress",
+        "shell"
+      ],
+      "missing_from_port": [
+        "filesystem",
+        "secrets"
+      ],
+      "extra_in_port": [
+        "data_sensitivity",
+        "impersonation"
+      ]
+    },
+    "npm-likec4-mcp": {
+      "manual_grep": [
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets",
+        "shell"
+      ],
+      "port_detected": [
+        "data_sensitivity",
+        "egress",
+        "ingress",
+        "secrets",
+        "shell"
+      ],
+      "missing_from_port": [
+        "filesystem"
+      ],
+      "extra_in_port": [
+        "data_sensitivity"
+      ]
+    },
+    "npm-transcend-io-mcp-server-workflows": {
+      "manual_grep": [
+        "egress",
+        "filesystem",
+        "ingress",
+        "secrets",
+        "shell"
+      ],
+      "port_detected": [
+        "data_sensitivity",
+        "egress",
+        "shell"
+      ],
+      "missing_from_port": [
+        "filesystem",
+        "ingress",
+        "secrets"
+      ],
+      "extra_in_port": [
+        "data_sensitivity"
+      ]
+    }
+  },
+  "spot_check_summary": {
+    "servers_checked": 4,
+    "filesystem_missing_in_all": true,
+    "secrets_missing_in_3_of_4": true,
+    "data_sensitivity_extra_in_all": true
+  },
+  "prevalence_comparison": {
+    "spike_n": 27,
+    "port_n": 298,
+    "spike": {
+      "filesystem": 70.4,
+      "shell": 37.0,
+      "egress": 70.4,
+      "ingress": 55.6,
+      "secrets": 74.1,
+      "delegation": 37.0,
+      "impersonation": 22.2,
+      "data_sensitivity": 59.3
+    },
+    "port": {
+      "filesystem": 4.7,
+      "shell": 47.0,
+      "egress": 62.8,
+      "ingress": 27.9,
+      "secrets": 6.0,
+      "delegation": 18.5,
+      "impersonation": 36.9,
+      "data_sensitivity": 51.3
+    },
+    "delta_pp": {
+      "filesystem": -65.7,
+      "shell": 10.0,
+      "egress": -7.6,
+      "ingress": -27.7,
+      "secrets": -68.1,
+      "delegation": -18.5,
+      "impersonation": 14.7,
+      "data_sensitivity": -8.0
+    },
+    "largest_drops": [
+      {
+        "category": "secrets",
+        "delta_pp": -68.1
+      },
+      {
+        "category": "filesystem",
+        "delta_pp": -65.7
+      },
+      {
+        "category": "ingress",
+        "delta_pp": -27.7
+      }
+    ]
+  },
+  "pattern_diff_summary": {
+    "spike_pattern_counts": {
+      "filesystem": {
+        "python": 4,
+        "typescript": 4,
+        "schema": 2
+      },
+      "shell": {
+        "python": 4,
+        "typescript": 3,
+        "schema": 2
+      },
+      "egress": {
+        "python": 2,
+        "typescript": 2,
+        "schema": 1
+      },
+      "ingress": {
+        "python": 2,
+        "typescript": 2,
+        "schema": 0
+      },
+      "secrets": {
+        "python": 2,
+        "typescript": 2,
+        "schema": 2
+      },
+      "delegation": {
+        "python": 2,
+        "typescript": 2,
+        "schema": 1
+      },
+      "impersonation": {
+        "python": 2,
+        "typescript": 2,
+        "schema": 2
+      },
+      "data_sensitivity": {
+        "python": 1,
+        "typescript": 1,
+        "schema": 2
+      }
+    },
+    "port_pattern_counts": {
+      "filesystem": 52,
+      "shell": 31,
+      "egress": 47,
+      "ingress": 28,
+      "secrets": 15,
+      "delegation": 21,
+      "impersonation": 30,
+      "data_sensitivity": 33
+    },
+    "architectural_changes": [
+      "tool_scope_gating_added",
+      "schema_patterns_dropped",
+      "comment_string_stripping_added",
+      "tier1_tier2_split_added",
+      "ast_augmentation_added",
+      "database_category_dropped"
+    ]
+  },
+  "root_causes": [
+    {
+      "cause": "tool_scope_gating",
+      "impact": "primary",
+      "affected_categories": [
+        "filesystem",
+        "secrets"
+      ],
+      "description": "near_tool_reg() restricts detection to MCP-tool-registered code only; module-level and constructor code invisible"
+    },
+    {
+      "cause": "schema_patterns_dropped",
+      "impact": "secondary",
+      "affected_categories": [
+        "filesystem",
+        "shell",
+        "egress",
+        "secrets",
+        "delegation",
+        "impersonation",
+        "data_sensitivity"
+      ],
+      "description": "All schema patterns removed; loses tool-schema-level detection of capabilities"
+    },
+    {
+      "cause": "comment_string_stripping",
+      "impact": "tertiary",
+      "affected_categories": [
+        "all"
+      ],
+      "description": "strip_comments_and_strings() removes some true positives from docstrings"
+    }
+  ]
+}

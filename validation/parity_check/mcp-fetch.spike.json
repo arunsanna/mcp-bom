@@ -1,0 +1,17 @@
+{
+  "server_id": "mcp-fetch",
+  "capability_vector": {
+    "egress": true
+  },
+  "score": {
+    "breadth": 11.1,
+    "depth": 8.9,
+    "exposure": 0,
+    "provenance": 35,
+    "attack_surface_score": 11.5,
+    "detected_categories": [
+      "egress"
+    ],
+    "num_detected": 1
+  }
+}
