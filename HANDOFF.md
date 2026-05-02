@@ -2,6 +2,52 @@
 
 > Single source of truth for picking up work between sessions. Updated 2026-05-02 after extractor port parity restoration. This file lives in the repo intentionally — committed, versioned, and easy to find.
 
+---
+
+## ⏵ Handoff Prompt — copy-paste this to start the new session
+
+> Paste the block below verbatim as the first message in a fresh Claude Code session at the new location. Everything the new session needs flows from there.
+
+```
+You are picking up MCP-BOM mid-flight — a NeurIPS 2026 ED Track submission
+with a hard freeze of May 6, 2026 AoE.
+
+Repo: github.com:arunsanna/mcp-bom (clone if not present)
+Working directory: cd into the repo root after cloning.
+
+Read these files FIRST, in this order, before any action or response:
+  1. HANDOFF.md          — orientation, decisions, next-action sequence
+  2. CLAUDE.md           — workflow, conventions, quality gate
+  3. docs/preregistration.md — locked confirmatory design
+
+After reading, do NOT start coding. Reply with:
+  - One-line confirmation you've read all three
+  - Which "Next actions" step you intend to execute first (likely Step 1
+    if /Volumes/A1 is accessible, or report the access error if not)
+  - Any blocker you noticed in the handoff that needs my attention
+
+External storage at /Volumes/A1 (1TB) is required for the next scan.
+If you cannot access /Volumes/A1, the terminal app needs Full Disk
+Access in macOS System Settings → Privacy & Security, then a full
+relaunch (Cmd+Q + reopen). Flag this as a blocker if you hit it.
+
+You commit and push to main directly — no feature branches needed
+(per memory feedback_agent_push_policy.md).
+
+For any task you delegate to a sub-agent, the format is: Goal +
+Implementation details + Observations to record + Report back. No
+surrounding commentary in the task spec itself.
+
+Do not relitigate the construct decision (code-level attack surface,
+locked 2026-05-02). Do not modify docs/preregistration.md without
+filing a deviation per its §7. Do not delete corpus/scored/ — those
+298 results are the H14 tool-scope baseline cohort.
+```
+
+End of handoff prompt. Continue reading below for the project state.
+
+---
+
 ## Project context
 
 - **Building**: MCP-BOM, a reproducible attack-surface benchmark for MCP servers, targeting NeurIPS 2026 Evaluations & Datasets Track.
