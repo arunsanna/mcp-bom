@@ -1,15 +1,17 @@
-"""Secrets capability detector with Tier 1 (config) vs Tier 2 (exposed) split.
+"""Secrets capability detector with config-only vs secret disambiguation.
 
 Per issue #17:
-  - Tier 1 (config): server reads a *named* env var for its OWN configuration
-                     (e.g., os.environ.get("NOTION_API_KEY"), process.env.FOO).
-                     This is benign and routine.
+  - config-only: server reads an env var whose name is clearly infrastructure
+                 config (PORT, HOST, NODE_ENV, LOG_LEVEL, etc.).  These are
+                 innocuous and do NOT count toward the secrets capability.
+  - secret: server reads an env var whose name matches secret patterns
+            (API_KEY, TOKEN, SECRET, PASSWORD, AWS_SECRET_ACCESS_KEY, etc.).
+            These DO count toward the secrets capability.
+  - ambiguous: server reads an env var that matches neither set.  These count
+               toward secrets with confidence=low.
   - Tier 2 (exposed): server reads the env *generically* (full dict, dynamic key,
                       subscript with non-literal). This is "secrets gateway"-shaped
-                      and is what the score function should weight heavily.
-
-The classification matters because nearly every server has Tier 1, but only a
-small fraction expose Tier 2. Conflating them inflates H14 (drift rate).
+                      and is weighted heavily by the score function.
 """
 from __future__ import annotations
 
@@ -28,19 +30,71 @@ SCHEMA_PATTERNS = [
     r'"credential"',
 ]
 
+# Env-var names that are clearly infrastructure configuration and should NOT
+# count toward the secrets capability.  Case-insensitive match.
+CONFIG_ONLY_PATTERNS = frozenset({
+    # Networking / binding
+    "PORT", "HOST", "HOSTNAME", "BIND", "ADDRESS",
+    # Environment / stage
+    "NODE_ENV", "ENV", "ENVIRONMENT", "STAGE", "TIER",
+    # Logging / verbosity
+    "DEBUG", "VERBOSE", "QUIET", "LOG_LEVEL", "LOG_FORMAT",
+    # Locale / timezone
+    "TZ", "TIMEZONE", "LOCALE", "LANG",
+    # Shell / user identity (not secrets)
+    "PWD", "HOME", "USER", "PATH",
+    # Temp dirs
+    "TEMP", "TMP", "TMPDIR",
+    # Config / data paths
+    "CONFIG_PATH", "CONFIG_FILE", "CONFIG_DIR",
+    "DATA_PATH", "DATA_DIR", "WORK_DIR",
+    # Operational tuning
+    "TIMEOUT", "RETRY", "MAX_RETRIES", "INTERVAL",
+    "WORKERS", "CONCURRENCY", "POOL_SIZE",
+    # Protocol / version
+    "PROTOCOL", "VERSION", "SCHEMA",
+})
 
-def _ast_python(source: str, scope: str = "code") -> tuple[bool, bool, bool, list[str]]:
-    tier1 = False
+# Regex fragment matching env-var names that are clearly secrets.
+_SECRET_INDICATORS_RE = re.compile(
+    r"(?i)(API[_-]?KEY|TOKEN|SECRET|PASSWORD|PASSWD|"
+    r"CREDENTIAL|AUTH[_-]?KEY|ACCESS[_-]?KEY|PRIVATE[_-]?KEY|"
+    r"BEARER|JWT|SESSION[_-]?KEY|ENCRYPTION[_-]?KEY|"
+    r"AWS_(SECRET|ACCESS|SESSION)|GCP_|AZURE_|"
+    r"DB_PASS|MYSQL_PASS|POSTGRES_PASS|MONGO_PASS|"
+    r"SLACK_TOKEN|GITHUB_TOKEN|STRIPE_KEY|OPENAI_KEY|"
+    r"ANTHROPIC_KEY|HF_TOKEN)"
+)
+
+
+def classify_env_read(name: str) -> str:
+    """Classify an env-var name as 'config_only', 'secret', or 'ambiguous'.
+
+    This is the public API consumed by the unit tests in
+    tests/test_secrets_disambiguation.py.
+    """
+    upper = name.upper()
+    if upper in CONFIG_ONLY_PATTERNS:
+        return "config_only"
+    if _SECRET_INDICATORS_RE.search(upper):
+        return "secret"
+    return "ambiguous"
+
+
+def _ast_python(source: str, scope: str = "code") -> tuple[bool, bool, bool, bool, list[str]]:
+    """Return (config_only, secret, tier2, write_seen, evidence)."""
+    config_only = False
+    secret = False
     tier2 = False
     write_seen = False
     evidence: list[str] = []
 
     tree, ranges, tool_text = python_tool_source(source)
     if tree is None:
-        return tier1, tier2, write_seen, evidence
+        return config_only, secret, tier2, write_seen, evidence
 
     if scope == "tool" and not ranges:
-        return tier1, tier2, write_seen, evidence
+        return config_only, secret, tier2, write_seen, evidence
 
     scan_text = tool_text if scope == "tool" else source
 
@@ -65,8 +119,14 @@ def _ast_python(source: str, scope: str = "code") -> tuple[bool, bool, bool, lis
             ):
                 arg0 = node.args[0] if node.args else None
                 if isinstance(arg0, ast.Constant) and isinstance(arg0.value, str):
-                    tier1 = True
-                    evidence.append(f"tier1:{mod or 'os'}.{attr}({arg0.value!r})")
+                    classification = classify_env_read(arg0.value)
+                    evidence.append(f"tier1:{mod or 'os'}.{attr}({arg0.value!r})[{classification}]")
+                    if classification == "config_only":
+                        config_only = True
+                    elif classification == "secret":
+                        secret = True
+                    else:
+                        secret = True  # ambiguous counts as secret
                 else:
                     tier2 = True
                     evidence.append(f"tier2:{mod or 'os'}.{attr}(non-literal)")
@@ -82,8 +142,14 @@ def _ast_python(source: str, scope: str = "code") -> tuple[bool, bool, bool, lis
             ):
                 key = node.slice
                 if isinstance(key, ast.Constant) and isinstance(key.value, str):
-                    tier1 = True
-                    evidence.append(f"tier1:os.environ[{key.value!r}]")
+                    classification = classify_env_read(key.value)
+                    evidence.append(f"tier1:os.environ[{key.value!r}][{classification}]")
+                    if classification == "config_only":
+                        config_only = True
+                    elif classification == "secret":
+                        secret = True
+                    else:
+                        secret = True
                 else:
                     tier2 = True
                     evidence.append("tier2:os.environ[non-literal]")
@@ -115,12 +181,14 @@ def _ast_python(source: str, scope: str = "code") -> tuple[bool, bool, bool, lis
         tier2 = True
         evidence.append("tier2:os.environ-bare")
 
-    return tier1, tier2, write_seen, evidence
+    return config_only, secret, tier2, write_seen, evidence
 
 
 
-def _ts_js(masked: str, scope: str = "code") -> tuple[bool, bool, bool, list[str]]:
-    tier1 = False
+def _ts_js(masked: str, scope: str = "code") -> tuple[bool, bool, bool, bool, list[str]]:
+    """Return (config_only, secret, tier2, write_seen, evidence)."""
+    config_only = False
+    secret = False
     tier2 = False
     write_seen = False
     evidence: list[str] = []
@@ -129,9 +197,16 @@ def _ts_js(masked: str, scope: str = "code") -> tuple[bool, bool, bool, list[str
     for i, line in enumerate(lines):
         if scope == "tool" and not near_tool_reg(lines, i, TS_TOOL_REG_PATS):
             continue
-        if re.search(r"\bprocess\.env\.[A-Z_][A-Z0-9_]*\b", line):
-            tier1 = True
-            evidence.append("tier1:process.env.LITERAL")
+        # process.env.LITERAL — extract the name and classify it
+        m = re.search(r"\bprocess\.env\.([A-Z_][A-Z0-9_]*)\b", line)
+        if m:
+            name = m.group(1)
+            classification = classify_env_read(name)
+            evidence.append(f"tier1:process.env.{name}[{classification}]")
+            if classification == "config_only":
+                config_only = True
+            else:
+                secret = True
         if re.search(r"\bprocess\.env\[", line):
             tier2 = True
             evidence.append("tier2:process.env[]")
@@ -142,33 +217,55 @@ def _ts_js(masked: str, scope: str = "code") -> tuple[bool, bool, bool, list[str
             write_seen = True
             evidence.append("write:process.env[]=")
 
-    return tier1, tier2, write_seen, evidence
+    return config_only, secret, tier2, write_seen, evidence
 
 
-def _go(masked: str, scope: str = "code") -> tuple[bool, bool, bool, list[str]]:
-    tier1 = False
+def _go(original: str, masked: str, scope: str = "code") -> tuple[bool, bool, bool, bool, list[str]]:
+    """Return (config_only, secret, tier2, write_seen, evidence).
+
+    Uses *original* (unmasked) content for extracting literal env-var names
+    from os.Getenv("..."), because string-masking blanks them.  Uses *masked*
+    content for all other patterns (os.Environ, os.Setenv, dynamic args).
+    """
+    config_only = False
+    secret = False
     tier2 = False
     write_seen = False
     evidence: list[str] = []
 
-    lines = masked.splitlines()
-    for i, line in enumerate(lines):
-        if scope == "tool" and not near_tool_reg(lines, i, GO_TOOL_REG_PATS):
+    orig_lines = original.splitlines()
+    masked_lines = masked.splitlines()
+
+    for i, (orig_line, masked_line) in enumerate(zip(orig_lines, masked_lines)):
+        if scope == "tool" and not near_tool_reg(masked_lines, i, GO_TOOL_REG_PATS):
             continue
-        if re.search(r'\bos\.Getenv\s*\(\s*"[A-Za-z_][A-Za-z0-9_]*"\s*\)', line):
-            tier1 = True
-            evidence.append("tier1:os.Getenv(literal)")
-        if re.search(r"\bos\.Getenv\s*\(\s*[A-Za-z_]", line):
-            tier2 = True
-            evidence.append("tier2:os.Getenv(var)")
-        if re.search(r"\bos\.Environ\s*\(\s*\)", line):
+
+        # os.Getenv("LITERAL") — use ORIGINAL line (string content is intact)
+        m = re.search(r'\bos\.Getenv\s*\(\s*"([A-Za-z_][A-Za-z0-9_]*)"\s*\)', orig_line)
+        if m:
+            name = m.group(1)
+            classification = classify_env_read(name)
+            evidence.append(f"tier1:os.Getenv({name!r})[{classification}]")
+            if classification == "config_only":
+                config_only = True
+            else:
+                secret = True
+        else:
+            # os.Getenv(var) — dynamic key; check masked line to avoid
+            # comment-only false positives
+            if re.search(r"\bos\.Getenv\s*\(", masked_line):
+                tier2 = True
+                evidence.append("tier2:os.Getenv(var)")
+
+        # Tier 2 / write patterns use masked lines
+        if re.search(r"\bos\.Environ\s*\(\s*\)", masked_line):
             tier2 = True
             evidence.append("tier2:os.Environ()")
-        if re.search(r"\bos\.Setenv\b", line):
+        if re.search(r"\bos\.Setenv\b", masked_line):
             write_seen = True
             evidence.append("write:os.Setenv")
 
-    return tier1, tier2, write_seen, evidence
+    return config_only, secret, tier2, write_seen, evidence
 
 
 def _kms_or_keychain(masked: str, language: str) -> str | None:
@@ -190,7 +287,8 @@ def _kms_or_keychain(masked: str, language: str) -> str | None:
 def detect(source_files: dict[str, str], scope: str = "code") -> SecretsResult:
     result = SecretsResult(detected=False)
     evidence: list[str] = []
-    tier1_seen = False
+    config_only_seen = False
+    secret_seen = False
     tier2_seen = False
     write_seen = False
     kms_or_keychain_scope: str | None = None
@@ -206,15 +304,16 @@ def detect(source_files: dict[str, str], scope: str = "code") -> SecretsResult:
                 evidence.append(f"schema:{pat}")
 
         if lang == "python":
-            t1, t2, w, ev = _ast_python(content, scope=scope)
+            co, sc, t2, w, ev = _ast_python(content, scope=scope)
         elif lang == "typescript":
-            t1, t2, w, ev = _ts_js(masked, scope=scope)
+            co, sc, t2, w, ev = _ts_js(masked, scope=scope)
         elif lang == "go":
-            t1, t2, w, ev = _go(masked, scope=scope)
+            co, sc, t2, w, ev = _go(content, masked, scope=scope)
         else:
             continue
 
-        tier1_seen = tier1_seen or t1
+        config_only_seen = config_only_seen or co
+        secret_seen = secret_seen or sc
         tier2_seen = tier2_seen or t2
         write_seen = write_seen or w
         evidence.extend(ev)
@@ -224,17 +323,23 @@ def detect(source_files: dict[str, str], scope: str = "code") -> SecretsResult:
             kms_or_keychain_scope = kms_scope
             evidence.append(f"scope:{kms_scope}")
 
-    if not (tier1_seen or tier2_seen or write_seen or kms_or_keychain_scope or schema_hits):
+    # "active" means something beyond mere config-only reads
+    active = secret_seen or tier2_seen or write_seen or kms_or_keychain_scope is not None
+
+    if not (active or config_only_seen or schema_hits):
         return result
 
-    result.detected = True
+    # detected=True only if there's a real secret/exposed read, not just config
+    result.detected = active
 
-    if tier1_seen or tier2_seen or write_seen or kms_or_keychain_scope:
+    if secret_seen or tier2_seen or write_seen or kms_or_keychain_scope:
         result.confidence = Confidence.HIGH
+    elif config_only_seen and not active:
+        result.confidence = Confidence.LOW
     elif schema_hits:
         result.confidence = Confidence.LOW
 
-    result.read = tier1_seen or tier2_seen or kms_or_keychain_scope is not None
+    result.read = active or config_only_seen
     result.write = write_seen
 
     if kms_or_keychain_scope == "cloud-kms":
@@ -243,8 +348,12 @@ def detect(source_files: dict[str, str], scope: str = "code") -> SecretsResult:
         result.scope = "system-keychain"
     elif tier2_seen:
         result.scope = "arbitrary-env"
-    elif tier1_seen:
+    elif secret_seen:
         result.scope = "process-env"
+    elif write_seen:
+        result.scope = "process-env"
+    elif config_only_seen and not active:
+        result.scope = "config-only"
     elif schema_hits:
         result.scope = "schema-only"
     else:
