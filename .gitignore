@@ -50,7 +50,7 @@ ENV/
 *.tmp
 
 # Benchmark data — large; archive separately, don't commit
-corpus/raw/
+corpus/raw
 corpus/cache/
 corpus/downloads/
 extractor/output/
@@ -84,7 +84,7 @@ validation/precision_recall/labels.json
 validation/precision_recall/metrics.md
 
 # Cached archives (large)
-corpus/cached/
+corpus/cached
 
 # Playwright MCP state
 .playwright-mcp/
