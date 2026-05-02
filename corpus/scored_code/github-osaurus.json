@@ -4,10 +4,10 @@
   "language": "c",
   "source_tier": "community",
   "scope": "code",
-  "archive_size_bytes": 9381465,
-  "duration_s": 3.78,
-  "download_seconds": 1.78,
-  "scan_seconds": 0.07,
+  "archive_size_bytes": 9401079,
+  "duration_s": 6.49,
+  "download_seconds": 0.91,
+  "scan_seconds": 1.48,
   "capability_vector": {
     "filesystem": {
       "detected": true,
@@ -65,6 +65,6 @@
     "provenance": 35.0,
     "attack_surface_score": 26.28
   },
-  "extractor_version": "0.1.0",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0"
 }

@@ -4,10 +4,10 @@
   "language": "python",
   "source_tier": "community",
   "scope": "code",
-  "archive_size_bytes": 717395,
-  "duration_s": 3.0,
-  "download_seconds": 0.13,
-  "scan_seconds": 1.82,
+  "archive_size_bytes": 720773,
+  "duration_s": 6.21,
+  "download_seconds": 0.15,
+  "scan_seconds": 1.83,
   "capability_vector": {
     "filesystem": {
       "detected": true,
@@ -65,6 +65,6 @@
     "provenance": 35.0,
     "attack_surface_score": 47.78
   },
-  "extractor_version": "0.1.0",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0"
 }

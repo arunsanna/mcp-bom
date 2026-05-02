@@ -5,9 +5,9 @@
   "source_tier": "community",
   "scope": "code",
   "archive_size_bytes": 14243225,
-  "duration_s": 2.1,
-  "download_seconds": 1.13,
-  "scan_seconds": 0.43,
+  "duration_s": 2.82,
+  "download_seconds": 0.73,
+  "scan_seconds": 1.07,
   "capability_vector": {
     "filesystem": {
       "detected": true,
@@ -36,8 +36,8 @@
     "secrets": {
       "detected": true,
       "confidence": "high",
-      "depth_raw": 4,
-      "depth_adjusted": 4.0
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
     },
     "delegation": {
       "detected": false,
@@ -60,11 +60,11 @@
   },
   "score": {
     "breadth": 75.0,
-    "depth": 33.12,
+    "depth": 38.12,
     "exposure": 20.0,
     "provenance": 35.0,
-    "attack_surface_score": 39.16
+    "attack_surface_score": 41.41
   },
-  "extractor_version": "0.1.0",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0"
 }

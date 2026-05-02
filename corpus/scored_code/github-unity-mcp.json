@@ -4,10 +4,10 @@
   "language": "c#",
   "source_tier": "community",
   "scope": "code",
-  "archive_size_bytes": 152918231,
-  "duration_s": 23.99,
-  "download_seconds": 14.04,
-  "scan_seconds": 0.55,
+  "archive_size_bytes": 152926131,
+  "duration_s": 35.65,
+  "download_seconds": 13.62,
+  "scan_seconds": 0.3,
   "capability_vector": {
     "filesystem": {
       "detected": true,
@@ -65,6 +65,6 @@
     "provenance": 35.0,
     "attack_surface_score": 40.28
   },
-  "extractor_version": "0.1.0",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0"
 }

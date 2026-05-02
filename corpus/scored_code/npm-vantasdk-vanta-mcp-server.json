@@ -5,9 +5,9 @@
   "source_tier": "community",
   "scope": "code",
   "archive_size_bytes": 104018,
-  "duration_s": 0.83,
-  "download_seconds": 0.09,
-  "scan_seconds": 0.3,
+  "duration_s": 0.43,
+  "download_seconds": 0.08,
+  "scan_seconds": 0.1,
   "capability_vector": {
     "filesystem": {
       "detected": true,
@@ -65,6 +65,6 @@
     "provenance": 35.0,
     "attack_surface_score": 30.75
   },
-  "extractor_version": "0.1.0",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0"
 }

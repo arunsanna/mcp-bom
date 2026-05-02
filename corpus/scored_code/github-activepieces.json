@@ -4,10 +4,10 @@
   "language": "typescript",
   "source_tier": "community",
   "scope": "code",
-  "archive_size_bytes": 73052894,
-  "duration_s": 39.35,
-  "download_seconds": 5.22,
-  "scan_seconds": 21.65,
+  "archive_size_bytes": 73060675,
+  "duration_s": 293.37,
+  "download_seconds": 4.38,
+  "scan_seconds": 240.83,
   "capability_vector": {
     "filesystem": {
       "detected": true,
@@ -65,6 +65,6 @@
     "provenance": 35.0,
     "attack_surface_score": 73.19
   },
-  "extractor_version": "0.1.0",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0"
 }
