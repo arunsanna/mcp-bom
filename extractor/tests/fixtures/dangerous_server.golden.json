@@ -8,6 +8,8 @@
       "confidence": "high",
       "evidence": [
         "open(",
+        "os.makedirs",
+        "os.path",
         "os.remove"
       ],
       "depth_raw": 15.0,
@@ -16,7 +18,7 @@
       "read": true,
       "write": true,
       "delete": true,
-      "scope": "cwd-only"
+      "scope": "arbitrary"
     },
     "shell": {
       "detected": true,
@@ -66,15 +68,14 @@
       "detected": true,
       "confidence": "high",
       "evidence": [
-        "tier1:os.get('API_KEY')",
-        "tier1:os.get('DATABASE_URL')"
+        "tier2:os.get(non-literal)"
       ],
-      "depth_raw": 2.0,
-      "depth_adjusted": 2.0,
+      "depth_raw": 6.0,
+      "depth_adjusted": 6.0,
       "sub_fields": {},
       "read": true,
       "write": false,
-      "scope": "process-env"
+      "scope": "arbitrary-env"
     },
     "delegation": {
       "detected": false,
@@ -123,10 +124,10 @@
   },
   "score": {
     "breadth": 50.0,
-    "depth": 35.0,
+    "depth": 50.0,
     "exposure": 20.0,
     "provenance": 35.0,
-    "attack_surface_score": 35.0
+    "attack_surface_score": 41.75
   },
   "languages_detected": [
     "python"

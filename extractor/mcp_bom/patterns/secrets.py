@@ -17,22 +17,34 @@ import ast
 import re
 
 from mcp_bom._strip import language_for_path, strip_comments_and_strings
+from mcp_bom._tool_scope import GO_TOOL_REG_PATS, TS_TOOL_REG_PATS, near_tool_reg, python_tool_source
 from mcp_bom.models import Confidence, SecretsResult
 
 
 def _ast_python(source: str) -> tuple[bool, bool, bool, list[str]]:
-    """Return (tier1_seen, tier2_seen, write_seen, evidence)."""
+    """Return (tier1_seen, tier2_seen, write_seen, evidence).
+
+    Only flags env access that occurs inside a function decorated with an MCP
+    tool decorator (@mcp.tool, @server.tool, @app.tool, @tool).  Module-level
+    config reads are intentionally excluded — they are not exposed capabilities.
+    """
     tier1 = False
     tier2 = False
     write_seen = False
     evidence: list[str] = []
 
-    try:
-        tree = ast.parse(source)
-    except SyntaxError:
+    tree, ranges, tool_text = python_tool_source(source)
+    if tree is None or not ranges:
         return tier1, tier2, write_seen, evidence
 
+    def in_tool(lineno: int) -> bool:
+        return any(s <= lineno <= e for s, e in ranges)
+
     for node in ast.walk(tree):
+        lineno = getattr(node, "lineno", None)
+        if lineno is None or not in_tool(lineno):
+            continue
+
         # os.environ.get(X)  /  os.getenv(X)
         if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):
             mod = node.func.value.id if isinstance(node.func.value, ast.Name) else None
@@ -67,13 +79,6 @@ def _ast_python(source: str) -> tuple[bool, bool, bool, list[str]]:
                     tier2 = True
                     evidence.append("tier2:os.environ[non-literal]")
 
-        # bare `os.environ` reference outside subscript/attribute access ->
-        # likely full-dict view (.keys(), iter, copy, **os.environ, etc.)
-        if isinstance(node, ast.Attribute) and node.attr == "environ":
-            if isinstance(node.value, ast.Name) and node.value.id == "os":
-                # only flag if NOT part of os.environ.<something> or os.environ[...]
-                pass  # handled by parent walks above; keep as no-op
-
         # assignment to os.environ[X] or os.environ.update(...)
         if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):
             if (
@@ -94,12 +99,15 @@ def _ast_python(source: str) -> tuple[bool, bool, bool, list[str]]:
                     write_seen = True
                     evidence.append("write:os.environ[]=")
 
-    # Detect bare `os.environ` (no subscript, no .get) — Tier 2 exposure.
-    if re.search(r"\bos\.environ\b(?!\s*\.\s*(get|setdefault|pop|update)\b|\s*\[)", source):
+    # Bare os.environ (dict view, **os.environ, etc.) — only inside tool functions.
+    if re.search(
+        r"\bos\.environ\b(?!\s*\.\s*(get|setdefault|pop|update)\b|\s*\[)", tool_text
+    ):
         tier2 = True
         evidence.append("tier2:os.environ-bare")
 
     return tier1, tier2, write_seen, evidence
+
 
 
 def _ts_js(masked: str) -> tuple[bool, bool, bool, list[str]]:
@@ -108,19 +116,22 @@ def _ts_js(masked: str) -> tuple[bool, bool, bool, list[str]]:
     write_seen = False
     evidence: list[str] = []
 
-    if re.search(r"\bprocess\.env\.[A-Z_][A-Z0-9_]*\b", masked):
-        tier1 = True
-        evidence.append("tier1:process.env.LITERAL")
-    if re.search(r"\bprocess\.env\[", masked):
-        tier2 = True
-        evidence.append("tier2:process.env[]")
-    if re.search(r"\bprocess\.env\b(?!\s*\.\s*[A-Za-z_]|\s*\[)", masked):
-        tier2 = True
-        evidence.append("tier2:process.env-bare")
-
-    if re.search(r"\bprocess\.env\[[^\]]+\]\s*=", masked):
-        write_seen = True
-        evidence.append("write:process.env[]=")
+    lines = masked.splitlines()
+    for i, line in enumerate(lines):
+        if not near_tool_reg(lines, i, TS_TOOL_REG_PATS):
+            continue
+        if re.search(r"\bprocess\.env\.[A-Z_][A-Z0-9_]*\b", line):
+            tier1 = True
+            evidence.append("tier1:process.env.LITERAL")
+        if re.search(r"\bprocess\.env\[", line):
+            tier2 = True
+            evidence.append("tier2:process.env[]")
+        if re.search(r"\bprocess\.env\b(?!\s*\.\s*[A-Za-z_]|\s*\[)", line):
+            tier2 = True
+            evidence.append("tier2:process.env-bare")
+        if re.search(r"\bprocess\.env\[[^\]]+\]\s*=", line):
+            write_seen = True
+            evidence.append("write:process.env[]=")
 
     return tier1, tier2, write_seen, evidence
 
@@ -131,18 +142,22 @@ def _go(masked: str) -> tuple[bool, bool, bool, list[str]]:
     write_seen = False
     evidence: list[str] = []
 
-    if re.search(r'\bos\.Getenv\s*\(\s*"[A-Za-z_][A-Za-z0-9_]*"\s*\)', masked):
-        tier1 = True
-        evidence.append("tier1:os.Getenv(literal)")
-    if re.search(r"\bos\.Getenv\s*\(\s*[A-Za-z_]", masked):
-        tier2 = True
-        evidence.append("tier2:os.Getenv(var)")
-    if re.search(r"\bos\.Environ\s*\(\s*\)", masked):
-        tier2 = True
-        evidence.append("tier2:os.Environ()")
-    if re.search(r"\bos\.Setenv\b", masked):
-        write_seen = True
-        evidence.append("write:os.Setenv")
+    lines = masked.splitlines()
+    for i, line in enumerate(lines):
+        if not near_tool_reg(lines, i, GO_TOOL_REG_PATS):
+            continue
+        if re.search(r'\bos\.Getenv\s*\(\s*"[A-Za-z_][A-Za-z0-9_]*"\s*\)', line):
+            tier1 = True
+            evidence.append("tier1:os.Getenv(literal)")
+        if re.search(r"\bos\.Getenv\s*\(\s*[A-Za-z_]", line):
+            tier2 = True
+            evidence.append("tier2:os.Getenv(var)")
+        if re.search(r"\bos\.Environ\s*\(\s*\)", line):
+            tier2 = True
+            evidence.append("tier2:os.Environ()")
+        if re.search(r"\bos\.Setenv\b", line):
+            write_seen = True
+            evidence.append("write:os.Setenv")
 
     return tier1, tier2, write_seen, evidence
 
