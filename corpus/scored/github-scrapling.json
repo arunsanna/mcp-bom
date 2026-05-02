@@ -1,0 +1,69 @@
+{
+  "id": "github-scrapling",
+  "registry": "github",
+  "language": "python",
+  "source_tier": "community",
+  "archive_size_bytes": 2372456,
+  "duration_s": 1.06,
+  "download_seconds": 0.53,
+  "scan_seconds": 0.5,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    }
+  },
+  "score": {
+    "breadth": 50.0,
+    "depth": 23.75,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 29.94
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

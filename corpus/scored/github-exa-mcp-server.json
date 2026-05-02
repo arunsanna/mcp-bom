@@ -1,0 +1,69 @@
+{
+  "id": "github-exa-mcp-server",
+  "registry": "github",
+  "language": "typescript",
+  "source_tier": "community",
+  "archive_size_bytes": 252083,
+  "duration_s": 0.57,
+  "download_seconds": 0.2,
+  "scan_seconds": 0.19,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 25.0,
+    "depth": 13.75,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 20.44
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "npm-argocd-mcp",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "archive_size_bytes": 150526,
+  "duration_s": 0.66,
+  "download_seconds": 0.08,
+  "scan_seconds": 0.57,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 1,
+      "depth_adjusted": 1.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 37.5,
+    "depth": 11.25,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 21.81
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

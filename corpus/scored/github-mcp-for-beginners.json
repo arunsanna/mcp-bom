@@ -1,0 +1,69 @@
+{
+  "id": "github-mcp-for-beginners",
+  "registry": "github",
+  "language": "jupyter notebook",
+  "source_tier": "enterprise",
+  "archive_size_bytes": 329177230,
+  "duration_s": 153.66,
+  "download_seconds": 57.29,
+  "scan_seconds": 48.92,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 4.0,
+      "depth_adjusted": 3.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 1,
+      "depth_adjusted": 1.0
+    },
+    "secrets": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "delegation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 100.0,
+    "depth": 26.88,
+    "exposure": 0.0,
+    "provenance": 35.0,
+    "attack_surface_score": 37.34
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

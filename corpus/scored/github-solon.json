@@ -1,0 +1,69 @@
+{
+  "id": "github-solon",
+  "registry": "github",
+  "language": "java",
+  "source_tier": "community",
+  "archive_size_bytes": 6342173,
+  "duration_s": 5.26,
+  "download_seconds": 1.22,
+  "scan_seconds": 0.26,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 25.0,
+    "depth": 1.88,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 15.09
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

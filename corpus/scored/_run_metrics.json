@@ -1,0 +1,54 @@
+{
+  "started_utc": "2026-05-02T15:33:12.089212+00:00",
+  "ended_utc": "2026-05-02T15:34:49.340788+00:00",
+  "total_duration_s": 97.3,
+  "manifest_total": 500,
+  "pre_filtered_remote": 181,
+  "pre_filtered_no_source": 3,
+  "scannable_total": 316,
+  "scanned_succeeded": 298,
+  "scanned_errored": 18,
+  "scanned_skipped": 298,
+  "download_seconds_p50": 0.8,
+  "download_seconds_p95": 15.59,
+  "download_seconds_max": 57.29,
+  "scan_seconds_p50": 0.26,
+  "scan_seconds_p95": 15.41,
+  "scan_seconds_max": 119.12,
+  "archive_size_bytes_p50": 348605,
+  "archive_size_bytes_p95": 48581223,
+  "archive_size_bytes_max": 385141181,
+  "total_on_disk_bytes": 3192371194,
+  "errors_by_stage": {
+    "scan": 54
+  },
+  "errors_by_exception_type": {
+    "HTTPError": 36
+  },
+  "score_distribution": {
+    "min": 9.2,
+    "p25": 9.2,
+    "median": 19.3,
+    "p75": 29.7,
+    "max": 61.7,
+    "mean": 22.3
+  },
+  "capability_prevalence": {
+    "filesystem": 4.7,
+    "shell": 47.0,
+    "egress": 62.8,
+    "ingress": 27.9,
+    "secrets": 6.0,
+    "delegation": 18.5,
+    "impersonation": 36.9,
+    "data_sensitivity": 51.3
+  },
+  "cached_subset_counts": {
+    "labeled": 29,
+    "hold_buffer": 0
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0",
+  "git_hash": "7a047f5feec7531dfc36bc4d2518b667617b072a",
+  "peak_temp_dir_bytes": 0
+}

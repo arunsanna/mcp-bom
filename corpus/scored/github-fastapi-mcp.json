@@ -1,0 +1,69 @@
+{
+  "id": "github-fastapi-mcp",
+  "registry": "github",
+  "language": "python",
+  "source_tier": "community",
+  "archive_size_bytes": 213129,
+  "duration_s": 8.37,
+  "download_seconds": 1.29,
+  "scan_seconds": 1.47,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 1,
+      "depth_adjusted": 1.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 37.5,
+    "depth": 5.62,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 19.28
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

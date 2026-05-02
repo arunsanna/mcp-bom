@@ -1,0 +1,69 @@
+{
+  "id": "github-skill-seekers",
+  "registry": "github",
+  "language": "python",
+  "source_tier": "community",
+  "archive_size_bytes": 13847567,
+  "duration_s": 5.83,
+  "download_seconds": 1.08,
+  "scan_seconds": 4.25,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 1,
+      "depth_adjusted": 1.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 6,
+      "depth_adjusted": 6.0
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 62.5,
+    "depth": 30.0,
+    "exposure": 0.0,
+    "provenance": 35.0,
+    "attack_surface_score": 31.25
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

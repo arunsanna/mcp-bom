@@ -1,0 +1,69 @@
+{
+  "id": "npm-rudderjs-mcp",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "archive_size_bytes": 3793805,
+  "duration_s": 14.88,
+  "download_seconds": 10.13,
+  "scan_seconds": 3.66,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 9,
+      "depth_adjusted": 9.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 3,
+      "depth_adjusted": 3.0
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 7,
+      "depth_adjusted": 7.0
+    }
+  },
+  "score": {
+    "breadth": 62.5,
+    "depth": 38.75,
+    "exposure": 60.0,
+    "provenance": 35.0,
+    "attack_surface_score": 47.19
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

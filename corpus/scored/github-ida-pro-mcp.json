@@ -1,0 +1,69 @@
+{
+  "id": "github-ida-pro-mcp",
+  "registry": "github",
+  "language": "python",
+  "source_tier": "community",
+  "archive_size_bytes": 1591996,
+  "duration_s": 2.17,
+  "download_seconds": 1.42,
+  "scan_seconds": 0.72,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 4.0,
+      "depth_adjusted": 3.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 8,
+      "depth_adjusted": 8.0
+    },
+    "ingress": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 62.5,
+    "depth": 25.62,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 33.28
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

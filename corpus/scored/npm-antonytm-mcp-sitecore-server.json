@@ -1,0 +1,69 @@
+{
+  "id": "npm-antonytm-mcp-sitecore-server",
+  "registry": "npm",
+  "language": "typescript",
+  "source_tier": "community",
+  "archive_size_bytes": 690477,
+  "duration_s": 1.29,
+  "download_seconds": 0.19,
+  "scan_seconds": 0.45,
+  "capability_vector": {
+    "filesystem": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 4.0,
+      "depth_adjusted": 3.0
+    },
+    "shell": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 1,
+      "depth_adjusted": 1.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "data_sensitivity": {
+      "detected": true,
+      "confidence": "medium",
+      "depth_raw": 0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 50.0,
+    "depth": 7.5,
+    "exposure": 0.0,
+    "provenance": 35.0,
+    "attack_surface_score": 18.62
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}

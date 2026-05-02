@@ -1,0 +1,69 @@
+{
+  "id": "official-ai-ankimcp-anki-mcp-server-addon",
+  "registry": "official",
+  "language": "unknown",
+  "source_tier": "official",
+  "archive_size_bytes": 383567,
+  "duration_s": 0.73,
+  "download_seconds": 0.24,
+  "scan_seconds": 0.32,
+  "capability_vector": {
+    "filesystem": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "shell": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 4,
+      "depth_adjusted": 4.0
+    },
+    "egress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 2,
+      "depth_adjusted": 2.0
+    },
+    "ingress": {
+      "detected": true,
+      "confidence": "high",
+      "depth_raw": 1,
+      "depth_adjusted": 1.0
+    },
+    "secrets": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "delegation": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    },
+    "impersonation": {
+      "detected": true,
+      "confidence": "low",
+      "depth_raw": 3,
+      "depth_adjusted": 1.5
+    },
+    "data_sensitivity": {
+      "detected": false,
+      "confidence": "low",
+      "depth_raw": 0.0,
+      "depth_adjusted": 0.0
+    }
+  },
+  "score": {
+    "breadth": 50.0,
+    "depth": 10.62,
+    "exposure": 20.0,
+    "provenance": 35.0,
+    "attack_surface_score": 24.03
+  },
+  "extractor_version": "0.1.0",
+  "score_function_version": "1.0"
+}
