@@ -4,7 +4,7 @@
   "language": "typescript",
   "source_tier": "community",
   "scope": "code",
-  "archive_size_bytes": 155648,
+  "archive_size_bytes": 151953,
   "capability_vector": {
     "filesystem": {
       "detected": true,
@@ -62,6 +62,6 @@
     "provenance": 35.0,
     "attack_surface_score": 58.91
   },
-  "extractor_version": "0.1.0",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0"
 }

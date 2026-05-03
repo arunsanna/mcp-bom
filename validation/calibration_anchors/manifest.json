@@ -6,12 +6,12 @@
   "package_name": "mcp-remote",
   "package_version": "0.1.38",
   "tarball_sha256": "d8e7034ed4ddf1f1b5efd928b74e7165ab427f7b21ab86ce79bcb82a4d9560aa",
-  "fetched_utc": "2026-05-02T23:26:19+00:00",
-  "extractor_version": "0.1.0",
+  "fetched_utc": "2026-05-02T23:55:00+00:00",
+  "extractor_version": "0.2.0",
   "score_function_version": "1.0",
   "ass_observed": 58.91,
   "corpus_p50_at_test_time": 31.61,
   "anchor_threshold": ">= p50 of corpus",
   "anchor_pass": true,
-  "notes": "mcp-remote is NOT in the locked 500-server corpus. Tested as standalone out-of-corpus calibration anchor per pre-reg v1.1 §4. ASS 58.91 comfortably exceeds corpus p50 (31.61). If Task #7 (issue #17 secrets fix) lands after this test, re-run against updated extractor."
+  "notes": "mcp-remote is NOT in the locked 500-server corpus. Tested as standalone out-of-corpus calibration anchor per pre-reg v1.1 §4. ASS 58.91 comfortably exceeds corpus p50 (31.61). If Task #7 (issue #17 secrets fix) lands after this test, re-run against updated extractor. Re-tested 2026-05-02 against v0.2.0 extractor for parity with corpus scoring (Task #9)."
 }
