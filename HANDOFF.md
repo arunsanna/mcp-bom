@@ -48,6 +48,66 @@ End of handoff prompt. Continue reading below for the project state.
 
 ---
 
+## ⚡ Resume snapshot — 2026-05-03 session end
+
+> Read this FIRST after the handoff prompt above. Captures everything that changed since the prior `## Where we are now` table was last refreshed.
+
+### Completed today (post-Task #12)
+
+| Task                              | Commit    | Outcome                                                                                                                 |
+| --------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------- |
+| #13 Threats-to-validity doc draft | `f336c8b` | `docs/threats-to-validity.md` (19 threats: 12 pre-reg + 7 NEW) + `validation/labeling_protocol.md` (LLM rater protocol) |
+| #14 Semgrep H12 baseline          | `0afda6b` | 50 servers, p/security-audit + p/owasp-top-ten, github-only sample (DEVIATION — see below)                              |
+
+### In flight at session end
+
+- **Task #15 — Corpus integrity diagnostic** (URGENT). Running. No commit yet. Verdict gates everything.
+
+### 🔴 Critical issue to triage tomorrow morning
+
+Task #14 surfaced that only ~99/500 archives on disk are real source (npm/official/pypi are mostly <1KB stubs per the existing `project_corpus_archive_gap.md` memory). But `corpus/scored_code/` has 298 entries scored, including 167 npm + 21 pypi + 14 official — registries with mostly-stub archives.
+
+**The integrity question**: how did 200+ servers get ASS scores when their source is a stub? Three possibilities:
+
+- **(A)** Scoring read real source that's now lost — valid but unreplicable
+- **(B)** Scoring on stubs produces default/garbage values — large chunk of corpus invalid, deadline crisis
+- **(C)** Scoring used `corpus/cached/` rather than `corpus/raw/` — recoverable
+
+Task #15 dispatched to determine which. Wait for its report before any other work.
+
+### Task #14 deviation 002 (pending log entry)
+
+- Pre-reg §H12 specified registry-stratified sample (10 × 5 = 50). Only github registry has real archives in volume.
+- Agent adapted to language-stratified within github (typescript=19, python=15, go=8, java=2, others=6).
+- H12 sample frame narrows from "MCP servers across registries" to "github-hosted MCP servers."
+- Preview Pearson r(ASS, cwe_finding_count) = **0.4918** — barely supports H12 complementarity threshold |r| < 0.5; confirmatory TOST in Step 5.
+- Deviation 002 entry needs to be written into `docs/preregistration-deviations.md` AFTER Task #15 verdict (because if (B), H12 may need fuller restatement).
+
+### Immediate first action tomorrow
+
+1. Check for Task #15 commit / report — `git log --oneline -3` and look for `docs: corpus integrity diagnostic`.
+2. Read `docs/corpus-integrity-investigation.md` — verdict is at the top.
+3. Branch on verdict:
+   - **(A) or (C)**: write Deviation 002 (Task #14 stratification change). Then continue with paper scaffold, anonymized repo prep, score sensitivity #18.
+   - **(B)**: STOP. Convene with user. Likely path: re-run extractor against the smaller real-source corpus (~99 servers); recompute all percentiles, anchors, and confirmatory test inputs; document as major mid-flight pivot.
+
+### Arun-side, deadline-blocking
+
+- **MB-008 labeling** (in AI Memory) — webapp at https://mcpbom.arunlabs.com/, blind-label all 50 servers via the form, then `curl -k https://mcpbom.arunlabs.com/api/export.csv > validation/labels_arun.csv`, commit, ping manager → dispatches Task #10 (LLM rater + κ + precision/recall).
+- **MB-009 OpenReview profile** (in AI Memory) — paste DBLP URL `https://dblp.org/pid/423/5988.html` into Edit Profile → DBLP. ~5 min.
+
+### Tasks queued but NOT YET dispatched
+
+| Task #    | Description                                                                                |
+| --------- | ------------------------------------------------------------------------------------------ |
+| #10       | LLM-as-second-rater + per-category precision/recall + Cohen's κ. Blocked on Arun's labels. |
+| #16 (TBD) | Deviation 002 entry for Task #14. Blocked on Task #15 verdict.                             |
+| #17 (TBD) | Paper scaffold (NeurIPS LaTeX, anonymized) — can dispatch once integrity verdict is in.    |
+| #18 (TBD) | Anonymized review repo prep. Can dispatch in parallel with paper scaffold.                 |
+| #19 (TBD) | Score function sensitivity analysis (issue #18).                                           |
+
+---
+
 ## Project context
 
 - **Building**: MCP-BOM, a reproducible attack-surface benchmark for MCP servers, targeting NeurIPS 2026 Evaluations & Datasets Track.
@@ -57,20 +117,20 @@ End of handoff prompt. Continue reading below for the project state.
 
 ## Where we are now
 
-| Phase                    | State                                         | Evidence                                                                              |
-| ------------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------- |
-| Pre-registration         | locked v1.1 (anchors percentile-relative)     | `docs/preregistration.md` + `docs/preregistration-deviations.md`                      |
-| Corpus manifest          | done (500 servers)                            | `corpus/manifest.json`                                                                |
-| Tool-scope cohort        | preserved (H14 baseline)                      | `corpus/scored/` (298 servers, untouched)                                             |
-| Code-scope cohort        | scored at extractor v0.2.0                    | `corpus/scored_code/` (298 servers + 18 errored)                                      |
-| Extractor                | v0.2.0 with #17 secrets disambiguation        | `extractor/`, commit `76c9525`                                                        |
-| Calibration anchors      | 3/4 verified PASS at v0.2.0                   | `validation/calibration_anchors/` (mcp-remote ASS=58.91, top decile)                  |
-| Instrument-validation    | sample done (50, seed 0x4d4250); labeling IN PROGRESS via webapp | `validation/labels_arun.csv` (0/50), https://mcpbom.arunlabs.com/   |
-| LLM second rater         | decision locked, not yet run                  | memory `project_labeling_decisions.md`, runs after Arun finishes labels               |
-| H14 drift computation    | not started (both scopes scored, ready)       | needs `validation/h14_drift.json` from set-difference                                 |
-| Confirmatory analysis    | not started (gated on labeling)               | will run with G3 sensitivity analysis baked in                                        |
-| Threats-to-validity doc  | not started                                   | needs `docs/threats-to-validity.md` (Step 6)                                          |
-| Paper scaffold           | not started                                   | `paper/` dir empty                                                                    |
+| Phase                   | State                                                            | Evidence                                                                |
+| ----------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| Pre-registration        | locked v1.1 (anchors percentile-relative)                        | `docs/preregistration.md` + `docs/preregistration-deviations.md`        |
+| Corpus manifest         | done (500 servers)                                               | `corpus/manifest.json`                                                  |
+| Tool-scope cohort       | preserved (H14 baseline)                                         | `corpus/scored/` (298 servers, untouched)                               |
+| Code-scope cohort       | scored at extractor v0.2.0                                       | `corpus/scored_code/` (298 servers + 18 errored)                        |
+| Extractor               | v0.2.0 with #17 secrets disambiguation                           | `extractor/`, commit `76c9525`                                          |
+| Calibration anchors     | 3/4 verified PASS at v0.2.0                                      | `validation/calibration_anchors/` (mcp-remote ASS=58.91, top decile)    |
+| Instrument-validation   | sample done (50, seed 0x4d4250); labeling IN PROGRESS via webapp | `validation/labels_arun.csv` (0/50), https://mcpbom.arunlabs.com/       |
+| LLM second rater        | decision locked, not yet run                                     | memory `project_labeling_decisions.md`, runs after Arun finishes labels |
+| H14 drift computation   | not started (both scopes scored, ready)                          | needs `validation/h14_drift.json` from set-difference                   |
+| Confirmatory analysis   | not started (gated on labeling)                                  | will run with G3 sensitivity analysis baked in                          |
+| Threats-to-validity doc | not started                                                      | needs `docs/threats-to-validity.md` (Step 6)                            |
+| Paper scaffold          | not started                                                      | `paper/` dir empty                                                      |
 
 ## Key decisions locked
 
