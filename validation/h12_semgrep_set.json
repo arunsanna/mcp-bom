@@ -1,0 +1,371 @@
+{
+  "seed": "0x4d435042",
+  "stratification": "language",
+  "stratification_note": "Pre-reg specified registry-stratified 50-server sample. Only github-registry servers have source archives on disk (86/500). Adapted to language-stratified sampling from available github servers. Deviation documented.",
+  "stratum_counts": {
+    "c": 1,
+    "c#": 1,
+    "c++": 1,
+    "go": 8,
+    "java": 2,
+    "jupyter notebook": 0,
+    "php": 1,
+    "python": 15,
+    "rust": 0,
+    "typescript": 19,
+    "unknown": 2
+  },
+  "total": 50,
+  "servers": [
+    {
+      "server_id": "github-osaurus",
+      "registry": "github",
+      "language": "c",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-osaurus.zip"
+    },
+    {
+      "server_id": "github-csharp-sdk",
+      "registry": "github",
+      "language": "c#",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-csharp-sdk.zip"
+    },
+    {
+      "server_id": "github-lemonade",
+      "registry": "github",
+      "language": "c++",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-lemonade.zip"
+    },
+    {
+      "server_id": "github-whatsapp-mcp",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-whatsapp-mcp.zip"
+    },
+    {
+      "server_id": "github-nunu",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-nunu.zip"
+    },
+    {
+      "server_id": "github-bifrost",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-bifrost.zip"
+    },
+    {
+      "server_id": "github-enscan-go",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-enscan-go.zip"
+    },
+    {
+      "server_id": "github-nginx-ui",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-nginx-ui.zip"
+    },
+    {
+      "server_id": "github-mcp-grafana",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-mcp-grafana.zip"
+    },
+    {
+      "server_id": "github-registry",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-registry.zip"
+    },
+    {
+      "server_id": "github-kubefwd",
+      "registry": "github",
+      "language": "go",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-kubefwd.zip"
+    },
+    {
+      "server_id": "github-ghidramcp",
+      "registry": "github",
+      "language": "java",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-ghidramcp.zip"
+    },
+    {
+      "server_id": "github-java-sdk",
+      "registry": "github",
+      "language": "java",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-java-sdk.zip"
+    },
+    {
+      "server_id": "github-boost",
+      "registry": "github",
+      "language": "php",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-boost.zip"
+    },
+    {
+      "server_id": "github-windows-mcp",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-windows-mcp.zip"
+    },
+    {
+      "server_id": "github-xhs-downloader",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-xhs-downloader.zip"
+    },
+    {
+      "server_id": "github-mcp-obsidian",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-mcp-obsidian.zip"
+    },
+    {
+      "server_id": "github-arxiv-mcp-server",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-arxiv-mcp-server.zip"
+    },
+    {
+      "server_id": "github-ddgs",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-ddgs.zip"
+    },
+    {
+      "server_id": "github-fastapi-mcp",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-fastapi-mcp.zip"
+    },
+    {
+      "server_id": "github-ha-mcp",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-ha-mcp.zip"
+    },
+    {
+      "server_id": "github-mcp",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-mcp.zip"
+    },
+    {
+      "server_id": "github-mcpo",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-mcpo.zip"
+    },
+    {
+      "server_id": "github-fast-agent",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-fast-agent.zip"
+    },
+    {
+      "server_id": "github-trendradar",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-trendradar.zip"
+    },
+    {
+      "server_id": "github-auto-claude-code-research-in-sleep",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-auto-claude-code-research-in-sleep.zip"
+    },
+    {
+      "server_id": "github-fastmcp",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-fastmcp.zip"
+    },
+    {
+      "server_id": "github-hexstrike-ai",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-hexstrike-ai.zip"
+    },
+    {
+      "server_id": "github-ida-pro-mcp",
+      "registry": "github",
+      "language": "python",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-ida-pro-mcp.zip"
+    },
+    {
+      "server_id": "github-activepieces",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-activepieces.zip"
+    },
+    {
+      "server_id": "github-browser-tools-mcp",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-browser-tools-mcp.zip"
+    },
+    {
+      "server_id": "github-figma-context-mcp",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-figma-context-mcp.zip"
+    },
+    {
+      "server_id": "github-gemini-cli",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-gemini-cli.zip"
+    },
+    {
+      "server_id": "github-ms-365-mcp-server",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-ms-365-mcp-server.zip"
+    },
+    {
+      "server_id": "github-deep-research",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-deep-research.zip"
+    },
+    {
+      "server_id": "github-n8n-mcp",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-n8n-mcp.zip"
+    },
+    {
+      "server_id": "github-mcp-server-chart",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-mcp-server-chart.zip"
+    },
+    {
+      "server_id": "github-xiaozhi-esp32-server",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-xiaozhi-esp32-server.zip"
+    },
+    {
+      "server_id": "github-markdownify-mcp",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-markdownify-mcp.zip"
+    },
+    {
+      "server_id": "github-context-mode",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-context-mode.zip"
+    },
+    {
+      "server_id": "github-n8n",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-n8n.zip"
+    },
+    {
+      "server_id": "github-directories",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-directories.zip"
+    },
+    {
+      "server_id": "github-supergateway",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-supergateway.zip"
+    },
+    {
+      "server_id": "github-firecrawl-mcp-server",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-firecrawl-mcp-server.zip"
+    },
+    {
+      "server_id": "github-playwright-mcp",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-playwright-mcp.zip"
+    },
+    {
+      "server_id": "github-5ire",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-5ire.zip"
+    },
+    {
+      "server_id": "github-nuclear",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-nuclear.zip"
+    },
+    {
+      "server_id": "github-exa-mcp-server",
+      "registry": "github",
+      "language": "typescript",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-exa-mcp-server.zip"
+    },
+    {
+      "server_id": "github-awesome-mcp-zh",
+      "registry": "github",
+      "language": "unknown",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-awesome-mcp-zh.zip"
+    },
+    {
+      "server_id": "github-mcp-chinese-getting-started-guide",
+      "registry": "github",
+      "language": "unknown",
+      "source_tier": null,
+      "raw_archive_path": "corpus/raw/github-mcp-chinese-getting-started-guide.zip"
+    }
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "h12_semgrep_summary": true,
+  "seed": "0x4d435042",
+  "stratification": "language",
+  "stratification_note": "Pre-reg specified registry-stratified 50-server sample. Only github-registry servers have source archives on disk (86/500). Adapted to language-stratified sampling from available github servers. Deviation documented.",
+  "semgrep_version": "1.159.0",
+  "rulesets": [
+    "p/security-audit",
+    "p/owasp-top-ten"
+  ],
+  "ran_at_utc": "2026-05-03T04:13:52.437788+00:00",
+  "aggregate": {
+    "n_succeeded": 50,
+    "n_total": 50,
+    "n_missing_or_errored": 0,
+    "servers_with_zero_findings": 13,
+    "cwe_finding_count": {
+      "min": 0,
+      "median": 2.5,
+      "mean": 9.72,
+      "max": 79,
+      "stdev": 17.15
+    }
+  },
+  "per_server": {
+    "github-osaurus": {
+      "status": "ok",
+      "cwe_finding_count": 1,
+      "cwe_tagged_finding_count": 1,
+      "unique_cwe_ids": [
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-csharp-sdk": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-lemonade": {
+      "status": "ok",
+      "cwe_finding_count": 30,
+      "cwe_tagged_finding_count": 30,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+        "CWE-939: Improper Authorization in Handler for Custom URL Scheme"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-whatsapp-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 2,
+      "cwe_tagged_finding_count": 2,
+      "unique_cwe_ids": [
+        "CWE-319: Cleartext Transmission of Sensitive Information",
+        "CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-nunu": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-bifrost": {
+      "status": "ok",
+      "cwe_finding_count": 35,
+      "cwe_tagged_finding_count": 35,
+      "unique_cwe_ids": [
+        "CWE-1220: Insufficient Granularity of Access Control",
+        "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "CWE-242: Use of Inherently Dangerous Function",
+        "CWE-287: Improper Authentication",
+        "CWE-290: Authentication Bypass by Spoofing",
+        "CWE-319: Cleartext Transmission of Sensitive Information",
+        "CWE-326: Inadequate Encryption Strength",
+        "CWE-328: Use of Weak Hash",
+        "CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)",
+        "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')",
+        "CWE-502: Deserialization of Untrusted Data",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-enscan-go": {
+      "status": "ok",
+      "cwe_finding_count": 5,
+      "cwe_tagged_finding_count": 5,
+      "unique_cwe_ids": [
+        "CWE-269: Improper Privilege Management",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-328: Use of Weak Hash",
+        "CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-nginx-ui": {
+      "status": "ok",
+      "cwe_finding_count": 79,
+      "cwe_tagged_finding_count": 79,
+      "unique_cwe_ids": [
+        "CWE-242: Use of Inherently Dangerous Function",
+        "CWE-290: Authentication Bypass by Spoofing",
+        "CWE-319: Cleartext Transmission of Sensitive Information",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-328: Use of Weak Hash",
+        "CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)",
+        "CWE-400: Uncontrolled Resource Consumption",
+        "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-mcp-grafana": {
+      "status": "ok",
+      "cwe_finding_count": 3,
+      "cwe_tagged_finding_count": 3,
+      "unique_cwe_ids": [
+        "CWE-319: Cleartext Transmission of Sensitive Information",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-502: Deserialization of Untrusted Data"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-registry": {
+      "status": "ok",
+      "cwe_finding_count": 1,
+      "cwe_tagged_finding_count": 1,
+      "unique_cwe_ids": [
+        "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-kubefwd": {
+      "status": "ok",
+      "cwe_finding_count": 1,
+      "cwe_tagged_finding_count": 1,
+      "unique_cwe_ids": [
+        "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-ghidramcp": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-java-sdk": {
+      "status": "ok",
+      "cwe_finding_count": 2,
+      "cwe_tagged_finding_count": 2,
+      "unique_cwe_ids": [
+        "CWE-319: Cleartext Transmission of Sensitive Information",
+        "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-boost": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-windows-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 2,
+      "cwe_tagged_finding_count": 2,
+      "unique_cwe_ids": [
+        "CWE-611: Improper Restriction of XML External Entity Reference",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-xhs-downloader": {
+      "status": "ok",
+      "cwe_finding_count": 4,
+      "cwe_tagged_finding_count": 4,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-mcp-obsidian": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-arxiv-mcp-server": {
+      "status": "ok",
+      "cwe_finding_count": 3,
+      "cwe_tagged_finding_count": 3,
+      "unique_cwe_ids": [
+        "CWE-269: Improper Privilege Management",
+        "CWE-611: Improper Restriction of XML External Entity Reference"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-ddgs": {
+      "status": "ok",
+      "cwe_finding_count": 1,
+      "cwe_tagged_finding_count": 1,
+      "unique_cwe_ids": [
+        "CWE-942: Permissive Cross-domain Policy with Untrusted Domains"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-fastapi-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-ha-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 19,
+      "cwe_tagged_finding_count": 19,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-532: Insertion of Sensitive Information into Log File",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-939: Improper Authorization in Handler for Custom URL Scheme",
+        "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 17,
+      "cwe_tagged_finding_count": 17,
+      "unique_cwe_ids": [
+        "CWE-116: Improper Encoding or Escaping of Output",
+        "CWE-276: Incorrect Default Permissions",
+        "CWE-732: Incorrect Permission Assignment for Critical Resource",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-939: Improper Authorization in Handler for Custom URL Scheme"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-mcpo": {
+      "status": "ok",
+      "cwe_finding_count": 5,
+      "cwe_tagged_finding_count": 5,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-269: Improper Privilege Management",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-942: Permissive Cross-domain Policy with Untrusted Domains"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-fast-agent": {
+      "status": "ok",
+      "cwe_finding_count": 11,
+      "cwe_tagged_finding_count": 11,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-269: Improper Privilege Management",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-939: Improper Authorization in Handler for Custom URL Scheme",
+        "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-trendradar": {
+      "status": "ok",
+      "cwe_finding_count": 7,
+      "cwe_tagged_finding_count": 7,
+      "unique_cwe_ids": [
+        "CWE-269: Improper Privilege Management",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-939: Improper Authorization in Handler for Custom URL Scheme"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-auto-claude-code-research-in-sleep": {
+      "status": "ok",
+      "cwe_finding_count": 10,
+      "cwe_tagged_finding_count": 10,
+      "unique_cwe_ids": [
+        "CWE-611: Improper Restriction of XML External Entity Reference",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-939: Improper Authorization in Handler for Custom URL Scheme"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-fastmcp": {
+      "status": "ok",
+      "cwe_finding_count": 65,
+      "cwe_tagged_finding_count": 65,
+      "unique_cwe_ids": [
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-532: Insertion of Sensitive Information into Log File",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-hexstrike-ai": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-ida-pro-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 8,
+      "cwe_tagged_finding_count": 8,
+      "unique_cwe_ids": [
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-activepieces": {
+      "status": "ok",
+      "cwe_finding_count": 54,
+      "cwe_tagged_finding_count": 54,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-269: Improper Privilege Management",
+        "CWE-290: Authentication Bypass by Spoofing",
+        "CWE-345: Insufficient Verification of Data Authenticity",
+        "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+        "CWE-94: Improper Control of Generation of Code ('Code Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-browser-tools-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 12,
+      "cwe_tagged_finding_count": 12,
+      "unique_cwe_ids": [
+        "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "CWE-319: Cleartext Transmission of Sensitive Information"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-figma-context-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-gemini-cli": {
+      "status": "ok",
+      "cwe_finding_count": 10,
+      "cwe_tagged_finding_count": 10,
+      "unique_cwe_ids": [
+        "CWE-310: CWE CATEGORY: Cryptographic Issues",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-798: Use of Hard-coded Credentials"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-ms-365-mcp-server": {
+      "status": "ok",
+      "cwe_finding_count": 2,
+      "cwe_tagged_finding_count": 2,
+      "unique_cwe_ids": [
+        "CWE-269: Improper Privilege Management",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-deep-research": {
+      "status": "ok",
+      "cwe_finding_count": 1,
+      "cwe_tagged_finding_count": 1,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-n8n-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 6,
+      "cwe_tagged_finding_count": 6,
+      "unique_cwe_ids": [
+        "CWE-290: Authentication Bypass by Spoofing",
+        "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-mcp-server-chart": {
+      "status": "ok",
+      "cwe_finding_count": 2,
+      "cwe_tagged_finding_count": 2,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-xiaozhi-esp32-server": {
+      "status": "ok",
+      "cwe_finding_count": 26,
+      "cwe_tagged_finding_count": 26,
+      "unique_cwe_ids": [
+        "CWE-23: Relative Path Traversal",
+        "CWE-290: Authentication Bypass by Spoofing",
+        "CWE-295: Improper Certificate Validation",
+        "CWE-319: Cleartext Transmission of Sensitive Information",
+        "CWE-327: Use of a Broken or Risky Cryptographic Algorithm",
+        "CWE-328: Use of Weak Hash",
+        "CWE-330: Use of Insufficiently Random Values",
+        "CWE-611: Improper Restriction of XML External Entity Reference",
+        "CWE-704: Incorrect Type Conversion or Cast"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-markdownify-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 1,
+      "cwe_tagged_finding_count": 1,
+      "unique_cwe_ids": [
+        "CWE-269: Improper Privilege Management"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-context-mode": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-n8n": {
+      "status": "ok",
+      "cwe_finding_count": 38,
+      "cwe_tagged_finding_count": 38,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-290: Authentication Bypass by Spoofing",
+        "CWE-319: Cleartext Transmission of Sensitive Information",
+        "CWE-345: Insufficient Verification of Data Authenticity",
+        "CWE-346: Origin Validation Error",
+        "CWE-668: Exposure of Resource to Wrong Sphere",
+        "CWE-73: External Control of File Name or Path",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "CWE-798: Use of Hard-coded Credentials",
+        "CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-directories": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-supergateway": {
+      "status": "ok",
+      "cwe_finding_count": 6,
+      "cwe_tagged_finding_count": 6,
+      "unique_cwe_ids": [
+        "CWE-250: Execution with Unnecessary Privileges",
+        "CWE-269: Improper Privilege Management",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-firecrawl-mcp-server": {
+      "status": "ok",
+      "cwe_finding_count": 8,
+      "cwe_tagged_finding_count": 8,
+      "unique_cwe_ids": [
+        "CWE-269: Improper Privilege Management",
+        "CWE-290: Authentication Bypass by Spoofing"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-playwright-mcp": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-5ire": {
+      "status": "ok",
+      "cwe_finding_count": 5,
+      "cwe_tagged_finding_count": 5,
+      "unique_cwe_ids": [
+        "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-nuclear": {
+      "status": "ok",
+      "cwe_finding_count": 3,
+      "cwe_tagged_finding_count": 3,
+      "unique_cwe_ids": [
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-exa-mcp-server": {
+      "status": "ok",
+      "cwe_finding_count": 1,
+      "cwe_tagged_finding_count": 1,
+      "unique_cwe_ids": [
+        "CWE-269: Improper Privilege Management"
+      ],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-awesome-mcp-zh": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    },
+    "github-mcp-chinese-getting-started-guide": {
+      "status": "ok",
+      "cwe_finding_count": 0,
+      "cwe_tagged_finding_count": 0,
+      "unique_cwe_ids": [],
+      "rulesets": [
+        "p/security-audit",
+        "p/owasp-top-ten"
+      ]
+    }
+  }
+}
