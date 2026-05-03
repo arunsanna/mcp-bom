@@ -1,14 +1,16 @@
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
 metadata:
   name: labeler
   namespace: mcp-bom
 spec:
-  entryPoints:
-    - web
-  routes:
-    - match: Host(`mcpbom.arunlabs.com`)
-      kind: Rule
-      services:
-        - name: labeler
-          port: 80
+  gateways:
+    - istio-system/arunlabs-public-gateway
+  hosts:
+    - mcpbom.arunlabs.com
+  http:
+    - route:
+        - destination:
+            host: labeler
+            port:
+              number: 80
