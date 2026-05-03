@@ -1,6 +1,6 @@
 # MCP-BOM Session Handoff
 
-> Single source of truth for picking up work between sessions. Updated 2026-05-02 after extractor port parity restoration. This file lives in the repo intentionally — committed, versioned, and easy to find.
+> Single source of truth for picking up work between sessions. Updated 2026-05-02 — pre-reg v1.1 locked, extractor v0.2.0 with secrets disambiguation, labeling webapp deployed to forge k3s. This file lives in the repo intentionally — committed, versioned, and easy to find.
 
 ---
 
@@ -57,16 +57,20 @@ End of handoff prompt. Continue reading below for the project state.
 
 ## Where we are now
 
-| Phase                 | State                                      | Evidence                                                                      |
-| --------------------- | ------------------------------------------ | ----------------------------------------------------------------------------- |
-| Pre-registration      | locked                                     | `docs/preregistration.md` — 6 confirmatory + 8 exploratory; α=0.00833         |
-| Corpus manifest       | done (500 servers)                         | `corpus/manifest.json`                                                        |
-| First corpus scan     | done — but **tool-scope cohort**           | `corpus/scored/*.json` (298 servers), kept as H14 baseline                    |
-| Extractor parity      | **restored 2026-05-02**                    | commits `485980c`, `40978ea`, `e7e5531` — 5/5 anchors match spike             |
-| External storage      | verified accessible, **not yet symlinked** | `/Volumes/A1` writable; `corpus/raw` and `corpus/cached` still on laptop disk |
-| Code-scope re-scan    | not started                                | needs symlinks done first, then re-run with `--scope code`                    |
-| H14 drift computation | not started                                | once both scopes are scored, drift is a set-difference per server             |
-| Instrument validation | not started                                | per pre-reg §4 — 50-server hand-label, Cohen's κ ≥ 0.6                        |
+| Phase                    | State                                         | Evidence                                                                              |
+| ------------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Pre-registration         | locked v1.1 (anchors percentile-relative)     | `docs/preregistration.md` + `docs/preregistration-deviations.md`                      |
+| Corpus manifest          | done (500 servers)                            | `corpus/manifest.json`                                                                |
+| Tool-scope cohort        | preserved (H14 baseline)                      | `corpus/scored/` (298 servers, untouched)                                             |
+| Code-scope cohort        | scored at extractor v0.2.0                    | `corpus/scored_code/` (298 servers + 18 errored)                                      |
+| Extractor                | v0.2.0 with #17 secrets disambiguation        | `extractor/`, commit `76c9525`                                                        |
+| Calibration anchors      | 3/4 verified PASS at v0.2.0                   | `validation/calibration_anchors/` (mcp-remote ASS=58.91, top decile)                  |
+| Instrument-validation    | sample done (50, seed 0x4d4250); labeling IN PROGRESS via webapp | `validation/labels_arun.csv` (0/50), https://mcpbom.arunlabs.com/   |
+| LLM second rater         | decision locked, not yet run                  | memory `project_labeling_decisions.md`, runs after Arun finishes labels               |
+| H14 drift computation    | not started (both scopes scored, ready)       | needs `validation/h14_drift.json` from set-difference                                 |
+| Confirmatory analysis    | not started (gated on labeling)               | will run with G3 sensitivity analysis baked in                                        |
+| Threats-to-validity doc  | not started                                   | needs `docs/threats-to-validity.md` (Step 6)                                          |
+| Paper scaffold           | not started                                   | `paper/` dir empty                                                                    |
 
 ## Key decisions locked
 
@@ -79,128 +83,42 @@ End of handoff prompt. Continue reading below for the project state.
      raw-archives/     ← corpus/raw symlinks here
      cached/           ← corpus/cached symlinks here
    ```
+4. **Pre-reg v1.1 anchors percentile-relative** (commit `62ff91e`, `docs/preregistration-deviations.md` deviation 001). Anchors tied to corpus distribution, not absolute thresholds. Reason: model ceiling at ASS≈75 made absolute ≥80 unreachable.
+5. **G3 sensitivity analysis path** (Path A from manager conversation). 18 HTTPError servers stay classified as errored; Step 5 runner imputes optimistic (ASS=0) and pessimistic (ASS=max) and reports verdict robustness.
+6. **LLM second rater** (memory `project_labeling_decisions.md`). Claude Sonnet 4.6 blind-labels the 25-server overlap subset for Cohen's κ. Documented as limitation in §Threats. Reason: no human second annotator available before May 6.
 
 ---
 
 ## Next actions (in order)
 
-### Step 1 — Storage setup (mechanical, ~2 min)
+### Step 1 — Storage setup — DONE
 
-Run from repo root:
+Symlinks at `corpus/raw` and `corpus/cached` point to `/Volumes/A1/mcp-bom-storage/`.
 
-```bash
-mkdir -p /Volumes/A1/mcp-bom-storage/{scan-temp,raw-archives,cached}
+### Step 2 — Code-scope re-scan — DONE
 
-# Move existing on-disk archives to A1
-[ -d corpus/raw ] && [ ! -L corpus/raw ] && mv corpus/raw/* /Volumes/A1/mcp-bom-storage/raw-archives/ 2>/dev/null && rmdir corpus/raw
-[ -d corpus/cached ] && [ ! -L corpus/cached ] && mv corpus/cached/* /Volumes/A1/mcp-bom-storage/cached/ 2>/dev/null && rmdir corpus/cached
+Scored at extractor v0.2.0. Results in `corpus/scored_code/` (298 succeeded + 18 errored).
 
-# Replace with symlinks
-ln -s /Volumes/A1/mcp-bom-storage/raw-archives corpus/raw
-ln -s /Volumes/A1/mcp-bom-storage/cached corpus/cached
+### Step 3 — H14 drift computation — NOT STARTED
 
-# Verify
-ls -la corpus/raw corpus/cached && df -h /Volumes/A1
-```
+Set-difference between `corpus/scored/` (tool) and `corpus/scored_code/` (code). Output: `validation/h14_drift.json` with per-server `drift_categories` and aggregate `drift_rate`. Small Python script (~30 lines).
 
-No commit needed — `corpus/raw` and `corpus/cached` are already in `.gitignore`. Symlinks are local-only.
+### Step 4 — Instrument validation — IN PROGRESS
 
-### Step 2 — Dispatch corpus re-scan with `--scope code`
+- Sample done: `validation/instrument_validation_set.json` (50 servers, seed `0x4d4250`)
+- Labeling webapp deployed: https://mcpbom.arunlabs.com/
+- Arun labels 50 servers via webapp (MB-008 in AI Memory)
+- When labels exported back to `validation/labels_arun.csv`, dispatch Task #10: LLM second rater + per-category precision/recall + Cohen's κ
 
-The streaming scan driver `extractor/run_corpus_scan.py` already has the `--scope code` flag (added by commit `485980c`). Re-run on the same 316-server scannable set, but write outputs to a **new directory** so the existing 298 tool-scope results are preserved as the H14 baseline.
+### Step 5 — Confirmatory analysis — gated on Step 4
 
-**Task spec to dispatch (copy-paste to delegated agent):**
+6 pre-registered tests + G3 sensitivity analysis (impute 18 errored both ways, report verdict robustness).
 
-```
-GOAL
-Re-run the corpus scan with --scope code on the 316 scannable servers
-(filtered set already in validation/scannable_set.json). Write outputs
-to corpus/scored_code/ — DO NOT overwrite corpus/scored/ which holds
-the tool-scope baseline cohort for H14.
+### Step 6 — Threats-to-validity doc — can start in parallel
 
-IMPLEMENTATION
-1. Verify the symlinks from Step 1 are in place:
-   readlink corpus/raw && readlink corpus/cached
-   (should both point under /Volumes/A1/mcp-bom-storage/)
+`docs/threats-to-validity.md` per pre-reg §5 + new threats (anchor recalibration discovery, LLM-as-rater limitation, G3 imputation sensitivity).
 
-2. Run:
-   python3 extractor/run_corpus_scan.py \
-     --manifest corpus/manifest.json \
-     --score-function score_function.toml \
-     --scope code \
-     --output-dir corpus/scored_code \
-     --cache-dir corpus/cached \
-     --temp-dir /Volumes/A1/mcp-bom-storage/scan-temp \
-     --workers 4
-
-3. Same retention rules as prior run (labeled 50-server subset, top-20
-   outliers, errored). Reuse cached archives where present (idempotency).
-
-4. Same exclusion rules — write to validation/excluded_remote_v2.json,
-   excluded_no_source_v2.json (don't overwrite v1).
-
-OBSERVATIONS TO RECORD
-Persist to corpus/scored_code/_run_metrics.json:
-- All fields from the prior _run_metrics.json schema
-- prevalence_comparison: side-by-side prevalence of {tool_scope_v1,
-  code_scope_v2} per category over the same 298 servers that succeeded
-  in BOTH runs
-- mean_breadth_tool_scope vs mean_breadth_code_scope (this drives H1)
-
-REPORT BACK
-SUMMARY
-- scannable: <N>/500
-- scanned succeeded: <N>
-- scanned errored: <N>
-- elapsed: <H>h <M>m
-- peak A1 disk during run: <GB>
-
-PREVALENCE COMPARISON (code vs tool, on 298 servers in both runs)
-              tool_scope    code_scope    delta
-  filesystem    4.7%          <pct>       <delta>pp
-  shell        47.0%          <pct>       <delta>pp
-  egress       62.8%          <pct>       <delta>pp
-  ingress      27.9%          <pct>       <delta>pp
-  secrets       6.0%          <pct>       <delta>pp
-  delegation   18.5%          <pct>       <delta>pp
-  impersonation 36.9%         <pct>       <delta>pp
-  data_sens    51.3%          <pct>       <delta>pp
-
-MEAN BREADTH (driver of H1)
-- tool_scope: 2.55 categories/server (existing)
-- code_scope: <X> categories/server (new)
-- H1 threshold (3.0) cleared under code-scope: yes/no
-
-PATHS
-- per-server: corpus/scored_code/*.json
-- run metrics: corpus/scored_code/_run_metrics.json
-
-GIT
-- branch: main
-- commits: <hash> <subject>
-```
-
-### Step 3 — Compute H14 drift (small, ~30 lines of Python)
-
-Once both scopes are scored, drift per server is a set-difference. One script writes `validation/h14_drift.json` with `{server_id, code_categories, tool_categories, drift_categories, drift_count}` per server, plus aggregate `drift_rate` (proportion with at least one drift category).
-
-This is a simple analysis, can be done in-session or dispatched.
-
-### Step 4 — Instrument validation (per pre-reg §4)
-
-50-server stratified random subsample (seed `0x4d4250` per pre-reg). Hand-label the 8-category capability vector. 25-server overlap subset for Cohen's κ. Compare to extractor output for per-category precision/recall. Calibration anchors from `score_function.toml`. **No confirmatory test runs until this passes.**
-
-### Step 5 — Confirmatory analysis
-
-Run the 6 pre-registered tests from `docs/preregistration.md` on the code-scope corpus. All claims must hit α=0.00833 with effect-size CI.
-
-### Step 6 — Threats-to-validity doc
-
-Per workflow phase. `docs/threats-to-validity.md`. Required by pre-reg §5.
-
-### Step 7 — Paper
-
-`paper/` directory. NeurIPS LaTeX template, anonymized. Submit by May 6 AoE.
+### Step 7 — Paper — `paper/` dir, NeurIPS LaTeX, anonymized. Submit by May 6 AoE.
 
 ---
 
@@ -214,6 +132,10 @@ Per workflow phase. `docs/threats-to-validity.md`. Required by pre-reg §5.
 | 4        | `docs/score-function.md`                                        | Now includes the "Construct" section (added in `e7e5531`)      |
 | 5        | `validation/parity_check/VERDICT.md` + `_post_fix_metrics.json` | Why the construct decision was forced and proof of restoration |
 | 6        | `corpus/scored/_run_metrics.json`                               | Tool-scope baseline run (the existing 298)                     |
+| 7        | `docs/preregistration-deviations.md`                            | What changed in v1.1 and why                                   |
+| 8        | `memory/project_labeling_decisions.md`                          | Locked LLM-second-rater + blind-labeling decisions             |
+| 9        | `validation/calibration_anchors/manifest.json`                  | All 3 anchor results at v0.2.0                                 |
+| 10       | `labeler/`                                                      | Web labeling helper source (deployed to forge k3s)             |
 
 ## Memory entries (auto-loaded via `~/.claude/projects/-Users-jarvis-arunlab-code-mcp-bom/memory/MEMORY.md`)
 
@@ -228,24 +150,31 @@ Per workflow phase. `docs/threats-to-validity.md`. Required by pre-reg §5.
 ## Latest commits on main
 
 ```
-e7e5531  docs: define code-level attack surface construct in score-function.md
-40978ea  test: anchor parity tests (5/5 match) + tool-scope regression + post-fix metrics
-485980c  feat(extractor): restore code-scope construct, add --scope flag, re-add schema patterns
-620c6b3  chore: gitignore corpus/cached + playwright, add validation set files
-945efff  validation: extractor port parity check — INCONCLUSIVE
-b713dab  feat(validation): precision/recall labeling pipeline with draft predictions
-2ccc6ad  data(corpus): score 298/316 scannable servers with production extractor
-4525946  feat(extractor): streaming corpus scan driver with rate limiting
+f4c51de fix(labeler): use istio VirtualService instead of traefik IngressRoute
+b94705c feat(labeler): web labeling helper for instrument-validation phase (deployed to forge k3s)
+c66d51c validation: re-run mcp-remote calibration anchor with extractor v0.2.0 (parity with corpus)
+3efcd57 data(corpus): re-score 316 servers with v0.2.0 extractor (post-#17 disambiguation)
+76c9525 fix(extractor): disambiguate config-only env reads from secrets (closes #17, bump v0.2.0)
+4f2fee3 validation: add mcp-remote calibration anchor (CVE-2025-6514, pre-reg v1.1 §4)
+62ff91e docs: pre-reg v1.1 -- recalibrate §4 anchors to percentile-relative (deviation 001)
+d53f53c data(corpus): score 316 scannable servers with --scope code (H1/H4/H14 input)
+e8f938a validation: stratified 50-server instrument-validation sample (seed 0x4d4250, source-stratified per pre-reg §4)
+59de2f1 chore(gitignore): match corpus/raw and corpus/cached symlinks (drop trailing slash)
+71e17cd docs(handoff): add copy-pasteable prompt block at top
+5a7ac87 docs: HANDOFF — final, code-scope restored, ready for code-scope re-scan
+e7e5531 docs: define code-level attack surface construct in score-function.md
+40978ea test: anchor parity tests (5/5 match) + tool-scope regression + post-fix metrics
+485980c feat(extractor): restore code-scope construct, add --scope flag, re-add schema patterns
 ```
 
 ## Open issues (not blockers right now)
 
-- `#16` extractor precision/recall — addressed by Step 4 (instrument validation)
-- `#17` secrets disambiguation — blocking H2/H14 confirmatory tests; resolve during Step 4
+- `#16` extractor precision/recall — in progress via Task #4 sample + forthcoming Task #10 LLM rater eval
+- `#17` ~~secrets disambiguation~~ — **closed** by commits `76c9525` + `3efcd57`
 - `#18` score function sensitivity analysis — needed before paper draft
 - `#19` LOC/tool-count confounder controls for H3/H5 — exploratory, can be skipped
 - `#20` H12 case studies — needed for paper
-- `#22` 500-corpus statistical power re-run — superseded by Step 5 confirmatory analysis
+- `#22` 500-corpus statistical power re-run — code-scope re-scan done (commit `3efcd57`); confirmatory tests still pending (Step 5)
 
 ## Quality gate reminder
 
