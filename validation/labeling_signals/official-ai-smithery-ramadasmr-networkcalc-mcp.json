@@ -1,0 +1,49 @@
+{
+  "server_id": "official-ai-smithery-ramadasmr-networkcalc-mcp",
+  "extracted_at": "2026-05-03T00:26:39.867857+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "networkcalc-mcp-main/main.py",
+        "line": 65,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "networkcalc-mcp-main/main.py",
+        "line": 71,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "networkcalc-mcp-main/main.py",
+        "line": 77,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "networkcalc-mcp-main/main.py",
+        "line": 83,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "networkcalc-mcp-main/main.py",
+        "line": 89,
+        "snippet": "@mcp.tool()"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "networkcalc-mcp-main/main.py",
+        "line": 117,
+        "snippet": "port = int(os.environ.get(\"PORT\", 8081))"
+      }
+    ],
+    "file_ops": [],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 1,
+    "languages": [
+      "python"
+    ]
+  }
+}

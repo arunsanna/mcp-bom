@@ -1,0 +1,461 @@
+{
+  "server_id": "github-nginx-ui",
+  "extracted_at": "2026-05-03T00:26:34.673146+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/geolite_downloader/main.go",
+        "line": 35,
+        "snippet": "licenseKey := os.Getenv(\"MAXMIND_LICENSE_KEY\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 34,
+        "snippet": "assert.Equal(t, \"127.0.0.1\", os.Getenv(\"NGINX_UI_SERVER_HOST\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 35,
+        "snippet": "assert.Equal(t, \"8080\", os.Getenv(\"NGINX_UI_SERVER_PORT\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 36,
+        "snippet": "// assert.Equal(t, \"testing\", os.Getenv(\"NGINX_UI_SERVER_RUN_MODE\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 37,
+        "snippet": "assert.Equal(t, \"newSecret123\", os.Getenv(\"NGINX_UI_APP_JWT_SECRET\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 38,
+        "snippet": "assert.Equal(t, \"newSercet123\", os.Getenv(\"NGINX_UI_NODE_SECRET\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 39,
+        "snippet": "assert.Equal(t, \"9181\", os.Getenv(\"NGINX_UI_CERT_HTTP_CHALLENGE_PORT\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 40,
+        "snippet": "assert.Equal(t, \"test\", os.Getenv(\"NGINX_UI_CERT_EMAIL\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 41,
+        "snippet": "assert.Equal(t, \"testDB\", os.Getenv(\"NGINX_UI_DATABASE_NAME\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 42,
+        "snippet": "assert.Equal(t, \"start\", os.Getenv(\"NGINX_UI_TERMINAL_START_CMD\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 43,
+        "snippet": "assert.Equal(t, \"/test/ca\", os.Getenv(\"NGINX_UI_CERT_CA_DIR\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 44,
+        "snippet": "assert.Equal(t, \"true\", os.Getenv(\"NGINX_UI_NODE_DEMO\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 45,
+        "snippet": "assert.Equal(t, \"20\", os.Getenv(\"NGINX_UI_APP_PAGE_SIZE\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 46,
+        "snippet": "assert.Equal(t, \"http://proxy.example.com\", os.Getenv(\"NGINX_UI_HTTP_GITHUB_PROXY\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 47,
+        "snippet": "assert.Equal(t, \"14\", os.Getenv(\"NGINX_UI_CERT_RENEWAL_INTERVAL\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 48,
+        "snippet": "assert.Equal(t, \"8.8.8.8,1.1.1.1\", os.Getenv(\"NGINX_UI_CERT_RECURSIVE_NAMESERVERS\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 49,
+        "snippet": "assert.Equal(t, \"true\", os.Getenv(\"NGINX_UI_NODE_SKIP_INSTALLATION\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 50,
+        "snippet": "assert.Equal(t, \"test\", os.Getenv(\"NGINX_UI_NODE_NAME\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/docker/ota.go",
+        "line": 204,
+        "snippet": "currentContainerName := os.Getenv(\"NGINX_UI_CONTAINER_NAME\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/docker/ota.go",
+        "line": 346,
+        "snippet": "currentContainerName := os.Getenv(\"NGINX_UI_CONTAINER_NAME\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/helper/docker.go",
+        "line": 10,
+        "snippet": "return cast.ToBool(os.Getenv(\"NGINX_UI_OFFICIAL_DOCKER\")) &&"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/helper/docker.go",
+        "line": 11,
+        "snippet": "!cast.ToBool(os.Getenv(\"NGINX_UI_IGNORE_DOCKER_SOCKET\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/docs/.vitepress/config/shared.ts",
+        "line": 4,
+        "snippet": "export const commitRef = process.env.COMMIT_REF ?"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/docs/.vitepress/config/shared.ts",
+        "line": 5,
+        "snippet": "`<a href=\"${projectUrl}/commit/${process.env.COMMIT_REF}\">` + process.env.COMMIT_REF.slice(0, 8) + '</a>' :"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/docs/.vitepress/config/shared.ts",
+        "line": 46,
+        "snippet": "port: Number.parseInt(process.env.VITE_PORT ?? '3003')"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/map_generator/main.go",
+        "line": 36,
+        "snippet": "if err := os.MkdirAll(mapDir, 0755); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/map_generator/main.go",
+        "line": 68,
+        "snippet": "out, err := os.Create(filepath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/map_generator/main.go",
+        "line": 98,
+        "snippet": "srcFile, err := os.Open(src)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/map_generator/main.go",
+        "line": 105,
+        "snippet": "dstFile, err := os.Create(dst)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/map_generator/main.go",
+        "line": 123,
+        "snippet": "return os.Remove(src)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/external_notifier/generate.go",
+        "line": 80,
+        "snippet": "if err := os.MkdirAll(outputDir, 0755); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/external_notifier/generate.go",
+        "line": 235,
+        "snippet": "file, err := os.Create(outputFile)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/external_notifier/generate.go",
+        "line": 282,
+        "snippet": "err := os.WriteFile(indexPath, []byte(content), 0644)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/geolite_downloader/main.go",
+        "line": 47,
+        "snippet": "if err := os.MkdirAll(outputDir, 0755); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/geolite_downloader/main.go",
+        "line": 108,
+        "snippet": "outFile, err := os.Create(outputPath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/translation/gettext.go",
+        "line": 83,
+        "snippet": "content, err := os.ReadFile(filePath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/translation/gettext.go",
+        "line": 231,
+        "snippet": "err := os.MkdirAll(filepath.Dir(outputPath), 0755)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/translation/gettext.go",
+        "line": 238,
+        "snippet": "file, err := os.Create(outputPath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/notification/generate.go",
+        "line": 194,
+        "snippet": "err := os.MkdirAll(targetDir, 0755)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/notification/generate.go",
+        "line": 261,
+        "snippet": "err = os.WriteFile(tsFilePath, []byte(content.String()), 0644)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/generate_licenses/main.go",
+        "line": 94,
+        "snippet": "err = os.MkdirAll(filepath.Dir(outputPath), 0755)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/generate_licenses/main.go",
+        "line": 99,
+        "snippet": "err = os.WriteFile(outputPath, compressed.Bytes(), 0644)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/generate_licenses/main.go",
+        "line": 122,
+        "snippet": "data, err := os.ReadFile(goModPath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/generate_licenses/main.go",
+        "line": 326,
+        "snippet": "data, err := os.ReadFile(packagePath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/language_spacing/main.go",
+        "line": 94,
+        "snippet": "original, err := os.ReadFile(path)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/language_spacing/main.go",
+        "line": 105,
+        "snippet": "if err := os.WriteFile(path, []byte(fixed), info.Mode().Perm()); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/version/generate.go",
+        "line": 36,
+        "snippet": "versionFile, err := os.Open(path.Join(basePath, \"app/dist/version.json\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/version/generate.go",
+        "line": 40,
+        "snippet": "versionFile, err = os.Open(path.Join(basePath, \"app/src/version.json\"))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/version/generate.go",
+        "line": 101,
+        "snippet": "err := os.WriteFile(genPath, []byte(genContent), 0644)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/ngx_dir_index/ngx_dir_index.go",
+        "line": 125,
+        "snippet": "err = os.WriteFile(outputPath, jsonData, 0644)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/lego_config/main.go",
+        "line": 123,
+        "snippet": "out, err := os.CreateTemp(\"\", \"lego-\"+tag+\".zip\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/lego_config/main.go",
+        "line": 166,
+        "snippet": "if err := os.WriteFile(destPath, data, 0644); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/lego_config/main.go",
+        "line": 174,
+        "snippet": "return os.Remove(zipFile)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/lego_config/main.go",
+        "line": 198,
+        "snippet": "data, err := os.ReadFile(path)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/lego_config/main.go",
+        "line": 248,
+        "snippet": "if err := os.WriteFile(compressedPath, compressedBuffer.Bytes(), 0644); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/lego_config/main.go",
+        "line": 259,
+        "snippet": "if err := os.Remove(path); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/server_v1_test.go",
+        "line": 120,
+        "snippet": "err := os.WriteFile(confName, []byte(confText), 0644)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/settings/settings.go",
+        "line": 190,
+        "snippet": "_ = os.Remove(tmpPath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/middleware/install_secret_test.go",
+        "line": 24,
+        "snippet": "require.NoError(t, os.WriteFile(confPath, []byte(\"[app]\\n\"), 0644))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/middleware/install_secret_test.go",
+        "line": 40,
+        "snippet": "data, err := os.ReadFile(internalSystem.InstallSecretPath())"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/docker/container_id.go",
+        "line": 13,
+        "snippet": "file, err := os.Open(\"/proc/self/mountinfo\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/llm/context.go",
+        "line": 42,
+        "snippet": "content, err := os.ReadFile(filename)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/llm/context.go",
+        "line": 88,
+        "snippet": "text, _ := os.ReadFile(nginx.GetConfPath(include))"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/cache/index.go",
+        "line": 821,
+        "snippet": "content, err := os.ReadFile(filePath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/cache/index.go",
+        "line": 823,
+        "snippet": "logger.Errorf(\"os.ReadFile failed for %s: %v\", filePath, err)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/cache/search.go",
+        "line": 60,
+        "snippet": "tempDir, err := os.MkdirTemp(\"\", \"nginx-ui-search-index-*\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/cache/search.go",
+        "line": 148,
+        "snippet": "if err := os.RemoveAll(si.indexPath); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/cache/search.go",
+        "line": 558,
+        "snippet": "if err := os.RemoveAll(si.indexPath); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/config/save.go",
+        "line": 41,
+        "snippet": "err = os.WriteFile(absPath, []byte(content), 0644)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/config/sync.go",
+        "line": 41,
+        "snippet": "configBytes, err := os.ReadFile(c.Filepath)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/config/path_test.go",
+        "line": 181,
+        "snippet": "if err := os.MkdirAll(dir, 0o755); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/config/path_test.go",
+        "line": 187,
+        "snippet": "if err := os.WriteFile(targetPath, []byte(\"server {}\"), 0o644); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/config/history.go",
+        "line": 24,
+        "snippet": "currentContent, err := os.ReadFile(path)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/config/validation_test.go",
+        "line": 23,
+        "snippet": "if err := os.MkdirAll(filepath.Join(confDir, dir), 0o755); err != nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/stream/rename.go",
+        "line": 59,
+        "snippet": "_ = os.Remove(oldEnabledConfigFilePath)"
+      },
+      {
+        "file": "... (384 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/generate_licenses/main.go",
+        "line": 758,
+        "snippet": "cmd := exec.Command(\"go\", \"version\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/generate_licenses/main.go",
+        "line": 785,
+        "snippet": "cmd := exec.Command(\"go\", \"env\", \"GOMOD\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/cmd/version/generate.go",
+        "line": 77,
+        "snippet": "cmd := exec.Command(\"git\", \"-C\", basePath, \"rev-parse\", \"HEAD\")"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/app/src/components/LLM/utils.ts",
+        "line": 46,
+        "snippet": "while (regex.exec(chunk) !== null) {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/app/src/components/LLM/contextBuilder.ts",
+        "line": 28,
+        "snippet": "while ((match = includePattern.exec(content)) !== null) {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/pty/pipeline.go",
+        "line": 31,
+        "snippet": "c := exec.Command(settings.TerminalSettings.StartCmd)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/logrotate/logrotate.go",
+        "line": 36,
+        "snippet": "out, err := exec.Command(name, args...).CombinedOutput()"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/nginx/exec.go",
+        "line": 16,
+        "snippet": "execCmd = exec.Command(\"cmd\", \"/c\", cmd)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/nginx/exec.go",
+        "line": 18,
+        "snippet": "execCmd = exec.Command(\"/bin/sh\", \"-c\", cmd)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/internal/nginx/exec.go",
+        "line": 36,
+        "snippet": "execCmd := exec.Command(name, cmd...)"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/api/system/port_scan.go",
+        "line": 119,
+        "snippet": "if cmd := exec.Command(\"netstat\", \"-tlnp\"); cmd.Err == nil {"
+      },
+      {
+        "file": "0xJacky-nginx-ui-0662353/api/system/port_scan.go",
+        "line": 147,
+        "snippet": "if cmd := exec.Command(\"ss\", \"-tlnp\"); cmd.Err == nil {"
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 880,
+    "languages": [
+      "go",
+      "ts"
+    ]
+  }
+}

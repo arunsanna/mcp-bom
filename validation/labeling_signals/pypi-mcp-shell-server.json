@@ -1,0 +1,110 @@
+{
+  "server_id": "pypi-mcp-shell-server",
+  "extracted_at": "2026-05-03T00:26:40.485158+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [
+      {
+        "file": "mcp_shell_server-1.0.3/tests/conftest.py",
+        "line": 8,
+        "snippet": "os.environ[\"ALLOW_COMMANDS\"] = \"1\""
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/tests/conftest.py",
+        "line": 10,
+        "snippet": "os.environ[\"ALLOWED_COMMANDS\"] = ("
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 22,
+        "snippet": "allow_commands = os.environ.get(\"ALLOW_COMMANDS\", \"\")"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 23,
+        "snippet": "allowed_commands = os.environ.get(\"ALLOWED_COMMANDS\", \"\")"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 387,
+        "snippet": "return os.environ.get(\"SHELL\", \"/bin/sh\")"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "mcp_shell_server-1.0.3/tests/test_shell_executor.py",
+        "line": 169,
+        "snippet": "os.mkdir(nested_dir)"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/tests/test_shell_executor.py",
+        "line": 428,
+        "snippet": "os.mkdir(no_exec_dir)"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/tests/test_server.py",
+        "line": 184,
+        "snippet": "os.mkdir(nested_dir)"
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 138,
+        "snippet": "handles[\"stdin\"] = asyncio.subprocess.PIPE"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 157,
+        "snippet": "handles[\"stdout\"] = asyncio.subprocess.PIPE"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 159,
+        "snippet": "handles[\"stderr\"] = asyncio.subprocess.PIPE"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 515,
+        "snippet": "stdout_handle: Union[int, IO[Any]] = asyncio.subprocess.PIPE"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 535,
+        "snippet": "stdin=asyncio.subprocess.PIPE if stdin else None,"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 537,
+        "snippet": "stderr=asyncio.subprocess.PIPE,"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 618,
+        "snippet": "processes: List[asyncio.subprocess.Process] = []"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 663,
+        "snippet": "stdin=asyncio.subprocess.PIPE if prev_stdout is not None else None,"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 664,
+        "snippet": "stdout=asyncio.subprocess.PIPE,"
+      },
+      {
+        "file": "mcp_shell_server-1.0.3/src/mcp_shell_server/shell_executor.py",
+        "line": 665,
+        "snippet": "stderr=asyncio.subprocess.PIPE,"
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 14,
+    "languages": [
+      "python"
+    ]
+  }
+}

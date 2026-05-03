@@ -1,0 +1,608 @@
+{
+  "server_id": "npm-grackle-ai-mcp",
+  "extracted_at": "2026-05-03T00:26:38.686532+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "grackle-main/tools/demo-recorder/mcp-recording/server.py",
+        "line": 16,
+        "snippet": "@mcp.tool()"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "grackle-main/tests/e2e-tests/playwright.config.ts",
+        "line": 6,
+        "snippet": "const envWorkers = process.env.E2E_WORKERS?.trim();"
+      },
+      {
+        "file": "grackle-main/tests/e2e-tests/playwright.config.ts",
+        "line": 16,
+        "snippet": "if (process.env.CI) {"
+      },
+      {
+        "file": "grackle-main/tests/e2e-tests/playwright.config.ts",
+        "line": 25,
+        "snippet": "retries: process.env.CI ? 1 : 0,"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 708,
+        "snippet": "const originalEnvPath = process.env.PATH || '';"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 714,
+        "snippet": "process.env.PATH = [binFolderPath, originalEnvPath].join(path__WEBPACK_IMPORTED_MODULE_3__.delimiter);"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 724,
+        "snippet": "process.env.PATH = originalEnvPath;"
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/import-github-issues.ts",
+        "line": 133,
+        "snippet": "const serverUrl = process.env.GRACKLE_URL ?? `http://127.0.0.1:${DEFAULT_SERVER_PORT}`;"
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/import-github-issues.ts",
+        "line": 134,
+        "snippet": "const apiKey = process.env.GRACKLE_API_KEY;"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db-seed.ts",
+        "line": 186,
+        "snippet": "const orchestrationEnabled = process.env[\"GRACKLE_SKIP_ORCHESTRATION\"] === \"1\" ? 0 : 1;"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db-seed.ts",
+        "line": 187,
+        "snippet": "const schedulingEnabled = process.env[\"GRACKLE_SKIP_SCHEDULING\"] === \"1\" ? 0 : 1;"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db-seed.ts",
+        "line": 189,
+        "snippet": "const knowledgeEnv = process.env[\"GRACKLE_KNOWLEDGE_ENABLED\"];"
+      },
+      {
+        "file": "grackle-main/packages/database/src/github-account-store.ts",
+        "line": 201,
+        "snippet": "return process.env.GH_TOKEN || process.env.GITHUB_TOKEN || undefined;"
+      },
+      {
+        "file": "grackle-main/packages/database/src/crypto.ts",
+        "line": 22,
+        "snippet": "if (process.env.GRACKLE_MASTER_KEY) {"
+      },
+      {
+        "file": "grackle-main/packages/database/src/crypto.ts",
+        "line": 23,
+        "snippet": "return process.env.GRACKLE_MASTER_KEY;"
+      },
+      {
+        "file": "grackle-main/packages/database/src/paths.ts",
+        "line": 11,
+        "snippet": "process.env.GRACKLE_HOME"
+      },
+      {
+        "file": "grackle-main/packages/database/src/paths.ts",
+        "line": 12,
+        "snippet": "? join(process.env.GRACKLE_HOME, GRACKLE_DIR)"
+      },
+      {
+        "file": "grackle-main/packages/core/src/reconciliation-manager.ts",
+        "line": 41,
+        "snippet": "const envRaw = process.env.GRACKLE_RECONCILIATION_TICK_MS;"
+      },
+      {
+        "file": "grackle-main/packages/core/src/credential-bundle.test.ts",
+        "line": 576,
+        "snippet": "// The copilot block checks GH_TOKEN first (process.env.GH_TOKEN || process.env.GITHUB_TOKEN)"
+      },
+      {
+        "file": "grackle-main/packages/core/src/logger.ts",
+        "line": 13,
+        "snippet": "level: process.env.LOG_LEVEL || \"info\","
+      },
+      {
+        "file": "grackle-main/packages/core/src/logger.ts",
+        "line": 15,
+        "snippet": "transport: process.env.NODE_ENV !== \"production\""
+      },
+      {
+        "file": "grackle-main/packages/core/src/grpc-shared-utils.ts",
+        "line": 37,
+        "snippet": "const dockerHost = process.env.GRACKLE_DOCKER_HOST;"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 6,
+        "snippet": "delete process.env.GRACKLE_DOCKER_HOST;"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 18,
+        "snippet": "process.env.GRACKLE_DOCKER_HOST = \"grackle\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 23,
+        "snippet": "process.env.GRACKLE_DOCKER_HOST = \"grackle\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 28,
+        "snippet": "process.env.GRACKLE_DOCKER_HOST = \"fd12::1\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 33,
+        "snippet": "process.env.GRACKLE_DOCKER_HOST = \"fd12::1\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 38,
+        "snippet": "process.env.GRACKLE_DOCKER_HOST = \"grackle.local\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 43,
+        "snippet": "process.env.GRACKLE_DOCKER_HOST = \"[fd12::1]\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/to-dialable-host.test.ts",
+        "line": 48,
+        "snippet": "process.env.GRACKLE_DOCKER_HOST = \"grackle\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/task-session.ts",
+        "line": 141,
+        "snippet": "const mcpPort = parseInt(process.env.GRACKLE_MCP_PORT || String(DEFAULT_MCP_PORT), 10);"
+      },
+      {
+        "file": "grackle-main/packages/core/src/task-session.ts",
+        "line": 142,
+        "snippet": "const mcpDialHost = toDialableHost(process.env.GRACKLE_HOST || \"127.0.0.1\");"
+      },
+      {
+        "file": "grackle-main/packages/core/src/task-session.ts",
+        "line": 159,
+        "snippet": "? (workspace?.workingDirectory || process.env.GRACKLE_WORKING_DIRECTORY || process.env.GRACKLE_WORKTREE_BASE || \"/workspace\")"
+      },
+      {
+        "file": "grackle-main/packages/core/src/credential-bundle.ts",
+        "line": 97,
+        "snippet": "const apiKey = process.env.ANTHROPIC_API_KEY;"
+      },
+      {
+        "file": "grackle-main/packages/core/src/credential-bundle.ts",
+        "line": 212,
+        "snippet": "const envToken = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;"
+      },
+      {
+        "file": "grackle-main/packages/core/src/credential-bundle.ts",
+        "line": 214,
+        "snippet": "const envVarName = process.env.GH_TOKEN ? \"GH_TOKEN\" : \"GITHUB_TOKEN\";"
+      },
+      {
+        "file": "grackle-main/packages/core/src/credential-bundle.ts",
+        "line": 259,
+        "snippet": "const openaiKey = process.env.OPENAI_API_KEY;"
+      },
+      {
+        "file": "grackle-main/packages/core/src/credential-bundle.ts",
+        "line": 277,
+        "snippet": "? join(process.env.APPDATA || join(homedir(), \"AppData\", \"Roaming\"), \"Block\", \"goose\", \"config\", \"config.yaml\")"
+      },
+      {
+        "file": "grackle-main/packages/runtime-sdk/src/worktree.ts",
+        "line": 21,
+        "snippet": "const shell = process.env.SHELL || true;"
+      },
+      {
+        "file": "grackle-main/packages/runtime-sdk/src/worktree.ts",
+        "line": 58,
+        "snippet": "const home = process.env.HOME || process.env.USERPROFILE || basePath;"
+      },
+      {
+        "file": "grackle-main/packages/runtime-sdk/src/runtime-utils.ts",
+        "line": 331,
+        "snippet": "const mcpConfigPath = process.env.GRACKLE_MCP_CONFIG;"
+      },
+      {
+        "file": "grackle-main/packages/runtime-sdk/src/logger.ts",
+        "line": 6,
+        "snippet": "level: process.env.LOG_LEVEL || \"info\","
+      },
+      {
+        "file": "grackle-main/packages/runtime-sdk/src/logger.ts",
+        "line": 7,
+        "snippet": "transport: process.env.NODE_ENV !== \"production\""
+      },
+      {
+        "file": "grackle-main/packages/runtime-claude-code/src/claude-code.ts",
+        "line": 291,
+        "snippet": "const configDir = process.env.CLAUDE_CONFIG_DIR || join(homedir(), \".claude\");"
+      },
+      {
+        "file": "grackle-main/packages/web/vite.config.ts",
+        "line": 8,
+        "snippet": "base: process.env.VITE_BASE_URL || \"/\","
+      },
+      {
+        "file": "grackle-main/packages/web/vite.config.ts",
+        "line": 12,
+        "snippet": "__DEMO_MODE__: JSON.stringify(process.env.VITE_DEMO_MODE === \"true\"),"
+      },
+      {
+        "file": "grackle-main/packages/web/vite.config.ts",
+        "line": 13,
+        "snippet": "__BASE_URL__: JSON.stringify(process.env.VITE_BASE_URL || \"/\"),"
+      },
+      {
+        "file": "grackle-main/packages/runtime-codex/src/codex.ts",
+        "line": 107,
+        "snippet": "const apiKey = process.env.CODEX_API_KEY || process.env.OPENAI_API_KEY;"
+      },
+      {
+        "file": "grackle-main/packages/runtime-codex/src/codex.ts",
+        "line": 113,
+        "snippet": "const baseUrl = process.env.OPENAI_BASE_URL;"
+      },
+      {
+        "file": "grackle-main/packages/web-server/src/web-server.ts",
+        "line": 69,
+        "snippet": "process.env.GRACKLE_WEB_DIR"
+      },
+      {
+        "file": "grackle-main/packages/adapter-docker/src/docker.ts",
+        "line": 38,
+        "snippet": "const DOCKER_NETWORK: string | undefined = process.env.GRACKLE_DOCKER_NETWORK || undefined;"
+      },
+      {
+        "file": "... (102 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "grackle-main/packages/runtime-genaiscript/src/genaiscript.ts",
+        "line": 3,
+        "snippet": "import { writeFile, readFile, mkdtemp, rm } from \"node:fs/promises\";"
+      },
+      {
+        "file": "grackle-main/packages/mcp/src/tools/logs.ts",
+        "line": 1,
+        "snippet": "import { readFile } from \"node:fs/promises\";"
+      },
+      {
+        "file": "grackle-main/packages/mcp/src/tools/logs.test.ts",
+        "line": 8,
+        "snippet": "vi.mock(\"node:fs/promises\", () => ({"
+      },
+      {
+        "file": "grackle-main/packages/mcp/src/tools/logs.test.ts",
+        "line": 12,
+        "snippet": "import { readFile } from \"node:fs/promises\";"
+      },
+      {
+        "file": "grackle-main/packages/cli/src/client.test.ts",
+        "line": 82,
+        "snippet": "vi.mocked(fs.readFileSync).mockImplementation(() => {"
+      },
+      {
+        "file": "grackle-main/packages/cli/src/client.test.ts",
+        "line": 94,
+        "snippet": "vi.mocked(fs.readFileSync).mockReturnValue(\"\");"
+      },
+      {
+        "file": "grackle-main/packages/cli/src/client.test.ts",
+        "line": 108,
+        "snippet": "expect(fs.readFileSync).not.toHaveBeenCalled();"
+      },
+      {
+        "file": "grackle-main/packages/cli/src/client.test.ts",
+        "line": 118,
+        "snippet": "expect(fs.readFileSync).not.toHaveBeenCalled();"
+      },
+      {
+        "file": "grackle-main/packages/powerline/src/token-writer.ts",
+        "line": 1,
+        "snippet": "import { writeFile as writeFileNode, mkdir as mkdirNode, realpath as realpathNode } from \"node:fs/promises\";"
+      },
+      {
+        "file": "grackle-main/packages/adapter-sdk/src/bootstrap.ts",
+        "line": 174,
+        "snippet": "+ `fs.writeFileSync(process.argv[2],String(c.pid));`"
+      },
+      {
+        "file": "grackle-main/packages/adapter-sdk/src/bootstrap.ts",
+        "line": 545,
+        "snippet": "`cd ${runtimeDir} && node -e \"const fs=require('fs');let c;try{c=JSON.parse(fs.readFileSync('manifest.json','utf8'));}catch(e){process.exit(1);}const e=JSON.parse(Buffer.from(process.argv[1],'base64')"
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "grackle-main/tests/e2e-tests/tests/server-manager.ts",
+        "line": 8,
+        "snippet": "import { spawn, type ChildProcess } from \"node:child_process\";"
+      },
+      {
+        "file": "grackle-main/tests/e2e-tests/tests/server-manager.ts",
+        "line": 182,
+        "snippet": "const powerline: ChildProcess = spawn("
+      },
+      {
+        "file": "grackle-main/tests/e2e-tests/tests/server-manager.ts",
+        "line": 195,
+        "snippet": "const server: ChildProcess = spawn("
+      },
+      {
+        "file": "grackle-main/.claude/hooks/pr-readiness-check.mjs",
+        "line": 22,
+        "snippet": "import { execSync } from \"node:child_process\";"
+      },
+      {
+        "file": "grackle-main/.claude/hooks/pr-readiness-check.mjs",
+        "line": 53,
+        "snippet": "const result = execSync(cmd, {"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 51,
+        "snippet": "!*** external \"child_process\" ***!"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 55,
+        "snippet": "module.exports = require(\"child_process\");"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 322,
+        "snippet": "/* harmony import */ var child_process__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! child_process */ 535317);"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 323,
+        "snippet": "/* harmony import */ var child_process__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(child_process__WEBPACK_IMPORTED_MODULE_0__);"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 379,
+        "snippet": "const whereOutput = child_process__WEBPACK_IMPORTED_MODULE_0__.execSync('where npm', { stdio: [] }).toString();"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 387,
+        "snippet": "_npmPath = child_process__WEBPACK_IMPORTED_MODULE_0__.execSync('command -v npm', { stdio: [] }).toString();"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 497,
+        "snippet": "const spawnSyncOptions = {"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 503,
+        "snippet": "const npmVersionSpawnResult = child_process__WEBPACK_IMPORTED_MODULE_0__.spawnSync(platformNpmPath, ['view', `${name}@${version}`, 'version', '--no-update-notifier', '--json'], spawnSyncOptions);"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 637,
+        "snippet": "const result = child_process__WEBPACK_IMPORTED_MODULE_0__.spawnSync(platformNpmPath, [command], {"
+      },
+      {
+        "file": "grackle-main/common/scripts/install-run.js",
+        "line": 715,
+        "snippet": "result = child_process__WEBPACK_IMPORTED_MODULE_0__.spawnSync(platformBinPath, packageBinArgs, {"
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/github-client.ts",
+        "line": 1,
+        "snippet": "import { execFile } from \"node:child_process\";"
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/github-client.ts",
+        "line": 21,
+        "snippet": "exec(args: string[], options: { encoding: BufferEncoding; maxBuffer: number; timeout?: number }): Promise<string>;"
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/github-client.ts",
+        "line": 26,
+        "snippet": "exec("
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/github-client.ts",
+        "line": 140,
+        "snippet": "ghOutput = await client.exec(ghArgs, {"
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/github-client.test.ts",
+        "line": 3,
+        "snippet": "// \u2500\u2500 Mock child_process for gh CLI calls \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+      },
+      {
+        "file": "grackle-main/scripts/github-import/src/github-client.test.ts",
+        "line": 7,
+        "snippet": "vi.mock(\"node:child_process\", () => ({"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db-seed.ts",
+        "line": 26,
+        "snippet": "conn.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db-seed.ts",
+        "line": 38,
+        "snippet": "conn.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db-seed.ts",
+        "line": 47,
+        "snippet": "conn.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db-seed.ts",
+        "line": 75,
+        "snippet": "conn.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/task-store.test.ts",
+        "line": 15,
+        "snippet": "sqlite.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/task-store.test.ts",
+        "line": 63,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS tasks\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/task-store.test.ts",
+        "line": 64,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS workspaces\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/workspace-environment-link-store.test.ts",
+        "line": 14,
+        "snippet": "sqlite.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/workspace-environment-link-store.test.ts",
+        "line": 68,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS workspace_environment_links\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/workspace-environment-link-store.test.ts",
+        "line": 69,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS workspaces\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/workspace-environment-link-store.test.ts",
+        "line": 70,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS environments\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/credential-providers.test.ts",
+        "line": 14,
+        "snippet": "sqlite.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/credential-providers.test.ts",
+        "line": 24,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS settings\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/plugin-store.test.ts",
+        "line": 14,
+        "snippet": "sqlite.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/plugin-store.test.ts",
+        "line": 25,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS plugins\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/plugin-store.test.ts",
+        "line": 35,
+        "snippet": "sqlite.exec(\"INSERT INTO plugins (name, enabled) VALUES ('orchestration', 1)\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/plugin-store.test.ts",
+        "line": 40,
+        "snippet": "sqlite.exec(\"INSERT INTO plugins (name, enabled) VALUES ('orchestration', 0)\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/github-account-store.test.ts",
+        "line": 14,
+        "snippet": "sqlite.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/github-account-store.test.ts",
+        "line": 28,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS github_accounts\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/persona-store.test.ts",
+        "line": 14,
+        "snippet": "sqlite.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/persona-store.test.ts",
+        "line": 36,
+        "snippet": "sqlite.exec(\"DROP TABLE IF EXISTS personas\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 105,
+        "snippet": "mem.exec(`"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 210,
+        "snippet": "mem.exec(\"ALTER TABLE workspaces ADD COLUMN environment_id TEXT NOT NULL DEFAULT ''\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 223,
+        "snippet": "mem.exec(\"DELETE FROM workspace_environment_links WHERE workspace_id = 'ws-migrate-test'\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 262,
+        "snippet": "mem.exec(\"ALTER TABLE schedules ADD COLUMN environment_id TEXT NOT NULL DEFAULT ''\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 293,
+        "snippet": "db1.exec(\"CREATE TABLE test (id TEXT, val TEXT)\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 295,
+        "snippet": "db1.exec(`INSERT INTO test VALUES ('id${i}', '${\"x\".repeat(200)}')`);"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 332,
+        "snippet": "db.exec(\"CREATE TABLE test (id TEXT)\");"
+      },
+      {
+        "file": "grackle-main/packages/database/src/db.test.ts",
+        "line": 333,
+        "snippet": "db.exec(\"INSERT INTO test VALUES ('hello')\");"
+      },
+      {
+        "file": "... (323 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "grackle-main/packages/web-components/src/mocks/mockData.ts",
+        "line": 237,
+        "snippet": "content: 'import { Router } from \"express\";\\nimport bcrypt from \"bcrypt\";\\nimport { db } from \"../db.js\";\\n\\nconst router = Router();\\n\\nrouter.post(\"/login\", async (req, res) => {\\n  const { email, p"
+      },
+      {
+        "file": "grackle-main/packages/web-components/src/mocks/mockData.ts",
+        "line": 384,
+        "snippet": "content: 'import { Router } from \"express\";\\nimport bcrypt from \"bcrypt\";\\nimport jwt from \"jsonwebtoken\";\\nimport crypto from \"node:crypto\";\\nimport { db } from \"../db.js\";\\n\\nconst JWT_SECRET = proc"
+      },
+      {
+        "file": "grackle-main/packages/web-components/src/mocks/mockData.ts",
+        "line": 528,
+        "snippet": "content: 'import { Router } from \"express\";\\nimport bcrypt from \"bcrypt\";\\nimport { db } from \"../db.js\";\\nimport { validateEmail, validatePassword } from \"../utils/validators.js\";\\n\\nconst SALT_ROUND"
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 883,
+    "languages": [
+      "python",
+      "ts"
+    ]
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "server_id": "github-kubefwd",
+  "extracted_at": "2026-05-03T00:26:33.914011+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [
+      {
+        "file": "txn2-kubefwd-fcdbda7/cmd/kubefwd/services/services.go",
+        "line": 627,
+        "snippet": "theme = os.Getenv(\"KUBEFWD_THEME\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/helpers.go",
+        "line": 39,
+        "snippet": "kubefwdPath := os.Getenv(\"KUBEFWD_BIN\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/mcp/live_test.go",
+        "line": 26,
+        "snippet": "if url := os.Getenv(\"KUBEFWD_API_URL\"); url != \"\" {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdtui/ui.go",
+        "line": 372,
+        "snippet": "if os.Getenv(\"TERM\") == \"\" {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdtui/components/detail.go",
+        "line": 667,
+        "snippet": "if os.Getenv(\"WAYLAND_DISPLAY\") != \"\" {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 91,
+        "snippet": "originalHome := os.Getenv(\"HOME\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 160,
+        "snippet": "originalHome := os.Getenv(\"HOME\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 204,
+        "snippet": "originalHome := os.Getenv(\"HOME\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 326,
+        "snippet": "originalHome := os.Getenv(\"HOME\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 375,
+        "snippet": "originalHome := os.Getenv(\"HOME\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 73,
+        "snippet": "originalKubeconfig := os.Getenv(\"KUBECONFIG\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 347,
+        "snippet": "originalKubeconfig := os.Getenv(\"KUBECONFIG\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 378,
+        "snippet": "originalKubeconfig := os.Getenv(\"KUBECONFIG\")"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/container_helpers.go",
+        "line": 237,
+        "snippet": "data, err := os.ReadFile(kubeconfigPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/helpers.go",
+        "line": 171,
+        "snippet": "data, err := os.ReadFile(\"/etc/hosts\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/helpers.go",
+        "line": 206,
+        "snippet": "data, err := os.ReadFile(\"/etc/hosts\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 21,
+        "snippet": "originalHosts, err := os.ReadFile(\"/etc/hosts\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 80,
+        "snippet": "modifiedHosts, err := os.ReadFile(\"/etc/hosts\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 111,
+        "snippet": "originalHosts, err := os.ReadFile(\"/etc/hosts\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 127,
+        "snippet": "modifiedHosts, err := os.ReadFile(\"/etc/hosts\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 147,
+        "snippet": "restoredHosts, err := os.ReadFile(\"/etc/hosts\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost.go",
+        "line": 24,
+        "snippet": "if err := os.Remove(backupHostsPath); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost.go",
+        "line": 31,
+        "snippet": "from, err := os.Open(hostFile.WriteFilePath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost.go",
+        "line": 37,
+        "snippet": "to, err := os.OpenFile(backupHostsPath, os.O_RDWR|os.O_CREATE, 0o644)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 24,
+        "snippet": "if err := os.WriteFile(hostsPath, []byte(content), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 70,
+        "snippet": "backupContent, err := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 92,
+        "snippet": "tempHome, err := os.MkdirTemp(\"\", \"home-*\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 97,
+        "snippet": "if err := os.RemoveAll(tempHome); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 123,
+        "snippet": "if err := os.WriteFile(hosts.WriteFilePath, []byte(newContent), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 139,
+        "snippet": "backupContent, err := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 161,
+        "snippet": "tempHome, err := os.MkdirTemp(\"\", \"home-*\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 166,
+        "snippet": "if err := os.RemoveAll(tempHome); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 181,
+        "snippet": "if err := os.Remove(hostsPath); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 205,
+        "snippet": "tempHome, err := os.MkdirTemp(\"\", \"home-readonly-*\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 210,
+        "snippet": "if err := os.RemoveAll(tempHome); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 263,
+        "snippet": "backupContent, err := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 303,
+        "snippet": "backupContent, err := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 327,
+        "snippet": "tempHome, err := os.MkdirTemp(\"\", \"home-*\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 332,
+        "snippet": "if err := os.RemoveAll(tempHome); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 357,
+        "snippet": "backupContent, err := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 376,
+        "snippet": "tempHome, err := os.MkdirTemp(\"\", \"home-*\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 381,
+        "snippet": "if err := os.RemoveAll(tempHome); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 509,
+        "snippet": "initialBackupContent, err := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 517,
+        "snippet": "if err := os.WriteFile(hostsPath1, []byte(modifiedContent), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 528,
+        "snippet": "finalBackupContent, err := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 709,
+        "snippet": "actualContent, err := os.ReadFile(hostsPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 748,
+        "snippet": "actualContent, err := os.ReadFile(hostsPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 826,
+        "snippet": "initialBackup, _ := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 844,
+        "snippet": "unchangedBackup, _ := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdhost/fwdhost_test.go",
+        "line": 859,
+        "snippet": "forcedBackup, _ := os.ReadFile(backupPath)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 40,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 90,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 130,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 166,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 185,
+        "snippet": "if err := os.WriteFile(configPath, []byte(malformedYAML), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 200,
+        "snippet": "if err := os.WriteFile(configPath, []byte(\"\"), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 238,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 275,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 305,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 342,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdcfg/fwdcfg_test.go",
+        "line": 374,
+        "snippet": "if err := os.WriteFile(configPath, []byte(kubeconfig), 0o644); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdport/fwdport_hosts_test.go",
+        "line": 20,
+        "snippet": "tempDir, err := os.MkdirTemp(\"\", \"kubefwd-hosts-test-*\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdport/fwdport_hosts_test.go",
+        "line": 28,
+        "snippet": "if err := os.WriteFile(hostsPath, []byte(\"127.0.0.1 localhost\\n\"), 0o644); err != nil {"
+      },
+      {
+        "file": "... (12 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/headless_test.go",
+        "line": 63,
+        "snippet": "getPods := exec.Command(\"kubectl\", \"get\", \"pods\", \"-n\", \"kf-a\","
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/headless_test.go",
+        "line": 169,
+        "snippet": "getPods := exec.Command(\"kubectl\", \"get\", \"pods\", \"-n\", \"kf-a\","
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/autoreconnect_test.go",
+        "line": 39,
+        "snippet": "getPod := exec.Command(\"kubectl\", \"get\", \"pods\", \"-n\", \"test-simple\","
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/autoreconnect_test.go",
+        "line": 185,
+        "snippet": "updateCmd := exec.Command(\"kubectl\", \"set\", \"env\", \"deployment/ok\","
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/autoreconnect_test.go",
+        "line": 271,
+        "snippet": "getPod := exec.Command(\"kubectl\", \"get\", \"pods\", \"-n\", \"test-simple\","
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/autoreconnect_test.go",
+        "line": 286,
+        "snippet": "deleteCmd := exec.Command(\"kubectl\", \"delete\", \"pod\", podName, \"-n\", \"test-simple\", \"--wait=false\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/helpers.go",
+        "line": 28,
+        "snippet": "cmd := exec.Command(\"kubectl\", \"cluster-info\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/helpers.go",
+        "line": 47,
+        "snippet": "cmd := exec.Command(kubefwdPath, args...)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/helpers.go",
+        "line": 261,
+        "snippet": "cmd := exec.Command(\"kubectl\", \"delete\", \"pod\", podName, \"-n\", namespace, \"--wait=false\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/helpers.go",
+        "line": 275,
+        "snippet": "cmd := exec.Command(\"kubectl\", \"scale\", \"deployment\", deploymentName,"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 70,
+        "snippet": "psCmd := exec.Command(\"pgrep\", \"-f\", \"kubefwd\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 73,
+        "snippet": "output, _ := exec.Command(\"pgrep\", \"-af\", \"kubefwd\").CombinedOutput()"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 255,
+        "snippet": "output, _ := exec.Command(\"pgrep\", \"-af\", \"kubefwd\").CombinedOutput()"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 299,
+        "snippet": "cmd = exec.Command(\"ifconfig\", \"lo0\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 302,
+        "snippet": "cmd = exec.Command(\"ip\", \"addr\", \"show\", \"lo\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/test/integration/cleanup_test.go",
+        "line": 340,
+        "snippet": "cmd := exec.Command(\"pgrep\", \"-f\", \"kubefwd\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdnet/fwdnet.go",
+        "line": 73,
+        "snippet": "if err := exec.Command(cmd, args...).Run(); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdnet/fwdnet.go",
+        "line": 90,
+        "snippet": "if err := exec.Command(cmd, args...).Run(); err != nil {"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdtui/components/detail.go",
+        "line": 686,
+        "snippet": "cmd = exec.Command(c.name, c.args...)"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/utils/root.go",
+        "line": 18,
+        "snippet": "cmd := exec.Command(\"id\", \"-u\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdapi/network.go",
+        "line": 64,
+        "snippet": "cmd := exec.Command(\"ifconfig\", \"lo0\", \"alias\", ip.String(), \"up\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdapi/network.go",
+        "line": 70,
+        "snippet": "cmd := exec.Command(\"ip\", \"addr\", \"add\", ip.String()+\"/32\", \"dev\", \"lo\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdapi/network.go",
+        "line": 80,
+        "snippet": "cmd := exec.Command(\"netsh\", \"interface\", \"ip\", \"add\", \"address\", \"Loopback Pseudo-Interface 1\", ip.String(), \"255.255.255.255\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdapi/network.go",
+        "line": 101,
+        "snippet": "cmd := exec.Command(\"ifconfig\", \"lo0\", \"-alias\", ip.String())"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdapi/network.go",
+        "line": 107,
+        "snippet": "cmd := exec.Command(\"ip\", \"addr\", \"del\", ip.String()+\"/32\", \"dev\", \"lo\")"
+      },
+      {
+        "file": "txn2-kubefwd-fcdbda7/pkg/fwdapi/network.go",
+        "line": 117,
+        "snippet": "cmd := exec.Command(\"netsh\", \"interface\", \"ip\", \"delete\", \"address\", \"Loopback Pseudo-Interface 1\", ip.String())"
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 132,
+    "languages": [
+      "go"
+    ]
+  }
+}

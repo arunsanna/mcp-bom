@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ server_id }} — MCP-BOM Labeler</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 1200px; margin: 0 auto; padding: 20px; background: #f8f9fa; color: #212529; }
+  a { color: #0d6efd; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 1.3rem; margin-bottom: 4px; }
+  .meta { color: #6c757d; font-size: 0.8rem; margin-bottom: 16px; }
+  .meta span { margin-right: 12px; }
+  .two-col { display: flex; gap: 20px; }
+  .col-left { flex: 3; min-width: 0; }
+  .col-right { flex: 2; min-width: 280px; }
+  @media (max-width: 768px) { .two-col { flex-direction: column; } }
+
+  /* Signals panel */
+  .signals { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1);
+             padding: 16px; margin-bottom: 16px; }
+  .signal-cat { margin-bottom: 12px; }
+  .signal-cat h3 { font-size: 0.85rem; cursor: pointer; padding: 6px 0;
+                    border-bottom: 1px solid #e9ecef; user-select: none; }
+  .signal-cat h3::before { content: "▸ "; }
+  .signal-cat.open h3::before { content: "▾ "; }
+  .signal-items { display: none; margin-top: 4px; max-height: 400px; overflow-y: auto; }
+  .signal-cat.open .signal-items { display: block; }
+  .signal-item { font-family: "SF Mono", Menlo, monospace; font-size: 0.75rem;
+                  padding: 3px 0; border-bottom: 1px solid #f1f3f5; }
+  .signal-item .loc { color: #6c757d; }
+  .signal-item .snippet { color: #495057; }
+  .no-evidence { color: #adb5bd; font-style: italic; font-size: 0.8rem; }
+
+  /* Label form */
+  .form-panel { background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,.1);
+                padding: 16px; position: sticky; top: 20px; }
+  .form-panel h2 { font-size: 1rem; margin-bottom: 12px; }
+  .cat-row { margin-bottom: 10px; }
+  .cat-row label { display: block; font-weight: 600; font-size: 0.82rem; margin-bottom: 3px; }
+  .cat-row .radios { display: flex; gap: 16px; }
+  .cat-row .radios label { font-weight: 400; font-size: 0.78rem; display: flex; align-items: center; gap: 4px; }
+  .cat-row .radios input[type=radio] { margin: 0; }
+  textarea { width: 100%; height: 60px; margin-top: 8px; padding: 6px; border: 1px solid #ced4da;
+             border-radius: 4px; font-size: 0.8rem; font-family: inherit; resize: vertical; }
+  button { margin-top: 12px; background: #198754; color: white; border: none; padding: 8px 20px;
+           border-radius: 4px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+  button:hover { background: #157347; }
+  .nav-links { margin-top: 12px; font-size: 0.8rem; }
+
+  /* Existing label indicator */
+  .cat-row.saved-1 .radios { background: #ffeaea; border-radius: 3px; padding: 2px 6px; }
+  .cat-row.saved-0 .radios { background: #e8f5e9; border-radius: 3px; padding: 2px 6px; }
+</style>
+</head>
+<body>
+<h1>{{ server_id }}</h1>
+<div class="meta">
+  <span>Source: {{ meta.source }}</span>
+  <span>Tier: {{ meta.source_tier }}</span>
+  <span>Archive: {{ meta.raw_archive_path }}</span>
+  {% if signals.stats is defined %}
+  <span>Files scanned: {{ signals.stats.total_files_scanned }}</span>
+  <span>Languages: {{ signals.stats.languages | join(', ') }}</span>
+  {% endif %}
+</div>
+
+<div class="two-col">
+<div class="col-left">
+  <div class="signals">
+    <h2 style="font-size: 1rem; margin-bottom: 12px;">Code Signals</h2>
+    {% set cats = ['tools_exposed', 'env_reads', 'file_ops', 'shell_calls', 'http_endpoints'] %}
+    {% for cat in cats %}
+    {% set items = signals.categories.get(cat, []) %}
+    <div class="signal-cat {% if items and cat == 'tools_exposed' %}open{% endif %}">
+      <h3>{{ cat }} ({{ items | length }})</h3>
+      <div class="signal-items">
+        {% if items %}
+          {% for item in items %}
+          <div class="signal-item">
+            <span class="loc">{{ item.file }}:{{ item.line }}</span>
+            <span class="snippet">{{ item.snippet }}</span>
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="no-evidence">No evidence found for this category.</div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="col-right">
+  <div class="form-panel">
+    <h2>Capability Labels</h2>
+    <form method="POST" action="/server/{{ server_id }}">
+      {% for cat in categories %}
+      {% set current_val = label[cat] if label and label[cat] is not none else none %}
+      <div class="cat-row {% if current_val is not none %}saved-{{ current_val }}{% endif %}">
+        <label>{{ cat }}</label>
+        <div class="radios">
+          <label><input type="radio" name="{{ cat }}" value="0"
+            {% if current_val == 0 %}checked{% endif %}> 0 (not detected)</label>
+          <label><input type="radio" name="{{ cat }}" value="1"
+            {% if current_val == 1 %}checked{% endif %}> 1 (detected)</label>
+        </div>
+      </div>
+      {% endfor %}
+
+      <textarea name="notes" placeholder="Notes...">{{ label.notes if label and label.notes else '' }}</textarea>
+
+      <button type="submit">Save {% if next_id %}&amp; Next{% endif %}</button>
+    </form>
+
+    <div class="nav-links">
+      <a href="/">Back to list</a>
+      {% if next_id %}
+      | <a href="/server/{{ next_id }}">Next unlabeled: {{ next_id }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+// Toggle collapsible signal sections
+document.querySelectorAll('.signal-cat h3').forEach(h3 => {
+  h3.addEventListener('click', () => h3.parentElement.classList.toggle('open'));
+});
+</script>
+</body>
+</html>

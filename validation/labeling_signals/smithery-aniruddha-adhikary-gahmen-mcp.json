@@ -1,0 +1,68 @@
+{
+  "server_id": "smithery-aniruddha-adhikary-gahmen-mcp",
+  "extracted_at": "2026-05-03T00:26:42.448721+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "gahmen-mcp-main/src/singstat.tools.ts",
+        "line": 10,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/singstat.tools.ts",
+        "line": 59,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/singstat.tools.ts",
+        "line": 102,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/datagovsg.tools.ts",
+        "line": 13,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/datagovsg.tools.ts",
+        "line": 53,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/datagovsg.tools.ts",
+        "line": 101,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/datagovsg.tools.ts",
+        "line": 141,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/datagovsg.tools.ts",
+        "line": 180,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/datagovsg.tools.ts",
+        "line": 248,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "gahmen-mcp-main/src/datagovsg.tools.ts",
+        "line": 309,
+        "snippet": "server.tool("
+      }
+    ],
+    "env_reads": [],
+    "file_ops": [],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 5,
+    "languages": [
+      "ts"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "server_id": "pypi-mcp-server-aws-kb-retrieval",
+  "extracted_at": "2026-05-03T00:26:40.236516+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [],
+    "file_ops": [],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 0,
+    "languages": []
+  }
+}

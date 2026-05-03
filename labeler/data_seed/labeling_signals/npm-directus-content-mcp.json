@@ -1,0 +1,28 @@
+{
+  "server_id": "npm-directus-content-mcp",
+  "extracted_at": "2026-05-03T00:26:35.631473+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [],
+    "file_ops": [],
+    "shell_calls": [
+      {
+        "file": "package/dist/utils/prompt-helpers.js",
+        "line": 10,
+        "snippet": "while ((match = regex.exec(text)) !== null) {"
+      },
+      {
+        "file": "package/src/utils/prompt-helpers.ts",
+        "line": 20,
+        "snippet": "while ((match = regex.exec(text)) !== null) {"
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 106,
+    "languages": [
+      "ts"
+    ]
+  }
+}

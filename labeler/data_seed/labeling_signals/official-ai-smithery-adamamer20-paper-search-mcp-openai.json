@@ -1,0 +1,225 @@
+{
+  "server_id": "official-ai-smithery-adamamer20-paper-search-mcp-openai",
+  "extracted_at": "2026-05-03T00:26:39.773987+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 247,
+        "snippet": "@mcp.tool(\"search\")"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 282,
+        "snippet": "@mcp.tool(\"fetch\")"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 327,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 341,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 355,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 369,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 383,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 397,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 415,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 429,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 445,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 458,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 471,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 484,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 501,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 514,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 531,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 548,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 565,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 583,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 604,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 629,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 662,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 679,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 699,
+        "snippet": "@mcp.tool()"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 49,
+        "snippet": "env_transport = _normalize_transport(os.environ.get(\"PAPER_SEARCH_MCP_TRANSPORT\"))"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 52,
+        "snippet": "if os.environ.get(\"PORT\"):"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 61,
+        "snippet": "if explicit_host := os.environ.get(\"PAPER_SEARCH_MCP_HOST\"):"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 63,
+        "snippet": "if explicit_host := os.environ.get(\"HOST\"):"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 71,
+        "snippet": "candidates = [os.environ.get(\"PAPER_SEARCH_MCP_PORT\"), os.environ.get(\"PORT\")]"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/server.py",
+        "line": 89,
+        "snippet": "DOWNLOAD_DIR = os.environ.get(\"PAPER_SEARCH_DOWNLOAD_DIR\", \"./downloads\")"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/paper_search_mcp/academic_platforms/semantic.py",
+        "line": 153,
+        "snippet": "api_key = os.getenv(\"SEMANTIC_SCHOLAR_API_KEY\")"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_iacr.py",
+        "line": 108,
+        "snippet": "shutil.rmtree(test_dir)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_iacr.py",
+        "line": 169,
+        "snippet": "shutil.rmtree(test_dir)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_medrxiv.py",
+        "line": 56,
+        "snippet": "os.remove(pdf_path)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_medrxiv.py",
+        "line": 58,
+        "snippet": "os.rmdir(save_path)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_semantic.py",
+        "line": 108,
+        "snippet": "shutil.rmtree(test_dir)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_semantic.py",
+        "line": 169,
+        "snippet": "shutil.rmtree(test_dir)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_sci_hub.py",
+        "line": 35,
+        "snippet": "shutil.rmtree(self.test_dir)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_biorxiv.py",
+        "line": 56,
+        "snippet": "os.remove(pdf_path)"
+      },
+      {
+        "file": "paper-search-mcp-openai-main/tests/test_biorxiv.py",
+        "line": 58,
+        "snippet": "os.rmdir(save_path)"
+      }
+    ],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 25,
+    "languages": [
+      "python"
+    ]
+  }
+}

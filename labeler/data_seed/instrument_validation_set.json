@@ -1,0 +1,314 @@
+{
+  "seed": "0x4d4250",
+  "stratification": "source",
+  "stratum_counts": {
+    "github": 10,
+    "npm": 10,
+    "official": 10,
+    "pypi": 10,
+    "smithery": 10
+  },
+  "total": 50,
+  "servers": [
+    {
+      "server_id": "github-activepieces",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-activepieces.zip"
+    },
+    {
+      "server_id": "github-directories",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-directories.zip"
+    },
+    {
+      "server_id": "github-enscan-go",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-enscan-go.zip"
+    },
+    {
+      "server_id": "github-java-sdk",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-java-sdk.zip"
+    },
+    {
+      "server_id": "github-kubefwd",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-kubefwd.zip"
+    },
+    {
+      "server_id": "github-metamcp",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-metamcp.metadata.json"
+    },
+    {
+      "server_id": "github-ms-365-mcp-server",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-ms-365-mcp-server.zip"
+    },
+    {
+      "server_id": "github-nginx-ui",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-nginx-ui.zip"
+    },
+    {
+      "server_id": "github-py-xiaozhi",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-py-xiaozhi.zip"
+    },
+    {
+      "server_id": "github-supergateway",
+      "source": "github",
+      "source_tier": "community",
+      "raw_archive_path": "raw/github-supergateway.zip"
+    },
+    {
+      "server_id": "npm-breadstone-archipel-platform-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-breadstone-archipel-platform-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-cap-js-mcp-server",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-cap-js-mcp-server.metadata.json"
+    },
+    {
+      "server_id": "npm-directus-content-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-directus-content-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-f4ww4z-mcp-mysql-server",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-f4ww4z-mcp-mysql-server.metadata.json"
+    },
+    {
+      "server_id": "npm-functional-models-orm-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-functional-models-orm-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-github-computer-use-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-github-computer-use-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-grackle-ai-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-grackle-ai-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-iflow-mcp-matthewdailey-rime-mcp",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-iflow-mcp-matthewdailey-rime-mcp.metadata.json"
+    },
+    {
+      "server_id": "npm-modelcontextprotocol-conformance",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-modelcontextprotocol-conformance.metadata.json"
+    },
+    {
+      "server_id": "npm-syn7xx-testops-mcp-server",
+      "source": "npm",
+      "source_tier": "community",
+      "raw_archive_path": "raw/npm-syn7xx-testops-mcp-server.metadata.json"
+    },
+    {
+      "server_id": "official-ai-artidrop-artidrop",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-artidrop-artidrop.metadata.json"
+    },
+    {
+      "server_id": "official-ai-childanxiety-library",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-childanxiety-library.metadata.json"
+    },
+    {
+      "server_id": "official-ai-cookiy-cookiy",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-cookiy-cookiy.metadata.json"
+    },
+    {
+      "server_id": "official-ai-explorium-mcp-explorium",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-explorium-mcp-explorium.metadata.json"
+    },
+    {
+      "server_id": "official-ai-fiber-mcp",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-fiber-mcp.metadata.json"
+    },
+    {
+      "server_id": "official-ai-fodda-mcp-server",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-fodda-mcp-server.metadata.json"
+    },
+    {
+      "server_id": "official-ai-gomarble-mcp-api",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-gomarble-mcp-api.metadata.json"
+    },
+    {
+      "server_id": "official-ai-lattiq-x402-trading-signals",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-lattiq-x402-trading-signals.metadata.json"
+    },
+    {
+      "server_id": "official-ai-smithery-adamamer20-paper-search-mcp-openai",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-smithery-adamamer20-paper-search-mcp-openai.metadata.json"
+    },
+    {
+      "server_id": "official-ai-smithery-ramadasmr-networkcalc-mcp",
+      "source": "official",
+      "source_tier": "official",
+      "raw_archive_path": "raw/official-ai-smithery-ramadasmr-networkcalc-mcp.metadata.json"
+    },
+    {
+      "server_id": "pypi-agentictrade-mcp",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-agentictrade-mcp.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp",
+      "source": "pypi",
+      "source_tier": "enterprise",
+      "raw_archive_path": "raw/pypi-mcp.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-aws-kb-retrieval",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-aws-kb-retrieval.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-memory",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-memory.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-notion",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-notion.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-postgres",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-postgres.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-qdrant",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-qdrant.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-redis",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-redis.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-server-sentry",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-server-sentry.metadata.json"
+    },
+    {
+      "server_id": "pypi-mcp-shell-server",
+      "source": "pypi",
+      "source_tier": "community",
+      "raw_archive_path": "raw/pypi-mcp-shell-server.metadata.json"
+    },
+    {
+      "server_id": "smithery-agentidx-agentcrawl",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-agentidx-agentcrawl.metadata.json"
+    },
+    {
+      "server_id": "smithery-aguskenari86-8bo7-cryptoiz-mcp",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-aguskenari86-8bo7-cryptoiz-mcp.metadata.json"
+    },
+    {
+      "server_id": "smithery-ai-research-airesearchass",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-ai-research-airesearchass.metadata.json"
+    },
+    {
+      "server_id": "smithery-aniruddha-adhikary-gahmen-mcp",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-aniruddha-adhikary-gahmen-mcp.metadata.json"
+    },
+    {
+      "server_id": "smithery-antvis-mcp-server-chart",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-antvis-mcp-server-chart.metadata.json"
+    },
+    {
+      "server_id": "smithery-apogeoapi-apogeoapi-mcp",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-apogeoapi-apogeoapi-mcp.metadata.json"
+    },
+    {
+      "server_id": "smithery-bartek-ywte-gaproll",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-bartek-ywte-gaproll.metadata.json"
+    },
+    {
+      "server_id": "smithery-linxule-lotus-wisdom-mcp",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-linxule-lotus-wisdom-mcp.metadata.json"
+    },
+    {
+      "server_id": "smithery-linxule-mcp-music-studio",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-linxule-mcp-music-studio.metadata.json"
+    },
+    {
+      "server_id": "smithery-tbakerx-instant-mcp",
+      "source": "smithery",
+      "source_tier": "community",
+      "raw_archive_path": "raw/smithery-tbakerx-instant-mcp.metadata.json"
+    }
+  ]
+}

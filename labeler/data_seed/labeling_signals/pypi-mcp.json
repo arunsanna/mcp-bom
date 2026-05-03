@@ -1,0 +1,501 @@
+{
+  "server_id": "pypi-mcp",
+  "extracted_at": "2026-05-03T00:26:40.214808+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "python-sdk-main/tests/server/test_lifespan.py",
+        "line": 144,
+        "snippet": "@server.tool()"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_url_elicitation_error_throw.py",
+        "line": 16,
+        "snippet": "@mcp.tool(description=\"A tool that raises UrlElicitationRequiredError\")"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_url_elicitation_error_throw.py",
+        "line": 57,
+        "snippet": "@mcp.tool(description=\"A tool that raises UrlElicitationRequiredError with multiple elicitations\")"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_url_elicitation_error_throw.py",
+        "line": 98,
+        "snippet": "@mcp.tool(description=\"A tool that raises a normal exception\")"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_parameter_descriptions.py",
+        "line": 13,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_title.py",
+        "line": 43,
+        "snippet": "@mcp.tool(description=\"Basic tool\")"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_title.py",
+        "line": 48,
+        "snippet": "@mcp.tool(description=\"Tool with title\", title=\"User-Friendly Tool\")"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_title.py",
+        "line": 54,
+        "snippet": "@mcp.tool(description=\"Tool with annotations\")"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_title.py",
+        "line": 59,
+        "snippet": "@mcp.tool(description=\"Tool with both\", title=\"Primary Title\")"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 98,
+        "snippet": "@mcp.tool(description=(\"\ud83c\udf1f This tool uses emojis and UTF-8 characters: \u00e1 \u00e9 \u00ed \u00f3 \u00fa \u00f1 \u6f22\u5b57 \ud83c\udf89\"))"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 120,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 131,
+        "snippet": "@mcp.tool  # Missing parentheses #type: ignore"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 1130,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 117,
+        "snippet": "async def test_add_tool_decorator(self):"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 126,
+        "snippet": "async def test_add_tool_decorator_incorrect_usage(self):"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 240,
+        "snippet": "async def test_add_tool(self):"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 242,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 243,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 248,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 255,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 263,
+        "snippet": "mcp.add_tool(error_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 274,
+        "snippet": "mcp.add_tool(error_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 286,
+        "snippet": "mcp.add_tool(error_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 297,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 314,
+        "snippet": "mcp.add_tool(image_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 334,
+        "snippet": "mcp.add_tool(audio_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 363,
+        "snippet": "mcp.add_tool(audio_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 382,
+        "snippet": "mcp.add_tool(mixed_content_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 433,
+        "snippet": "mcp.add_tool(mixed_list_fn)  # type: ignore"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 475,
+        "snippet": "mcp.add_tool(get_user)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 504,
+        "snippet": "mcp.add_tool(calculate_sum)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 530,
+        "snippet": "mcp.add_tool(get_numbers)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 545,
+        "snippet": "mcp.add_tool(get_numbers)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 568,
+        "snippet": "mcp.add_tool(get_metadata)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 603,
+        "snippet": "mcp.add_tool(get_settings)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 621,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 642,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 643,
+        "snippet": "mcp.add_tool(error_tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 665,
+        "snippet": "mcp.add_tool(tool_fn)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 1043,
+        "snippet": "tool = mcp._tool_manager.add_tool(tool_with_context)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 1054,
+        "snippet": "mcp.add_tool(tool_with_context)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 1071,
+        "snippet": "mcp.add_tool(async_tool)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 1091,
+        "snippet": "mcp.add_tool(logging_tool)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_server.py",
+        "line": 1114,
+        "snippet": "mcp.add_tool(no_context)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_tool_manager.py",
+        "line": 427,
+        "snippet": "@app.tool(annotations=ToolAnnotations(title=\"Echo Tool\", read_only_hint=True))"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_tool_manager.py",
+        "line": 660,
+        "snippet": "@app.tool(meta=metadata)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_tool_manager.py",
+        "line": 684,
+        "snippet": "@app.tool(meta=metadata)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_tool_manager.py",
+        "line": 703,
+        "snippet": "@app.tool(meta=metadata1)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_tool_manager.py",
+        "line": 708,
+        "snippet": "@app.tool(meta=metadata2)"
+      },
+      {
+        "file": "python-sdk-main/tests/server/mcpserver/test_tool_manager.py",
+        "line": 713,
+        "snippet": "@app.tool()"
+      },
+      {
+        "file": "... (176 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "python-sdk-main/examples/snippets/clients/stdio_client.py",
+        "line": 16,
+        "snippet": "env={\"UV_INDEX\": os.environ.get(\"UV_INDEX\", \"\")},"
+      },
+      {
+        "file": "python-sdk-main/examples/snippets/clients/completion_client.py",
+        "line": 16,
+        "snippet": "env={\"UV_INDEX\": os.environ.get(\"UV_INDEX\", \"\")},"
+      },
+      {
+        "file": "python-sdk-main/examples/snippets/clients/display_utilities.py",
+        "line": 16,
+        "snippet": "env={\"UV_INDEX\": os.environ.get(\"UV_INDEX\", \"\")},"
+      },
+      {
+        "file": "python-sdk-main/examples/clients/simple-chatbot/mcp_simple_chatbot/main.py",
+        "line": 26,
+        "snippet": "self.api_key = os.getenv(\"LLM_API_KEY\")"
+      },
+      {
+        "file": "python-sdk-main/examples/clients/simple-auth-client/mcp_simple_auth_client/main.py",
+        "line": 357,
+        "snippet": "server_url = os.getenv(\"MCP_SERVER_PORT\", 8000)"
+      },
+      {
+        "file": "python-sdk-main/examples/clients/simple-auth-client/mcp_simple_auth_client/main.py",
+        "line": 358,
+        "snippet": "transport_type = os.getenv(\"MCP_TRANSPORT_TYPE\", \"streamable-http\")"
+      },
+      {
+        "file": "python-sdk-main/examples/clients/simple-auth-client/mcp_simple_auth_client/main.py",
+        "line": 359,
+        "snippet": "client_metadata_url = os.getenv(\"MCP_CLIENT_METADATA_URL\")"
+      },
+      {
+        "file": "python-sdk-main/examples/mcpserver/memory.py",
+        "line": 43,
+        "snippet": "PROFILE_DIR = (Path.home() / \".mcp\" / os.environ.get(\"USER\", \"anon\") / \"memory\").resolve()"
+      },
+      {
+        "file": "python-sdk-main/.github/actions/conformance/client.py",
+        "line": 72,
+        "snippet": "context_json = os.environ.get(\"MCP_CONFORMANCE_CONTEXT\")"
+      },
+      {
+        "file": "python-sdk-main/.github/actions/conformance/client.py",
+        "line": 281,
+        "snippet": "context_json = os.environ.get(\"MCP_CONFORMANCE_CONTEXT\")"
+      },
+      {
+        "file": "python-sdk-main/.github/actions/conformance/client.py",
+        "line": 349,
+        "snippet": "scenario = os.environ.get(\"MCP_CONFORMANCE_SCENARIO\")"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/cli/claude.py",
+        "line": 24,
+        "snippet": "path = Path(os.environ.get(\"XDG_CONFIG_HOME\", Path.home() / \".config\"), \"Claude\")"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "python-sdk-main/tests/cli/test_claude.py",
+        "line": 111,
+        "snippet": "\"\"\"Should return shutil.which's result, or fall back to bare 'uv' when not on PATH.\"\"\""
+      },
+      {
+        "file": "python-sdk-main/tests/cli/test_claude.py",
+        "line": 116,
+        "snippet": "monkeypatch.setattr(\"shutil.which\", fake_which)"
+      },
+      {
+        "file": "python-sdk-main/tests/client/test_stdio.py",
+        "line": 29,
+        "snippet": "tee = shutil.which(\"tee\")"
+      },
+      {
+        "file": "python-sdk-main/docs/hooks/gen_ref_pages.py",
+        "line": 34,
+        "snippet": "with mkdocs_gen_files.open(\"api/SUMMARY.md\", \"w\") as nav_file:"
+      },
+      {
+        "file": "python-sdk-main/examples/clients/simple-chatbot/mcp_simple_chatbot/main.py",
+        "line": 78,
+        "snippet": "command = shutil.which(\"npx\") if self.config[\"command\"] == \"npx\" else self.config[\"command\"]"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/cli/claude.py",
+        "line": 35,
+        "snippet": "uv_path = shutil.which(\"uv\")"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 48,
+        "snippet": "if command_path := shutil.which(command):"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 54,
+        "snippet": "if ext_path := shutil.which(ext_version):"
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "python-sdk-main/tests/cli/test_utils.py",
+        "line": 82,
+        "snippet": "def fake_run(cmd: list[str], **kw: Any) -> subprocess.CompletedProcess[bytes]:"
+      },
+      {
+        "file": "python-sdk-main/tests/cli/test_utils.py",
+        "line": 84,
+        "snippet": "return subprocess.CompletedProcess(cmd, 0)"
+      },
+      {
+        "file": "python-sdk-main/tests/cli/test_utils.py",
+        "line": 86,
+        "snippet": "raise subprocess.CalledProcessError(1, cmd[0])"
+      },
+      {
+        "file": "python-sdk-main/tests/cli/test_utils.py",
+        "line": 97,
+        "snippet": "def always_fail(*args: Any, **kwargs: Any) -> subprocess.CompletedProcess[bytes]:"
+      },
+      {
+        "file": "python-sdk-main/tests/cli/test_utils.py",
+        "line": 98,
+        "snippet": "raise subprocess.CalledProcessError(1, args[0])"
+      },
+      {
+        "file": "python-sdk-main/tests/client/test_stdio.py",
+        "line": 391,
+        "snippet": "f\"subprocess.Popen([sys.executable, '-c', {grandchild!r}])\\n\" + _connect_back_script(port)"
+      },
+      {
+        "file": "python-sdk-main/tests/client/test_stdio.py",
+        "line": 395,
+        "snippet": "f\"subprocess.Popen([sys.executable, '-c', {child!r}])\\n\" + _connect_back_script(port)"
+      },
+      {
+        "file": "python-sdk-main/tests/client/test_stdio.py",
+        "line": 430,
+        "snippet": "f\"subprocess.Popen([sys.executable, '-c', {child!r}])\\n\""
+      },
+      {
+        "file": "python-sdk-main/src/mcp/cli/cli.py",
+        "line": 48,
+        "snippet": "subprocess.run([cmd, \"--version\"], check=True, capture_output=True, shell=True)"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/cli/cli.py",
+        "line": 50,
+        "snippet": "except subprocess.CalledProcessError:"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/cli/cli.py",
+        "line": 276,
+        "snippet": "process = subprocess.run("
+      },
+      {
+        "file": "python-sdk-main/src/mcp/cli/cli.py",
+        "line": 283,
+        "snippet": "except subprocess.CalledProcessError as e:"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 67,
+        "snippet": "when using subprocess.Popen, which provides sync-only FileIO objects."
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 74,
+        "snippet": "def __init__(self, popen_obj: subprocess.Popen[bytes]):"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 75,
+        "snippet": "self.popen: subprocess.Popen[bytes] = popen_obj"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 149,
+        "snippet": "In that case, we fall back to using subprocess.Popen."
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 173,
+        "snippet": "creationflags=subprocess.CREATE_NO_WINDOW  # type: ignore"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 202,
+        "snippet": "\"\"\"Create a subprocess using subprocess.Popen as a fallback when anyio fails."
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 204,
+        "snippet": "This function wraps the sync subprocess.Popen in an async-compatible interface."
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 208,
+        "snippet": "popen_obj = subprocess.Popen("
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 210,
+        "snippet": "stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 211,
+        "snippet": "stdout=subprocess.PIPE,"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 220,
+        "snippet": "popen_obj = subprocess.Popen("
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 222,
+        "snippet": "stdin=subprocess.PIPE,"
+      },
+      {
+        "file": "python-sdk-main/src/mcp/os/win32/utilities.py",
+        "line": 223,
+        "snippet": "stdout=subprocess.PIPE,"
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 356,
+    "languages": [
+      "python"
+    ]
+  }
+}

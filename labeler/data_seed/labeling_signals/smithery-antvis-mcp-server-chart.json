@@ -1,0 +1,17 @@
+{
+  "server_id": "smithery-antvis-mcp-server-chart",
+  "extracted_at": "2026-05-03T00:26:42.449748+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [],
+    "file_ops": [],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 0,
+    "languages": [
+      "remote"
+    ]
+  }
+}

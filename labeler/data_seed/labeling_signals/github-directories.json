@@ -1,0 +1,174 @@
+{
+  "server_id": "github-directories",
+  "extracted_at": "2026-05-03T00:26:33.766804+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/dist/index.js",
+        "line": 5,
+        "snippet": "const API_BASE = process.env.CURSOR_DIRECTORY_API ?? \"https://cursor.directory\";"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/dist/index.js",
+        "line": 7,
+        "snippet": "const isColorSupported = process.env.FORCE_COLOR !== \"0\" &&"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/dist/index.js",
+        "line": 8,
+        "snippet": "(process.env.FORCE_COLOR !== undefined || process.stdout.isTTY);"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/src/index.ts",
+        "line": 8,
+        "snippet": "process.env.CURSOR_DIRECTORY_API ?? \"https://cursor.directory\";"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/src/index.ts",
+        "line": 13,
+        "snippet": "process.env.FORCE_COLOR !== \"0\" &&"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/src/index.ts",
+        "line": 14,
+        "snippet": "(process.env.FORCE_COLOR !== undefined || process.stdout.isTTY);"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/app/layout.tsx",
+        "line": 92,
+        "snippet": "clientId={process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID!}"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/app/layout.tsx",
+        "line": 94,
+        "snippet": "disabled={process.env.NODE_ENV === \"development\"}"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/app/auth/callback/route.ts",
+        "line": 20,
+        "snippet": "const isLocalEnv = process.env.NODE_ENV === \"development\";"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/app/api/cron/sync-ambassadors/route.ts",
+        "line": 84,
+        "snippet": "const cronSecret = process.env.CRON_SECRET;"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/admin.ts",
+        "line": 2,
+        "snippet": "return (process.env.ADMIN_USER_IDS ?? \"\")"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/supabase/admin-client.ts",
+        "line": 5,
+        "snippet": "process.env.NEXT_PUBLIC_SUPABASE_URL!,"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/supabase/admin-client.ts",
+        "line": 6,
+        "snippet": "process.env.SUPABASE_SECRET_KEY!,"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/supabase/client.ts",
+        "line": 5,
+        "snippet": "process.env.NEXT_PUBLIC_SUPABASE_URL!,"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/supabase/client.ts",
+        "line": 6,
+        "snippet": "process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/supabase/server.ts",
+        "line": 18,
+        "snippet": "process.env.NEXT_PUBLIC_SUPABASE_URL!,"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/supabase/server.ts",
+        "line": 20,
+        "snippet": "? process.env.SUPABASE_SECRET_KEY!"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/utils/supabase/server.ts",
+        "line": 21,
+        "snippet": ": process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/actions/parse-github-plugin.ts",
+        "line": 141,
+        "snippet": "...(process.env.GITHUB_TOKEN"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/actions/parse-github-plugin.ts",
+        "line": 142,
+        "snippet": "? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/lib/luma.ts",
+        "line": 54,
+        "snippet": "\"X-Luma-API-Key\": process.env.LUMA_API_KEY || \"\","
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/lib/resend.ts",
+        "line": 3,
+        "snippet": "export const resend = new Resend(process.env.RESEND_API_KEY);"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/dist/index.js",
+        "line": 90,
+        "snippet": "fs.mkdirSync(dir, { recursive: true });"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/dist/index.js",
+        "line": 97,
+        "snippet": "return JSON.parse(fs.readFileSync(filePath, \"utf-8\"));"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/dist/index.js",
+        "line": 105,
+        "snippet": "fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + \"\\n\", \"utf-8\");"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/dist/index.js",
+        "line": 109,
+        "snippet": "fs.writeFileSync(filePath, content, \"utf-8\");"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/src/index.ts",
+        "line": 157,
+        "snippet": "fs.mkdirSync(dir, { recursive: true });"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/src/index.ts",
+        "line": 164,
+        "snippet": "return JSON.parse(fs.readFileSync(filePath, \"utf-8\"));"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/src/index.ts",
+        "line": 175,
+        "snippet": "fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + \"\\n\", \"utf-8\");"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/packages/install-plugin/src/index.ts",
+        "line": 180,
+        "snippet": "fs.writeFileSync(filePath, content, \"utf-8\");"
+      },
+      {
+        "file": "leerob-directories-2f51c0b/apps/cursor/src/lib/og.tsx",
+        "line": 1,
+        "snippet": "import { readFile } from \"fs/promises\";"
+      }
+    ],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 214,
+    "languages": [
+      "ts"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "server_id": "pypi-mcp-server-redis",
+  "extracted_at": "2026-05-03T00:26:40.365953+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "mcp_server_redis-0.1.1/src/mcp_server_redis/server.py",
+        "line": 30,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "mcp_server_redis-0.1.1/src/mcp_server_redis/server.py",
+        "line": 37,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "mcp_server_redis-0.1.1/src/mcp_server_redis/server.py",
+        "line": 46,
+        "snippet": "@mcp.tool()"
+      },
+      {
+        "file": "mcp_server_redis-0.1.1/src/mcp_server_redis/server.py",
+        "line": 53,
+        "snippet": "@mcp.tool()"
+      }
+    ],
+    "env_reads": [],
+    "file_ops": [],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 3,
+    "languages": [
+      "python"
+    ]
+  }
+}

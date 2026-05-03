@@ -1,0 +1,141 @@
+{
+  "server_id": "github-supergateway",
+  "extracted_at": "2026-05-03T00:26:34.890408+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/helpers/mock-mcp-server.js",
+        "line": 14,
+        "snippet": "server.tool('add', { a: z.number(), b: z.number() }, async ({ a, b }) => ({"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/helpers/mock-mcp-server.js",
+        "line": 10,
+        "snippet": "const port = Number(process.env.PORT || 3000)"
+      }
+    ],
+    "file_ops": [],
+    "shell_calls": [
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/streamableHttpToStdio.test.ts",
+        "line": 3,
+        "snippet": "import { spawn, ChildProcess } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/streamableHttpToStdio.test.ts",
+        "line": 15,
+        "snippet": "const proc = spawn("
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/concurrency.test.ts",
+        "line": 5,
+        "snippet": "import { spawn, ChildProcess } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/concurrency.test.ts",
+        "line": 39,
+        "snippet": "gatewayProc = spawn("
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/baseUrl.test.ts",
+        "line": 3,
+        "snippet": "import { spawn, ChildProcess } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/baseUrl.test.ts",
+        "line": 13,
+        "snippet": "gatewayProc = spawn("
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/stdioToStatefulStreamableHttp.test.ts",
+        "line": 3,
+        "snippet": "import { spawn, ChildProcess } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/stdioToStatefulStreamableHttp.test.ts",
+        "line": 13,
+        "snippet": "gatewayProc = spawn("
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/protocolVersion.test.ts",
+        "line": 3,
+        "snippet": "import { spawn, ChildProcess } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/protocolVersion.test.ts",
+        "line": 15,
+        "snippet": "const proc = spawn('node', ['tests/helpers/mock-mcp-server.js', 'sse'], {"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/stdioToStatelessStreamableHttp.test.ts",
+        "line": 3,
+        "snippet": "import { spawn, ChildProcess } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/stdioToStatelessStreamableHttp.test.ts",
+        "line": 13,
+        "snippet": "gatewayProc = spawn("
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToStatefulStreamableHttp.ts",
+        "line": 3,
+        "snippet": "import { spawn } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToStatefulStreamableHttp.ts",
+        "line": 140,
+        "snippet": "const child = spawn(stdioCmd, { shell: true })"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToWs.ts",
+        "line": 4,
+        "snippet": "import { spawn, ChildProcessWithoutNullStreams } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToWs.ts",
+        "line": 56,
+        "snippet": "child = spawn(stdioCmd, { shell: true })"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToSse.ts",
+        "line": 4,
+        "snippet": "import { spawn, ChildProcessWithoutNullStreams } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToSse.ts",
+        "line": 69,
+        "snippet": "const child: ChildProcessWithoutNullStreams = spawn(stdioCmd, { shell: true })"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToStatelessStreamableHttp.ts",
+        "line": 3,
+        "snippet": "import { spawn } from 'child_process'"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/src/gateways/stdioToStatelessStreamableHttp.ts",
+        "line": 129,
+        "snippet": "const child = spawn(stdioCmd, { shell: true })"
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/helpers/mock-mcp-server.js",
+        "line": 26,
+        "snippet": "app.get('/sse', async (req, res) => {"
+      },
+      {
+        "file": "supercorp-ai-supergateway-973c459/tests/helpers/mock-mcp-server.js",
+        "line": 36,
+        "snippet": "app.post('/message', async (req, res) => {"
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 24,
+    "languages": [
+      "ts"
+    ]
+  }
+}

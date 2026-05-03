@@ -1,0 +1,151 @@
+{
+  "server_id": "smithery-linxule-mcp-music-studio",
+  "extracted_at": "2026-05-03T00:26:43.059926+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "mcp-music-studio-main/server.ts",
+        "line": 282,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "mcp-music-studio-main/server.ts",
+        "line": 491,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "mcp-music-studio-main/server.ts",
+        "line": 523,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "mcp-music-studio-main/worker/src/index.ts",
+        "line": 210,
+        "snippet": "// Tool: play-sheet-music (registerTool for _meta support)"
+      },
+      {
+        "file": "mcp-music-studio-main/worker/src/index.ts",
+        "line": 213,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "mcp-music-studio-main/worker/src/index.ts",
+        "line": 291,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "mcp-music-studio-main/worker/src/index.ts",
+        "line": 311,
+        "snippet": "// Tool: play-live-pattern (registerTool for _meta support)"
+      },
+      {
+        "file": "mcp-music-studio-main/worker/src/index.ts",
+        "line": 314,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "mcp-music-studio-main/worker/src/index.ts",
+        "line": 375,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "mcp-music-studio-main/worker/src/index.ts",
+        "line": 401,
+        "snippet": "server.tool("
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "mcp-music-studio-main/main.ts",
+        "line": 22,
+        "snippet": "const port = parseInt(process.env.PORT ?? \"3001\", 10);"
+      },
+      {
+        "file": "mcp-music-studio-main/vite.config.ts",
+        "line": 6,
+        "snippet": "const INPUT = process.env.INPUT;"
+      },
+      {
+        "file": "mcp-music-studio-main/vite.config.ts",
+        "line": 11,
+        "snippet": "const isDevelopment = process.env.NODE_ENV === \"development\";"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "mcp-music-studio-main/server.ts",
+        "line": 327,
+        "snippet": "const html = await fs.readFile("
+      },
+      {
+        "file": "mcp-music-studio-main/server.ts",
+        "line": 621,
+        "snippet": "const html = await fs.readFile("
+      },
+      {
+        "file": "mcp-music-studio-main/server.ts",
+        "line": 6,
+        "snippet": "import fs from \"node:fs/promises\";"
+      },
+      {
+        "file": "mcp-music-studio-main/src/strudel-browser-fallback.ts",
+        "line": 180,
+        "snippet": "await fs.mkdir(dir, { recursive: true });"
+      },
+      {
+        "file": "mcp-music-studio-main/src/strudel-browser-fallback.ts",
+        "line": 184,
+        "snippet": "await fs.writeFile(filepath, html, \"utf-8\");"
+      },
+      {
+        "file": "mcp-music-studio-main/src/strudel-browser-fallback.ts",
+        "line": 7,
+        "snippet": "import fs from \"node:fs/promises\";"
+      },
+      {
+        "file": "mcp-music-studio-main/src/browser-fallback.ts",
+        "line": 435,
+        "snippet": "await fs.mkdir(outDir, { recursive: true });"
+      },
+      {
+        "file": "mcp-music-studio-main/src/browser-fallback.ts",
+        "line": 439,
+        "snippet": "await fs.writeFile(filepath, html, \"utf-8\");"
+      },
+      {
+        "file": "mcp-music-studio-main/src/browser-fallback.ts",
+        "line": 6,
+        "snippet": "import fs from \"node:fs/promises\";"
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "mcp-music-studio-main/src/strudel-browser-fallback.ts",
+        "line": 6,
+        "snippet": "import { exec } from \"node:child_process\";"
+      },
+      {
+        "file": "mcp-music-studio-main/src/strudel-browser-fallback.ts",
+        "line": 193,
+        "snippet": "exec(cmd, () => {});"
+      },
+      {
+        "file": "mcp-music-studio-main/src/browser-fallback.ts",
+        "line": 5,
+        "snippet": "import { exec } from \"node:child_process\";"
+      },
+      {
+        "file": "mcp-music-studio-main/src/browser-fallback.ts",
+        "line": 448,
+        "snippet": "exec(cmd, (err) => {"
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 20,
+    "languages": [
+      "ts"
+    ]
+  }
+}

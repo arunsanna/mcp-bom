@@ -1,0 +1,106 @@
+{
+  "server_id": "smithery-linxule-lotus-wisdom-mcp",
+  "extracted_at": "2026-05-03T00:26:42.900430+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "lotus-wisdom-mcp-main/worker/src/index.ts",
+        "line": 411,
+        "snippet": "// Tool: lotuswisdom (registerTool for _meta support \u2014 server.tool() drops _meta)"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/worker/src/index.ts",
+        "line": 412,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/worker/src/index.ts",
+        "line": 464,
+        "snippet": "server.tool("
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "lotus-wisdom-mcp-main/index.ts",
+        "line": 67,
+        "snippet": "private debugMode: boolean = process.env.LOTUS_DEBUG === 'true';"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/server.ts",
+        "line": 51,
+        "snippet": "private debugMode: boolean = process.env.LOTUS_DEBUG === 'true';"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/server.ts",
+        "line": 597,
+        "snippet": "const PORT = process.env.PORT || 3000;"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/dist/server.js",
+        "line": 30,
+        "snippet": "debugMode = process.env.LOTUS_DEBUG === 'true';"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/dist/server.js",
+        "line": 518,
+        "snippet": "const PORT = process.env.PORT || 3000;"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/dist/bundle.js",
+        "line": 12472,
+        "snippet": "debugMode = process.env.LOTUS_DEBUG === \"true\";"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/dist/index.js",
+        "line": 45,
+        "snippet": "debugMode = process.env.LOTUS_DEBUG === 'true';"
+      }
+    ],
+    "file_ops": [],
+    "shell_calls": [
+      {
+        "file": "lotus-wisdom-mcp-main/dist/bundle.js",
+        "line": 12064,
+        "snippet": "const matches = /[a-f\\d]{6}|[a-f\\d]{3}/i.exec(hex.toString(16));"
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "lotus-wisdom-mcp-main/server.ts",
+        "line": 527,
+        "snippet": "app.post('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/server.ts",
+        "line": 573,
+        "snippet": "app.get('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/server.ts",
+        "line": 585,
+        "snippet": "app.delete('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/dist/server.js",
+        "line": 455,
+        "snippet": "app.post('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/dist/server.js",
+        "line": 498,
+        "snippet": "app.get('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "lotus-wisdom-mcp-main/dist/server.js",
+        "line": 508,
+        "snippet": "app.delete('/mcp', async (req, res) => {"
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 11,
+    "languages": [
+      "ts"
+    ]
+  }
+}

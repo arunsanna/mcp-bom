@@ -1,0 +1,139 @@
+{
+  "server_id": "npm-syn7xx-testops-mcp-server",
+  "extracted_at": "2026-05-03T00:26:39.281305+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "testops-mcp-server-main/src/server.ts",
+        "line": 36,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 42,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 67,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 94,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 106,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 118,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 157,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 193,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 218,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 252,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-case/tools.ts",
+        "line": 308,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/launch/tools.ts",
+        "line": 21,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/launch/tools.ts",
+        "line": 79,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/launch/tools.ts",
+        "line": 107,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/launch/tools.ts",
+        "line": 148,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/project/tools.ts",
+        "line": 12,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/project/tools.ts",
+        "line": 54,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/project/tools.ts",
+        "line": 88,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-plan/tools.ts",
+        "line": 20,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-plan/tools.ts",
+        "line": 47,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-plan/tools.ts",
+        "line": 95,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "testops-mcp-server-main/src/presentation/test-plan/tools.ts",
+        "line": 147,
+        "snippet": "server.registerTool("
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "testops-mcp-server-main/src/args.ts",
+        "line": 64,
+        "snippet": "const urlRaw = values.url ?? process.env.TESTOPS_URL;"
+      },
+      {
+        "file": "testops-mcp-server-main/src/args.ts",
+        "line": 65,
+        "snippet": "const tokenRaw = values.token ?? process.env.TESTOPS_TOKEN;"
+      }
+    ],
+    "file_ops": [],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 28,
+    "languages": [
+      "ts"
+    ]
+  }
+}

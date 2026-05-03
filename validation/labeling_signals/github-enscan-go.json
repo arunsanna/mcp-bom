@@ -1,0 +1,63 @@
+{
+  "server_id": "github-enscan-go",
+  "extracted_at": "2026-05-03T00:26:33.790795+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [],
+    "file_ops": [
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/runner/runner.go",
+        "line": 371,
+        "snippet": "file, err := os.Create(j.gobPath)"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/runner/runner.go",
+        "line": 403,
+        "snippet": "file, err := os.Open(j.gobPath)"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/runner/runner.go",
+        "line": 484,
+        "snippet": "err := os.Remove(j.gobPath)"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/common/output.go",
+        "line": 173,
+        "snippet": "err = os.Mkdir(dir, os.ModePerm)"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/common/output.go",
+        "line": 193,
+        "snippet": "err = os.WriteFile(savaPath, jsonStr, 0644)"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/common/parse.go",
+        "line": 29,
+        "snippet": "f, errs := os.Create(cfgYName) //\u521b\u5efa\u6587\u4ef6"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/common/parse.go",
+        "line": 46,
+        "snippet": "yamlFile, err := os.ReadFile(cfgYName)"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/common/utils/utils.go",
+        "line": 120,
+        "snippet": "f, err := os.Open(filename)"
+      },
+      {
+        "file": "wgpsec-ENScan_GO-9969d51/common/utils/utils.go",
+        "line": 189,
+        "snippet": "file, err := os.OpenFile(path, os.O_RDWR|os.O_APPEND|os.O_CREATE, 0666)"
+      }
+    ],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 34,
+    "languages": [
+      "go"
+    ]
+  }
+}

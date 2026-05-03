@@ -1,0 +1,48 @@
+{
+  "server_id": "npm-f4ww4z-mcp-mysql-server",
+  "extracted_at": "2026-05-03T00:26:35.706086+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [
+      {
+        "file": "mcp-mysql-server-main/src/index.ts",
+        "line": 99,
+        "snippet": "if (process.env.MYSQL_HOST && process.env.MYSQL_USER && process.env.MYSQL_PASSWORD && process.env.MYSQL_DATABASE) {"
+      },
+      {
+        "file": "mcp-mysql-server-main/src/index.ts",
+        "line": 102,
+        "snippet": "host: process.env.MYSQL_HOST,"
+      },
+      {
+        "file": "mcp-mysql-server-main/src/index.ts",
+        "line": 103,
+        "snippet": "user: process.env.MYSQL_USER,"
+      },
+      {
+        "file": "mcp-mysql-server-main/src/index.ts",
+        "line": 104,
+        "snippet": "password: process.env.MYSQL_PASSWORD,"
+      },
+      {
+        "file": "mcp-mysql-server-main/src/index.ts",
+        "line": 105,
+        "snippet": "database: process.env.MYSQL_DATABASE,"
+      },
+      {
+        "file": "mcp-mysql-server-main/src/index.ts",
+        "line": 106,
+        "snippet": "port: Number(process.env.MYSQL_PORT ?? 3306),"
+      }
+    ],
+    "file_ops": [],
+    "shell_calls": [],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 2,
+    "languages": [
+      "ts"
+    ]
+  }
+}

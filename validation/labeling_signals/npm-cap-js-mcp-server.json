@@ -1,0 +1,336 @@
+{
+  "server_id": "npm-cap-js-mcp-server",
+  "extracted_at": "2026-05-03T00:26:35.202789+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "mcp-server-main/lib/run.js",
+        "line": 5,
+        "snippet": "export function registerTools(server) {"
+      },
+      {
+        "file": "mcp-server-main/lib/run.js",
+        "line": 21,
+        "snippet": "server.registerTool(t, tool, _text(tool.handler))"
+      },
+      {
+        "file": "mcp-server-main/lib/run.js",
+        "line": 60,
+        "snippet": "return registerTools(serverInstance)"
+      },
+      {
+        "file": "mcp-server-main/lib/run.js",
+        "line": 69,
+        "snippet": "registerTools(server)"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 10,
+        "snippet": "const offline = process.argv.includes('--offline') || process.env.CDS_MCP_OFFLINE === 'true'"
+      },
+      {
+        "file": "mcp-server-main/lib/getModel.js",
+        "line": 104,
+        "snippet": "const intervalMs = process.env.CDS_MCP_REFRESH_MS"
+      },
+      {
+        "file": "mcp-server-main/lib/getModel.js",
+        "line": 105,
+        "snippet": "? parseInt(process.env.CDS_MCP_REFRESH_MS, 10)"
+      },
+      {
+        "file": "mcp-server-main/lib/searchMarkdownDocs.js",
+        "line": 123,
+        "snippet": "const offline = process.argv.includes('--offline') || process.env.CDS_MCP_OFFLINE === 'true'"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "mcp-server-main/index.js",
+        "line": 4,
+        "snippet": "import { readFile } from 'node:fs/promises'"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 13,
+        "snippet": "await fs.rm(TEST_EMBEDDINGSDIR, { recursive: true, force: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 17,
+        "snippet": "await fs.rm(TEST_EMBEDDINGSDIR, { recursive: true, force: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 26,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 29,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), 'invalid json content')"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 30,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(new Float32Array([1, 2, 3, 4])))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 48,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 52,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), JSON.stringify(badMeta))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 53,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(new Float32Array([1, 2, 3, 4])))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 59,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 63,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), JSON.stringify(meta))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 67,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(wrongSizeBinary.buffer))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 73,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 77,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), JSON.stringify(meta))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 80,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(binary.buffer))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 86,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 89,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), JSON.stringify(meta))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 93,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(binary.buffer))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 99,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 102,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), JSON.stringify(meta))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 106,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(binary.buffer))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 112,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 116,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), JSON.stringify(meta))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 127,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(binary.buffer))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 141,
+        "snippet": "await fs.mkdir(TEST_EMBEDDINGSDIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 144,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.json'), JSON.stringify(meta))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 147,
+        "snippet": "await fs.writeFile(path.join(TEST_EMBEDDINGSDIR, 'code.bin'), Buffer.from(binary.buffer))"
+      },
+      {
+        "file": "mcp-server-main/tests/loadEmbeddings.test.js",
+        "line": 3,
+        "snippet": "import fs from 'fs/promises'"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 43,
+        "snippet": "const tokenizerData = JSON.parse(fs.readFileSync(tokenizerPath, 'utf-8'))"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 52,
+        "snippet": "const configData = JSON.parse(fs.readFileSync(configPath, 'utf-8'))"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 190,
+        "snippet": "fs.mkdirSync(testModelDir, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 197,
+        "snippet": "fs.writeFileSync(corruptModelPath, corruptData)"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 205,
+        "snippet": "const corruptContent = fs.readFileSync(corruptModelPath, 'utf-8')"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 213,
+        "snippet": "fs.rmSync(testModelDir, { recursive: true, force: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 223,
+        "snippet": "fs.mkdirSync(testModelDir, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 229,
+        "snippet": "fs.writeFileSync(corruptTokenizerPath, 'This is not valid JSON data for tokenizer')"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 234,
+        "snippet": "JSON.parse(fs.readFileSync(corruptTokenizerPath, 'utf-8'))"
+      },
+      {
+        "file": "mcp-server-main/tests/embeddings.test.js",
+        "line": 247,
+        "snippet": "fs.rmSync(testModelDir, { recursive: true, force: true })"
+      },
+      {
+        "file": "mcp-server-main/tests/searchMarkdownDocs.test.js",
+        "line": 7,
+        "snippet": "import fs from 'fs/promises'"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 20,
+        "snippet": "await fs.writeFile(outputPath, Buffer.from(buffer))"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 54,
+        "snippet": "await fs.mkdir(MODEL_DIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 69,
+        "snippet": "await fs.unlink(filePath).catch(() => {})"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 71,
+        "snippet": "await fs.mkdir(MODEL_DIR, { recursive: true })"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 89,
+        "snippet": "await fs.unlink(filePath).catch(() => {})"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 103,
+        "snippet": "const modelBuffer = await fs.readFile(modelPath)"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 107,
+        "snippet": "const tokenizerJson = JSON.parse(await fs.readFile(vocabPath, 'utf-8'))"
+      },
+      {
+        "file": "mcp-server-main/lib/calculateEmbeddings.js",
+        "line": 1,
+        "snippet": "import fs from 'fs/promises'"
+      },
+      {
+        "file": "mcp-server-main/lib/embeddings.js",
+        "line": 19,
+        "snippet": "const metaRaw = await fs.readFile(metaPath, 'utf-8')"
+      },
+      {
+        "file": "mcp-server-main/lib/embeddings.js",
+        "line": 39,
+        "snippet": "const buffer = await fs.readFile(binPath)"
+      },
+      {
+        "file": "mcp-server-main/lib/embeddings.js",
+        "line": 88,
+        "snippet": "fs.unlink(metaPath).catch(() => {}),"
+      },
+      {
+        "file": "... (16 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "mcp-server-main/tests/compare-calculateEmbeddings-huggingface.test.js",
+        "line": 177,
+        "snippet": "'Creates a background job using cds.spawn() to process outbox mails periodically under a privileged user. Each run executes in a fresh transaction, independent of the main event context.',"
+      },
+      {
+        "file": "mcp-server-main/tests/cli.test.js",
+        "line": 4,
+        "snippet": "import { spawn } from 'node:child_process'"
+      },
+      {
+        "file": "mcp-server-main/tests/cli.test.js",
+        "line": 13,
+        "snippet": "const child = spawn('node', [cdsMcpPath, ...args], {"
+      },
+      {
+        "file": "mcp-server-main/tests/cli.test.js",
+        "line": 143,
+        "snippet": "const child = spawn('node', [cdsMcpPath], {"
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 21,
+    "languages": [
+      "ts"
+    ]
+  }
+}

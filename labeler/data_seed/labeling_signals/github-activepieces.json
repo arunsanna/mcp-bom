@@ -1,0 +1,1057 @@
+{
+  "server_id": "github-activepieces",
+  "extracted_at": "2026-05-03T00:26:32.716764+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/ai/src/lib/actions/agents/tools.ts",
+        "line": 60,
+        "snippet": "for (const [toolName, fn] of Object.entries(server.tools)) {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/mcp/mcp-service.ts",
+        "line": 113,
+        "snippet": "server.tool(toolName, toolDescription, zodFromInputSchema, { title: toolName }, async (args) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/mcp/mcp-service.ts",
+        "line": 173,
+        "snippet": "server.registerTool(tool.title, { title: tool.title, description: tool.description, inputSchema: tool.inputSchema, annotations: tool.annotations }, (args: Record<string, unknown>) => execute(args))"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 65,
+        "snippet": "const devPieces = process.env.AP_DEV_PIECES || envConfig.AP_DEV_PIECES;"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/check-manifest-migrations.ts",
+        "line": 31,
+        "snippet": "const outputFile = process.env.GITHUB_OUTPUT"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/check-migration-rollback.ts",
+        "line": 12,
+        "snippet": "const baseBranch = process.env.GITHUB_BASE_REF ?? 'main'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/check-release-migrations.ts",
+        "line": 21,
+        "snippet": "const outputFile = process.env.GITHUB_OUTPUT"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/publish-pieces-to-npm.ts",
+        "line": 6,
+        "snippet": "const changedPieces = process.env['CHANGED_PIECES']"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/update-pieces-metadata.ts",
+        "line": 7,
+        "snippet": "assert(process.env['AP_CLOUD_API_KEY'], 'API Key is not defined');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/prepare-pieces-for-publish.ts",
+        "line": 5,
+        "snippet": "const changedPieces = process.env['CHANGED_PIECES']"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/piece-script-utils.ts",
+        "line": 130,
+        "snippet": "const changedPieces = process.env['CHANGED_PIECES']"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/deploy/pulumi/index.ts",
+        "line": 87,
+        "snippet": "imageName = process.env.IMAGE_NAME || config.get(\"imageName\") || \"activepieces/activepieces:latest\";"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/global-setup.ts",
+        "line": 12,
+        "snippet": "baseURL: process.env.AP_FRONTEND_URL,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/global-setup.ts",
+        "line": 19,
+        "snippet": "if (process.env.E2E_EMAIL && process.env.E2E_PASSWORD) {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/global-setup.ts",
+        "line": 22,
+        "snippet": "email: process.env.E2E_EMAIL,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/global-setup.ts",
+        "line": 23,
+        "snippet": "password: process.env.E2E_PASSWORD,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 7,
+        "snippet": "if (!process.env.CI) {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 11,
+        "snippet": "const AP_EDITION = process.env.AP_EDITION || 'ce';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 30,
+        "snippet": "forbidOnly: !!process.env.CI,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 32,
+        "snippet": "retries: process.env.CI ? 2 : 0,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 34,
+        "snippet": "workers: process.env.CI ? '100%' : undefined,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 36,
+        "snippet": "reporter: process.env.CI ? 'github' : 'html',"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 65,
+        "snippet": "command: process.env.CI"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/playwright.config.ts",
+        "line": 69,
+        "snippet": "reuseExistingServer: !process.env.CI,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/checkly.config.ts",
+        "line": 9,
+        "snippet": "projectName: `E2E (${process.env.E2E_CONFIG_MODE})`,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/checkly.config.ts",
+        "line": 13,
+        "snippet": "logicalId: `activepieces-e2e-tests-${process.env.E2E_CONFIG_MODE}`,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/scenarios/betterstack/webhook-should-return-response.flat.spec.js",
+        "line": 3,
+        "snippet": "const email = process.env.EMAIL;"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/scenarios/betterstack/webhook-should-return-response.flat.spec.js",
+        "line": 4,
+        "snippet": "const password = process.env.PASSWORD;"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/scenarios/betterstack/webhook-should-return-response.flat.spec.js",
+        "line": 5,
+        "snippet": "const baseUrl = process.env.BASEURL;"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/fixtures/index.ts",
+        "line": 25,
+        "snippet": "if (process.env.E2E_EMAIL && process.env.E2E_PASSWORD) {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/fixtures/index.ts",
+        "line": 27,
+        "snippet": "email: process.env.E2E_EMAIL,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/tests-e2e/fixtures/index.ts",
+        "line": 28,
+        "snippet": "password: process.env.E2E_PASSWORD,"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/ee/embed-sdk/webpack.config.js",
+        "line": 5,
+        "snippet": "mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/http/test/http.test.ts",
+        "line": 9,
+        "snippet": "delete process.env['HTTP_PROXY'];"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/http/test/http.test.ts",
+        "line": 10,
+        "snippet": "delete process.env['HTTPS_PROXY'];"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/http/test/http.test.ts",
+        "line": 16,
+        "snippet": "delete process.env['HTTP_PROXY'];"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/http/test/http.test.ts",
+        "line": 17,
+        "snippet": "delete process.env['HTTPS_PROXY'];"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/http/test/http.test.ts",
+        "line": 36,
+        "snippet": "process.env['HTTPS_PROXY'] = 'http://127.0.0.1:4444';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/http/test/http.test.ts",
+        "line": 37,
+        "snippet": "process.env['HTTP_PROXY'] = 'http://127.0.0.1:4444';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/common/src/lib/http/axios/axios-http-client.ts",
+        "line": 31,
+        "snippet": "process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/common/src/lib/http/axios/axios-http-client.ts",
+        "line": 54,
+        "snippet": "const httpProxy = process.env['HTTP_PROXY'] ?? process.env['http_proxy'];"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/common/src/lib/http/axios/axios-http-client.ts",
+        "line": 55,
+        "snippet": "const httpsProxy = process.env['HTTPS_PROXY'] ?? process.env['https_proxy'];"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/chat-data/src/lib/common/client.ts",
+        "line": 20,
+        "snippet": "this.apiKey = apiKey || process.env['CHATDATA_API_KEY'] || '';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/chat-data/src/lib/common/client.ts",
+        "line": 26,
+        "snippet": "process.env['CHATDATA_BASE_URL'] || 'https://api.chat-data.com';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/assemblyai/scripts/generateFromSpec.ts",
+        "line": 32,
+        "snippet": "const specLocation = process.env.OPENAPI_SPEC_LOCATION;"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/kallabot-ai/src/lib/actions/get-call-details.ts",
+        "line": 66,
+        "snippet": "return process.env['NODE_ENV'] === 'development' ? mockResponse : response.body;"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/utils/src/safe-http.ts",
+        "line": 9,
+        "snippet": "const raw = process.env['AP_SSRF_ALLOW_LIST']"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/webpack.config.js",
+        "line": 6,
+        "snippet": "mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/vitest.setup.ts",
+        "line": 8,
+        "snippet": "process.env.AP_WEBHOOK_TIMEOUT_SECONDS = '120'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/test/integration/ce/engine-services/engine-services.test.ts",
+        "line": 335,
+        "snippet": "const originalMaxFileSize = process.env.AP_MAX_FILE_SIZE_MB"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/test/integration/ce/engine-services/engine-services.test.ts",
+        "line": 336,
+        "snippet": "process.env.AP_MAX_FILE_SIZE_MB = '10'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/test/integration/ce/engine-services/engine-services.test.ts",
+        "line": 356,
+        "snippet": "delete process.env.AP_MAX_FILE_SIZE_MB"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/test/integration/ce/engine-services/engine-services.test.ts",
+        "line": 359,
+        "snippet": "process.env.AP_MAX_FILE_SIZE_MB = originalMaxFileSize"
+      },
+      {
+        "file": "... (112 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 62,
+        "snippet": "envConfig = dotenv.parse(fs.readFileSync('.env.dev', 'utf-8'));"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 76,
+        "snippet": "const packageName = JSON.parse(fs.readFileSync(path.join(dir, 'package.json'), 'utf-8')).name;"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/format-checkly-report.js",
+        "line": 11,
+        "snippet": "const content = fs.readFileSync(mdPath, 'utf8');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 45,
+        "snippet": "const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 92,
+        "snippet": "fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + '\\n');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 106,
+        "snippet": "const tsconfig = JSON.parse(fs.readFileSync(tsconfigLibPath, 'utf-8'));"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 149,
+        "snippet": "fs.writeFileSync(tsconfigLibPath, JSON.stringify(tsconfig, null, 2) + '\\n');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 171,
+        "snippet": "fs.writeFileSync(tsconfigLibPath, JSON.stringify(tsconfig, null, 2) + '\\n');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 191,
+        "snippet": "fs.writeFileSync(tsconfigPath, JSON.stringify(tsconfig, null, 2) + '\\n');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 199,
+        "snippet": "fs.unlinkSync(projectJsonPath);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/migrate-custom-piece-to-turbo.ts",
+        "line": 207,
+        "snippet": "fs.unlinkSync(workspaceJsonPath);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-all-pieces-patch-version.ts",
+        "line": 30,
+        "snippet": "const content = fs.readFileSync(packageJsonPath, 'utf8');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-all-pieces-patch-version.ts",
+        "line": 42,
+        "snippet": "fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + '\\n');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-translated-pieces.ts",
+        "line": 31,
+        "snippet": "const content = fs.readFileSync(packageJsonPath, 'utf8');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-translated-pieces.ts",
+        "line": 43,
+        "snippet": "fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + '\\n');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-translated-pieces.ts",
+        "line": 99,
+        "snippet": "const content = fs.readFileSync(packageJsonPath, 'utf8');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/piece-script-utils.ts",
+        "line": 4,
+        "snippet": "import { readdir, stat } from 'node:fs/promises'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/files.ts",
+        "line": 1,
+        "snippet": "import { readFile, writeFile } from 'node:fs/promises'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/pdf/src/lib/actions/convert-to-image.ts",
+        "line": 25,
+        "snippet": "await fs.mkdir(outputDir);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/pdf/src/lib/actions/convert-to-image.ts",
+        "line": 26,
+        "snippet": "await fs.writeFile(inputFilePath, dataBuffer as any);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/pdf/src/lib/actions/convert-to-image.ts",
+        "line": 37,
+        "snippet": "const imageBuffer = await fs.readFile(filePath);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/pdf/src/lib/actions/convert-to-image.ts",
+        "line": 38,
+        "snippet": "await fs.unlink(filePath);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/pdf/src/lib/actions/convert-to-image.ts",
+        "line": 44,
+        "snippet": "await fs.unlink(inputFilePath).catch(() => void 0);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/pdf/src/lib/actions/convert-to-image.ts",
+        "line": 45,
+        "snippet": "await fs.rm(outputDir, { recursive: true, force: true }).catch(() => void 0);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/framework/src/lib/i18n.ts",
+        "line": 115,
+        "snippet": "const fileContent = await fs.readFile(filePath, 'utf8');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/framework/src/lib/i18n.ts",
+        "line": 4,
+        "snippet": "import fs from 'fs/promises';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 18,
+        "snippet": "fs.mkdirSync(systemDir, { recursive: true });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 88,
+        "snippet": "fs.unlink(dest, () => {});"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 96,
+        "snippet": "fs.unlink(dest, () => {});"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 121,
+        "snippet": "fs.unlink(dest, () => {});"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 129,
+        "snippet": "fs.unlink(dest, () => {});"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 169,
+        "snippet": "fs.mkdirSync(ORACLE_BASE_DIR, { recursive: true });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 173,
+        "snippet": "try { fs.unlinkSync(tarPath); } catch { /* ignore */ }"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 223,
+        "snippet": "fs.mkdirSync(extractDir, { recursive: true });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 247,
+        "snippet": "try { fs.rmSync(extractDir, { recursive: true }); } catch { /* ignore */ }"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 248,
+        "snippet": "try { fs.unlinkSync(debPath); } catch { /* ignore */ }"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 311,
+        "snippet": "fs.mkdirSync(ORACLE_BASE_DIR, { recursive: true });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 316,
+        "snippet": "try { fs.unlinkSync(ORACLE_TEMP_ZIP); } catch { /* ignore */ }"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/google-gemini/src/lib/actions/generate-content-from-image.action.ts",
+        "line": 48,
+        "snippet": "await fs.writeFile(tempFilePath, imageBuffer);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/google-gemini/src/lib/actions/generate-content-from-image.action.ts",
+        "line": 77,
+        "snippet": "await fs.unlink(tempFilePath).catch(() => void 0);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/google-gemini/src/lib/actions/generate-content-with-file-search.ts",
+        "line": 48,
+        "snippet": "await fs.writeFile(tempFilePath, fileBuffer);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/google-gemini/src/lib/actions/generate-content-with-file-search.ts",
+        "line": 88,
+        "snippet": "await fs.unlink(tempFilePath).catch(() => void 0);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/google-gemini/src/lib/actions/generate-content.action.ts",
+        "line": 135,
+        "snippet": "await fs.writeFile(tempFilePath, fileBuffer);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/utils/test/file-system-utils.test.ts",
+        "line": 1,
+        "snippet": "import { mkdtemp, mkdir, symlink, writeFile, rm } from 'node:fs/promises'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/utils/src/file-system-utils.ts",
+        "line": 1,
+        "snippet": "import { access, mkdir, realpath, unlink } from 'node:fs/promises'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/database/redis/default-redis.ts",
+        "line": 61,
+        "snippet": "return fs.readFileSync(file, { encoding: 'utf8' })"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/database/redis/sentinel-redis.ts",
+        "line": 61,
+        "snippet": "return fs.readFileSync(file, { encoding: 'utf8' })"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/project-release/git-sync/git-helper.ts",
+        "line": 38,
+        "snippet": "await fs.rmdir(tmpFolder, { recursive: true })"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/project-release/git-sync/git-helper.ts",
+        "line": 43,
+        "snippet": "await fs.mkdir(tmpFolder, { recursive: true })"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/project-release/git-sync/git-helper.ts",
+        "line": 50,
+        "snippet": "await fs.mkdir(flowFolderPath, { recursive: true })"
+      },
+      {
+        "file": "... (55 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 3,
+        "snippet": "const { execSync } = require('child_process');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 8,
+        "snippet": "const nodeVersion = execSync('node --version').toString().trim();"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 26,
+        "snippet": "execSync(\"bun --version\", { stdio: \"ignore\" });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 31,
+        "snippet": "execSync(\"npm install -g bun\", { stdio: \"inherit\" });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 39,
+        "snippet": "execSync('bun install', { stdio: 'inherit' });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/setup-dev.js",
+        "line": 81,
+        "snippet": "execSync(`npx turbo run build ${pieceFilters}`, { stdio: 'inherit' });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/install-bun.js",
+        "line": 3,
+        "snippet": "const { execSync } = require(\"child_process\")"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/install-bun.js",
+        "line": 7,
+        "snippet": "execSync(\"bun --version\", { stdio: \"ignore\" });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/install-bun.js",
+        "line": 12,
+        "snippet": "execSync(\"npm install -g bun\", { stdio: \"inherit\" });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/check-migration-rollback.ts",
+        "line": 1,
+        "snippet": "import { execSync } from 'child_process'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/check-migration-rollback.ts",
+        "line": 13,
+        "snippet": "const diffOutput = execSync("
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/publish-piece.ts",
+        "line": 22,
+        "snippet": "await exec(`turbo run build --filter=${packageName}`)"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-translated-pieces.ts",
+        "line": 3,
+        "snippet": "import { execSync } from 'child_process';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-translated-pieces.ts",
+        "line": 60,
+        "snippet": "execSync(`git diff --quiet origin/main -- ${piecePath}`, { encoding: 'utf8' });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-translated-pieces.ts",
+        "line": 80,
+        "snippet": "const i18nChanges = execSync(`git diff --name-only origin/main -- ${piecePath}/src/i18n`, { encoding: 'utf8' }).trim();"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/pieces/bump-translated-pieces.ts",
+        "line": 108,
+        "snippet": "const mainVersion = execSync(`git show origin/main:${packageJsonPath}`, { encoding: 'utf8' });"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/piece-script-utils.ts",
+        "line": 2,
+        "snippet": "import { execFileSync } from 'node:child_process'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/package-pre-publish-checks.ts",
+        "line": 2,
+        "snippet": "import { ExecException } from 'node:child_process'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/package-pre-publish-checks.ts",
+        "line": 46,
+        "snippet": "const diff = await exec(`git diff --quiet origin/main -- ${cleaned}`)"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/package-pre-publish-checks.ts",
+        "line": 67,
+        "snippet": "await exec(`git diff --quiet origin/main -- ${packageJsonPath}`)"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/exec.ts",
+        "line": 1,
+        "snippet": "import { exec as execCallback } from 'node:child_process'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/publish-npm-package.ts",
+        "line": 3,
+        "snippet": "import { execSync } from 'node:child_process'"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/tools/scripts/utils/publish-npm-package.ts",
+        "line": 89,
+        "snippet": "execSync(`npm publish --access public --tag latest`, { cwd: outputPath, stdio: 'inherit' })"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/deploy/pulumi/index.ts",
+        "line": 7,
+        "snippet": "import * as child_process from \"child_process\";"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/deploy/pulumi/index.ts",
+        "line": 13,
+        "snippet": "return secretValue || child_process.execSync(\"openssl rand -hex 16\").toString().trim();"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/deploy/pulumi/index.ts",
+        "line": 16,
+        "snippet": "return secretValue || child_process.execSync(\"openssl rand -hex 32\").toString().trim();"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/deploy/pulumi/index.ts",
+        "line": 37,
+        "snippet": "\"Created by\": config.get(\"author\") || child_process.execSync(\"pulumi whoami\").toString().trim().replace('\\\\', '/')"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 17,
+        "snippet": "const match = regex.exec(content);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 54,
+        "snippet": "const titleMatch = /^title:\\s*(.+)$/m.exec(block);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 55,
+        "snippet": "const descMatch = /^description:\\s*(.+)$/m.exec(block);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 79,
+        "snippet": "let match = regex.exec(content);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 83,
+        "snippet": "const pieceMatch = /^piece:\\s*(.+)$/m.exec(block);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 84,
+        "snippet": "const nameMatch = /^displayName:\\s*(.+)$/m.exec(block);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 92,
+        "snippet": "match = regex.exec(content);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 128,
+        "snippet": "const questionMatch = /^question:\\s*(.+)$/m.exec(section);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 129,
+        "snippet": "const typeMatch = /^type:\\s*(choice|text)$/m.exec(section);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 132,
+        "snippet": "const titleMatch = /^title:\\s*(.+)$/m.exec(section);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/app/routes/chat-with-ai/lib/message-parsers.ts",
+        "line": 144,
+        "snippet": "const placeholderMatch = /^placeholder:\\s*(.+)$/m.exec(section);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/features/chat/components/tool-call-card.tsx",
+        "line": 83,
+        "snippet": "const mcpMatch = /^mcp__[^_]+__(.+)$/.exec(raw);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/web/src/features/chat/chat-message/text-message.tsx",
+        "line": 44,
+        "snippet": "const match = /language-(\\w+)/.exec(className || '');"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/core/pdf/src/lib/actions/convert-to-image.ts",
+        "line": 5,
+        "snippet": "import { exec } from 'child_process';"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/new-bank-transaction.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/new-quote.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/updated-quote.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/new-credit-note.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/new-reconciled-payment.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/new-purchase-order.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/new-payment.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/xero/src/lib/triggers/new-bill.ts",
+        "line": 21,
+        "snippet": "const match = /\\/Date\\((\\d+)/.exec(dateVal);"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/pieces/community/oracle-database/src/lib/common/thick-mode.ts",
+        "line": 6,
+        "snippet": "import { execSync } from 'child_process';"
+      },
+      {
+        "file": "... (38 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/test/unit/app/core/canary/canary-proxy.integration.test.ts",
+        "line": 110,
+        "snippet": "app.get('/v1/test', async () => ({ source: 'primary' }))"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/test/unit/app/core/canary/canary-proxy.integration.test.ts",
+        "line": 111,
+        "snippet": "app.post('/v1/test', async () => ({ source: 'primary' }))"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/trigger/trigger-run/trigger-run.controller.ts",
+        "line": 8,
+        "snippet": "app.get('/status', GetStatusReportSchema, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/trigger/test-trigger/test-trigger-controller.ts",
+        "line": 8,
+        "snippet": "app.post('/', TestTriggerRequest, async (req) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/trigger/test-trigger/test-trigger-controller.ts",
+        "line": 24,
+        "snippet": "app.delete('/', CancelTestTriggerRequest, async (req) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/chat/chat-controller.ts",
+        "line": 20,
+        "snippet": "app.post('/conversations', CreateConversationRoute, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/chat/chat-controller.ts",
+        "line": 29,
+        "snippet": "app.get('/conversations', ListConversationsRoute, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/chat/chat-controller.ts",
+        "line": 38,
+        "snippet": "app.get('/conversations/:id', GetConversationRoute, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/chat/chat-controller.ts",
+        "line": 46,
+        "snippet": "app.post('/conversations/:id', UpdateConversationRoute, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/chat/chat-controller.ts",
+        "line": 55,
+        "snippet": "app.delete('/conversations/:id', DeleteConversationRoute, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/chat/chat-controller.ts",
+        "line": 64,
+        "snippet": "app.get('/conversations/:id/messages', GetMessagesRoute, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/chat/chat-controller.ts",
+        "line": 72,
+        "snippet": "app.post('/conversations/:id/messages', SendMessageRoute, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/file/step-file/step-file.controller.ts",
+        "line": 25,
+        "snippet": "app.get('/signed', SignedFileRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/file/step-file/step-file.controller.ts",
+        "line": 49,
+        "snippet": "app.post('/', UpsertStepFileRequest, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection.controller.ts",
+        "line": 30,
+        "snippet": "app.post('/', UpsertAppConnectionRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection.controller.ts",
+        "line": 55,
+        "snippet": "app.post('/:id', UpdateConnectionValueRequest, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection.controller.ts",
+        "line": 70,
+        "snippet": "app.get('/', ListAppConnectionsRequest, async (request): Promise<SeekPage<AppConnectionWithoutSensitiveData>> => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection.controller.ts",
+        "line": 92,
+        "snippet": "app.get('/owners', ListAppConnectionOwnersRequest, async (request): Promise<SeekPage<AppConnectionOwners>> => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection.controller.ts",
+        "line": 105,
+        "snippet": "app.post('/replace', ReplaceAppConnectionsRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection.controller.ts",
+        "line": 117,
+        "snippet": "app.delete('/:id', DeleteAppConnectionRequest, async (request, reply): Promise<void> => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection.controller.ts",
+        "line": 137,
+        "snippet": "app.post('/oauth2/authorization-url', GetOAuth2AuthorizationUrlRequest, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/app-connection/app-connection-worker-controller.ts",
+        "line": 17,
+        "snippet": "app.get('/:externalId', GetAppConnectionRequest, async (request): Promise<AppConnection> => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/audit-logs/audit-event-module.ts",
+        "line": 15,
+        "snippet": "app.get('/', ListAuditEventsRequestEndpoint, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-user-controller.ts",
+        "line": 15,
+        "snippet": "app.get('/', ListUsersRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-user-controller.ts",
+        "line": 26,
+        "snippet": "app.get('/:id', GetUserRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-user-controller.ts",
+        "line": 35,
+        "snippet": "app.post('/', CreateUserRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-user-controller.ts",
+        "line": 44,
+        "snippet": "app.put('/:id', ReplaceUserRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-user-controller.ts",
+        "line": 54,
+        "snippet": "app.patch('/:id', PatchUserRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-user-controller.ts",
+        "line": 64,
+        "snippet": "app.delete('/:id', DeleteUserRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-discovery-controller.ts",
+        "line": 15,
+        "snippet": "app.get('/ServiceProviderConfig', ServiceProviderConfigRequest, async (_request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-discovery-controller.ts",
+        "line": 56,
+        "snippet": "app.get('/ResourceTypes', ResourceTypesRequest, async (_request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-discovery-controller.ts",
+        "line": 85,
+        "snippet": "app.get('/Schemas', SchemasRequest, async (_request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-group-controller.ts",
+        "line": 16,
+        "snippet": "app.get('/', ListGroupsRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-group-controller.ts",
+        "line": 27,
+        "snippet": "app.get('/:id', GetGroupRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-group-controller.ts",
+        "line": 36,
+        "snippet": "app.post('/', CreateGroupRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-group-controller.ts",
+        "line": 45,
+        "snippet": "app.put('/:id', ReplaceGroupRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-group-controller.ts",
+        "line": 55,
+        "snippet": "app.patch('/:id', PatchGroupRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/scim/scim-group-controller.ts",
+        "line": 65,
+        "snippet": "app.delete('/:id', DeleteGroupRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/platform-webhooks/platform-webhooks.controller.ts",
+        "line": 9,
+        "snippet": "app.post('/', CreateEventDestinationRequest, async (req) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/platform-webhooks/platform-webhooks.controller.ts",
+        "line": 13,
+        "snippet": "app.patch('/:id', UpdateEventDestinationRequest, async (req) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/platform-webhooks/platform-webhooks.controller.ts",
+        "line": 20,
+        "snippet": "app.get('/', ListEventDestinationsRequest, async (req) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/platform-webhooks/platform-webhooks.controller.ts",
+        "line": 27,
+        "snippet": "app.delete('/:id', DeleteEventDestinationRequest, async (req) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/platform-webhooks/platform-webhooks.controller.ts",
+        "line": 34,
+        "snippet": "app.post('/test', TestPlatformEventDestinationRequest, async (req) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/platform-project-controller.ts",
+        "line": 33,
+        "snippet": "app.get('/:id', GetProjectRequest, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/platform-project-controller.ts",
+        "line": 38,
+        "snippet": "app.post('/', CreateProjectRequest, async (request, reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/platform-project-controller.ts",
+        "line": 53,
+        "snippet": "app.get('/', ListProjectRequestForPlatform, async (request, _reply) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/platform-project-controller.ts",
+        "line": 70,
+        "snippet": "app.post('/:id', UpdateProjectRequest, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/platform-project-controller.ts",
+        "line": 94,
+        "snippet": "app.delete('/:id', DeleteProjectRequest, async (req, res) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/project-members/project-member.controller.ts",
+        "line": 25,
+        "snippet": "app.get('/role', GetCurrentProjectMemberRoleRequest, async (request) => {"
+      },
+      {
+        "file": "activepieces-activepieces-40476cf/packages/server/api/src/app/ee/projects/project-members/project-member.controller.ts",
+        "line": 32,
+        "snippet": "app.get('/', ListProjectMembersRequestQueryOptions, async (request) => {"
+      },
+      {
+        "file": "... (133 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 10534,
+    "languages": [
+      "ts"
+    ]
+  }
+}

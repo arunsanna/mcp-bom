@@ -1,0 +1,467 @@
+{
+  "server_id": "github-ms-365-mcp-server",
+  "extracted_at": "2026-05-03T00:26:34.448316+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth-tools.ts",
+        "line": 6,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth-tools.ts",
+        "line": 75,
+        "snippet": "server.tool('logout', 'Log out from Microsoft account', {}, async () => {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth-tools.ts",
+        "line": 98,
+        "snippet": "server.tool('verify-login', 'Check current Microsoft authentication status', {}, async () => {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth-tools.ts",
+        "line": 111,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth-tools.ts",
+        "line": 158,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth-tools.ts",
+        "line": 191,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/graph-tools.ts",
+        "line": 688,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/graph-tools.ts",
+        "line": 714,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/graph-tools.ts",
+        "line": 885,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/graph-tools.ts",
+        "line": 938,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/graph-tools.ts",
+        "line": 972,
+        "snippet": "server.tool("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 156,
+        "snippet": "const tool = server.tools.get('test-tool');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 204,
+        "snippet": "const tool = server.tools.get('test-tool');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 245,
+        "snippet": "const tool = server.tools.get('test-tool');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 265,
+        "snippet": "const tool = server.tools.get('test-tool');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 320,
+        "snippet": "const tool = server.tools.get('test-tool');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 343,
+        "snippet": "const tool = server.tools.get('test-tool');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 386,
+        "snippet": "const tool = server.tools.get('download-file');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 426,
+        "snippet": "const tool = server.tools.get('get-mail-message');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 459,
+        "snippet": "const tool = server.tools.get('get-mail-message2');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 492,
+        "snippet": "const tool = server.tools.get('list-calendar-events');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 524,
+        "snippet": "const tool = server.tools.get('list-mail');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 545,
+        "snippet": "await server.tools.get('test-tool')!.handler({});"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 575,
+        "snippet": "await server.tools.get('create-reply-draft')!.handler({"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/test/read-only.test.ts",
+        "line": 67,
+        "snippet": "delete process.env.READ_ONLY;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/test/auth-paths.test.ts",
+        "line": 47,
+        "snippet": "delete process.env.MS365_MCP_TOKEN_CACHE_PATH;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/test/auth-paths.test.ts",
+        "line": 79,
+        "snippet": "delete process.env.MS365_MCP_SELECTED_ACCOUNT_PATH;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 139,
+        "snippet": "if (process.env.READ_ONLY === 'true' || process.env.READ_ONLY === '1') {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 143,
+        "snippet": "if (process.env.ENABLED_TOOLS) {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 144,
+        "snippet": "options.enabledTools = process.env.ENABLED_TOOLS;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 161,
+        "snippet": "if (process.env.MS365_MCP_ORG_MODE === 'true' || process.env.MS365_MCP_ORG_MODE === '1') {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 166,
+        "snippet": "process.env.MS365_MCP_FORCE_WORK_SCOPES === 'true' ||"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 167,
+        "snippet": "process.env.MS365_MCP_FORCE_WORK_SCOPES === '1'"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 176,
+        "snippet": "if (process.env.MS365_MCP_OUTPUT_FORMAT === 'toon') {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 190,
+        "snippet": "if (process.env.MS365_MCP_OBO === 'true' || process.env.MS365_MCP_OBO === '1') {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/cli.ts",
+        "line": 196,
+        "snippet": "process.env.MS365_MCP_CLOUD_TYPE = options.cloud;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/secrets.ts",
+        "line": 33,
+        "snippet": "const cloudType = parseCloudType(process.env.MS365_MCP_CLOUD_TYPE);"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/secrets.ts",
+        "line": 35,
+        "snippet": "clientId: process.env.MS365_MCP_CLIENT_ID || getDefaultClientId(cloudType),"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/secrets.ts",
+        "line": 36,
+        "snippet": "tenantId: process.env.MS365_MCP_TENANT_ID || 'common',"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/secrets.ts",
+        "line": 37,
+        "snippet": "clientSecret: process.env.MS365_MCP_CLIENT_SECRET,"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/secrets.ts",
+        "line": 99,
+        "snippet": "const vaultUrl = process.env.MS365_MCP_KEYVAULT_URL;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/logger.ts",
+        "line": 9,
+        "snippet": "process.env.MS365_MCP_LOG_DIR || path.join(os.homedir(), '.ms-365-mcp-server', 'logs');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/logger.ts",
+        "line": 16,
+        "snippet": "level: process.env.LOG_LEVEL || 'info',"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/logger.ts",
+        "line": 40,
+        "snippet": "silent: process.env.SILENT === 'true' || process.env.SILENT === '1',"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 183,
+        "snippet": "NODE_ENV: process.env.NODE_ENV || 'NOT SET',"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 199,
+        "snippet": "const corsOrigin = process.env.MS365_MCP_CORS_ORIGIN || 'http://localhost:3000';"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 241,
+        "snippet": "process.env.MS365_MCP_PUBLIC_URL ||"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 243,
+        "snippet": "process.env.MS365_MCP_BASE_URL ||"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 68,
+        "snippet": "const envPath = process.env.MS365_MCP_TOKEN_CACHE_PATH?.trim();"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 77,
+        "snippet": "const envPath = process.env.MS365_MCP_SELECTED_ACCOUNT_PATH?.trim();"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 243,
+        "snippet": "const oauthTokenFromEnv = process.env.MS365_MCP_OAUTH_TOKEN;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/graph-tools.ts",
+        "line": 45,
+        "snippet": "const raw = process.env.MS365_MCP_MAX_TOP;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/graph-tools.ts",
+        "line": 289,
+        "snippet": "const bodyFormat = process.env.MS365_MCP_BODY_FORMAT || 'text';"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 297,
+        "snippet": "const prevMaxTop = process.env.MS365_MCP_MAX_TOP;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 300,
+        "snippet": "if (prevMaxTop === undefined) delete process.env.MS365_MCP_MAX_TOP;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 301,
+        "snippet": "else process.env.MS365_MCP_MAX_TOP = prevMaxTop;"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 305,
+        "snippet": "process.env.MS365_MCP_MAX_TOP = '10';"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 328,
+        "snippet": "delete process.env.MS365_MCP_MAX_TOP;"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/remove-recursive-refs.js",
+        "line": 177,
+        "snippet": "const originalData = JSON.parse(fs.readFileSync(inputPath, 'utf8'));"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/remove-recursive-refs.js",
+        "line": 194,
+        "snippet": "fs.writeFileSync(outputPath, cleanedString);"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/extract-descriptions.mjs",
+        "line": 24,
+        "snippet": "const openApiSpec = yaml.load(fs.readFileSync(openapiFile, 'utf8'));"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/download-openapi.mjs",
+        "line": 14,
+        "snippet": "fs.mkdirSync(targetDir, { recursive: true });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/download-openapi.mjs",
+        "line": 33,
+        "snippet": "fs.writeFileSync(targetFile, content);"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/generate-mcp-tools.mjs",
+        "line": 10,
+        "snippet": "fs.mkdirSync(outputDir, { recursive: true });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/generate-mcp-tools.mjs",
+        "line": 28,
+        "snippet": "let clientCode = fs.readFileSync(clientFilePath, 'utf-8');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/generate-mcp-tools.mjs",
+        "line": 54,
+        "snippet": "fs.writeFileSync(clientFilePath, clientCode);"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/simplified-openapi.mjs",
+        "line": 5,
+        "snippet": "const allEndpoints = JSON.parse(fs.readFileSync(endpointsFile, 'utf8'));"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/simplified-openapi.mjs",
+        "line": 8,
+        "snippet": "const spec = fs.readFileSync(openapiFile, 'utf8');"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/simplified-openapi.mjs",
+        "line": 102,
+        "snippet": "fs.writeFileSync(openapiTrimmedFile, yaml.dump(openApiSpec));"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/logger.ts",
+        "line": 12,
+        "snippet": "fs.mkdirSync(logsDir, { recursive: true, mode: 0o700 });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 86,
+        "snippet": "fs.mkdirSync(dir, { recursive: true, mode: 0o700 });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 330,
+        "snippet": "fs.writeFileSync(cachePath, stamped, { mode: 0o600 });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 339,
+        "snippet": "fs.writeFileSync(cachePath, stamped, { mode: 0o600 });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 357,
+        "snippet": "fs.writeFileSync(accountPath, stamped, { mode: 0o600 });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 366,
+        "snippet": "fs.writeFileSync(accountPath, stamped, { mode: 0o600 });"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 603,
+        "snippet": "fs.unlinkSync(cachePath);"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/auth.ts",
+        "line": 608,
+        "snippet": "fs.unlinkSync(accountPath);"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/__tests__/graph-tools.test.ts",
+        "line": 99,
+        "snippet": "* and we mock fs.readFileSync, we need to re-import after setting mocks."
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/test-calendar-fix.js",
+        "line": 6,
+        "snippet": "import { spawn } from 'child_process';"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/test-calendar-fix.js",
+        "line": 14,
+        "snippet": "const server = spawn('node', [join(__dirname, 'dist', 'index.js'), '-v'], {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/generate-mcp-tools.mjs",
+        "line": 3,
+        "snippet": "import { execSync } from 'child_process';"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/bin/modules/generate-mcp-tools.mjs",
+        "line": 19,
+        "snippet": "execSync("
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/generated/hack.ts",
+        "line": 24,
+        "snippet": "while ((match = pathParamRegex.exec(endpoint.path)) !== null) {"
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 248,
+        "snippet": "app.get('/.well-known/oauth-authorization-server', async (req, res) => {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 275,
+        "snippet": "app.get('/.well-known/oauth-protected-resource', async (req, res) => {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 294,
+        "snippet": "app.post('/register', async (req, res) => {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 314,
+        "snippet": "app.get('/authorize', async (req, res) => {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 434,
+        "snippet": "app.post('/token', async (req, res) => {"
+      },
+      {
+        "file": "Softeria-ms-365-mcp-server-4821aa9/src/server.ts",
+        "line": 651,
+        "snippet": "app.get('/', (req, res) => {"
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 60,
+    "languages": [
+      "ts"
+    ]
+  }
+}

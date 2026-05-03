@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: labeler
+  namespace: mcp-bom
+spec:
+  selector:
+    app: labeler
+  ports:
+    - port: 80
+      targetPort: 8000

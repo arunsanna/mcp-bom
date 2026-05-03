@@ -1,0 +1,392 @@
+{
+  "server_id": "npm-modelcontextprotocol-conformance",
+  "extracted_at": "2026-05-03T00:26:39.202395+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "conformance-main/examples/servers/typescript/no-dns-rebinding-protection.ts",
+        "line": 24,
+        "snippet": "server.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 7,
+        "snippet": "* Should be using registerTool(), registerResource(), and registerPrompt()."
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 8,
+        "snippet": "* we use tool() instead of registerTool() as there is a bug with logging in registerTool()."
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 176,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 191,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 206,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 228,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 252,
+        "snippet": "// Tool with logging - registerTool with empty inputSchema to get (args, extra) signature"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 253,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 293,
+        "snippet": "// Tool with progress - registerTool with empty inputSchema to get (args, extra) signature"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 294,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 342,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 353,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 393,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 453,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 507,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 581,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 681,
+        "snippet": "mcpServer.registerTool("
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 975,
+        "snippet": "// This override is necessary because registerTool converts Zod schemas to"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "conformance-main/examples/clients/typescript/everything-client.ts",
+        "line": 231,
+        "snippet": "const raw = process.env.MCP_CONFORMANCE_CONTEXT;"
+      },
+      {
+        "file": "conformance-main/examples/clients/typescript/everything-client.ts",
+        "line": 532,
+        "snippet": "const scenarioName = process.env.MCP_CONFORMANCE_SCENARIO;"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/no-dns-rebinding-protection.ts",
+        "line": 67,
+        "snippet": "const PORT = parseInt(process.env.PORT || '3003', 10);"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/sep-2164-empty-contents.ts",
+        "line": 61,
+        "snippet": "const PORT = parseInt(process.env.PORT || '3005', 10);"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 1171,
+        "snippet": "const PORT = process.env.PORT || 3000;"
+      },
+      {
+        "file": "conformance-main/src/tier-check/index.ts",
+        "line": 58,
+        "snippet": "let token = options.token || process.env.GITHUB_TOKEN;"
+      },
+      {
+        "file": "conformance-main/src/tier-check/index.ts",
+        "line": 185,
+        "snippet": "auth: options.token || process.env.GITHUB_TOKEN"
+      },
+      {
+        "file": "conformance-main/src/tier-check/index.ts",
+        "line": 200,
+        "snippet": "auth: options.token || process.env.GITHUB_TOKEN"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/test_helpers/testClient.ts",
+        "line": 112,
+        "snippet": "process.env.MCP_CONFORMANCE_SCENARIO = scenarioName;"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/test_helpers/testClient.ts",
+        "line": 114,
+        "snippet": "process.env.MCP_CONFORMANCE_CONTEXT = JSON.stringify({"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/test_helpers/testClient.ts",
+        "line": 180,
+        "snippet": "delete process.env.MCP_CONFORMANCE_SCENARIO;"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/test_helpers/testClient.ts",
+        "line": 181,
+        "snippet": "delete process.env.MCP_CONFORMANCE_CONTEXT;"
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "conformance-main/src/expected-failures.test.ts",
+        "line": 29,
+        "snippet": "await fs.rm(tmpDir, { recursive: true });"
+      },
+      {
+        "file": "conformance-main/src/expected-failures.test.ts",
+        "line": 34,
+        "snippet": "await fs.writeFile("
+      },
+      {
+        "file": "conformance-main/src/expected-failures.test.ts",
+        "line": 55,
+        "snippet": "await fs.writeFile("
+      },
+      {
+        "file": "conformance-main/src/expected-failures.test.ts",
+        "line": 69,
+        "snippet": "await fs.writeFile(filePath, '');"
+      },
+      {
+        "file": "conformance-main/src/expected-failures.test.ts",
+        "line": 77,
+        "snippet": "await fs.writeFile(filePath, '- foo\\n- bar\\n');"
+      },
+      {
+        "file": "conformance-main/src/expected-failures.test.ts",
+        "line": 86,
+        "snippet": "await fs.writeFile(filePath, 'server: not-an-array\\n');"
+      },
+      {
+        "file": "conformance-main/src/expected-failures.test.ts",
+        "line": 95,
+        "snippet": "await fs.writeFile(filePath, 'client: 123\\n');"
+      },
+      {
+        "file": "conformance-main/src/expected-failures.ts",
+        "line": 37,
+        "snippet": "const content = await fs.readFile(filePath, 'utf-8');"
+      },
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 111,
+        "snippet": "await fs.mkdir(resultDir, { recursive: true });"
+      },
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 153,
+        "snippet": "await fs.writeFile("
+      },
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 158,
+        "snippet": "await fs.writeFile("
+      },
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 163,
+        "snippet": "await fs.writeFile("
+      },
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 278,
+        "snippet": "await fs.mkdir(resultDir, { recursive: true });"
+      },
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 296,
+        "snippet": "await fs.writeFile("
+      },
+      {
+        "file": "conformance-main/src/runner/authorization-server.ts",
+        "line": 24,
+        "snippet": "await fs.mkdir(resultDir, { recursive: true });"
+      },
+      {
+        "file": "conformance-main/src/runner/authorization-server.ts",
+        "line": 37,
+        "snippet": "await fs.writeFile("
+      },
+      {
+        "file": "conformance-main/src/runner/server.ts",
+        "line": 33,
+        "snippet": "await fs.mkdir(resultDir, { recursive: true });"
+      },
+      {
+        "file": "conformance-main/src/runner/server.ts",
+        "line": 46,
+        "snippet": "await fs.writeFile("
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 1,
+        "snippet": "import { spawn } from 'child_process';"
+      },
+      {
+        "file": "conformance-main/src/runner/client.ts",
+        "line": 50,
+        "snippet": "const childProcess = spawn(executable, args, {"
+      },
+      {
+        "file": "conformance-main/src/tier-check/index.ts",
+        "line": 67,
+        "snippet": "const { execSync } = await import('child_process');"
+      },
+      {
+        "file": "conformance-main/src/tier-check/index.ts",
+        "line": 68,
+        "snippet": "token = execSync('gh auth token', { encoding: 'utf-8' }).trim();"
+      },
+      {
+        "file": "conformance-main/src/tier-check/checks/test-conformance-results.ts",
+        "line": 1,
+        "snippet": "import { execFileSync } from 'child_process';"
+      },
+      {
+        "file": "conformance-main/src/scenarios/server/negative.test.ts",
+        "line": 1,
+        "snippet": "import { spawn, ChildProcess } from 'child_process';"
+      },
+      {
+        "file": "conformance-main/src/scenarios/server/negative.test.ts",
+        "line": 9,
+        "snippet": "const proc = spawn('npx', ['tsx', scriptPath], {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/server/all-scenarios.test.ts",
+        "line": 1,
+        "snippet": "import { spawn, ChildProcess } from 'child_process';"
+      },
+      {
+        "file": "conformance-main/src/scenarios/server/all-scenarios.test.ts",
+        "line": 20,
+        "snippet": "serverProcess = spawn('npx', ['tsx', serverPath], {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/test_helpers/testClient.ts",
+        "line": 2,
+        "snippet": "import { spawn } from 'child_process';"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/test_helpers/testClient.ts",
+        "line": 26,
+        "snippet": "const clientProcess = spawn('npx', ['tsx', this.clientPath, serverUrl], {"
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "conformance-main/examples/servers/typescript/no-dns-rebinding-protection.ts",
+        "line": 44,
+        "snippet": "app.post('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/sep-2164-empty-contents.ts",
+        "line": 39,
+        "snippet": "app.post('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 1054,
+        "snippet": "app.post('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 1122,
+        "snippet": "app.get('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "conformance-main/examples/servers/typescript/everything-server.ts",
+        "line": 1149,
+        "snippet": "app.delete('/mcp', async (req, res) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/elicitation-defaults.ts",
+        "line": 363,
+        "snippet": "app.post('/mcp', async (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/elicitation-defaults.ts",
+        "line": 426,
+        "snippet": "app.get('/mcp', async (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/elicitation-defaults.ts",
+        "line": 445,
+        "snippet": "app.delete('/mcp', async (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/tools_call.ts",
+        "line": 102,
+        "snippet": "app.post('/mcp', async (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/cross-app-access.ts",
+        "line": 176,
+        "snippet": "app.post('/token', async (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/march-spec-backcompat.ts",
+        "line": 91,
+        "snippet": "app.get('/authorize', (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/march-spec-backcompat.ts",
+        "line": 120,
+        "snippet": "app.post('/token', (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/march-spec-backcompat.ts",
+        "line": 141,
+        "snippet": "app.post('/register', (req: Request, res: Response) => {"
+      },
+      {
+        "file": "conformance-main/src/scenarios/client/auth/helpers/createServer.ts",
+        "line": 139,
+        "snippet": "app.post('/mcp', async (req: Request, res: Response, next: NextFunction) => {"
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 93,
+    "languages": [
+      "ts"
+    ]
+  }
+}

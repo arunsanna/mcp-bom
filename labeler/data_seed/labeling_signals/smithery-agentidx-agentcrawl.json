@@ -1,0 +1,1063 @@
+{
+  "server_id": "smithery-agentidx-agentcrawl",
+  "extracted_at": "2026-05-03T00:26:42.286561+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "agentindex-main/agentindex/mcp_sse_server.py",
+        "line": 456,
+        "snippet": "from agentindex.mcp.tools_v3 import TOOLS as _V3_TOOLS_EXTRA"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp/tools_v3.py",
+        "line": 23,
+        "snippet": "logger = logging.getLogger(\"nerq.mcp.tools_v3\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp/__init__.py",
+        "line": 5,
+        "snippet": "``TOOLS`` and ``TOOL_HANDLERS`` from :mod:`agentindex.mcp.tools_v3` and"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp/__init__.py",
+        "line": 14,
+        "snippet": "from agentindex.mcp.tools_v3 import TOOLS, TOOL_HANDLERS"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "agentindex-main/daily_report.py",
+        "line": 19,
+        "snippet": "self.conn = psycopg2.connect(os.getenv('DATABASE_URL'))"
+      },
+      {
+        "file": "agentindex-main/multi_jurisdiction_assess.py",
+        "line": 20,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_full_datasets.py",
+        "line": 17,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/classify_agents_rules.py",
+        "line": 9,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_full_models.py",
+        "line": 17,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/check_prs.py",
+        "line": 9,
+        "snippet": "TOKEN = os.environ.get('GITHUB_TOKEN', '')"
+      },
+      {
+        "file": "agentindex-main/crawl_huggingface_massive_search.py",
+        "line": 32,
+        "snippet": "self.conn = psycopg2.connect(os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex'))"
+      },
+      {
+        "file": "agentindex-main/assess_new_agents.py",
+        "line": 14,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_huggingface_chronological.py",
+        "line": 39,
+        "snippet": "self.conn = psycopg2.connect(os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex'))"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_spaces_datasets.py",
+        "line": 32,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_full_spaces.py",
+        "line": 17,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_mcp_registries.py",
+        "line": 35,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_huggingface_search_massive.py",
+        "line": 37,
+        "snippet": "self.conn = psycopg2.connect(os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex'))"
+      },
+      {
+        "file": "agentindex-main/compute_compliance_scores.py",
+        "line": 29,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_npm_massive.py",
+        "line": 11,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_pypi_full.py",
+        "line": 11,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_huggingface_chronological_fixed.py",
+        "line": 43,
+        "snippet": "self.conn = psycopg2.connect(os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex'))"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_authors.py",
+        "line": 31,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/github_issues_outreach_bot.py",
+        "line": 32,
+        "snippet": "self.github_token = github_token or os.getenv('GITHUB_TOKEN')"
+      },
+      {
+        "file": "agentindex-main/crawl_replicate.py",
+        "line": 30,
+        "snippet": "self.api_token = os.getenv('REPLICATE_API_TOKEN')"
+      },
+      {
+        "file": "agentindex-main/crawl_pypi_v2.py",
+        "line": 11,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/github_token_rotation.py",
+        "line": 34,
+        "snippet": "primary = os.getenv('GITHUB_TOKEN')"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_authors2.py",
+        "line": 9,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_replicate_fixed.py",
+        "line": 28,
+        "snippet": "self.api_key = os.getenv('REPLICATE_API_TOKEN') or os.getenv('REPLICATE_API_KEY')"
+      },
+      {
+        "file": "agentindex-main/seed_reviews.py",
+        "line": 17,
+        "snippet": "database_url = os.getenv(\"DATABASE_URL\", \"postgresql://localhost/agentindex\")"
+      },
+      {
+        "file": "agentindex-main/crawl_replicate_cursor_fix.py",
+        "line": 28,
+        "snippet": "self.api_token = os.getenv('REPLICATE_API_TOKEN')"
+      },
+      {
+        "file": "agentindex-main/crawl_replicate_cursor_fix.py",
+        "line": 38,
+        "snippet": "self.conn = psycopg2.connect(os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex'))"
+      },
+      {
+        "file": "agentindex-main/crawl_pypi_v3.py",
+        "line": 11,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/crawl_glama.py",
+        "line": 31,
+        "snippet": "DB_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/agentindex')"
+      },
+      {
+        "file": "agentindex-main/docker/entrypoint.py",
+        "line": 9,
+        "snippet": "API_URL = os.environ.get(\"NERQ_API_URL\", \"https://nerq.ai\")"
+      },
+      {
+        "file": "agentindex-main/docker/entrypoint.py",
+        "line": 10,
+        "snippet": "PORT = int(os.environ.get(\"PORT\", \"8080\"))"
+      },
+      {
+        "file": "agentindex-main/agentindex/dashboard_old.py",
+        "line": 84,
+        "snippet": "uvicorn.run(app,host=\"0.0.0.0\",port=int(os.getenv(\"DASHBOARD_PORT\",\"8200\")),log_level=\"warning\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp_sse_server_v2.py",
+        "line": 499,
+        "snippet": "port = int(os.getenv(\"MCP_SSE_PORT\", \"8300\"))"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp_sse_server.py",
+        "line": 523,
+        "snippet": "port = os.getenv(\"API_PORT\", \"8000\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp_sse_server.py",
+        "line": 816,
+        "snippet": "port = os.getenv(\"API_PORT\", \"8000\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp_sse_server.py",
+        "line": 839,
+        "snippet": "port = os.getenv(\"API_PORT\", \"8000\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp_sse_server.py",
+        "line": 895,
+        "snippet": "port = os.getenv(\"API_PORT\", \"8000\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/mcp_sse_server.py",
+        "line": 1081,
+        "snippet": "port = int(os.getenv(\"MCP_SSE_PORT\", \"8300\"))"
+      },
+      {
+        "file": "agentindex-main/agentindex/zarq_dashboard.py",
+        "line": 23,
+        "snippet": "METRICS_TOKEN = os.getenv(\"ZARQ_METRICS_TOKEN\", \"zarq-internal-2026\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/run.py",
+        "line": 278,
+        "snippet": "crawl_interval = int(os.getenv(\"CRAWL_INTERVAL_HOURS\", \"6\"))"
+      },
+      {
+        "file": "agentindex-main/agentindex/badge_outreach_auto.py",
+        "line": 171,
+        "snippet": "token = os.environ.get(\"GITHUB_TOKEN\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 76,
+        "snippet": "s.strip() for s in os.environ.get(\"L1_UNLOCK_REGISTRIES\", \"\").split(\",\") if s.strip()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 84,
+        "snippet": "_L5_CROSSREG_MODE: str = os.environ.get(\"L5_CROSSREG_LINKS\", \"off\").strip().lower()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 90,
+        "snippet": "m = os.environ.get(\"L2_BLOCK_2A_MODE\", \"off\").strip().lower()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 118,
+        "snippet": "s.strip() for s in os.environ.get(\"L2_BLOCK_2A_REGISTRIES\", \"\").split(\",\") if s.strip()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 130,
+        "snippet": "allow_raw = os.environ.get(\"L2_BLOCK_2A_REGISTRIES\", \"\").strip()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 155,
+        "snippet": "m = os.environ.get(\"L2_BLOCK_2B_MODE\", \"off\").strip().lower()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 187,
+        "snippet": "s.strip() for s in os.environ.get(\"L2_BLOCK_2B_REGISTRIES\", \"\").split(\",\") if s.strip()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 199,
+        "snippet": "allow_raw = os.environ.get(\"L2_BLOCK_2B_REGISTRIES\", \"\").strip()"
+      },
+      {
+        "file": "agentindex-main/agentindex/agent_safety_pages.py",
+        "line": 220,
+        "snippet": "m = os.environ.get(\"L2_BLOCK_2E_MODE\", \"off\").strip().lower()"
+      },
+      {
+        "file": "... (194 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "agentindex-main/pr_recovery_action_plan.py",
+        "line": 248,
+        "snippet": "with open('pr_follow_up_messages.json', 'w') as f:"
+      },
+      {
+        "file": "agentindex-main/autonomous_marketing_executor.py",
+        "line": 31,
+        "snippet": "with open(\"marketing_execution.log\", \"a\") as f:"
+      },
+      {
+        "file": "agentindex-main/autonomous_marketing_executor.py",
+        "line": 265,
+        "snippet": "with open(\"phase1_execution_report.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/system_autoheal.py",
+        "line": 628,
+        "snippet": "os.rename(_lf, _lf + f\".{datetime.now().strftime('%Y%m%d')}\")"
+      },
+      {
+        "file": "agentindex-main/system_monitor.py",
+        "line": 265,
+        "snippet": "with open(\"system_health_status.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/deployment_package_okr1.py",
+        "line": 21,
+        "snippet": "shutil.rmtree(self.package_dir)"
+      },
+      {
+        "file": "agentindex-main/deployment_package_okr1.py",
+        "line": 36,
+        "snippet": "shutil.copy(\"optimized_html_head.html\", f\"{self.package_dir}/web_assets/\")"
+      },
+      {
+        "file": "agentindex-main/deployment_package_okr1.py",
+        "line": 74,
+        "snippet": "shutil.copy(blog_file, f\"{self.package_dir}/blog_content/\")"
+      },
+      {
+        "file": "agentindex-main/deployment_package_okr1.py",
+        "line": 121,
+        "snippet": "shutil.copy(seo_file, f\"{self.package_dir}/seo_files/\")"
+      },
+      {
+        "file": "agentindex-main/deployment_package_okr1.py",
+        "line": 168,
+        "snippet": "shutil.copy(monitor_file, f\"{self.package_dir}/monitoring/\")"
+      },
+      {
+        "file": "agentindex-main/phase2_preparation.py",
+        "line": 200,
+        "snippet": "with open(\"phase2_execution_plan.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/optimized_distribution_generator.py",
+        "line": 80,
+        "snippet": "with open(\"distribution_content_ready.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/compute_trust_score.py",
+        "line": 31,
+        "snippet": "RISKY_FS_WRITE = ['write file', 'filesystem write', 'fs.write', 'os.remove',"
+      },
+      {
+        "file": "agentindex-main/compute_trust_score.py",
+        "line": 32,
+        "snippet": "'shutil.rmtree', 'unlink(', 'delete file']"
+      },
+      {
+        "file": "agentindex-main/autonomous_monitoring_loop.py",
+        "line": 154,
+        "snippet": "with open(\"autonomous_monitoring_status.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/patch_health2.py",
+        "line": 1,
+        "snippet": "f = open('/Users/anstudio/agentindex/agentindex/api/discovery.py', 'r')"
+      },
+      {
+        "file": "agentindex-main/patch_health2.py",
+        "line": 41,
+        "snippet": "f = open('/Users/anstudio/agentindex/agentindex/api/discovery.py', 'w')"
+      },
+      {
+        "file": "agentindex-main/seo_optimization_suite.py",
+        "line": 299,
+        "snippet": "with open(\"seo_implementation_plan.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/apply_agent_page_edits.py",
+        "line": 13,
+        "snippet": "shutil.copy2(FILE, FILE + \".bak\")"
+      },
+      {
+        "file": "agentindex-main/install_vs_pages.py",
+        "line": 15,
+        "snippet": "shutil.copy2(SRC, DST)"
+      },
+      {
+        "file": "agentindex-main/apply_platform_edits.py",
+        "line": 36,
+        "snippet": "shutil.copy2(path, path + \".bak2\")"
+      },
+      {
+        "file": "agentindex-main/patch_stats_cache.py",
+        "line": 3,
+        "snippet": "f = open('/Users/anstudio/agentindex/agentindex/api/discovery.py', 'r')"
+      },
+      {
+        "file": "agentindex-main/patch_stats_cache.py",
+        "line": 61,
+        "snippet": "f = open('/Users/anstudio/agentindex/agentindex/api/discovery.py', 'w')"
+      },
+      {
+        "file": "agentindex-main/prepare_distribution_content.py",
+        "line": 131,
+        "snippet": "with open(\"distribution_content.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/implement_seo_improvements.py",
+        "line": 70,
+        "snippet": "with open(\"optimized_html_head.html\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/implement_seo_improvements.py",
+        "line": 425,
+        "snippet": "with open(\"robots.txt\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/implement_seo_improvements.py",
+        "line": 471,
+        "snippet": "with open(\"sitemap.xml\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/implement_seo_improvements.py",
+        "line": 521,
+        "snippet": "with open(\"organic_traffic_monitoring.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/implement_seo_improvements.py",
+        "line": 576,
+        "snippet": "with open(\"seo_implementation_summary.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/clean_reddit_content.py",
+        "line": 89,
+        "snippet": "with open(\"clean_reddit_posts.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/continuous_monitor.py",
+        "line": 40,
+        "snippet": "with open(\"system_alerts.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/emergency_budget_fix.py",
+        "line": 173,
+        "snippet": "with open('emergency_budget_report.json', 'w') as f:"
+      },
+      {
+        "file": "agentindex-main/okr1_progress_tracker.py",
+        "line": 216,
+        "snippet": "with open(\"okr1_progress_report.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/security_baseline_check.py",
+        "line": 88,
+        "snippet": "with open('security_baseline.json', 'w') as f:"
+      },
+      {
+        "file": "agentindex-main/patch_seo_pages.py",
+        "line": 28,
+        "snippet": "shutil.copy2(SEO_FILE, BACKUP)"
+      },
+      {
+        "file": "agentindex-main/framework_package_publisher.py",
+        "line": 23,
+        "snippet": "shutil.rmtree(package_dir)"
+      },
+      {
+        "file": "agentindex-main/framework_package_publisher.py",
+        "line": 336,
+        "snippet": "shutil.rmtree(package_dir)"
+      },
+      {
+        "file": "agentindex-main/framework_package_publisher.py",
+        "line": 343,
+        "snippet": "with open(\"README.md\", \"r\", encoding=\"utf-8\") as fh:"
+      },
+      {
+        "file": "agentindex-main/framework_package_publisher.py",
+        "line": 734,
+        "snippet": "shutil.rmtree(package_dir)"
+      },
+      {
+        "file": "agentindex-main/framework_package_publisher.py",
+        "line": 741,
+        "snippet": "with open(\"README.md\", \"r\", encoding=\"utf-8\") as fh:"
+      },
+      {
+        "file": "agentindex-main/framework_package_publisher.py",
+        "line": 1387,
+        "snippet": "with open(\"framework_publication_guide.md\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/framework_package_publisher.py",
+        "line": 1422,
+        "snippet": "with open(\"framework_packages_summary.json\", \"w\") as f:"
+      },
+      {
+        "file": "agentindex-main/install_comparison_pages.py",
+        "line": 23,
+        "snippet": "shutil.copy2(SRC, DST)"
+      },
+      {
+        "file": "agentindex-main/security_monitor_continuous.py",
+        "line": 282,
+        "snippet": "with open('security_assessment_report.json', 'w') as f:"
+      },
+      {
+        "file": "agentindex-main/create-nerq-agent/src/scaffold.js",
+        "line": 312,
+        "snippet": "fs.mkdirSync(dir, { recursive: true });"
+      },
+      {
+        "file": "agentindex-main/create-nerq-agent/src/scaffold.js",
+        "line": 316,
+        "snippet": "fs.writeFileSync(filepath, content);"
+      },
+      {
+        "file": "agentindex-main/agent-security/setup.py",
+        "line": 7,
+        "snippet": "long_description=open(\"README.md\").read(),"
+      },
+      {
+        "file": "agentindex-main/agentindex/zarq_dashboard.py",
+        "line": 82,
+        "snippet": "total, used, free = shutil.disk_usage(\"/\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence/launch_day_coverage.py",
+        "line": 73,
+        "snippet": "shutil.copy2(AGENTS_DB, TMP_DB)"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence/social_scheduler.py",
+        "line": 44,
+        "snippet": "with open(\"/Users/anstudio/agentindex/logs/social_queue.txt\", \"a\") as f:"
+      },
+      {
+        "file": "... (18 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "agentindex-main/system_autoheal.py",
+        "line": 112,
+        "snippet": "result = subprocess.run([\"netstat\", \"-an\"], capture_output=True, text=True, timeout=10)"
+      },
+      {
+        "file": "agentindex-main/system_autoheal.py",
+        "line": 137,
+        "snippet": "r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)"
+      },
+      {
+        "file": "agentindex-main/system_autoheal.py",
+        "line": 139,
+        "snippet": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "file": "agentindex-main/system_monitor.py",
+        "line": 131,
+        "snippet": "ps_output = subprocess.check_output(['ps', 'aux'], text=True)"
+      },
+      {
+        "file": "agentindex-main/patch_analytics.py",
+        "line": 57,
+        "snippet": "r = subprocess.run([\"bash\", \"-c\","
+      },
+      {
+        "file": "agentindex-main/daily_report.py",
+        "line": 105,
+        "snippet": "result = subprocess.run(['ps', 'aux'], capture_output=True, text=True)"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_full_datasets.py",
+        "line": 11,
+        "snippet": "subprocess.check_call(['pip', 'install', 'huggingface_hub', '--break-system-packages'])"
+      },
+      {
+        "file": "agentindex-main/overnight_crawl.py",
+        "line": 69,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "agentindex-main/overnight_crawl.py",
+        "line": 79,
+        "snippet": "\"\"\"Start a crawler subprocess.\"\"\""
+      },
+      {
+        "file": "agentindex-main/overnight_crawl.py",
+        "line": 84,
+        "snippet": "proc = subprocess.Popen("
+      },
+      {
+        "file": "agentindex-main/overnight_crawl.py",
+        "line": 87,
+        "snippet": "stderr=subprocess.STDOUT,"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_full_models.py",
+        "line": 11,
+        "snippet": "subprocess.check_call(['pip', 'install', 'huggingface_hub', '--break-system-packages'])"
+      },
+      {
+        "file": "agentindex-main/watchdog.py",
+        "line": 334,
+        "snippet": "result = subprocess.run(cmd, check=True)"
+      },
+      {
+        "file": "agentindex-main/watchdog.py",
+        "line": 367,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "agentindex-main/db_monitor_cron.py",
+        "line": 30,
+        "snippet": "subprocess.run([\"pkill\", \"-f\", \"agentindex.dashboard\"], check=False)"
+      },
+      {
+        "file": "agentindex-main/db_monitor_cron.py",
+        "line": 31,
+        "snippet": "subprocess.run([\"sleep\", \"2\"], check=False)"
+      },
+      {
+        "file": "agentindex-main/autonomous_monitoring_loop.py",
+        "line": 49,
+        "snippet": "result = subprocess.run(["
+      },
+      {
+        "file": "agentindex-main/local_llm_setup.py",
+        "line": 38,
+        "snippet": "result = subprocess.run([\"which\", \"ollama\"], capture_output=True, text=True)"
+      },
+      {
+        "file": "agentindex-main/local_llm_setup.py",
+        "line": 45,
+        "snippet": "subprocess.run([\"brew\", \"install\", \"ollama\"], check=True)"
+      },
+      {
+        "file": "agentindex-main/local_llm_setup.py",
+        "line": 48,
+        "snippet": "subprocess.Popen([\"ollama\", \"serve\"])"
+      },
+      {
+        "file": "agentindex-main/local_llm_setup.py",
+        "line": 74,
+        "snippet": "subprocess.run([\"ollama\", \"pull\", model], check=True, timeout=300)"
+      },
+      {
+        "file": "agentindex-main/local_llm_setup.py",
+        "line": 91,
+        "snippet": "subprocess.Popen([\"ollama\", \"serve\"])"
+      },
+      {
+        "file": "agentindex-main/hourly_monitoring.py",
+        "line": 109,
+        "snippet": "github_proc = subprocess.run(['ps', 'aux'], capture_output=True, text=True)"
+      },
+      {
+        "file": "agentindex-main/hourly_monitoring.py",
+        "line": 117,
+        "snippet": "parser_proc = subprocess.run(['ps', 'aux'], capture_output=True, text=True)"
+      },
+      {
+        "file": "agentindex-main/crawl_hf_full_spaces.py",
+        "line": 11,
+        "snippet": "subprocess.check_call(['pip', 'install', 'huggingface_hub', '--break-system-packages'])"
+      },
+      {
+        "file": "agentindex-main/system_healthcheck.py",
+        "line": 39,
+        "snippet": "r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=timeout)"
+      },
+      {
+        "file": "agentindex-main/crawler_manager.py",
+        "line": 81,
+        "snippet": "self.proc = subprocess.Popen("
+      },
+      {
+        "file": "agentindex-main/zarq_healthcheck.py",
+        "line": 106,
+        "snippet": "r = subprocess.run("
+      },
+      {
+        "file": "agentindex-main/zarq_healthcheck.py",
+        "line": 125,
+        "snippet": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "file": "agentindex-main/tunnel_repair.py",
+        "line": 48,
+        "snippet": "result = subprocess.run(['pgrep', '-f', 'cloudflared'],"
+      },
+      {
+        "file": "agentindex-main/tunnel_repair.py",
+        "line": 67,
+        "snippet": "subprocess.run(['pkill', '-f', 'cloudflared'],"
+      },
+      {
+        "file": "agentindex-main/tunnel_repair.py",
+        "line": 75,
+        "snippet": "subprocess.run(cmd, shell=True, check=True)"
+      },
+      {
+        "file": "agentindex-main/security_baseline_check.py",
+        "line": 22,
+        "snippet": "result = subprocess.run(['curl', '-s', '-o', '/dev/null', '-w', '%{http_code}', 'https://agentcrawl.dev'],"
+      },
+      {
+        "file": "agentindex-main/security_baseline_check.py",
+        "line": 33,
+        "snippet": "result = subprocess.run(['curl', '-s', '-o', '/dev/null', '-w', '%{http_code}', 'https://api.agentcrawl.dev/v1/health'],"
+      },
+      {
+        "file": "agentindex-main/security_baseline_check.py",
+        "line": 48,
+        "snippet": "result = subprocess.run(['curl', '-s', '-o', '/dev/null', '-w', '%{http_code}', f'https://agentcrawl.dev{path}'],"
+      },
+      {
+        "file": "agentindex-main/security_monitor_continuous.py",
+        "line": 37,
+        "snippet": "result = subprocess.run(['curl', '-s', '-I', endpoint],"
+      },
+      {
+        "file": "agentindex-main/security_monitor_continuous.py",
+        "line": 78,
+        "snippet": "result = subprocess.run(['curl', '-s', '-o', '/dev/null', '-w', '%{http_code}',"
+      },
+      {
+        "file": "agentindex-main/security_monitor_continuous.py",
+        "line": 102,
+        "snippet": "result = subprocess.run(['curl', '-s', 'https://api.agentcrawl.dev/v1/'],"
+      },
+      {
+        "file": "agentindex-main/security_monitor_continuous.py",
+        "line": 110,
+        "snippet": "headers_result = subprocess.run(['curl', '-s', '-I', 'https://api.agentcrawl.dev/v1/health'],"
+      },
+      {
+        "file": "agentindex-main/security_monitor_continuous.py",
+        "line": 165,
+        "snippet": "result = subprocess.run(['find', 'static/', '-name', f'*{pattern}*'],"
+      },
+      {
+        "file": "agentindex-main/agentindex/zarq_dashboard.py",
+        "line": 40,
+        "snippet": "r = subprocess.run([REDIS_CLI, \"PING\"], capture_output=True, text=True, timeout=3)"
+      },
+      {
+        "file": "agentindex-main/agentindex/zarq_dashboard.py",
+        "line": 60,
+        "snippet": "r = subprocess.run([\"launchctl\", \"list\", label], capture_output=True, text=True, timeout=5)"
+      },
+      {
+        "file": "agentindex-main/agentindex/run.py",
+        "line": 108,
+        "snippet": "subprocess.run([\"pkill\", \"-STOP\", \"-f\", \"parser_loop\"], capture_output=True)"
+      },
+      {
+        "file": "agentindex-main/agentindex/run.py",
+        "line": 119,
+        "snippet": "subprocess.run([\"pkill\", \"-CONT\", \"-f\", \"parser_loop\"], capture_output=True)"
+      },
+      {
+        "file": "agentindex-main/agentindex/flywheel_dashboard.py",
+        "line": 374,
+        "snippet": "result = subprocess.run([\"pgrep\", \"-fa\", \"enrichment\"], capture_output=True, text=True, timeout=3)"
+      },
+      {
+        "file": "agentindex-main/agentindex/flywheel_dashboard.py",
+        "line": 381,
+        "snippet": "load_out = subprocess.run([\"sysctl\", \"-n\", \"vm.loadavg\"], capture_output=True, text=True, timeout=3)"
+      },
+      {
+        "file": "agentindex-main/agentindex/flywheel_dashboard.py",
+        "line": 386,
+        "snippet": "df_out = subprocess.run([\"df\", \"-h\", \"/\"], capture_output=True, text=True, timeout=3)"
+      },
+      {
+        "file": "agentindex-main/agentindex/observability.py",
+        "line": 68,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "agentindex-main/agentindex/observability.py",
+        "line": 74,
+        "snippet": "subprocess.run("
+      },
+      {
+        "file": "agentindex-main/agentindex/observability.py",
+        "line": 88,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "... (428 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "agentindex-main/add_methodology_page.py",
+        "line": 27,
+        "snippet": "@app.get(\"/methodology\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/vs_pages.py",
+        "line": 90,
+        "snippet": "@app.get(\"/vs\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/vs_pages.py",
+        "line": 103,
+        "snippet": "@app.get(\"/vs/{id_a}/{id_b}\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/vs_pages.py",
+        "line": 127,
+        "snippet": "@app.get(\"/sitemap-vs.xml\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/add_trust_badges.py",
+        "line": 24,
+        "snippet": "@router.get(\"/trust/{agent_id}\")"
+      },
+      {
+        "file": "agentindex-main/add_trust_badges.py",
+        "line": 54,
+        "snippet": "@router.get(\"/trust-grade/{grade}\")"
+      },
+      {
+        "file": "agentindex-main/comparison_pages.py",
+        "line": 226,
+        "snippet": "@app.get(\"/mcp-servers\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/comparison_pages.py",
+        "line": 250,
+        "snippet": "@app.get(\"/best-mcp-servers-for-{category}\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/comparison_pages.py",
+        "line": 296,
+        "snippet": "@app.get(\"/sitemap-comparisons.xml\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/enhanced_dashboard.py",
+        "line": 385,
+        "snippet": "@app.get(\"/\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/trust_snapshot_export.py",
+        "line": 323,
+        "snippet": "@app.get(\"/data/trust-scores.jsonl\")"
+      },
+      {
+        "file": "agentindex-main/trust_snapshot_export.py",
+        "line": 324,
+        "snippet": "@app.get(\"/data/trust-scores.jsonl.gz\")"
+      },
+      {
+        "file": "agentindex-main/trust_snapshot_export.py",
+        "line": 325,
+        "snippet": "@app.get(\"/data/trust-summary.json\")"
+      },
+      {
+        "file": "agentindex-main/add_data_and_api_endpoints.py",
+        "line": 40,
+        "snippet": "@app.get(\"/data/trust-scores.jsonl.gz\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/add_data_and_api_endpoints.py",
+        "line": 58,
+        "snippet": "@app.get(\"/data/trust-summary.json\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/add_data_and_api_endpoints.py",
+        "line": 94,
+        "snippet": "@app.get(\"/api/v1/trust-score/{agent_id}\")"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints.py",
+        "line": 46,
+        "snippet": "@app.get(\"/data/trust-scores.jsonl.gz\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints.py",
+        "line": 62,
+        "snippet": "@app.get(\"/data/trust-summary.json\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints.py",
+        "line": 79,
+        "snippet": "@app.get(\"/api/v1/trust-score/{agent_id}\")"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints_v3.py",
+        "line": 38,
+        "snippet": "@app.get(\"/data/trust-scores.jsonl.gz\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints_v3.py",
+        "line": 49,
+        "snippet": "@app.get(\"/data/trust-summary.json\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints_v3.py",
+        "line": 62,
+        "snippet": "@app.get(\"/api/v1/trust-score/{agent_id}\")"
+      },
+      {
+        "file": "agentindex-main/add_best_pages.py",
+        "line": 37,
+        "snippet": "@app.get(\"/best\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/add_best_pages.py",
+        "line": 56,
+        "snippet": "@app.get(\"/best/{category}\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints_v2.py",
+        "line": 76,
+        "snippet": "@app.get(\"/data/trust-scores.jsonl.gz\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints_v2.py",
+        "line": 88,
+        "snippet": "@app.get(\"/data/trust-summary.json\", include_in_schema=False)"
+      },
+      {
+        "file": "agentindex-main/fix_data_endpoints_v2.py",
+        "line": 101,
+        "snippet": "@app.get(\"/api/v1/trust-score/{agent_id}\")"
+      },
+      {
+        "file": "agentindex-main/patch_seo_pages.py",
+        "line": 242,
+        "snippet": "OLD_ROBOTS = '''    @app.get(\"/robots.txt\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/patch_seo_pages.py",
+        "line": 255,
+        "snippet": "NEW_ROBOTS = '''    @app.get(\"/robots.txt\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/patch_seo_pages.py",
+        "line": 310,
+        "snippet": "@app.get(\"/llms.txt\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/agentindex/dashboard_old.py",
+        "line": 10,
+        "snippet": "@app.get(\"/\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 154,
+        "snippet": "@app.get(\"/v1/intelligence/trending\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 206,
+        "snippet": "@app.get(\"/v1/intelligence/agent/{agent_name}/dashboard\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 273,
+        "snippet": "@app.get(\"/v1/intelligence/report/latest\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 284,
+        "snippet": "@app.get(\"/dashboard\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 340,
+        "snippet": "@app.get(\"/dashboard/{agent_slug}\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 453,
+        "snippet": "@app.get(\"/trends\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 520,
+        "snippet": "@app.get(\"/security\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/intelligence_api.py",
+        "line": 598,
+        "snippet": "@app.get(\"/reports\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/analytics_dashboard.py",
+        "line": 540,
+        "snippet": "@app.get(\"/admin/analytics-dashboard\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/federation_api.py",
+        "line": 590,
+        "snippet": "@app.post(\"/v1/federation/contribute\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/localized_routes.py",
+        "line": 12519,
+        "snippet": "@app.get(\"/sitemap-localized.xml\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/agentindex/localized_routes.py",
+        "line": 12557,
+        "snippet": "@app.get(\"/sitemap-lang-{lang}-{chunk}.xml\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/agentindex/localized_routes.py",
+        "line": 12616,
+        "snippet": "@app.get(\"/sitemap-lang-{lang}.xml\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/agentindex/data_exports.py",
+        "line": 90,
+        "snippet": "@app.get(\"/data\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentindex-main/agentindex/data_exports.py",
+        "line": 150,
+        "snippet": "@app.get(\"/data/trust-scores-latest.csv\", response_class=Response)"
+      },
+      {
+        "file": "agentindex-main/agentindex/data_exports.py",
+        "line": 182,
+        "snippet": "@app.get(\"/data/trust-scores-latest.json\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/data_exports.py",
+        "line": 211,
+        "snippet": "@app.get(\"/data/frameworks-latest.json\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/data_exports.py",
+        "line": 240,
+        "snippet": "@app.get(\"/data/cves-latest.json\")"
+      },
+      {
+        "file": "agentindex-main/agentindex/data_exports.py",
+        "line": 266,
+        "snippet": "@app.post(\"/v1/webhooks/subscribe\")"
+      },
+      {
+        "file": "... (482 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 1227,
+    "languages": [
+      "python",
+      "ts"
+    ]
+  }
+}

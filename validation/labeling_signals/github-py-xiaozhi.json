@@ -1,0 +1,662 @@
+{
+  "server_id": "github-py-xiaozhi",
+  "extracted_at": "2026-05-03T00:26:34.868271+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/scripts/calendar_query.py",
+        "line": 12,
+        "snippet": "from src.mcp.tools.calendar import get_calendar_manager"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/plugins/calendar.py",
+        "line": 51,
+        "snippet": "from src.mcp.tools.calendar import get_reminder_service"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/plugins/audio.py",
+        "line": 113,
+        "snippet": "from src.mcp.tools.music.music_player import get_music_player_instance"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/plugins/audio.py",
+        "line": 134,
+        "snippet": "from src.mcp.tools.music.music_player import get_music_player_instance"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 258,
+        "snippet": "from src.mcp.tools.system import get_system_tools_manager"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 264,
+        "snippet": "from src.mcp.tools.calendar import get_calendar_manager"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 270,
+        "snippet": "from src.mcp.tools.timer import get_timer_manager"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 276,
+        "snippet": "from src.mcp.tools.music import get_music_tools_manager"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 282,
+        "snippet": "from src.mcp.tools.camera import take_photo"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 314,
+        "snippet": "from src.mcp.tools.screenshot import take_screenshot"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 351,
+        "snippet": "from src.mcp.tools.bazi import get_bazi_manager"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 517,
+        "snippet": "from src.mcp.tools.camera import get_camera_instance"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 232,
+        "snippet": "def add_tool(self, tool: Union[McpTool, Tuple[str, str, PropertyList, Callable]]):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 261,
+        "snippet": "system_manager.init_tools(self.add_tool, PropertyList, Property, PropertyType)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 267,
+        "snippet": "calendar_manager.init_tools(self.add_tool, PropertyList, Property, PropertyType)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 273,
+        "snippet": "timer_manager.init_tools(self.add_tool, PropertyList, Property, PropertyType)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 279,
+        "snippet": "music_manager.init_tools(self.add_tool, PropertyList, Property, PropertyType)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 304,
+        "snippet": "self.add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 341,
+        "snippet": "self.add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/mcp_server.py",
+        "line": 354,
+        "snippet": "bazi_manager.init_tools(self.add_tool, PropertyList, Property, PropertyType)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 28,
+        "snippet": "def init_tools(self, add_tool, PropertyList, Property, PropertyType):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 40,
+        "snippet": "add_tool, PropertyList, Property, PropertyType"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 44,
+        "snippet": "self._register_pause_tool(add_tool, PropertyList)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 47,
+        "snippet": "self._register_resume_tool(add_tool, PropertyList)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 50,
+        "snippet": "self._register_stop_tool(add_tool, PropertyList)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 53,
+        "snippet": "self._register_seek_tool(add_tool, PropertyList, Property, PropertyType)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 56,
+        "snippet": "self._register_get_lyrics_tool(add_tool, PropertyList)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 60,
+        "snippet": "add_tool, PropertyList, Property, PropertyType"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 71,
+        "snippet": "self, add_tool, PropertyList, Property, PropertyType"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 84,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 96,
+        "snippet": "def _register_pause_tool(self, add_tool, PropertyList):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 105,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 118,
+        "snippet": "def _register_resume_tool(self, add_tool, PropertyList):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 127,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 139,
+        "snippet": "def _register_stop_tool(self, add_tool, PropertyList):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 148,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 160,
+        "snippet": "def _register_seek_tool(self, add_tool, PropertyList, Property, PropertyType):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 174,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 186,
+        "snippet": "def _register_get_lyrics_tool(self, add_tool, PropertyList):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 199,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 211,
+        "snippet": "self, add_tool, PropertyList, Property, PropertyType"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/manager.py",
+        "line": 238,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/screenshot/screenshot_camera.py",
+        "line": 9,
+        "snippet": "from src.mcp.tools.camera.base_camera import BaseCamera"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/screenshot/screenshot_camera.py",
+        "line": 447,
+        "snippet": "from src.mcp.tools.camera import get_camera_instance"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/calendar/manager.py",
+        "line": 26,
+        "snippet": "def init_tools(self, add_tool, PropertyList, Property, PropertyType):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/calendar/manager.py",
+        "line": 51,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/calendar/manager.py",
+        "line": 89,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/calendar/manager.py",
+        "line": 121,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/calendar/manager.py",
+        "line": 157,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/calendar/manager.py",
+        "line": 187,
+        "snippet": "add_tool("
+      },
+      {
+        "file": "... (37 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/main.py",
+        "line": 92,
+        "snippet": "os.environ.get(\"WAYLAND_DISPLAY\")"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/main.py",
+        "line": 93,
+        "snippet": "or os.environ.get(\"XDG_SESSION_TYPE\") == \"wayland\""
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/main.py",
+        "line": 100,
+        "snippet": "os.environ[\"QT_QPA_PLATFORM\"] = \"wayland;xcb\""
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/plugins/audio.py",
+        "line": 31,
+        "snippet": "if os.getenv(\"XIAOZHI_DISABLE_AUDIO\") == \"1\":"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/opus_loader.py",
+        "line": 304,
+        "snippet": "os.environ[\"PATH\"] = lib_dir + os.pathsep + os.environ.get(\"PATH\", \"\")"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/opus_loader.py",
+        "line": 304,
+        "snippet": "os.environ[\"PATH\"] = lib_dir + os.pathsep + os.environ.get(\"PATH\", \"\")"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/windows/scanner.py",
+        "line": 166,
+        "snippet": "os.environ.get(\"PROGRAMDATA\", \"\"),"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/windows/scanner.py",
+        "line": 173,
+        "snippet": "os.environ.get(\"APPDATA\", \"\"),"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/windows/launcher.py",
+        "line": 157,
+        "snippet": "f\"C:\\\\Users\\\\{os.getenv('USERNAME')}\\\\AppData\\\\Local\\\\Programs\\\\{app_name}\\\\{app_name}.exe\","
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/windows/launcher.py",
+        "line": 158,
+        "snippet": "f\"C:\\\\Users\\\\{os.getenv('USERNAME')}\\\\AppData\\\\Local\\\\{app_name}\\\\{app_name}.exe\","
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/windows/launcher.py",
+        "line": 159,
+        "snippet": "f\"C:\\\\Users\\\\{os.getenv('USERNAME')}\\\\AppData\\\\Roaming\\\\{app_name}\\\\{app_name}.exe\","
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/display/gui_display.py",
+        "line": 568,
+        "snippet": "if os.getenv(\"XIAOZHI_DISABLE_TRAY\") == \"1\":"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/views/activation/activation_window.py",
+        "line": 75,
+        "snippet": "os.environ.get(\"WAYLAND_DISPLAY\")"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/views/activation/activation_window.py",
+        "line": 76,
+        "snippet": "or os.environ.get(\"XDG_SESSION_TYPE\") == \"wayland\""
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/scripts/webrtc_aec_demo.py",
+        "line": 613,
+        "snippet": "os.remove(temp_wav_path)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/resource_finder.py",
+        "line": 206,
+        "snippet": "with plist.open(\"rb\") as f:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/opus_loader.py",
+        "line": 229,
+        "snippet": "shutil.copy2(system_lib_path, target_file)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/volume_controller.py",
+        "line": 173,
+        "snippet": "if shutil.which(tool):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/volume_controller.py",
+        "line": 429,
+        "snippet": "found = any(shutil.which(tool) for tool in tools)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 44,
+        "snippet": "elif system == \"Linux\" and shutil.which(\"espeak\"):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 177,
+        "snippet": "if shutil.which(\"espeak\"):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 202,
+        "snippet": "if shutil.which(\"say\"):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/music/music_player.py",
+        "line": 1061,
+        "snippet": "shutil.move(str(temp_path), str(cache_path))"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/screenshot/screenshot_camera.py",
+        "line": 71,
+        "snippet": "self._subprocess_available = shutil.which(\"screencapture\") is not None"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/calendar/manager.py",
+        "line": 295,
+        "snippet": "os.rename(json_file, backup_file)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/display/cli_display.py",
+        "line": 249,
+        "snippet": "size = shutil.get_terminal_size(fallback=(80, 24))"
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/audio_codecs/music_decoder.py",
+        "line": 19,
+        "snippet": "self._process: Optional[subprocess.Process] = None"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/audio_codecs/music_decoder.py",
+        "line": 37,
+        "snippet": "stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/audio_codecs/music_decoder.py",
+        "line": 38,
+        "snippet": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/audio_codecs/music_decoder.py",
+        "line": 67,
+        "snippet": "*cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/volume_controller.py",
+        "line": 116,
+        "snippet": ") -> Optional[subprocess.CompletedProcess]:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/volume_controller.py",
+        "line": 121,
+        "snippet": "return subprocess.run(cmd, capture_output=True, text=True, check=check)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 39,
+        "snippet": "subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 41,
+        "snippet": "stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 42,
+        "snippet": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 45,
+        "snippet": "subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 47,
+        "snippet": "stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 48,
+        "snippet": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 180,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 182,
+        "snippet": "stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 183,
+        "snippet": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 188,
+        "snippet": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 205,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 207,
+        "snippet": "stdout=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 208,
+        "snippet": "stderr=subprocess.DEVNULL,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/utils/common_utils.py",
+        "line": 213,
+        "snippet": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/screenshot/screenshot_camera.py",
+        "line": 398,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/screenshot/screenshot_camera.py",
+        "line": 419,
+        "snippet": "except subprocess.TimeoutExpired:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/screenshot/screenshot_camera.py",
+        "line": 501,
+        "snippet": "result = subprocess.run(cmd, capture_output=True, text=True)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/screenshot/screenshot_camera.py",
+        "line": 556,
+        "snippet": "result = subprocess.run(cmd, capture_output=True, text=True)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/scanner.py",
+        "line": 116,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 42,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 70,
+        "snippet": "subprocess.TimeoutExpired,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 71,
+        "snippet": "subprocess.SubprocessError,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 73,
+        "snippet": "subprocess.CalledProcessError,"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 90,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 131,
+        "snippet": "except (subprocess.TimeoutExpired, subprocess.SubprocessError) as e:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 146,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 151,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/killer.py",
+        "line": 164,
+        "snippet": "except (subprocess.TimeoutExpired, subprocess.SubprocessError) as e:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/launcher.py",
+        "line": 28,
+        "snippet": "subprocess.Popen([\"open\", \"-a\", app_name])"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/launcher.py",
+        "line": 31,
+        "snippet": "except (OSError, subprocess.SubprocessError):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/launcher.py",
+        "line": 36,
+        "snippet": "subprocess.Popen([app_name])"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/launcher.py",
+        "line": 39,
+        "snippet": "except (OSError, subprocess.SubprocessError):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/launcher.py",
+        "line": 45,
+        "snippet": "subprocess.Popen([\"open\", app_path])"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/mac/launcher.py",
+        "line": 51,
+        "snippet": "subprocess.Popen([\"osascript\", \"-e\", script])"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/scanner.py",
+        "line": 105,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/killer.py",
+        "line": 22,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/killer.py",
+        "line": 61,
+        "snippet": "except (subprocess.TimeoutExpired, subprocess.SubprocessError) as e:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/killer.py",
+        "line": 78,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/killer.py",
+        "line": 83,
+        "snippet": "result = subprocess.run("
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/killer.py",
+        "line": 96,
+        "snippet": "except (subprocess.TimeoutExpired, subprocess.SubprocessError) as e:"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/launcher.py",
+        "line": 28,
+        "snippet": "subprocess.Popen([app_name])"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/launcher.py",
+        "line": 31,
+        "snippet": "except (OSError, subprocess.SubprocessError):"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/launcher.py",
+        "line": 36,
+        "snippet": "result = subprocess.run([\"which\", app_name], capture_output=True, text=True)"
+      },
+      {
+        "file": "huangjunsen0406-py-xiaozhi-6cad765/src/mcp/tools/system/app_management/linux/launcher.py",
+        "line": 39,
+        "snippet": "subprocess.Popen([app_path])"
+      },
+      {
+        "file": "... (29 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "http_endpoints": []
+  },
+  "stats": {
+    "total_files_scanned": 125,
+    "languages": [
+      "python",
+      "ts"
+    ]
+  }
+}

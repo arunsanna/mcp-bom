@@ -1,0 +1,275 @@
+{
+  "server_id": "github-metamcp",
+  "extracted_at": "2026-05-03T00:26:34.413208+00:00",
+  "categories": {
+    "tools_exposed": [],
+    "env_reads": [
+      {
+        "file": "metamcp-main/apps/frontend/lib/env.ts",
+        "line": 7,
+        "snippet": "const serverUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.APP_URL;"
+      },
+      {
+        "file": "metamcp-main/apps/backend/drizzle.config.ts",
+        "line": 10,
+        "snippet": "url: process.env.DATABASE_URL!,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 11,
+        "snippet": "if (!process.env.BETTER_AUTH_SECRET) {"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 14,
+        "snippet": "if (!process.env.APP_URL) {"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 18,
+        "snippet": "const BETTER_AUTH_SECRET = process.env.BETTER_AUTH_SECRET;"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 19,
+        "snippet": "const BETTER_AUTH_URL = process.env.APP_URL;"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 38,
+        "snippet": "if (process.env.OIDC_CLIENT_ID && process.env.OIDC_CLIENT_SECRET) {"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 40,
+        "snippet": "providerId: process.env.OIDC_PROVIDER_ID || \"oidc\","
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 41,
+        "snippet": "clientId: process.env.OIDC_CLIENT_ID,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 42,
+        "snippet": "clientSecret: process.env.OIDC_CLIENT_SECRET,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 43,
+        "snippet": "scopes: (process.env.OIDC_SCOPES || \"openid email profile\").split(\" \"),"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 44,
+        "snippet": "pkce: process.env.OIDC_PKCE !== \"false\", // Enable PKCE by default for security"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 45,
+        "snippet": "discoveryUrl: process.env.OIDC_DISCOVERY_URL,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 46,
+        "snippet": "authorizationUrl: process.env.OIDC_AUTHORIZATION_URL, //this is required due to a bug in better-auth: https://github.com/better-auth/better-auth/issues/3278"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 67,
+        "snippet": "const extraTrustedOrigins = process.env.EXTRA_TRUSTED_ORIGINS"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/auth.ts",
+        "line": 68,
+        "snippet": "? process.env.EXTRA_TRUSTED_ORIGINS.split(\",\")"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/routers/trpc.ts",
+        "line": 41,
+        "snippet": "origin: process.env.APP_URL,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/routers/mcp-proxy.ts",
+        "line": 14,
+        "snippet": "origin: process.env.APP_URL,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/routers/oauth/utils.ts",
+        "line": 70,
+        "snippet": "process.env.NODE_ENV === \"production\" &&"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/routers/oauth/utils.ts",
+        "line": 77,
+        "snippet": "if (process.env.NODE_ENV === \"production\") {"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/routers/oauth/utils.ts",
+        "line": 135,
+        "snippet": "if (process.env.APP_URL) {"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/routers/oauth/utils.ts",
+        "line": 136,
+        "snippet": "return process.env.APP_URL;"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/middleware/api-key-oauth.middleware.ts",
+        "line": 31,
+        "snippet": "if (process.env.APP_URL) {"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/middleware/api-key-oauth.middleware.ts",
+        "line": 32,
+        "snippet": "return process.env.APP_URL;"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/trpc/endpoints.impl.ts",
+        "line": 97,
+        "snippet": "const baseUrl = process.env.APP_URL;"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/startup.ts",
+        "line": 22,
+        "snippet": "const enableEnvBootstrap = parseBool(process.env.BOOTSTRAP_ENABLE, true);"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/startup.ts",
+        "line": 23,
+        "snippet": "const failHard = parseBool(process.env.BOOTSTRAP_FAIL_HARD, false);"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/config.service.ts",
+        "line": 159,
+        "snippet": "process.env.OIDC_CLIENT_ID &&"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/config.service.ts",
+        "line": 160,
+        "snippet": "process.env.OIDC_CLIENT_SECRET &&"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/config.service.ts",
+        "line": 161,
+        "snippet": "process.env.OIDC_DISCOVERY_URL"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 150,
+        "snippet": "process.env.BOOTSTRAP_USERS,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 155,
+        "snippet": "const singleUserEmail = nonEmpty(process.env.BOOTSTRAP_USER_EMAIL);"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 156,
+        "snippet": "const singleUserPassword = nonEmpty(process.env.BOOTSTRAP_USER_PASSWORD);"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 162,
+        "snippet": "name: nonEmpty(process.env.BOOTSTRAP_USER_NAME) ?? \"Administrator\","
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 171,
+        "snippet": "nonEmpty(process.env.BOOTSTRAP_USER_NAME) ?? \"Administrator\","
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 177,
+        "snippet": "process.env.BOOTSTRAP_DELETE_OTHER_USERS,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 181,
+        "snippet": "recreateDefaultUser: parseBool(process.env.BOOTSTRAP_RECREATE_USER, false),"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 183,
+        "snippet": "process.env.BOOTSTRAP_PRESERVE_API_KEYS,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 187,
+        "snippet": "process.env.BOOTSTRAP_WARN_PASSWORD_CHANGE,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 191,
+        "snippet": "process.env.BOOTSTRAP_ONLY_FIRST_RUN,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 197,
+        "snippet": "process.env.BOOTSTRAP_DISABLE_REGISTRATION_UI,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 201,
+        "snippet": "process.env.BOOTSTRAP_DISABLE_REGISTRATION_SSO,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 206,
+        "snippet": "apiKeys: parseJsonArray<ApiKeyConfig>(process.env.BOOTSTRAP_API_KEYS, []),"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 208,
+        "snippet": "process.env.BOOTSTRAP_NAMESPACES,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 212,
+        "snippet": "process.env.BOOTSTRAP_ENDPOINTS,"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/bootstrap.service.ts",
+        "line": 975,
+        "snippet": "if (process.env.BOOTSTRAP_DEBUG === \"true\") {"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/metamcp/client.ts",
+        "line": 28,
+        "snippet": "if (process.env.TRANSFORM_LOCALHOST_TO_DOCKER_INTERNAL === \"true\") {"
+      }
+    ],
+    "file_ops": [],
+    "shell_calls": [
+      {
+        "file": "metamcp-main/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
+        "line": 1,
+        "snippet": "import { ChildProcess, IOType } from \"node:child_process\";"
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
+        "line": 32,
+        "snippet": "* How to handle stderr of the child process. This matches the semantics of Node's `child_process.spawn`."
+      },
+      {
+        "file": "metamcp-main/apps/backend/src/lib/stdio-transport/process-managed-transport.ts",
+        "line": 152,
+        "snippet": "this._process = spawn("
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "metamcp-main/apps/backend/src/index.ts",
+        "line": 117,
+        "snippet": "app.get(\"/health\", (req, res) => {"
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 210,
+    "languages": [
+      "ts"
+    ]
+  }
+}

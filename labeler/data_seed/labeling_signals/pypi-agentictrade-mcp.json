@@ -1,0 +1,558 @@
+{
+  "server_id": "pypi-agentictrade-mcp",
+  "extracted_at": "2026-05-03T00:26:40.050557+00:00",
+  "categories": {
+    "tools_exposed": [
+      {
+        "file": "agentictrade-main/mcp_bridge/server.py",
+        "line": 178,
+        "snippet": "self._register_tools()"
+      },
+      {
+        "file": "agentictrade-main/mcp_bridge/server.py",
+        "line": 206,
+        "snippet": "def _register_tools(self) -> None:"
+      }
+    ],
+    "env_reads": [
+      {
+        "file": "agentictrade-main/provider_agent.py",
+        "line": 39,
+        "snippet": "return os.environ.get(\"ANTHROPIC_API_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/migrations/runner.py",
+        "line": 151,
+        "snippet": "db_path = os.environ.get(\"ACF_DB_PATH\", \"data/marketplace.db\")"
+      },
+      {
+        "file": "agentictrade-main/payments/nowpayments_provider.py",
+        "line": 74,
+        "snippet": "self._api_key = api_key or os.environ.get(\"NOWPAYMENTS_API_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/nowpayments_provider.py",
+        "line": 75,
+        "snippet": "self._ipn_secret = ipn_secret or os.environ.get(\"NOWPAYMENTS_IPN_SECRET\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/stripe_acp.py",
+        "line": 74,
+        "snippet": "self._api_key = api_key or os.environ.get(\"STRIPE_SECRET_KEY\", \"\") or os.environ.get(\"STRIPE_API_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/paypal_provider.py",
+        "line": 62,
+        "snippet": "self._client_id = client_id if client_id is not None else os.environ.get(\"PAYPAL_CLIENT_ID\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/paypal_provider.py",
+        "line": 63,
+        "snippet": "self._client_secret = client_secret if client_secret is not None else os.environ.get(\"PAYPAL_CLIENT_SECRET\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/nanopayments_provider.py",
+        "line": 27,
+        "snippet": "NANO_GATEWAY_URL = os.environ.get(\"NANO_GATEWAY_URL\", \"http://localhost:3402\")"
+      },
+      {
+        "file": "agentictrade-main/payments/circle_wallets.py",
+        "line": 28,
+        "snippet": "CIRCLE_API_KEY = os.environ.get(\"CIRCLE_API_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/circle_wallets.py",
+        "line": 29,
+        "snippet": "CIRCLE_ENTITY_SECRET = os.environ.get(\"CIRCLE_ENTITY_SECRET\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/circle_wallets.py",
+        "line": 51,
+        "snippet": "self._wallet_set_id: Optional[str] = os.environ.get(\"CIRCLE_WALLET_SET_ID\")"
+      },
+      {
+        "file": "agentictrade-main/payments/x402_client.py",
+        "line": 88,
+        "snippet": "key = os.environ.get(\"EVM_PRIVATE_KEY\") or os.environ.get(\"BUYER_PRIVATE_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/payments/x402_client.py",
+        "line": 93,
+        "snippet": "network = os.environ.get(\"NETWORK\", \"eip155:8453\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/db.py",
+        "line": 39,
+        "snippet": "max_workers=int(os.environ.get(\"PG_POOL_MAX\", \"100\")),"
+      },
+      {
+        "file": "agentictrade-main/marketplace/db.py",
+        "line": 614,
+        "snippet": "database_url = os.environ.get(\"DATABASE_URL\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/db.py",
+        "line": 626,
+        "snippet": "minconn = int(os.environ.get(\"PG_POOL_MIN\", \"2\"))"
+      },
+      {
+        "file": "agentictrade-main/marketplace/db.py",
+        "line": 627,
+        "snippet": "maxconn = int(os.environ.get(\"PG_POOL_MAX\", \"100\"))"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 42,
+        "snippet": "webhook_key = os.environ.get(\"ACF_WEBHOOK_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 59,
+        "snippet": "admin_secret = os.environ.get(\"ACF_ADMIN_SECRET\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 78,
+        "snippet": "db_path = os.environ.get(\"DATABASE_PATH\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 95,
+        "snippet": "cors_origins = os.environ.get(\"CORS_ORIGINS\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 112,
+        "snippet": "rl_backend = os.environ.get(\"RATE_LIMIT_BACKEND\", \"memory\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 129,
+        "snippet": "portal_secret = os.environ.get(\"ACF_PORTAL_SECRET\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 176,
+        "snippet": "is_production = bool(os.environ.get(\"DATABASE_URL\"))"
+      },
+      {
+        "file": "agentictrade-main/marketplace/compliance.py",
+        "line": 177,
+        "snippet": "enforce = os.environ.get(\"ACF_ENFORCE_COMPLIANCE\", \"auto\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/registry.py",
+        "line": 20,
+        "snippet": "h.strip() for h in os.environ.get(\"ACF_INTERNAL_HOSTS\", \"\").split(\",\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/proxy.py",
+        "line": 33,
+        "snippet": "h.strip() for h in os.environ.get(\"ACF_INTERNAL_HOSTS\", \"\").split(\",\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/proxy.py",
+        "line": 198,
+        "snippet": "_PLATFORM_HOST = os.environ.get(\"ACF_PLATFORM_HOST\", \"https://agentictrade.io\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/provider_auth.py",
+        "line": 159,
+        "snippet": "_RAW_PORTAL_SECRET = os.environ.get(\"ACF_PORTAL_SECRET\", \"\") or os.urandom(32).hex()"
+      },
+      {
+        "file": "agentictrade-main/marketplace/provider_auth.py",
+        "line": 515,
+        "snippet": "_DEFAULT_PAT_EXPIRY_DAYS = int(os.environ.get(\"ACF_PAT_EXPIRY_DAYS\", \"90\"))"
+      },
+      {
+        "file": "agentictrade-main/marketplace/quality_notifier.py",
+        "line": 24,
+        "snippet": "RESEND_API_KEY = os.environ.get(\"RESEND_API_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/quality_notifier.py",
+        "line": 25,
+        "snippet": "FROM_EMAIL = os.environ.get(\"FROM_EMAIL\", \"noreply@agentictrade.io\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/quality_notifier.py",
+        "line": 26,
+        "snippet": "FROM_NAME = os.environ.get(\"FROM_NAME\", \"AgenticTrade\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/drip_email.py",
+        "line": 25,
+        "snippet": "RESEND_API_KEY = os.environ.get(\"RESEND_API_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/drip_email.py",
+        "line": 26,
+        "snippet": "FROM_EMAIL = os.environ.get(\"FROM_EMAIL\", \"noreply@agentictrade.io\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/drip_email.py",
+        "line": 27,
+        "snippet": "FROM_NAME = os.environ.get(\"FROM_NAME\", \"AgenticTrade\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/webhooks.py",
+        "line": 29,
+        "snippet": "h.strip() for h in os.environ.get(\"ACF_INTERNAL_HOSTS\", \"\").split(\",\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/velocity.py",
+        "line": 25,
+        "snippet": "DEFAULT_TX_COUNT_PER_HOUR = int(os.environ.get(\"ACF_VELOCITY_TX_COUNT\", \"100\"))"
+      },
+      {
+        "file": "agentictrade-main/marketplace/velocity.py",
+        "line": 26,
+        "snippet": "DEFAULT_TX_AMOUNT_PER_HOUR = Decimal(os.environ.get(\"ACF_VELOCITY_TX_AMOUNT\", \"10000\"))"
+      },
+      {
+        "file": "agentictrade-main/marketplace/payment.py",
+        "line": 29,
+        "snippet": "address = os.environ.get(\"WALLET_ADDRESS\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/payment.py",
+        "line": 36,
+        "snippet": "network=os.environ.get(\"NETWORK\", \"eip155:8453\"),"
+      },
+      {
+        "file": "agentictrade-main/marketplace/wallet.py",
+        "line": 53,
+        "snippet": "key_id = os.environ.get(\"CDP_API_KEY_ID\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/wallet.py",
+        "line": 54,
+        "snippet": "key_secret = os.environ.get(\"CDP_API_KEY_SECRET\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/wallet.py",
+        "line": 55,
+        "snippet": "account_name = os.environ.get(\"CDP_ACCOUNT_NAME\", \"marketplace-settlement\")"
+      },
+      {
+        "file": "agentictrade-main/marketplace/wallet.py",
+        "line": 65,
+        "snippet": "network=os.environ.get(\"CDP_NETWORK\", \"base-mainnet\"),"
+      },
+      {
+        "file": "agentictrade-main/cli/drip_sender.py",
+        "line": 30,
+        "snippet": "RESEND_API_KEY = os.environ.get(\"RESEND_API_KEY\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/cli/drip_sender.py",
+        "line": 31,
+        "snippet": "FROM_EMAIL = os.environ.get(\"FROM_EMAIL\", \"onboarding@agentictrade.io\")"
+      },
+      {
+        "file": "agentictrade-main/cli/drip_sender.py",
+        "line": 32,
+        "snippet": "FROM_NAME = os.environ.get(\"FROM_NAME\", \"AgenticTrade\")"
+      },
+      {
+        "file": "agentictrade-main/cli/drip_sender.py",
+        "line": 105,
+        "snippet": "secret = os.environ.get(\"ACF_ADMIN_SECRET\", \"\")"
+      },
+      {
+        "file": "agentictrade-main/cli/manage.py",
+        "line": 29,
+        "snippet": "return Database(os.environ.get(\"DATABASE_PATH\"))"
+      },
+      {
+        "file": "... (80 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ],
+    "file_ops": [
+      {
+        "file": "agentictrade-main/marketplace/audit.py",
+        "line": 174,
+        "snippet": "- A file-path string or ``pathlib.Path`` (creates its own"
+      },
+      {
+        "file": "agentictrade-main/marketplace/check_i18n_qa.py",
+        "line": 4,
+        "snippet": "with open('marketplace/i18n.py', 'r') as f:"
+      }
+    ],
+    "shell_calls": [
+      {
+        "file": "agentictrade-main/scripts/record_demos.py",
+        "line": 227,
+        "snippet": "result = subprocess.run("
+      }
+    ],
+    "http_endpoints": [
+      {
+        "file": "agentictrade-main/tests/test_rate_limit_middleware.py",
+        "line": 46,
+        "snippet": "@app.get(\"/test\")"
+      },
+      {
+        "file": "agentictrade-main/tests/test_rate_limit_middleware.py",
+        "line": 234,
+        "snippet": "@app.get(\"/test\")"
+      },
+      {
+        "file": "agentictrade-main/tests/test_rate_limit_middleware.py",
+        "line": 319,
+        "snippet": "@app.get(\"/test\")"
+      },
+      {
+        "file": "agentictrade-main/examples/template_api/main.py",
+        "line": 44,
+        "snippet": "@app.get(\"/health\")"
+      },
+      {
+        "file": "agentictrade-main/examples/template_api/main.py",
+        "line": 52,
+        "snippet": "@app.post(\"/predict\", response_model=PredictResponse)"
+      },
+      {
+        "file": "agentictrade-main/examples/template_api/main.py",
+        "line": 81,
+        "snippet": "@app.get(\"/models\")"
+      },
+      {
+        "file": "agentictrade-main/api/main.py",
+        "line": 531,
+        "snippet": "@app.get(\"/api/health\")"
+      },
+      {
+        "file": "agentictrade-main/api/main.py",
+        "line": 532,
+        "snippet": "@app.get(\"/api/v1/health\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/auth.py",
+        "line": 64,
+        "snippet": "@router.post(\"/keys\", status_code=201)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/auth.py",
+        "line": 148,
+        "snippet": "@router.post(\"/keys/validate\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/legal.py",
+        "line": 15,
+        "snippet": "@router.get(\"/versions\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/legal.py",
+        "line": 24,
+        "snippet": "@router.delete(\"/data-deletion/{user_id}\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/legal.py",
+        "line": 46,
+        "snippet": "@router.get(\"/privacy\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/legal.py",
+        "line": 115,
+        "snippet": "@router.get(\"/terms\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 62,
+        "snippet": "@router.post(\"/services\", status_code=201)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 115,
+        "snippet": "@router.get(\"/services\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 154,
+        "snippet": "@router.get(\"/services/{service_id}\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 164,
+        "snippet": "@router.patch(\"/services/{service_id}\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 186,
+        "snippet": "@router.delete(\"/services/{service_id}\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 213,
+        "snippet": "@router.put(\"/provider-contact\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 244,
+        "snippet": "@router.get(\"/provider-contact\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 259,
+        "snippet": "@router.get(\"/founding-sellers\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/services.py",
+        "line": 273,
+        "snippet": "@router.get(\"/founding-sellers/{provider_id}\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 83,
+        "snippet": "@router.get(\"/\", include_in_schema=False)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 197,
+        "snippet": "@router.get(\"/login\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 210,
+        "snippet": "@router.post(\"/login\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 258,
+        "snippet": "@router.get(\"/register\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 275,
+        "snippet": "@router.post(\"/register\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 373,
+        "snippet": "@router.get(\"/verify\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 385,
+        "snippet": "@router.get(\"/logout\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 397,
+        "snippet": "@router.get(\"/dashboard\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 415,
+        "snippet": "@router.get(\"/getting-started\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 427,
+        "snippet": "@router.get(\"/services\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 442,
+        "snippet": "@router.get(\"/analytics\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 500,
+        "snippet": "@router.get(\"/settings\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 524,
+        "snippet": "@router.post(\"/settings\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 564,
+        "snippet": "@router.get(\"/referrals\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 594,
+        "snippet": "@router.post(\"/referrals/generate\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 616,
+        "snippet": "@router.get(\"/budget\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 661,
+        "snippet": "@router.post(\"/budget\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 750,
+        "snippet": "@router.get(\"/negotiations\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 797,
+        "snippet": "@router.get(\"/reputation\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 841,
+        "snippet": "@router.post(\"/api-token\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 907,
+        "snippet": "@router.post(\"/revoke-api-token\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/portal.py",
+        "line": 958,
+        "snippet": "@router.post(\"/services/create\", response_class=HTMLResponse)"
+      },
+      {
+        "file": "agentictrade-main/api/routes/audit.py",
+        "line": 19,
+        "snippet": "@router.get(\"/admin/audit\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/audit.py",
+        "line": 61,
+        "snippet": "@router.get(\"/admin/audit/summary\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/reputation.py",
+        "line": 24,
+        "snippet": "@router.get(\"/agents/{agent_id}/reputation\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/reputation.py",
+        "line": 67,
+        "snippet": "@router.get(\"/services/{service_id}/reputation\")"
+      },
+      {
+        "file": "agentictrade-main/api/routes/reputation.py",
+        "line": 89,
+        "snippet": "@router.get(\"/reputation/leaderboard\")"
+      },
+      {
+        "file": "... (182 more items truncated)",
+        "line": 0,
+        "snippet": ""
+      }
+    ]
+  },
+  "stats": {
+    "total_files_scanned": 180,
+    "languages": [
+      "python",
+      "ts"
+    ]
+  }
+}
